@@ -16,6 +16,8 @@
 		5A557BA7205A0CAA007F7FDD /* RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A557BA6205A0CAA007F7FDD /* RootController.m */; };
 		5A557BAA205A1479007F7FDD /* GCDTestHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A557BA9205A1479007F7FDD /* GCDTestHeaderView.m */; };
 		5A557BAC205A1482007F7FDD /* GCDTestHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A557BAB205A1482007F7FDD /* GCDTestHeaderView.xib */; };
+		5A557BB8205A4470007F7FDD /* QueueGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A557BB7205A4470007F7FDD /* QueueGroupController.m */; };
+		5AF631CC205A5718001EE355 /* OtherController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF631CB205A5718001EE355 /* OtherController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,10 @@
 		5A557BA8205A1479007F7FDD /* GCDTestHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDTestHeaderView.h; sourceTree = "<group>"; };
 		5A557BA9205A1479007F7FDD /* GCDTestHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDTestHeaderView.m; sourceTree = "<group>"; };
 		5A557BAB205A1482007F7FDD /* GCDTestHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GCDTestHeaderView.xib; sourceTree = "<group>"; };
+		5A557BB6205A4470007F7FDD /* QueueGroupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueueGroupController.h; sourceTree = "<group>"; };
+		5A557BB7205A4470007F7FDD /* QueueGroupController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QueueGroupController.m; sourceTree = "<group>"; };
+		5AF631CA205A5718001EE355 /* OtherController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherController.h; sourceTree = "<group>"; };
+		5AF631CB205A5718001EE355 /* OtherController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,20 +74,40 @@
 			children = (
 				5A0D17C5205944DE001CE157 /* AppDelegate.h */,
 				5A0D17C6205944DE001CE157 /* AppDelegate.m */,
-				5A0D17C8205944DE001CE157 /* ViewController.h */,
-				5A0D17C9205944DE001CE157 /* ViewController.m */,
+				5AF631C9205A5093001EE355 /* Controller */,
 				5A0D17CB205944DE001CE157 /* Main.storyboard */,
 				5A0D17CE205944DE001CE157 /* Assets.xcassets */,
 				5A0D17D0205944DE001CE157 /* LaunchScreen.storyboard */,
 				5A0D17D3205944DE001CE157 /* Info.plist */,
 				5A0D17D4205944DE001CE157 /* main.m */,
-				5A557BA5205A0CAA007F7FDD /* RootController.h */,
-				5A557BA6205A0CAA007F7FDD /* RootController.m */,
+				5AF631C8205A5083001EE355 /* View */,
+			);
+			path = GCD_Demo;
+			sourceTree = "<group>";
+		};
+		5AF631C8205A5083001EE355 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				5A557BA8205A1479007F7FDD /* GCDTestHeaderView.h */,
 				5A557BA9205A1479007F7FDD /* GCDTestHeaderView.m */,
 				5A557BAB205A1482007F7FDD /* GCDTestHeaderView.xib */,
 			);
-			path = GCD_Demo;
+			path = View;
+			sourceTree = "<group>";
+		};
+		5AF631C9205A5093001EE355 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5A557BA5205A0CAA007F7FDD /* RootController.h */,
+				5A557BA6205A0CAA007F7FDD /* RootController.m */,
+				5A0D17C8205944DE001CE157 /* ViewController.h */,
+				5A0D17C9205944DE001CE157 /* ViewController.m */,
+				5A557BB6205A4470007F7FDD /* QueueGroupController.h */,
+				5A557BB7205A4470007F7FDD /* QueueGroupController.m */,
+				5AF631CA205A5718001EE355 /* OtherController.h */,
+				5AF631CB205A5718001EE355 /* OtherController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,9 +184,11 @@
 			files = (
 				5A557BAA205A1479007F7FDD /* GCDTestHeaderView.m in Sources */,
 				5A0D17CA205944DE001CE157 /* ViewController.m in Sources */,
+				5AF631CC205A5718001EE355 /* OtherController.m in Sources */,
 				5A0D17D5205944DE001CE157 /* main.m in Sources */,
 				5A0D17C7205944DE001CE157 /* AppDelegate.m in Sources */,
 				5A557BA7205A0CAA007F7FDD /* RootController.m in Sources */,
+				5A557BB8205A4470007F7FDD /* QueueGroupController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = GCD_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "daiyunpeng.GCD-Demo";
@@ -308,6 +337,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = GCD_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "daiyunpeng.GCD-Demo";

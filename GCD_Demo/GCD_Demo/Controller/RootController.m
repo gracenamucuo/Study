@@ -8,6 +8,8 @@
 
 #import "RootController.h"
 #import "ViewController.h"
+#import "QueueGroupController.h"
+#import "OtherController.h"
 @interface RootController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *dataSource;
@@ -44,9 +46,14 @@ static NSString *cellID = @"cellID";
     if (indexPath.row == 0) {
         ViewController *vc = (ViewController*)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:NSStringFromClass([ViewController class])];
         [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 1){
+        QueueGroupController *groupVC = (QueueGroupController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:NSStringFromClass([QueueGroupController class])];
+        [self.navigationController pushViewController:groupVC animated:YES];
+    }else if (indexPath.row == 2){
+        OtherController *other = (OtherController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:NSStringFromClass([OtherController class])];
+        [self.navigationController pushViewController:other animated:YES];
     }
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

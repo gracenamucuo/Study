@@ -45,6 +45,125 @@
             </objects>
             <point key="canvasLocation" x="596" y="235"/>
         </scene>
+        <!--Queue Group Controller-->
+        <scene sceneID="VJR-1g-dub">
+            <objects>
+                <viewController storyboardIdentifier="QueueGroupController" id="Zx0-UE-tIQ" customClass="QueueGroupController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9S0-Iu-z2a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3U-N0-s9g">
+                                <rect key="frame" x="91.5" y="318.5" width="192" height="30"/>
+                                <state key="normal" title="dispatch_group_enter /leave"/>
+                                <connections>
+                                    <action selector="enterLeaveAction:" destination="Zx0-UE-tIQ" eventType="touchUpInside" id="dJ1-1e-E95"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhB-7W-lFD">
+                                <rect key="frame" x="111" y="238.5" width="152" height="30"/>
+                                <state key="normal" title="dispatch_group_async"/>
+                                <connections>
+                                    <action selector="notifyAction:" destination="Zx0-UE-tIQ" eventType="touchUpInside" id="f79-n4-0jQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKA-s3-gCd">
+                                <rect key="frame" x="117.5" y="398.5" width="139" height="30"/>
+                                <state key="normal" title="dispatch_group_wait"/>
+                                <connections>
+                                    <action selector="waitAction:" destination="Zx0-UE-tIQ" eventType="touchUpInside" id="KgZ-ru-w86"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m3U-N0-s9g" firstAttribute="centerY" secondItem="9S0-Iu-z2a" secondAttribute="centerY" id="3DI-DX-sxA"/>
+                            <constraint firstItem="m3U-N0-s9g" firstAttribute="top" secondItem="dhB-7W-lFD" secondAttribute="bottom" constant="50" id="8Ur-Ez-YyK"/>
+                            <constraint firstItem="m3U-N0-s9g" firstAttribute="centerX" secondItem="dhB-7W-lFD" secondAttribute="centerX" id="N3S-yE-fd3"/>
+                            <constraint firstItem="m3U-N0-s9g" firstAttribute="centerX" secondItem="9S0-Iu-z2a" secondAttribute="centerX" id="YPb-7i-av0"/>
+                            <constraint firstItem="tKA-s3-gCd" firstAttribute="centerX" secondItem="m3U-N0-s9g" secondAttribute="centerX" id="rHb-CI-VkA"/>
+                            <constraint firstItem="tKA-s3-gCd" firstAttribute="top" secondItem="m3U-N0-s9g" secondAttribute="bottom" constant="50" id="vgb-OU-Dpk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bik-Ph-9bK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NnU-Jj-tdl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596" y="889"/>
+        </scene>
+        <!--Other Controller-->
+        <scene sceneID="sMK-lH-IwX">
+            <objects>
+                <viewController storyboardIdentifier="OtherController" id="gZJ-xU-GSW" customClass="OtherController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QwW-cH-qIh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cl-n2-KUe">
+                                <rect key="frame" x="121" y="318" width="133" height="30"/>
+                                <state key="normal" title="Semaphore  信号量"/>
+                                <connections>
+                                    <action selector="semaphoneAction:" destination="gZJ-xU-GSW" eventType="touchUpInside" id="7uy-rq-NFP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31H-Ap-x69">
+                                <rect key="frame" x="138.5" y="398" width="98" height="30"/>
+                                <state key="normal" title="dispatch_after"/>
+                                <connections>
+                                    <action selector="afterAction:" destination="gZJ-xU-GSW" eventType="touchUpInside" id="IMX-pG-tGZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIc-jx-39W">
+                                <rect key="frame" x="132.5" y="458" width="111" height="30"/>
+                                <state key="normal" title="dispatch_barrier"/>
+                                <connections>
+                                    <action selector="barrierAction:" destination="gZJ-xU-GSW" eventType="touchUpInside" id="xAn-jt-RDI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXe-Lo-3tZ">
+                                <rect key="frame" x="138" y="238" width="99" height="30"/>
+                                <state key="normal" title="dispatch_once"/>
+                                <connections>
+                                    <action selector="onceAction:" destination="gZJ-xU-GSW" eventType="touchUpInside" id="BBC-vC-U75"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8t-Hg-z4J">
+                                <rect key="frame" x="104.5" y="158" width="166" height="30"/>
+                                <state key="normal" title="Semaphore  信号量 safe"/>
+                                <connections>
+                                    <action selector="semaphoneSafeAction:" destination="gZJ-xU-GSW" eventType="touchUpInside" id="tvA-Fx-iwu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5I-2I-9LO">
+                                <rect key="frame" x="156.5" y="518" width="62" height="30"/>
+                                <state key="normal" title="线程通信"/>
+                                <connections>
+                                    <action selector="communicationAction:" destination="gZJ-xU-GSW" eventType="touchUpInside" id="IP2-Ud-H2h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pIc-jx-39W" firstAttribute="centerX" secondItem="QwW-cH-qIh" secondAttribute="centerX" id="1XW-40-Yxl"/>
+                            <constraint firstItem="P5I-2I-9LO" firstAttribute="centerX" secondItem="QwW-cH-qIh" secondAttribute="centerX" id="EJr-6K-lI9"/>
+                            <constraint firstItem="31H-Ap-x69" firstAttribute="centerX" secondItem="QwW-cH-qIh" secondAttribute="centerX" id="IHx-OS-d4D"/>
+                            <constraint firstItem="P5I-2I-9LO" firstAttribute="top" secondItem="pIc-jx-39W" secondAttribute="bottom" constant="30" id="KJz-eV-oRd"/>
+                            <constraint firstItem="PXe-Lo-3tZ" firstAttribute="centerX" secondItem="QwW-cH-qIh" secondAttribute="centerX" id="MPw-22-iUT"/>
+                            <constraint firstItem="PXe-Lo-3tZ" firstAttribute="top" secondItem="a8t-Hg-z4J" secondAttribute="bottom" constant="50" id="XmM-gc-BnT"/>
+                            <constraint firstItem="pIc-jx-39W" firstAttribute="top" secondItem="31H-Ap-x69" secondAttribute="bottom" constant="30" id="cP7-c6-FxH"/>
+                            <constraint firstItem="a8t-Hg-z4J" firstAttribute="centerX" secondItem="QwW-cH-qIh" secondAttribute="centerX" id="cro-6o-IET"/>
+                            <constraint firstItem="1Cl-n2-KUe" firstAttribute="centerX" secondItem="QwW-cH-qIh" secondAttribute="centerX" id="n4a-fw-x4q"/>
+                            <constraint firstItem="1Cl-n2-KUe" firstAttribute="top" secondItem="PXe-Lo-3tZ" secondAttribute="bottom" constant="50" id="s3V-Qy-C3Y"/>
+                            <constraint firstItem="31H-Ap-x69" firstAttribute="top" secondItem="1Cl-n2-KUe" secondAttribute="bottom" constant="50" id="sl3-Od-8GD"/>
+                            <constraint firstItem="1Cl-n2-KUe" firstAttribute="centerY" secondItem="QwW-cH-qIh" secondAttribute="centerY" id="yun-Zf-LLG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UoU-c5-8tb"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2cL-Kk-Vbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1378" y="900"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="x49-z3-rqs">
             <objects>
