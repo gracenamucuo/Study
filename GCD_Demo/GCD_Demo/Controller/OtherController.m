@@ -10,6 +10,7 @@
 
 @interface OtherController ()
 @property (nonatomic,assign)NSInteger totalTickets;
+@property (nonatomic,strong)dispatch_semaphore_t semaphore;
 @end
 
 @implementation OtherController
@@ -74,6 +75,7 @@
 - (void)setTicket{
     dispatch_queue_t beijingQueue = dispatch_queue_create("beijing", DISPATCH_QUEUE_SERIAL);
     dispatch_queue_t shanghaiQueue = dispatch_queue_create("shanghai", DISPATCH_QUEUE_SERIAL);
+      _semaphore = dispatch_semaphore_create(1);
     dispatch_async(beijingQueue, ^{
         NSLog(@"北京%@",[NSThread currentThread]);
 //        [self sellTicketNotSafe];
@@ -101,10 +103,10 @@
 }
 
 - (void)sellTicketSafe
-{   dispatch_semaphore_t semaphore = dispatch_semaphore_create(1);
-    while (1) {//这里用信号量好像并不能保证线程安全。用了同步锁。
-        @synchronized(self){
-//                    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+{
+    while (1) {//
+//        @synchronized(self){
+                    dispatch_semaphore_wait(_semaphore, DISPATCH_TIME_FOREVER);
             if (self.totalTickets > 0) {
                 
                 self.totalTickets--;
@@ -112,11 +114,11 @@
                 
             }else{
                 NSLog(@"票卖完了%@",[NSThread currentThread]);
-//                dispatch_semaphore_signal(semaphore);
+                dispatch_semaphore_signal(_semaphore);
                 break;
             }
-//                    dispatch_semaphore_signal(semaphore);
-        }
+                    dispatch_semaphore_signal(_semaphore);
+//        }
 
     }
 }
