@@ -122,6 +122,7 @@
 				5A14BE86207612F8006F6A47 /* AppDelegate.m */,
 				5A14BE88207612F8006F6A47 /* ViewController.h */,
 				5A14BE89207612F8006F6A47 /* ViewController.m */,
+				5A7ED909207B91C400A52475 /* Push&Pop */,
 				5A2CCE81207A5C84005D142F /* PresentationTransition */,
 				5A02E61F20761AE700A4C367 /* 非交互式转场 */,
 				5A14BE8B207612F8006F6A47 /* Main.storyboard */,
@@ -132,10 +133,6 @@
 				5A02E62020761D0700A4C367 /* UIViewController+LoadController.h */,
 				5A02E62120761D0700A4C367 /* UIViewController+LoadController.m */,
 				5A02E6262076F1FB00A4C367 /* Constant.h */,
-				5A02E64F20775DC000A4C367 /* NavgationTransitionFromController.h */,
-				5A02E65020775DC000A4C367 /* NavgationTransitionFromController.m */,
-				5A02E65220775DD000A4C367 /* NavgationTransitionToController.h */,
-				5A02E65320775DD000A4C367 /* NavgationTransitionToController.m */,
 				5A02E66A207761C900A4C367 /* TabTransitionRootController.h */,
 				5A02E66B207761C900A4C367 /* TabTransitionRootController.m */,
 				5A02E65B20775E3400A4C367 /* TabTransitionFirstController.h */,
@@ -163,6 +160,17 @@
 				5A6E4612207B13C3006C20A0 /* DYPInteractiveTransition.m */,
 			);
 			path = PresentationTransition;
+			sourceTree = "<group>";
+		};
+		5A7ED909207B91C400A52475 /* Push&Pop */ = {
+			isa = PBXGroup;
+			children = (
+				5A02E64F20775DC000A4C367 /* NavgationTransitionFromController.h */,
+				5A02E65020775DC000A4C367 /* NavgationTransitionFromController.m */,
+				5A02E65220775DD000A4C367 /* NavgationTransitionToController.h */,
+				5A02E65320775DD000A4C367 /* NavgationTransitionToController.m */,
+			);
+			path = "Push&Pop";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

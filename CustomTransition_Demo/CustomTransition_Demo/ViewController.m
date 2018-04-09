@@ -46,28 +46,33 @@ static NSString *cellID = @"cellID";
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    NSString *classStr = self.dataSource[indexPath.row];
     if (indexPath.row == 0) {
         PresentingController *presentingVC = [PresentingController loadFromMainStoryboard];
-//        [self.navigationController pushViewController:presentingVC animated:YES];
-        [self presentViewController:presentingVC animated:YES completion:nil];
-    }else if (indexPath.row == 2) {
-        Class cls = NSClassFromString(classStr);
-        UIViewController *vc = [cls performSelector:@selector(loadFromMainStoryboard)];
-        [self.navigationController pushViewController:vc animated:YES];
+        [self.navigationController pushViewController:presentingVC animated:YES];
+//        [self presentViewController:presentingVC animated:YES completion:nil];
+    }else if (indexPath.row == 1) {
+        NavgationTransitionFromController *fromVC = [NavgationTransitionFromController loadFromMainStoryboard];
+        [self.navigationController pushViewController:fromVC animated:YES];
     }else{
-        UITabBarController *tab = [[UITabBarController alloc]init];
-        TabTransitionFirstController *first = [TabTransitionFirstController loadFromMainStoryboard];
-        TabTransitionSecondController *second = [TabTransitionSecondController loadFromMainStoryboard];
-        TabTransitionThirdController *third = [TabTransitionThirdController loadFromMainStoryboard];
-        [tab setViewControllers:@[first,second,third]];
-        for (NSInteger i = 0; i < tab.tabBar.items.count; i++) {
-            UITabBarItem *item = tab.tabBar.items[i];
-            item.title = [NSString stringWithFormat:@"第%ld",(long)i];
-        }
-        [self.navigationController pushViewController:tab animated:YES];
+//        UITabBarController *tab = [[UITabBarController alloc]init];
+//        TabTransitionFirstController *first = [TabTransitionFirstController loadFromMainStoryboard];
+//        TabTransitionSecondController *second = [TabTransitionSecondController loadFromMainStoryboard];
+//        TabTransitionThirdController *third = [TabTransitionThirdController loadFromMainStoryboard];
+//        [tab setViewControllers:@[first,second,third]];
+//        for (NSInteger i = 0; i < tab.tabBar.items.count; i++) {
+//            UITabBarItem *item = tab.tabBar.items[i];
+//            item.title = [NSString stringWithFormat:@"第%ld",(long)i];
+//        }
+//        [self.navigationController pushViewController:tab animated:YES];
     }
 
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    
 }
 
 #pragma mark -- LAZY
@@ -76,7 +81,7 @@ static NSString *cellID = @"cellID";
     if (!_dataSource) {
         _dataSource = [NSMutableArray array];
         
-        [_dataSource addObjectsFromArray:@[@"模态转场",@"Tab",@"ModelTransitionFromController"]];
+        [_dataSource addObjectsFromArray:@[@"模态转场",@"Push&pop",@"ModelTransitionFromController"]];
     }
     return _dataSource;
 }

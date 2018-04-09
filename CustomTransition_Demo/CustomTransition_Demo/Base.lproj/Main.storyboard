@@ -160,10 +160,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V9h-0e-FSS"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kq8-x9-0jd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tb5-Y3-PFX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1" y="413"/>
+            <point key="canvasLocation" x="940" y="412.44377811094455"/>
         </scene>
         <!--Tab Transition Root Controller-->
         <scene sceneID="GQf-qo-3tQ">
@@ -297,13 +298,26 @@
                     <view key="view" contentMode="scaleToFill" id="gYP-VN-VS7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hz-sX-W7s">
+                                <rect key="frame" x="172" y="318" width="30" height="30"/>
+                                <state key="normal" title="pop"/>
+                                <connections>
+                                    <action selector="popAction:" destination="tbB-pe-O84" eventType="touchUpInside" id="eDk-1I-jA2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.73107151210634025" green="0.97082715573345568" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7hz-sX-W7s" firstAttribute="centerY" secondItem="gYP-VN-VS7" secondAttribute="centerY" id="CvY-yw-hSn"/>
+                            <constraint firstItem="7hz-sX-W7s" firstAttribute="centerX" secondItem="gYP-VN-VS7" secondAttribute="centerX" id="yaX-OG-UVO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="TbA-lh-2hZ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mBt-K4-kpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="716" y="412"/>
+            <point key="canvasLocation" x="1655.2" y="411.544227886057"/>
         </scene>
     </scenes>
 </document>

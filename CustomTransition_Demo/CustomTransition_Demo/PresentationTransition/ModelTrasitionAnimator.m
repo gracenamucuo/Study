@@ -135,19 +135,30 @@
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIView *containerView = [transitionContext containerView];
+//    containerView.backgroundColor = [UIColor redColor];
+    
     UIView *formView =  fromVC.view;
     UIView *toView = toVC.view;
     [containerView addSubview:toView];
+    UIView *captureView = [fromVC.view snapshotViewAfterScreenUpdates:NO];
+        captureView.frame = fromVC.view.frame;
+    [containerView addSubview:captureView];
+    formView.hidden = YES;
+    
+    
+    
     toView.frame = CGRectMake(containerView.frame.size.width, containerView.frame.size.height, containerView.frame.size.width, containerView.frame.size.height);
     
     [UIView animateWithDuration:2 animations:^{
-        formView.transform = CGAffineTransformMakeTranslation(-containerView.frame.size.width, -containerView.frame.size.height);
+        captureView.transform = CGAffineTransformMakeTranslation(-containerView.frame.size.width, -containerView.frame.size.height);
         toView.transform = CGAffineTransformMakeTranslation(-containerView.frame.size.width, -containerView.frame.size.height);
+        
     } completion:^(BOOL finished) {
         if ([transitionContext transitionWasCancelled]) {
   
             [transitionContext completeTransition:NO];
         }else{
+            captureView;
             [transitionContext completeTransition:YES];
         }
     }];
@@ -157,22 +168,36 @@
 {
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    
+    
+
+    
     UIView *containerView = [transitionContext containerView];
+    
     UIView *formView =  fromVC.view;
     UIView *toView = toVC.view;
-    [containerView addSubview:toView];
-    toView.frame = CGRectMake(-containerView.frame.size.width, -containerView.frame.size.height, containerView.frame.size.width, containerView.frame.size.height);
+   
+    UIView *captureView = [containerView.subviews lastObject];
+     [containerView addSubview:toView];
+//    toView.frame = CGRectMake(-containerView.frame.size.width, -containerView.frame.size.height, containerView.frame.size.width, containerView.frame.size.height);
     
     [UIView animateWithDuration:2 animations:^{
-        formView.transform  = CGAffineTransformIdentity;
-        toView.transform = CGAffineTransformIdentity;
+//        captureView.transform  = CGAffineTransformMakeTranslation(containerView.frame.size.width, captureView.frame.size.height);
+        captureView.transform = CGAffineTransformIdentity;
+        formView.transform = CGAffineTransformIdentity;
+        
+        
     } completion:^(BOOL finished) {
    
         if ([transitionContext transitionWasCancelled]) {
             
             [transitionContext completeTransition:NO];
         }else{
+            toView.hidden = NO;
+            [captureView removeFromSuperview];
             [transitionContext completeTransition:YES];
+            
+
         }
     }];
 }
