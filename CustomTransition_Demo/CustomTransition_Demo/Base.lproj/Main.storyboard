@@ -210,10 +210,19 @@
                                     <action selector="presentAction:" destination="Dir-rF-uUc" eventType="touchUpInside" id="RuH-i7-1gJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpk-4Q-al0">
+                                <rect key="frame" x="161" y="219" width="52" height="30"/>
+                                <state key="normal" title="dismiss"/>
+                                <connections>
+                                    <action selector="dismissAction:" destination="Dir-rF-uUc" eventType="touchUpInside" id="x6S-xI-Gl1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.55095364538980207" blue="0.98012255081908839" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Wpk-4Q-al0" firstAttribute="centerX" secondItem="Pjh-Or-Csd" secondAttribute="centerX" id="2jO-qs-e8e"/>
                             <constraint firstItem="54X-cJ-7jc" firstAttribute="centerX" secondItem="Pjh-Or-Csd" secondAttribute="centerX" id="KQ5-Vh-fme"/>
+                            <constraint firstItem="Wpk-4Q-al0" firstAttribute="top" secondItem="9Xm-yU-DO7" secondAttribute="top" constant="199" id="N78-wM-INw"/>
                             <constraint firstItem="9Xm-yU-DO7" firstAttribute="bottom" secondItem="54X-cJ-7jc" secondAttribute="bottom" constant="60" id="gll-3c-ybY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Xm-yU-DO7"/>
@@ -221,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dg-ys-EGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8" y="1877"/>
+            <point key="canvasLocation" x="-8.8000000000000007" y="1876.9115442278862"/>
         </scene>
         <!--Presented Controller-->
         <scene sceneID="YQm-Qf-ge2">

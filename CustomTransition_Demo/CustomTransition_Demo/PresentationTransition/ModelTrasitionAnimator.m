@@ -68,6 +68,7 @@
 
 #pragma mark -- 生成动画
 
+//在这里，如果presentingVC被nav持有或者不持有的话，fromVC会不同，但是最终动画的效果是一样的，都可以按照fromVC就是presentingvc的思路来处理动画、
 - (void)performPresentAnimationWithContext:(id<UIViewControllerContextTransitioning>)transitionContext
 {
     //可以通过上下文取出转场涉及到的两个控制器，以及两个控制器的view
@@ -75,6 +76,7 @@
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     //是否使用手势
+    //转场结束，containerView会将fromVC.view移除，所以要想在转场结束后，仍然看到fromVC.view，用截图方法
     UIView *captureView = [fromVC.view snapshotViewAfterScreenUpdates:NO];
     captureView.frame = fromVC.view.frame;
     fromVC.view.hidden = YES;
@@ -89,6 +91,7 @@
         //将toVC.view从containerview的下边移动到能见范围内
         toVC.view.transform = CGAffineTransformMakeTranslation(0, -500);
         captureView.transform = CGAffineTransformMakeScale(0.9, 0.9);
+        
     } completion:^(BOOL finished) {
         //转场结束后，要将结果告诉UIKit
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
@@ -108,7 +111,7 @@
     UIView *containerView = [transitionContext containerView];
     NSArray *subviewsArray = containerView.subviews;
     UIView *captureView = subviewsArray[MIN(subviewsArray.count, MAX(0, subviewsArray.count - 2))];
-    //动画吧
+
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
         //因为present的时候都是使用的transform，这里的动画只需要将transform恢复就可以了
         fromVC.view.transform = CGAffineTransformIdentity;
@@ -121,6 +124,7 @@
             //如果成功了，我们需要标记成功，同时让toVC显示出来，然后移除截图视图，
             [transitionContext completeTransition:YES];
             toVC.view.hidden = NO;
+            
             [captureView removeFromSuperview];
         }
     }];

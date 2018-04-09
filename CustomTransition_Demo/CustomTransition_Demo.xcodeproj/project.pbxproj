@@ -26,6 +26,9 @@
 		5A2CCE84207A5CD0005D142F /* PresentingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2CCE83207A5CD0005D142F /* PresentingController.m */; };
 		5A2CCE87207A5D0C005D142F /* PresentedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2CCE86207A5D0C005D142F /* PresentedController.m */; };
 		5A2CCE8A207A5FA7005D142F /* ModelTrasitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2CCE89207A5FA7005D142F /* ModelTrasitionAnimator.m */; };
+		5A6E460E207B0335006C20A0 /* 模态跳转不被nav持有.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6E460D207B0335006C20A0 /* 模态跳转不被nav持有.png */; };
+		5A6E4610207B087B006C20A0 /* 模态跳转presentingVC被nav持有.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6E460F207B087B006C20A0 /* 模态跳转presentingVC被nav持有.png */; };
+		5A6E4613207B13C3006C20A0 /* DYPInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E4612207B13C3006C20A0 /* DYPInteractiveTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,10 @@
 		5A2CCE86207A5D0C005D142F /* PresentedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentedController.m; sourceTree = "<group>"; };
 		5A2CCE88207A5FA7005D142F /* ModelTrasitionAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelTrasitionAnimator.h; sourceTree = "<group>"; };
 		5A2CCE89207A5FA7005D142F /* ModelTrasitionAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelTrasitionAnimator.m; sourceTree = "<group>"; };
+		5A6E460D207B0335006C20A0 /* 模态跳转不被nav持有.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "模态跳转不被nav持有.png"; sourceTree = "<group>"; };
+		5A6E460F207B087B006C20A0 /* 模态跳转presentingVC被nav持有.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "模态跳转presentingVC被nav持有.png"; sourceTree = "<group>"; };
+		5A6E4611207B13C3006C20A0 /* DYPInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYPInteractiveTransition.h; sourceTree = "<group>"; };
+		5A6E4612207B13C3006C20A0 /* DYPInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYPInteractiveTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +157,10 @@
 				5A2CCE86207A5D0C005D142F /* PresentedController.m */,
 				5A2CCE88207A5FA7005D142F /* ModelTrasitionAnimator.h */,
 				5A2CCE89207A5FA7005D142F /* ModelTrasitionAnimator.m */,
+				5A6E460D207B0335006C20A0 /* 模态跳转不被nav持有.png */,
+				5A6E460F207B087B006C20A0 /* 模态跳转presentingVC被nav持有.png */,
+				5A6E4611207B13C3006C20A0 /* DYPInteractiveTransition.h */,
+				5A6E4612207B13C3006C20A0 /* DYPInteractiveTransition.m */,
 			);
 			path = PresentationTransition;
 			sourceTree = "<group>";
@@ -212,7 +223,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A14BE92207612F9006F6A47 /* LaunchScreen.storyboard in Resources */,
+				5A6E4610207B087B006C20A0 /* 模态跳转presentingVC被nav持有.png in Resources */,
 				5A14BE8F207612F9006F6A47 /* Assets.xcassets in Resources */,
+				5A6E460E207B0335006C20A0 /* 模态跳转不被nav持有.png in Resources */,
 				5A14BE8D207612F8006F6A47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +240,7 @@
 				5A02E66320775EB300A4C367 /* TabTransitionThirdController.m in Sources */,
 				5A02E65120775DC000A4C367 /* NavgationTransitionFromController.m in Sources */,
 				5A14BE8A207612F8006F6A47 /* ViewController.m in Sources */,
+				5A6E4613207B13C3006C20A0 /* DYPInteractiveTransition.m in Sources */,
 				5A02E65D20775E3400A4C367 /* TabTransitionFirstController.m in Sources */,
 				5A02E65420775DD000A4C367 /* NavgationTransitionToController.m in Sources */,
 				5A14BE95207612F9006F6A47 /* main.m in Sources */,

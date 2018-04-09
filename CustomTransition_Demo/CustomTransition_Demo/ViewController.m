@@ -49,7 +49,8 @@ static NSString *cellID = @"cellID";
     NSString *classStr = self.dataSource[indexPath.row];
     if (indexPath.row == 0) {
         PresentingController *presentingVC = [PresentingController loadFromMainStoryboard];
-        [self.navigationController pushViewController:presentingVC animated:YES];
+//        [self.navigationController pushViewController:presentingVC animated:YES];
+        [self presentViewController:presentingVC animated:YES completion:nil];
     }else if (indexPath.row == 2) {
         Class cls = NSClassFromString(classStr);
         UIViewController *vc = [cls performSelector:@selector(loadFromMainStoryboard)];
