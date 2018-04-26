@@ -60,6 +60,7 @@ kCAFilterNearest 最近过滤
 kCAFilterTrilinear 三线性过滤
 “线性过滤保留了形状，最近过滤则保留了像素的差异。
 
+CALayer的doubleSided属性来
 
 
 
