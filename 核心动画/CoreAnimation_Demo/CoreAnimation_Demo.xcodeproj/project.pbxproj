@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A6B8AA82091639900AD4EA0 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6B8AA72091639900AD4EA0 /* CoreText.framework */; };
 		5A875365208EC109003D695D /* CustomDrawingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A875364208EC109003D695D /* CustomDrawingController.m */; };
-		5A875368208EC24B003D695D /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A875367208EC24B003D695D /* CustomView.m */; };
 		5AA6CFB22086D82C008A1582 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6CFB12086D82C008A1582 /* AppDelegate.m */; };
 		5AA6CFB52086D82C008A1582 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6CFB42086D82C008A1582 /* ViewController.m */; };
 		5AA6CFB82086D82C008A1582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA6CFB62086D82C008A1582 /* Main.storyboard */; };
 		5AA6CFBA2086D82D008A1582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AA6CFB92086D82D008A1582 /* Assets.xcassets */; };
 		5AA6CFBD2086D82D008A1582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA6CFBB2086D82D008A1582 /* LaunchScreen.storyboard */; };
 		5AA6CFC02086D82D008A1582 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6CFBF2086D82D008A1582 /* main.m */; };
+		5AC7972C20920FED003040F4 /* LayerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7972B20920FED003040F4 /* LayerLabel.m */; };
+		5AEAF40520955D320028A783 /* UIViewController+loadFromStoryBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF40420955D320028A783 /* UIViewController+loadFromStoryBoard.m */; };
+		5AEAF40820955DBA0028A783 /* CustomActionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF40720955DBA0028A783 /* CustomActionsController.m */; };
+		5AEAF40D20955EAE0028A783 /* FireEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF40C20955EAE0028A783 /* FireEffectController.m */; };
+		5AEAF41120955F040028A783 /* CubeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF41020955F040028A783 /* CubeController.m */; };
+		5AEAF41520955F840028A783 /* CATextLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF41420955F840028A783 /* CATextLayerController.m */; };
+		5AEAF41920955FCD0028A783 /* FlatLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF41820955FCD0028A783 /* FlatLayerController.m */; };
+		5AEAF41D209560300028A783 /* ContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF41C209560300028A783 /* ContentsViewController.m */; };
+		5AEAF421209560650028A783 /* AnchorPointController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF420209560650028A783 /* AnchorPointController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A6B8AA72091639900AD4EA0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		5A875363208EC109003D695D /* CustomDrawingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomDrawingController.h; sourceTree = "<group>"; };
 		5A875364208EC109003D695D /* CustomDrawingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomDrawingController.m; sourceTree = "<group>"; };
-		5A875366208EC24B003D695D /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
-		5A875367208EC24B003D695D /* CustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		5AA6CFAD2086D82C008A1582 /* CoreAnimation_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimation_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA6CFB02086D82C008A1582 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5AA6CFB12086D82C008A1582 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,6 +40,24 @@
 		5AA6CFBC2086D82D008A1582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AA6CFBE2086D82D008A1582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AA6CFBF2086D82D008A1582 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AC7972A20920FED003040F4 /* LayerLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerLabel.h; sourceTree = "<group>"; };
+		5AC7972B20920FED003040F4 /* LayerLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerLabel.m; sourceTree = "<group>"; };
+		5AEAF40320955D320028A783 /* UIViewController+loadFromStoryBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+loadFromStoryBoard.h"; sourceTree = "<group>"; };
+		5AEAF40420955D320028A783 /* UIViewController+loadFromStoryBoard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+loadFromStoryBoard.m"; sourceTree = "<group>"; };
+		5AEAF40620955DBA0028A783 /* CustomActionsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomActionsController.h; sourceTree = "<group>"; };
+		5AEAF40720955DBA0028A783 /* CustomActionsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomActionsController.m; sourceTree = "<group>"; };
+		5AEAF40B20955EAE0028A783 /* FireEffectController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FireEffectController.h; sourceTree = "<group>"; };
+		5AEAF40C20955EAE0028A783 /* FireEffectController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FireEffectController.m; sourceTree = "<group>"; };
+		5AEAF40F20955F040028A783 /* CubeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CubeController.h; sourceTree = "<group>"; };
+		5AEAF41020955F040028A783 /* CubeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubeController.m; sourceTree = "<group>"; };
+		5AEAF41320955F840028A783 /* CATextLayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATextLayerController.h; sourceTree = "<group>"; };
+		5AEAF41420955F840028A783 /* CATextLayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATextLayerController.m; sourceTree = "<group>"; };
+		5AEAF41720955FCD0028A783 /* FlatLayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlatLayerController.h; sourceTree = "<group>"; };
+		5AEAF41820955FCD0028A783 /* FlatLayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlatLayerController.m; sourceTree = "<group>"; };
+		5AEAF41B209560300028A783 /* ContentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentsViewController.h; sourceTree = "<group>"; };
+		5AEAF41C209560300028A783 /* ContentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentsViewController.m; sourceTree = "<group>"; };
+		5AEAF41F209560650028A783 /* AnchorPointController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnchorPointController.h; sourceTree = "<group>"; };
+		5AEAF420209560650028A783 /* AnchorPointController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnchorPointController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +65,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A6B8AA82091639900AD4EA0 /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A6B8AA62091639900AD4EA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A6B8AA72091639900AD4EA0 /* CoreText.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5AA6CFA42086D82C008A1582 = {
 			isa = PBXGroup;
 			children = (
 				5AA6CFAF2086D82C008A1582 /* CoreAnimation_Demo */,
 				5AA6CFAE2086D82C008A1582 /* Products */,
+				5A6B8AA62091639900AD4EA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,10 +111,90 @@
 				5AA6CFBF2086D82D008A1582 /* main.m */,
 				5A875363208EC109003D695D /* CustomDrawingController.h */,
 				5A875364208EC109003D695D /* CustomDrawingController.m */,
-				5A875366208EC24B003D695D /* CustomView.h */,
-				5A875367208EC24B003D695D /* CustomView.m */,
+				5AEAF40320955D320028A783 /* UIViewController+loadFromStoryBoard.h */,
+				5AEAF40420955D320028A783 /* UIViewController+loadFromStoryBoard.m */,
+				5AEAF41E209560530028A783 /* 锚点 */,
+				5AEAF41A209560100028A783 /* 寄宿图 */,
+				5AEAF41620955FBA0028A783 /* 扁平化图层 */,
+				5AEAF41220955F710028A783 /* CATextLayer显示文字 */,
+				5AEAF40E20955EF00028A783 /* CATransformLayer立方体 */,
+				5AC7972D20921342003040F4 /* CATextLayer */,
+				5AEAF40A20955E910028A783 /* CAEmitterLayer粒子效果 */,
+				5AEAF40920955DC10028A783 /* 动画自定义行为 */,
 			);
 			path = CoreAnimation_Demo;
+			sourceTree = "<group>";
+		};
+		5AC7972D20921342003040F4 /* CATextLayer */ = {
+			isa = PBXGroup;
+			children = (
+				5AC7972A20920FED003040F4 /* LayerLabel.h */,
+				5AC7972B20920FED003040F4 /* LayerLabel.m */,
+			);
+			path = CATextLayer;
+			sourceTree = "<group>";
+		};
+		5AEAF40920955DC10028A783 /* 动画自定义行为 */ = {
+			isa = PBXGroup;
+			children = (
+				5AEAF40620955DBA0028A783 /* CustomActionsController.h */,
+				5AEAF40720955DBA0028A783 /* CustomActionsController.m */,
+			);
+			name = "动画自定义行为";
+			sourceTree = "<group>";
+		};
+		5AEAF40A20955E910028A783 /* CAEmitterLayer粒子效果 */ = {
+			isa = PBXGroup;
+			children = (
+				5AEAF40B20955EAE0028A783 /* FireEffectController.h */,
+				5AEAF40C20955EAE0028A783 /* FireEffectController.m */,
+			);
+			path = "CAEmitterLayer粒子效果";
+			sourceTree = "<group>";
+		};
+		5AEAF40E20955EF00028A783 /* CATransformLayer立方体 */ = {
+			isa = PBXGroup;
+			children = (
+				5AEAF40F20955F040028A783 /* CubeController.h */,
+				5AEAF41020955F040028A783 /* CubeController.m */,
+			);
+			path = "CATransformLayer立方体";
+			sourceTree = "<group>";
+		};
+		5AEAF41220955F710028A783 /* CATextLayer显示文字 */ = {
+			isa = PBXGroup;
+			children = (
+				5AEAF41320955F840028A783 /* CATextLayerController.h */,
+				5AEAF41420955F840028A783 /* CATextLayerController.m */,
+			);
+			path = "CATextLayer显示文字";
+			sourceTree = "<group>";
+		};
+		5AEAF41620955FBA0028A783 /* 扁平化图层 */ = {
+			isa = PBXGroup;
+			children = (
+				5AEAF41720955FCD0028A783 /* FlatLayerController.h */,
+				5AEAF41820955FCD0028A783 /* FlatLayerController.m */,
+			);
+			path = "扁平化图层";
+			sourceTree = "<group>";
+		};
+		5AEAF41A209560100028A783 /* 寄宿图 */ = {
+			isa = PBXGroup;
+			children = (
+				5AEAF41B209560300028A783 /* ContentsViewController.h */,
+				5AEAF41C209560300028A783 /* ContentsViewController.m */,
+			);
+			path = "寄宿图";
+			sourceTree = "<group>";
+		};
+		5AEAF41E209560530028A783 /* 锚点 */ = {
+			isa = PBXGroup;
+			children = (
+				5AEAF41F209560650028A783 /* AnchorPointController.h */,
+				5AEAF420209560650028A783 /* AnchorPointController.m */,
+			);
+			path = "锚点";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,10 +267,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A875368208EC24B003D695D /* CustomView.m in Sources */,
+				5AEAF41D209560300028A783 /* ContentsViewController.m in Sources */,
+				5AEAF41920955FCD0028A783 /* FlatLayerController.m in Sources */,
+				5AEAF421209560650028A783 /* AnchorPointController.m in Sources */,
+				5AC7972C20920FED003040F4 /* LayerLabel.m in Sources */,
+				5AEAF40520955D320028A783 /* UIViewController+loadFromStoryBoard.m in Sources */,
+				5AEAF40D20955EAE0028A783 /* FireEffectController.m in Sources */,
+				5AEAF41120955F040028A783 /* CubeController.m in Sources */,
 				5AA6CFB52086D82C008A1582 /* ViewController.m in Sources */,
 				5AA6CFC02086D82D008A1582 /* main.m in Sources */,
 				5AA6CFB22086D82C008A1582 /* AppDelegate.m in Sources */,
+				5AEAF40820955DBA0028A783 /* CustomActionsController.m in Sources */,
+				5AEAF41520955F840028A783 /* CATextLayerController.m in Sources */,
 				5A875365208EC109003D695D /* CustomDrawingController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

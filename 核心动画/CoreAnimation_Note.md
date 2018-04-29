@@ -20,6 +20,7 @@ Layer的功能
 
 ---
 CALayer有一个可选的delegate属性，实现CALayerDelegate协议，当CALayer需要一个内容特定的信息时，就会从协议中请求。
+UIView是其layer的<CALayerDelegate>的代理
 “当UIView创建了它的宿主图层时，它就会自动地把图层的delegate设置为它自己，并提供了一个-displayLayer:的实现”
 
 ```
@@ -60,7 +61,26 @@ kCAFilterNearest 最近过滤
 kCAFilterTrilinear 三线性过滤
 “线性过滤保留了形状，最近过滤则保留了像素的差异。
 
-CALayer的doubleSided属性来
+CALayer的doubleSided属性来控制是否是双面绘图。
+**隐式动画**
+
+“改变属性时CALayer自动应用的动画称作行为”
+
+摘录来自: 钟声. “ios核心动画高级技巧。” iBooks. 
+
+Core Animation通常对CALayer的所有属性(可以做动画的属性)做动画，但是UIView把关联的图层的这个特性关闭了。(就是说，创建一个layer改变其颜色属性，有默认的动画，但是如果直接用view.layer来改变其颜色属性，是没有隐式动画效果的)
+
+```
+当CALayer的属性改变时：
+1，图层首先检测自己是否有委托代理(UIView的layer的话，view就是该layer的代理<CALayerDelegate>),是否实现- (nullable id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)event;如果有，直接调用并返回结果。
+2，如果没有代理，或者没有实现上述方法，图层直接检查包含属性名称对应行为映射的actions字典。
+3，如果actions字典里没有对应的属性，图层接着在它的style字典里接着搜索属性名。
+4，若在style里面也找不到对应的行为，图层则会直接调用定义了每个属性的标准行为的defaultActionForKey方法。
+所以一轮完整的搜索结束之后，-actionForKey:要么返回空（这种情况下将不会有动画发生），要么是CAAction协议对应的对象，最后CALayer拿这个结果去对先前和当前的值做动画。
+
+“当不在一个动画块的实现中，UIView对所有图层行为返回nil，但是在动画block范围之内，它就返回了一个非空值”
+```
+
 
 
 
