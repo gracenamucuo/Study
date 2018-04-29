@@ -20,7 +20,7 @@ static NSString *cellID = @"cellID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataArray = [NSMutableArray arrayWithArray:@[@"CustomActionsController"]];
+    self.dataArray = [NSMutableArray arrayWithArray:@[@"CustomActionsController",@"ExplicitAnimationController",@"CATransitionController",@"RemoveAnimationController",@"CAMediaTimingController"]];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     self.tableView.rowHeight = 45.f;
     self.tableView.tableFooterView = [UIView new];

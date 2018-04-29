@@ -81,6 +81,18 @@ Core Animation通常对CALayer的所有属性(可以做动画的属性)做动画
 “当不在一个动画块的实现中，UIView对所有图层行为返回nil，但是在动画block范围之内，它就返回了一个非空值”
 ```
 
+CAAnimation子类有
+//CAPropertyAnimation的子类, CAPropertyAnimation继承于CAAnimation
+
+* CAKeyframeAnimation
+* CABasicAnimation
+
+//CAAnimation
+
+* CATransition
+* CAAnimationGroup
+
+
 
 
 

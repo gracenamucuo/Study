@@ -24,6 +24,10 @@
 		5AEAF41920955FCD0028A783 /* FlatLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF41820955FCD0028A783 /* FlatLayerController.m */; };
 		5AEAF41D209560300028A783 /* ContentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF41C209560300028A783 /* ContentsViewController.m */; };
 		5AEAF421209560650028A783 /* AnchorPointController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF420209560650028A783 /* AnchorPointController.m */; };
+		5AEAF4242095A1C30028A783 /* ExplicitAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF4232095A1C30028A783 /* ExplicitAnimationController.m */; };
+		5AEAF4282095B58F0028A783 /* CATransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF4272095B58F0028A783 /* CATransitionController.m */; };
+		5AEAF42B2095EBCA0028A783 /* RemoveAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF42A2095EBCA0028A783 /* RemoveAnimationController.m */; };
+		5AEAF42F2095F6440028A783 /* CAMediaTimingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF42E2095F6440028A783 /* CAMediaTimingController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +62,14 @@
 		5AEAF41C209560300028A783 /* ContentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentsViewController.m; sourceTree = "<group>"; };
 		5AEAF41F209560650028A783 /* AnchorPointController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnchorPointController.h; sourceTree = "<group>"; };
 		5AEAF420209560650028A783 /* AnchorPointController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnchorPointController.m; sourceTree = "<group>"; };
+		5AEAF4222095A1C30028A783 /* ExplicitAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExplicitAnimationController.h; sourceTree = "<group>"; };
+		5AEAF4232095A1C30028A783 /* ExplicitAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExplicitAnimationController.m; sourceTree = "<group>"; };
+		5AEAF4262095B58F0028A783 /* CATransitionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CATransitionController.h; sourceTree = "<group>"; };
+		5AEAF4272095B58F0028A783 /* CATransitionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CATransitionController.m; sourceTree = "<group>"; };
+		5AEAF4292095EBCA0028A783 /* RemoveAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoveAnimationController.h; sourceTree = "<group>"; };
+		5AEAF42A2095EBCA0028A783 /* RemoveAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoveAnimationController.m; sourceTree = "<group>"; };
+		5AEAF42D2095F6440028A783 /* CAMediaTimingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAMediaTimingController.h; sourceTree = "<group>"; };
+		5AEAF42E2095F6440028A783 /* CAMediaTimingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAMediaTimingController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +132,9 @@
 				5AEAF40E20955EF00028A783 /* CATransformLayer立方体 */,
 				5AC7972D20921342003040F4 /* CATextLayer */,
 				5AEAF40A20955E910028A783 /* CAEmitterLayer粒子效果 */,
-				5AEAF40920955DC10028A783 /* 动画自定义行为 */,
+				5AEAF40920955DC10028A783 /* 隐式动画自定义行为 */,
+				5AEAF4252095A1EA0028A783 /* 显式动画 */,
+				5AEAF42C2095F6250028A783 /* 图层时间 */,
 			);
 			path = CoreAnimation_Demo;
 			sourceTree = "<group>";
@@ -134,13 +148,13 @@
 			path = CATextLayer;
 			sourceTree = "<group>";
 		};
-		5AEAF40920955DC10028A783 /* 动画自定义行为 */ = {
+		5AEAF40920955DC10028A783 /* 隐式动画自定义行为 */ = {
 			isa = PBXGroup;
 			children = (
 				5AEAF40620955DBA0028A783 /* CustomActionsController.h */,
 				5AEAF40720955DBA0028A783 /* CustomActionsController.m */,
 			);
-			name = "动画自定义行为";
+			name = "隐式动画自定义行为";
 			sourceTree = "<group>";
 		};
 		5AEAF40A20955E910028A783 /* CAEmitterLayer粒子效果 */ = {
@@ -195,6 +209,28 @@
 				5AEAF420209560650028A783 /* AnchorPointController.m */,
 			);
 			path = "锚点";
+			sourceTree = "<group>";
+		};
+		5AEAF4252095A1EA0028A783 /* 显式动画 */ = {
+			isa = PBXGroup;
+			children = (
+				5AEAF4222095A1C30028A783 /* ExplicitAnimationController.h */,
+				5AEAF4232095A1C30028A783 /* ExplicitAnimationController.m */,
+				5AEAF4262095B58F0028A783 /* CATransitionController.h */,
+				5AEAF4272095B58F0028A783 /* CATransitionController.m */,
+				5AEAF4292095EBCA0028A783 /* RemoveAnimationController.h */,
+				5AEAF42A2095EBCA0028A783 /* RemoveAnimationController.m */,
+			);
+			path = "显式动画";
+			sourceTree = "<group>";
+		};
+		5AEAF42C2095F6250028A783 /* 图层时间 */ = {
+			isa = PBXGroup;
+			children = (
+				5AEAF42D2095F6440028A783 /* CAMediaTimingController.h */,
+				5AEAF42E2095F6440028A783 /* CAMediaTimingController.m */,
+			);
+			path = "图层时间";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AEAF4242095A1C30028A783 /* ExplicitAnimationController.m in Sources */,
 				5AEAF41D209560300028A783 /* ContentsViewController.m in Sources */,
 				5AEAF41920955FCD0028A783 /* FlatLayerController.m in Sources */,
 				5AEAF421209560650028A783 /* AnchorPointController.m in Sources */,
@@ -274,11 +311,14 @@
 				5AEAF40520955D320028A783 /* UIViewController+loadFromStoryBoard.m in Sources */,
 				5AEAF40D20955EAE0028A783 /* FireEffectController.m in Sources */,
 				5AEAF41120955F040028A783 /* CubeController.m in Sources */,
+				5AEAF42B2095EBCA0028A783 /* RemoveAnimationController.m in Sources */,
 				5AA6CFB52086D82C008A1582 /* ViewController.m in Sources */,
 				5AA6CFC02086D82D008A1582 /* main.m in Sources */,
 				5AA6CFB22086D82C008A1582 /* AppDelegate.m in Sources */,
+				5AEAF42F2095F6440028A783 /* CAMediaTimingController.m in Sources */,
 				5AEAF40820955DBA0028A783 /* CustomActionsController.m in Sources */,
 				5AEAF41520955F840028A783 /* CATextLayerController.m in Sources */,
+				5AEAF4282095B58F0028A783 /* CATransitionController.m in Sources */,
 				5A875365208EC109003D695D /* CustomDrawingController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

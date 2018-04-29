@@ -78,5 +78,142 @@
             </objects>
             <point key="canvasLocation" x="236" y="24"/>
         </scene>
+        <!--Media Timing Controller-->
+        <scene sceneID="4TD-hN-XfZ">
+            <objects>
+                <viewController storyboardIdentifier="CAMediaTimingController" id="3su-LZ-n3C" customClass="CAMediaTimingController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7rP-oe-RGR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.20000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BwG-wh-Paf">
+                                <rect key="frame" x="32" y="528" width="118" height="30"/>
+                                <connections>
+                                    <action selector="speedAction:" destination="3su-LZ-n3C" eventType="valueChanged" id="RIC-fT-Y18"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RoU-ob-kaX">
+                                <rect key="frame" x="224" y="528" width="118" height="30"/>
+                                <connections>
+                                    <action selector="timeAction:" destination="3su-LZ-n3C" eventType="valueChanged" id="Nfe-36-cCu"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwE-VU-t0F">
+                                <rect key="frame" x="0.0" y="582" width="187.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLg-Gc-FN7">
+                                <rect key="frame" x="187.5" y="582" width="187.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duT-7D-nEx">
+                                <rect key="frame" x="167" y="627" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="play"/>
+                                <connections>
+                                    <action selector="play:" destination="3su-LZ-n3C" eventType="touchUpInside" id="oiG-sl-mZH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RoU-ob-kaX" firstAttribute="leading" secondItem="BwG-wh-Paf" secondAttribute="trailing" constant="78" id="6PQ-0I-0hH"/>
+                            <constraint firstItem="G1x-jf-d1q" firstAttribute="trailing" secondItem="xLg-Gc-FN7" secondAttribute="trailing" id="B8p-mG-216"/>
+                            <constraint firstItem="G1x-jf-d1q" firstAttribute="trailing" secondItem="RoU-ob-kaX" secondAttribute="trailing" constant="35" id="Eka-Qk-ULp"/>
+                            <constraint firstItem="xLg-Gc-FN7" firstAttribute="leading" secondItem="YwE-VU-t0F" secondAttribute="trailing" id="ILx-6M-Kbd"/>
+                            <constraint firstItem="RoU-ob-kaX" firstAttribute="width" secondItem="BwG-wh-Paf" secondAttribute="width" id="JhD-cP-k0T"/>
+                            <constraint firstItem="G1x-jf-d1q" firstAttribute="bottom" secondItem="BwG-wh-Paf" secondAttribute="bottom" constant="110" id="Lf4-Ez-3Ok"/>
+                            <constraint firstItem="YwE-VU-t0F" firstAttribute="leading" secondItem="G1x-jf-d1q" secondAttribute="leading" id="N2N-DV-o9l"/>
+                            <constraint firstItem="YwE-VU-t0F" firstAttribute="top" secondItem="BwG-wh-Paf" secondAttribute="bottom" constant="25" id="Va9-GH-3iX"/>
+                            <constraint firstItem="xLg-Gc-FN7" firstAttribute="width" secondItem="YwE-VU-t0F" secondAttribute="width" id="WHr-lA-nFI"/>
+                            <constraint firstItem="xLg-Gc-FN7" firstAttribute="leading" secondItem="YwE-VU-t0F" secondAttribute="trailing" id="Yrg-uB-l4t"/>
+                            <constraint firstItem="BwG-wh-Paf" firstAttribute="leading" secondItem="G1x-jf-d1q" secondAttribute="leading" constant="34" id="cGf-RP-gqM"/>
+                            <constraint firstItem="RoU-ob-kaX" firstAttribute="leading" secondItem="BwG-wh-Paf" secondAttribute="trailing" constant="78" id="cHt-Ia-pHb"/>
+                            <constraint firstItem="G1x-jf-d1q" firstAttribute="bottom" secondItem="YwE-VU-t0F" secondAttribute="bottom" constant="64" id="dOn-3i-M4y"/>
+                            <constraint firstItem="xLg-Gc-FN7" firstAttribute="centerY" secondItem="YwE-VU-t0F" secondAttribute="centerY" id="hhH-kE-W0d"/>
+                            <constraint firstItem="G1x-jf-d1q" firstAttribute="bottom" secondItem="RoU-ob-kaX" secondAttribute="bottom" constant="110" id="ro2-2y-Whf"/>
+                            <constraint firstItem="BwG-wh-Paf" firstAttribute="top" secondItem="G1x-jf-d1q" secondAttribute="top" constant="508" id="v4y-6H-UXy"/>
+                            <constraint firstItem="RoU-ob-kaX" firstAttribute="top" secondItem="G1x-jf-d1q" secondAttribute="top" constant="508" id="wue-dh-hDN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G1x-jf-d1q"/>
+                    </view>
+                    <connections>
+                        <outlet property="speedLabel" destination="YwE-VU-t0F" id="pIz-QK-dwB"/>
+                        <outlet property="speedSlider" destination="BwG-wh-Paf" id="qrP-LX-j0F"/>
+                        <outlet property="timeLabel" destination="xLg-Gc-FN7" id="WO0-Xv-XWW"/>
+                        <outlet property="timeSlider" destination="RoU-ob-kaX" id="fN3-wu-TbW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ips-H5-JYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="193" y="693"/>
+        </scene>
+        <!--Explicit Animation Controller-->
+        <scene sceneID="cfb-Zm-84b">
+            <objects>
+                <viewController storyboardIdentifier="ExplicitAnimationController" id="RXu-6p-rGG" customClass="ExplicitAnimationController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gMO-vg-PR4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9hT-S8-CI9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VcD-ek-IDE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="899" y="20"/>
+        </scene>
+        <!--Transition Controller-->
+        <scene sceneID="tXB-Fl-BUC">
+            <objects>
+                <viewController storyboardIdentifier="CATransitionController" id="y6e-tf-x7S" customClass="CATransitionController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iI1-sI-7uY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vhY-ma-VId"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Awz-za-rZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1636" y="23"/>
+        </scene>
+        <!--Remove Animation Controller-->
+        <scene sceneID="QYE-tv-IFg">
+            <objects>
+                <viewController storyboardIdentifier="RemoveAnimationController" id="JZp-AO-LRi" customClass="RemoveAnimationController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h8o-jq-tcw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWb-RL-vjE">
+                                <rect key="frame" x="78" y="573" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="start:" destination="JZp-AO-LRi" eventType="touchUpInside" id="0Tv-xr-POk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwy-rs-Yan">
+                                <rect key="frame" x="257" y="573" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="JZp-AO-LRi" eventType="touchUpInside" id="M4h-o2-EnJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wUQ-gK-iUa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IMT-qi-C1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2587" y="34"/>
+        </scene>
     </scenes>
 </document>
