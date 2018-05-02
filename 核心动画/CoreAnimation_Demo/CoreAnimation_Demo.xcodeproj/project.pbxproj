@@ -15,6 +15,8 @@
 		5AA6CFBA2086D82D008A1582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AA6CFB92086D82D008A1582 /* Assets.xcassets */; };
 		5AA6CFBD2086D82D008A1582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA6CFBB2086D82D008A1582 /* LaunchScreen.storyboard */; };
 		5AA6CFC02086D82D008A1582 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6CFBF2086D82D008A1582 /* main.m */; };
+		5AAE2D8B2096C19B008D739A /* ManualOperationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE2D8A2096C19B008D739A /* ManualOperationController.m */; };
+		5AAE2D8F2096C8F5008D739A /* BufferController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE2D8E2096C8F5008D739A /* BufferController.m */; };
 		5AC7972C20920FED003040F4 /* LayerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7972B20920FED003040F4 /* LayerLabel.m */; };
 		5AEAF40520955D320028A783 /* UIViewController+loadFromStoryBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF40420955D320028A783 /* UIViewController+loadFromStoryBoard.m */; };
 		5AEAF40820955DBA0028A783 /* CustomActionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF40720955DBA0028A783 /* CustomActionsController.m */; };
@@ -44,6 +46,10 @@
 		5AA6CFBC2086D82D008A1582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AA6CFBE2086D82D008A1582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AA6CFBF2086D82D008A1582 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AAE2D892096C19B008D739A /* ManualOperationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManualOperationController.h; sourceTree = "<group>"; };
+		5AAE2D8A2096C19B008D739A /* ManualOperationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManualOperationController.m; sourceTree = "<group>"; };
+		5AAE2D8D2096C8F5008D739A /* BufferController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BufferController.h; sourceTree = "<group>"; };
+		5AAE2D8E2096C8F5008D739A /* BufferController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BufferController.m; sourceTree = "<group>"; };
 		5AC7972A20920FED003040F4 /* LayerLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerLabel.h; sourceTree = "<group>"; };
 		5AC7972B20920FED003040F4 /* LayerLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerLabel.m; sourceTree = "<group>"; };
 		5AEAF40320955D320028A783 /* UIViewController+loadFromStoryBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+loadFromStoryBoard.h"; sourceTree = "<group>"; };
@@ -135,8 +141,28 @@
 				5AEAF40920955DC10028A783 /* 隐式动画自定义行为 */,
 				5AEAF4252095A1EA0028A783 /* 显式动画 */,
 				5AEAF42C2095F6250028A783 /* 图层时间 */,
+				5AAE2D852096BE9C008D739A /* 手动动画 */,
+				5AAE2D8C2096C8D8008D739A /* 缓冲 */,
 			);
 			path = CoreAnimation_Demo;
+			sourceTree = "<group>";
+		};
+		5AAE2D852096BE9C008D739A /* 手动动画 */ = {
+			isa = PBXGroup;
+			children = (
+				5AAE2D892096C19B008D739A /* ManualOperationController.h */,
+				5AAE2D8A2096C19B008D739A /* ManualOperationController.m */,
+			);
+			path = "手动动画";
+			sourceTree = "<group>";
+		};
+		5AAE2D8C2096C8D8008D739A /* 缓冲 */ = {
+			isa = PBXGroup;
+			children = (
+				5AAE2D8D2096C8F5008D739A /* BufferController.h */,
+				5AAE2D8E2096C8F5008D739A /* BufferController.m */,
+			);
+			path = "缓冲";
 			sourceTree = "<group>";
 		};
 		5AC7972D20921342003040F4 /* CATextLayer */ = {
@@ -310,6 +336,7 @@
 				5AC7972C20920FED003040F4 /* LayerLabel.m in Sources */,
 				5AEAF40520955D320028A783 /* UIViewController+loadFromStoryBoard.m in Sources */,
 				5AEAF40D20955EAE0028A783 /* FireEffectController.m in Sources */,
+				5AAE2D8F2096C8F5008D739A /* BufferController.m in Sources */,
 				5AEAF41120955F040028A783 /* CubeController.m in Sources */,
 				5AEAF42B2095EBCA0028A783 /* RemoveAnimationController.m in Sources */,
 				5AA6CFB52086D82C008A1582 /* ViewController.m in Sources */,
@@ -318,6 +345,7 @@
 				5AEAF42F2095F6440028A783 /* CAMediaTimingController.m in Sources */,
 				5AEAF40820955DBA0028A783 /* CustomActionsController.m in Sources */,
 				5AEAF41520955F840028A783 /* CATextLayerController.m in Sources */,
+				5AAE2D8B2096C19B008D739A /* ManualOperationController.m in Sources */,
 				5AEAF4282095B58F0028A783 /* CATransitionController.m in Sources */,
 				5A875365208EC109003D695D /* CustomDrawingController.m in Sources */,
 			);

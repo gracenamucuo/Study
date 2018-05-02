@@ -93,6 +93,34 @@ CAAnimation子类有
 * CAAnimationGroup
 
 
+```
+    ///可以通过设置图层的speed属性来控制所有该图层上的动画效果。
+    self.window.layer.speed = 0;
+    
+```
+
+beginTime指定了动画开始之前的延迟时间。
+timeOffset和beginTime类似，但是和增加beginTime导致的延迟动画不同，增加timeOffset只是让动画快进到某一点，beginTime受speed的影响，timeOffset不受speed的影响。
+
+事务中可以是设置动画的时间函数
+
+```
+    [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
+    
+```
+
+时间函数的构造方法`[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]`有以下四个选项
+
+//线性计时函数
+kCAMediaTimingFunctionLinear 
+//慢慢加速然后突然停止
+kCAMediaTimingFunctionEaseIn 
+//全速开始，慢慢减速
+kCAMediaTimingFunctionEaseOut 
+//慢慢加速 后慢慢减速
+kCAMediaTimingFunctionEaseInEaseOut
+//和上边的效果类似
+kCAMediaTimingFunctionDefault”
 
 
 
