@@ -152,6 +152,40 @@
             </objects>
             <point key="canvasLocation" x="193" y="693"/>
         </scene>
+        <!--Instrument Controller-->
+        <scene sceneID="yjn-Lw-DCZ">
+            <objects>
+                <viewController storyboardIdentifier="InstrumentController" id="uNs-wf-Qsg" customClass="InstrumentController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RFY-It-Q4j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aV6-gJ-C4G">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uNs-wf-Qsg" id="6Zq-ES-v3m"/>
+                                    <outlet property="delegate" destination="uNs-wf-Qsg" id="FRD-Cr-JzW"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FdI-sF-16v" firstAttribute="trailing" secondItem="aV6-gJ-C4G" secondAttribute="trailing" id="2qG-Bb-Sfb"/>
+                            <constraint firstItem="FdI-sF-16v" firstAttribute="bottom" secondItem="aV6-gJ-C4G" secondAttribute="bottom" id="5g0-Eh-lin"/>
+                            <constraint firstItem="aV6-gJ-C4G" firstAttribute="leading" secondItem="FdI-sF-16v" secondAttribute="leading" id="IfB-dd-Jye"/>
+                            <constraint firstItem="aV6-gJ-C4G" firstAttribute="top" secondItem="FdI-sF-16v" secondAttribute="top" id="tKl-tQ-Wlw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FdI-sF-16v"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="aV6-gJ-C4G" id="Rsd-NG-tzB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJF-e0-tyD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="212" y="1426"/>
+        </scene>
         <!--Manual Operation Controller-->
         <scene sceneID="LTk-9h-nwY">
             <objects>
@@ -244,6 +278,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMT-qi-C1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2587" y="34"/>
+        </scene>
+        <!--Timer Animation Controller-->
+        <scene sceneID="GUd-Se-YxW">
+            <objects>
+                <viewController storyboardIdentifier="TimerAnimationController" id="giY-ZT-NWn" customClass="TimerAnimationController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6af-bL-PjQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bpt-UL-0Th"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X13-Az-dQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2482" y="741"/>
         </scene>
     </scenes>
 </document>

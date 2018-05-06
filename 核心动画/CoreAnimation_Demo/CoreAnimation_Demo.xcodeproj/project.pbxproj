@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A54F07B209ADD0A0066C90E /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A54F07A209ADD0A0066C90E /* Constant.m */; };
+		5A54F07F209ADE3A0066C90E /* InstrumentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A54F07E209ADE3A0066C90E /* InstrumentController.m */; };
+		5A54F082209ADFD20066C90E /* DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A54F081209ADFD20066C90E /* DataHelper.m */; };
+		5A54F085209AE8FA0066C90E /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A54F084209AE8FA0066C90E /* ball.png */; };
+		5A54F087209AE9040066C90E /* door.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A54F086209AE9040066C90E /* door.png */; };
+		5A54F089209AE90A0066C90E /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A54F088209AE90A0066C90E /* fire.png */; };
+		5A54F08B209AE9120066C90E /* room.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A54F08A209AE9120066C90E /* room.png */; };
+		5A54F08D209AE9180066C90E /* ship.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A54F08C209AE9180066C90E /* ship.png */; };
+		5A54F08F209AE9230066C90E /* sonw.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A54F08E209AE9230066C90E /* sonw.png */; };
 		5A6B8AA82091639900AD4EA0 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6B8AA72091639900AD4EA0 /* CoreText.framework */; };
+		5A82E9E420995033000EEDF7 /* TimerAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A82E9E320995033000EEDF7 /* TimerAnimationController.m */; };
 		5A875365208EC109003D695D /* CustomDrawingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A875364208EC109003D695D /* CustomDrawingController.m */; };
 		5AA6CFB22086D82C008A1582 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6CFB12086D82C008A1582 /* AppDelegate.m */; };
 		5AA6CFB52086D82C008A1582 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6CFB42086D82C008A1582 /* ViewController.m */; };
@@ -33,7 +43,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A54F079209ADD0A0066C90E /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		5A54F07A209ADD0A0066C90E /* Constant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
+		5A54F07D209ADE3A0066C90E /* InstrumentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstrumentController.h; sourceTree = "<group>"; };
+		5A54F07E209ADE3A0066C90E /* InstrumentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstrumentController.m; sourceTree = "<group>"; };
+		5A54F080209ADFD20066C90E /* DataHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataHelper.h; sourceTree = "<group>"; };
+		5A54F081209ADFD20066C90E /* DataHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataHelper.m; sourceTree = "<group>"; };
+		5A54F084209AE8FA0066C90E /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ball.png; path = CoreAnimation_Demo/Assets.xcassets/ball.imageset/ball.png; sourceTree = SOURCE_ROOT; };
+		5A54F086209AE9040066C90E /* door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = door.png; path = CoreAnimation_Demo/Assets.xcassets/door.imageset/door.png; sourceTree = SOURCE_ROOT; };
+		5A54F088209AE90A0066C90E /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fire.png; path = CoreAnimation_Demo/Assets.xcassets/fire.imageset/fire.png; sourceTree = SOURCE_ROOT; };
+		5A54F08A209AE9120066C90E /* room.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = room.png; path = CoreAnimation_Demo/Assets.xcassets/room.imageset/room.png; sourceTree = SOURCE_ROOT; };
+		5A54F08C209AE9180066C90E /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ship.png; path = CoreAnimation_Demo/Assets.xcassets/ship.imageset/ship.png; sourceTree = SOURCE_ROOT; };
+		5A54F08E209AE9230066C90E /* sonw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sonw.png; path = CoreAnimation_Demo/Assets.xcassets/snow.imageset/sonw.png; sourceTree = SOURCE_ROOT; };
 		5A6B8AA72091639900AD4EA0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		5A82E9E220995033000EEDF7 /* TimerAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerAnimationController.h; sourceTree = "<group>"; };
+		5A82E9E320995033000EEDF7 /* TimerAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerAnimationController.m; sourceTree = "<group>"; };
 		5A875363208EC109003D695D /* CustomDrawingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomDrawingController.h; sourceTree = "<group>"; };
 		5A875364208EC109003D695D /* CustomDrawingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomDrawingController.m; sourceTree = "<group>"; };
 		5AA6CFAD2086D82C008A1582 /* CoreAnimation_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreAnimation_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +114,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A54F07C209ADE000066C90E /* Instruments */ = {
+			isa = PBXGroup;
+			children = (
+				5A54F07D209ADE3A0066C90E /* InstrumentController.h */,
+				5A54F07E209ADE3A0066C90E /* InstrumentController.m */,
+				5A54F080209ADFD20066C90E /* DataHelper.h */,
+				5A54F081209ADFD20066C90E /* DataHelper.m */,
+			);
+			path = Instruments;
+			sourceTree = "<group>";
+		};
+		5A54F083209AE8E50066C90E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5A54F084209AE8FA0066C90E /* ball.png */,
+				5A54F086209AE9040066C90E /* door.png */,
+				5A54F088209AE90A0066C90E /* fire.png */,
+				5A54F08A209AE9120066C90E /* room.png */,
+				5A54F08C209AE9180066C90E /* ship.png */,
+				5A54F08E209AE9230066C90E /* sonw.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		5A6B8AA62091639900AD4EA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,9 +146,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5A82E9E120994DEA000EEDF7 /* 定时器动画 */ = {
+			isa = PBXGroup;
+			children = (
+				5A82E9E220995033000EEDF7 /* TimerAnimationController.h */,
+				5A82E9E320995033000EEDF7 /* TimerAnimationController.m */,
+			);
+			path = "定时器动画";
+			sourceTree = "<group>";
+		};
 		5AA6CFA42086D82C008A1582 = {
 			isa = PBXGroup;
 			children = (
+				5A54F083209AE8E50066C90E /* Resource */,
 				5AA6CFAF2086D82C008A1582 /* CoreAnimation_Demo */,
 				5AA6CFAE2086D82C008A1582 /* Products */,
 				5A6B8AA62091639900AD4EA0 /* Frameworks */,
@@ -143,6 +201,10 @@
 				5AEAF42C2095F6250028A783 /* 图层时间 */,
 				5AAE2D852096BE9C008D739A /* 手动动画 */,
 				5AAE2D8C2096C8D8008D739A /* 缓冲 */,
+				5A82E9E120994DEA000EEDF7 /* 定时器动画 */,
+				5A54F07C209ADE000066C90E /* Instruments */,
+				5A54F079209ADD0A0066C90E /* Constant.h */,
+				5A54F07A209ADD0A0066C90E /* Constant.m */,
 			);
 			path = CoreAnimation_Demo;
 			sourceTree = "<group>";
@@ -317,8 +379,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AA6CFBD2086D82D008A1582 /* LaunchScreen.storyboard in Resources */,
+				5A54F087209AE9040066C90E /* door.png in Resources */,
+				5A54F08F209AE9230066C90E /* sonw.png in Resources */,
 				5AA6CFBA2086D82D008A1582 /* Assets.xcassets in Resources */,
+				5A54F085209AE8FA0066C90E /* ball.png in Resources */,
+				5A54F089209AE90A0066C90E /* fire.png in Resources */,
 				5AA6CFB82086D82C008A1582 /* Main.storyboard in Resources */,
+				5A54F08B209AE9120066C90E /* room.png in Resources */,
+				5A54F08D209AE9180066C90E /* ship.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +399,7 @@
 			files = (
 				5AEAF4242095A1C30028A783 /* ExplicitAnimationController.m in Sources */,
 				5AEAF41D209560300028A783 /* ContentsViewController.m in Sources */,
+				5A82E9E420995033000EEDF7 /* TimerAnimationController.m in Sources */,
 				5AEAF41920955FCD0028A783 /* FlatLayerController.m in Sources */,
 				5AEAF421209560650028A783 /* AnchorPointController.m in Sources */,
 				5AC7972C20920FED003040F4 /* LayerLabel.m in Sources */,
@@ -340,11 +409,14 @@
 				5AEAF41120955F040028A783 /* CubeController.m in Sources */,
 				5AEAF42B2095EBCA0028A783 /* RemoveAnimationController.m in Sources */,
 				5AA6CFB52086D82C008A1582 /* ViewController.m in Sources */,
+				5A54F07F209ADE3A0066C90E /* InstrumentController.m in Sources */,
 				5AA6CFC02086D82D008A1582 /* main.m in Sources */,
 				5AA6CFB22086D82C008A1582 /* AppDelegate.m in Sources */,
 				5AEAF42F2095F6440028A783 /* CAMediaTimingController.m in Sources */,
 				5AEAF40820955DBA0028A783 /* CustomActionsController.m in Sources */,
+				5A54F07B209ADD0A0066C90E /* Constant.m in Sources */,
 				5AEAF41520955F840028A783 /* CATextLayerController.m in Sources */,
+				5A54F082209ADFD20066C90E /* DataHelper.m in Sources */,
 				5AAE2D8B2096C19B008D739A /* ManualOperationController.m in Sources */,
 				5AEAF4282095B58F0028A783 /* CATransitionController.m in Sources */,
 				5A875365208EC109003D695D /* CustomDrawingController.m in Sources */,
@@ -407,7 +479,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -424,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -476,7 +548,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -488,6 +560,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = CoreAnimation_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -504,6 +577,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = CoreAnimation_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
