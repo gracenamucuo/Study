@@ -17,6 +17,9 @@
 		5A54F08D209AE9180066C90E /* ship.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A54F08C209AE9180066C90E /* ship.png */; };
 		5A54F08F209AE9230066C90E /* sonw.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A54F08E209AE9230066C90E /* sonw.png */; };
 		5A6B8AA82091639900AD4EA0 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6B8AA72091639900AD4EA0 /* CoreText.framework */; };
+		5A7C1D24209FE13200F765C2 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C1D23209FE13200F765C2 /* DrawingView.m */; };
+		5A7C1D2A209FE3E100F765C2 /* VectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C1D29209FE3E100F765C2 /* VectorViewController.m */; };
+		5A7C1D2E20A02ADF00F765C2 /* PerforemanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C1D2D20A02ADF00F765C2 /* PerforemanceController.m */; };
 		5A82E9E420995033000EEDF7 /* TimerAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A82E9E320995033000EEDF7 /* TimerAnimationController.m */; };
 		5A875365208EC109003D695D /* CustomDrawingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A875364208EC109003D695D /* CustomDrawingController.m */; };
 		5AA6CFB22086D82C008A1582 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA6CFB12086D82C008A1582 /* AppDelegate.m */; };
@@ -56,6 +59,12 @@
 		5A54F08C209AE9180066C90E /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ship.png; path = CoreAnimation_Demo/Assets.xcassets/ship.imageset/ship.png; sourceTree = SOURCE_ROOT; };
 		5A54F08E209AE9230066C90E /* sonw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sonw.png; path = CoreAnimation_Demo/Assets.xcassets/snow.imageset/sonw.png; sourceTree = SOURCE_ROOT; };
 		5A6B8AA72091639900AD4EA0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		5A7C1D22209FE13200F765C2 /* DrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
+		5A7C1D23209FE13200F765C2 /* DrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
+		5A7C1D28209FE3E100F765C2 /* VectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorViewController.h; sourceTree = "<group>"; };
+		5A7C1D29209FE3E100F765C2 /* VectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VectorViewController.m; sourceTree = "<group>"; };
+		5A7C1D2C20A02ADF00F765C2 /* PerforemanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerforemanceController.h; sourceTree = "<group>"; };
+		5A7C1D2D20A02ADF00F765C2 /* PerforemanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerforemanceController.m; sourceTree = "<group>"; };
 		5A82E9E220995033000EEDF7 /* TimerAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerAnimationController.h; sourceTree = "<group>"; };
 		5A82E9E320995033000EEDF7 /* TimerAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerAnimationController.m; sourceTree = "<group>"; };
 		5A875363208EC109003D695D /* CustomDrawingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomDrawingController.h; sourceTree = "<group>"; };
@@ -146,6 +155,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5A7C1D21209FE11100F765C2 /* 矢量图形 */ = {
+			isa = PBXGroup;
+			children = (
+				5A7C1D22209FE13200F765C2 /* DrawingView.h */,
+				5A7C1D23209FE13200F765C2 /* DrawingView.m */,
+				5A7C1D28209FE3E100F765C2 /* VectorViewController.h */,
+				5A7C1D29209FE3E100F765C2 /* VectorViewController.m */,
+			);
+			path = "矢量图形";
+			sourceTree = "<group>";
+		};
+		5A7C1D2B20A02AB000F765C2 /* 性能相关 */ = {
+			isa = PBXGroup;
+			children = (
+				5A7C1D2C20A02ADF00F765C2 /* PerforemanceController.h */,
+				5A7C1D2D20A02ADF00F765C2 /* PerforemanceController.m */,
+			);
+			path = "性能相关";
+			sourceTree = "<group>";
+		};
 		5A82E9E120994DEA000EEDF7 /* 定时器动画 */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +231,8 @@
 				5AAE2D852096BE9C008D739A /* 手动动画 */,
 				5AAE2D8C2096C8D8008D739A /* 缓冲 */,
 				5A82E9E120994DEA000EEDF7 /* 定时器动画 */,
+				5A7C1D21209FE11100F765C2 /* 矢量图形 */,
+				5A7C1D2B20A02AB000F765C2 /* 性能相关 */,
 				5A54F07C209ADE000066C90E /* Instruments */,
 				5A54F079209ADD0A0066C90E /* Constant.h */,
 				5A54F07A209ADD0A0066C90E /* Constant.m */,
@@ -415,11 +446,14 @@
 				5AEAF42F2095F6440028A783 /* CAMediaTimingController.m in Sources */,
 				5AEAF40820955DBA0028A783 /* CustomActionsController.m in Sources */,
 				5A54F07B209ADD0A0066C90E /* Constant.m in Sources */,
+				5A7C1D2E20A02ADF00F765C2 /* PerforemanceController.m in Sources */,
 				5AEAF41520955F840028A783 /* CATextLayerController.m in Sources */,
 				5A54F082209ADFD20066C90E /* DataHelper.m in Sources */,
 				5AAE2D8B2096C19B008D739A /* ManualOperationController.m in Sources */,
+				5A7C1D2A209FE3E100F765C2 /* VectorViewController.m in Sources */,
 				5AEAF4282095B58F0028A783 /* CATransitionController.m in Sources */,
 				5A875365208EC109003D695D /* CustomDrawingController.m in Sources */,
+				5A7C1D24209FE13200F765C2 /* DrawingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
