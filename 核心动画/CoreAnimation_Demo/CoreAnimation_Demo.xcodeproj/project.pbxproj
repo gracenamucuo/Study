@@ -31,6 +31,8 @@
 		5AAE2D8B2096C19B008D739A /* ManualOperationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE2D8A2096C19B008D739A /* ManualOperationController.m */; };
 		5AAE2D8F2096C8F5008D739A /* BufferController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE2D8E2096C8F5008D739A /* BufferController.m */; };
 		5AC7972C20920FED003040F4 /* LayerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC7972B20920FED003040F4 /* LayerLabel.m */; };
+		5AC83A2720A418F300734B68 /* OffScreenRenderingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC83A2620A418F300734B68 /* OffScreenRenderingController.m */; };
+		5AC83A2A20A4303800734B68 /* UIImage+ImageByAlphaComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC83A2920A4303800734B68 /* UIImage+ImageByAlphaComponent.m */; };
 		5AEAF40520955D320028A783 /* UIViewController+loadFromStoryBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF40420955D320028A783 /* UIViewController+loadFromStoryBoard.m */; };
 		5AEAF40820955DBA0028A783 /* CustomActionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF40720955DBA0028A783 /* CustomActionsController.m */; };
 		5AEAF40D20955EAE0028A783 /* FireEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEAF40C20955EAE0028A783 /* FireEffectController.m */; };
@@ -85,6 +87,10 @@
 		5AAE2D8E2096C8F5008D739A /* BufferController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BufferController.m; sourceTree = "<group>"; };
 		5AC7972A20920FED003040F4 /* LayerLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerLabel.h; sourceTree = "<group>"; };
 		5AC7972B20920FED003040F4 /* LayerLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerLabel.m; sourceTree = "<group>"; };
+		5AC83A2520A418F300734B68 /* OffScreenRenderingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OffScreenRenderingController.h; sourceTree = "<group>"; };
+		5AC83A2620A418F300734B68 /* OffScreenRenderingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OffScreenRenderingController.m; sourceTree = "<group>"; };
+		5AC83A2820A4303800734B68 /* UIImage+ImageByAlphaComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageByAlphaComponent.h"; sourceTree = "<group>"; };
+		5AC83A2920A4303800734B68 /* UIImage+ImageByAlphaComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageByAlphaComponent.m"; sourceTree = "<group>"; };
 		5AEAF40320955D320028A783 /* UIViewController+loadFromStoryBoard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+loadFromStoryBoard.h"; sourceTree = "<group>"; };
 		5AEAF40420955D320028A783 /* UIViewController+loadFromStoryBoard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+loadFromStoryBoard.m"; sourceTree = "<group>"; };
 		5AEAF40620955DBA0028A783 /* CustomActionsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomActionsController.h; sourceTree = "<group>"; };
@@ -233,6 +239,7 @@
 				5A82E9E120994DEA000EEDF7 /* 定时器动画 */,
 				5A7C1D21209FE11100F765C2 /* 矢量图形 */,
 				5A7C1D2B20A02AB000F765C2 /* 性能相关 */,
+				5AC83A2420A418C100734B68 /* 离屏渲染 */,
 				5A54F07C209ADE000066C90E /* Instruments */,
 				5A54F079209ADD0A0066C90E /* Constant.h */,
 				5A54F07A209ADD0A0066C90E /* Constant.m */,
@@ -265,6 +272,17 @@
 				5AC7972B20920FED003040F4 /* LayerLabel.m */,
 			);
 			path = CATextLayer;
+			sourceTree = "<group>";
+		};
+		5AC83A2420A418C100734B68 /* 离屏渲染 */ = {
+			isa = PBXGroup;
+			children = (
+				5AC83A2520A418F300734B68 /* OffScreenRenderingController.h */,
+				5AC83A2620A418F300734B68 /* OffScreenRenderingController.m */,
+				5AC83A2820A4303800734B68 /* UIImage+ImageByAlphaComponent.h */,
+				5AC83A2920A4303800734B68 /* UIImage+ImageByAlphaComponent.m */,
+			);
+			path = "离屏渲染";
 			sourceTree = "<group>";
 		};
 		5AEAF40920955DC10028A783 /* 隐式动画自定义行为 */ = {
@@ -429,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AEAF4242095A1C30028A783 /* ExplicitAnimationController.m in Sources */,
+				5AC83A2720A418F300734B68 /* OffScreenRenderingController.m in Sources */,
 				5AEAF41D209560300028A783 /* ContentsViewController.m in Sources */,
 				5A82E9E420995033000EEDF7 /* TimerAnimationController.m in Sources */,
 				5AEAF41920955FCD0028A783 /* FlatLayerController.m in Sources */,
@@ -448,6 +467,7 @@
 				5A54F07B209ADD0A0066C90E /* Constant.m in Sources */,
 				5A7C1D2E20A02ADF00F765C2 /* PerforemanceController.m in Sources */,
 				5AEAF41520955F840028A783 /* CATextLayerController.m in Sources */,
+				5AC83A2A20A4303800734B68 /* UIImage+ImageByAlphaComponent.m in Sources */,
 				5A54F082209ADFD20066C90E /* DataHelper.m in Sources */,
 				5AAE2D8B2096C19B008D739A /* ManualOperationController.m in Sources */,
 				5A7C1D2A209FE3E100F765C2 /* VectorViewController.m in Sources */,

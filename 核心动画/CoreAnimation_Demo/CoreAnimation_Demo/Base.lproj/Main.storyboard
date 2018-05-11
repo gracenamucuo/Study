@@ -216,6 +216,21 @@
             </objects>
             <point key="canvasLocation" x="1622" y="1431"/>
         </scene>
+        <!--Off Screen Rendering Controller-->
+        <scene sceneID="TWS-tv-weN">
+            <objects>
+                <viewController storyboardIdentifier="OffScreenRenderingController" id="AVp-q0-4as" customClass="OffScreenRenderingController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pLt-eD-qUa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="YB8-4D-YIJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6bE-gv-f0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2372" y="1493"/>
+        </scene>
         <!--Manual Operation Controller-->
         <scene sceneID="LTk-9h-nwY">
             <objects>
