@@ -7,23 +7,41 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
-
+#import "UIViewController+loadFromStoryBoard.h"
+@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic,strong)NSMutableArray *dataSource;
 @end
-
+static NSString *cellID = @"cellID";
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+    self.tableView.tableFooterView = [UIView new];
+    self.dataSource = [NSMutableArray arrayWithArray:@[@"SimpleFactoryPatternController",@"FactoryMethodController"]];
+    self.tableView.rowHeight = 50.f;
+    
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dataSource.count;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    cell.textLabel.text = self.dataSource[indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *clsName = self.dataSource[indexPath.row];
+    Class cls = NSClassFromString(clsName);
+   UIViewController *vc = [cls loadFromStoryBoard];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end
