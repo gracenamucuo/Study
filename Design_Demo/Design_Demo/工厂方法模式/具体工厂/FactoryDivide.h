@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FactoryProtocol.h"
-@interface FactoryDivide : NSObject<FactoryProtocol>
+#import "FactoryMethodProtocol.h"
+@interface FactoryDivide : NSObject<FactoryMethodProtocol>
 
 @end

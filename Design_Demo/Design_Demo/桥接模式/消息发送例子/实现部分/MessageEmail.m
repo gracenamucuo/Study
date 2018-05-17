@@ -1,0 +1,18 @@
+//
+//  MessageEmail.m
+//  Design_Demo
+//
+//  Created by 戴运鹏 on 2018/5/17.
+//  Copyright © 2018年 戴运鹏. All rights reserved.
+//
+
+#import "MessageEmail.h"
+
+@implementation MessageEmail
+
+- (void)sendMessage:(NSString *)message
+{
+    NSLog(@"使用邮件发送消息;内容是:%@",message);
+}
+
+@end

@@ -30,11 +30,8 @@
 		5A355C1320AD237500A26F2F /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A355C0B20AD237500A26F2F /* City.m */; };
 		5A355C1420AD237500A26F2F /* CoreDataSettingsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A355C0C20AD237500A26F2F /* CoreDataSettingsInfo.m */; };
 		5A355C1520AD237500A26F2F /* SqliteSettingsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A355C0D20AD237500A26F2F /* SqliteSettingsInfo.m */; };
-		5A44869920AAD3C30084C8B3 /* FlyWeightController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44869820AAD3C30084C8B3 /* FlyWeightController.m */; };
 		5A44869C20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44869B20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m */; };
 		5A4486A220AAD6D30084C8B3 /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 5A4486A120AAD6D30084C8B3 /* Resource */; };
-		5A4486A520AAD89E0084C8B3 /* FlowerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4486A420AAD89E0084C8B3 /* FlowerView.m */; };
-		5A4486A820AAD8E80084C8B3 /* FlowerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4486A720AAD8E80084C8B3 /* FlowerFactory.m */; };
 		5A6CE7B020A529A20046585D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CE7AF20A529A20046585D /* AppDelegate.m */; };
 		5A6CE7B320A529A30046585D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CE7B220A529A20046585D /* ViewController.m */; };
 		5A6CE7B620A529A30046585D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CE7B420A529A30046585D /* Main.storyboard */; };
@@ -44,6 +41,14 @@
 		5ABC5FB920AD24C800D04B09 /* SqliteFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FB820AD24C800D04B09 /* SqliteFactory.m */; };
 		5ABC5FBC20AD24D300D04B09 /* CoreDataFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FBB20AD24D300D04B09 /* CoreDataFactory.m */; };
 		5ABC5FC320AD28BD00D04B09 /* AbstractFactoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FC220AD28BD00D04B09 /* AbstractFactoryController.m */; };
+		5ABC5FCF20AD5BB400D04B09 /* BridgePatternController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FCE20AD5BB400D04B09 /* BridgePatternController.m */; };
+		5ABC5FD520AD65B400D04B09 /* AbstractMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FD420AD65B400D04B09 /* AbstractMessage.m */; };
+		5ABC5FD920AD670700D04B09 /* MessageSMS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FD820AD670700D04B09 /* MessageSMS.m */; };
+		5ABC5FDC20AD672D00D04B09 /* MessageEmail.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FDB20AD672D00D04B09 /* MessageEmail.m */; };
+		5ABC5FDF20AD673A00D04B09 /* MessageMobile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FDE20AD673A00D04B09 /* MessageMobile.m */; };
+		5ABC5FE420AD694E00D04B09 /* CommonMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FE320AD694E00D04B09 /* CommonMessage.m */; };
+		5ABC5FE720AD695D00D04B09 /* UrgencyMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FE620AD695D00D04B09 /* UrgencyMessage.m */; };
+		5ABC5FEA20AD696E00D04B09 /* SpecialUrgencyMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FE920AD696E00D04B09 /* SpecialUrgencyMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,7 +68,7 @@
 		5A03F76320AC10EE0097BC4F /* SimpleFactoryPatternController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleFactoryPatternController.m; sourceTree = "<group>"; };
 		5A03F76720AC2AD70097BC4F /* FactoryMethodController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryMethodController.h; sourceTree = "<group>"; };
 		5A03F76820AC2AD70097BC4F /* FactoryMethodController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryMethodController.m; sourceTree = "<group>"; };
-		5A03F76A20AC2B500097BC4F /* FactoryProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryProtocol.h; sourceTree = "<group>"; };
+		5A03F76A20AC2B500097BC4F /* FactoryMethodProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryMethodProtocol.h; sourceTree = "<group>"; };
 		5A03F76B20AC2B730097BC4F /* CalculateMethodProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculateMethodProtocol.h; sourceTree = "<group>"; };
 		5A03F76C20AC2CD50097BC4F /* FactoryAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryAdd.h; sourceTree = "<group>"; };
 		5A03F76D20AC2CD50097BC4F /* FactoryAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryAdd.m; sourceTree = "<group>"; };
@@ -101,15 +106,9 @@
 		5A355C0C20AD237500A26F2F /* CoreDataSettingsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataSettingsInfo.m; sourceTree = "<group>"; };
 		5A355C0D20AD237500A26F2F /* SqliteSettingsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteSettingsInfo.m; sourceTree = "<group>"; };
 		5A355C1A20AD23C400A26F2F /* FactoryProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryProtocol.h; sourceTree = "<group>"; };
-		5A44869720AAD3C30084C8B3 /* FlyWeightController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlyWeightController.h; sourceTree = "<group>"; };
-		5A44869820AAD3C30084C8B3 /* FlyWeightController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyWeightController.m; sourceTree = "<group>"; };
 		5A44869A20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+loadFromStoryBoard.h"; sourceTree = "<group>"; };
 		5A44869B20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+loadFromStoryBoard.m"; sourceTree = "<group>"; };
 		5A4486A120AAD6D30084C8B3 /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = "<group>"; };
-		5A4486A320AAD89E0084C8B3 /* FlowerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowerView.h; sourceTree = "<group>"; };
-		5A4486A420AAD89E0084C8B3 /* FlowerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlowerView.m; sourceTree = "<group>"; };
-		5A4486A620AAD8E80084C8B3 /* FlowerFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowerFactory.h; sourceTree = "<group>"; };
-		5A4486A720AAD8E80084C8B3 /* FlowerFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlowerFactory.m; sourceTree = "<group>"; };
 		5A6CE7AB20A529A20046585D /* Design_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Design_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6CE7AE20A529A20046585D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A6CE7AF20A529A20046585D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -126,6 +125,23 @@
 		5ABC5FBB20AD24D300D04B09 /* CoreDataFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataFactory.m; sourceTree = "<group>"; };
 		5ABC5FC120AD28BD00D04B09 /* AbstractFactoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractFactoryController.h; sourceTree = "<group>"; };
 		5ABC5FC220AD28BD00D04B09 /* AbstractFactoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractFactoryController.m; sourceTree = "<group>"; };
+		5ABC5FCD20AD5BB400D04B09 /* BridgePatternController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgePatternController.h; sourceTree = "<group>"; };
+		5ABC5FCE20AD5BB400D04B09 /* BridgePatternController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgePatternController.m; sourceTree = "<group>"; };
+		5ABC5FD320AD65B400D04B09 /* AbstractMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractMessage.h; sourceTree = "<group>"; };
+		5ABC5FD420AD65B400D04B09 /* AbstractMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractMessage.m; sourceTree = "<group>"; };
+		5ABC5FD720AD670700D04B09 /* MessageSMS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageSMS.h; sourceTree = "<group>"; };
+		5ABC5FD820AD670700D04B09 /* MessageSMS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageSMS.m; sourceTree = "<group>"; };
+		5ABC5FDA20AD672D00D04B09 /* MessageEmail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageEmail.h; sourceTree = "<group>"; };
+		5ABC5FDB20AD672D00D04B09 /* MessageEmail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageEmail.m; sourceTree = "<group>"; };
+		5ABC5FDD20AD673A00D04B09 /* MessageMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageMobile.h; sourceTree = "<group>"; };
+		5ABC5FDE20AD673A00D04B09 /* MessageMobile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageMobile.m; sourceTree = "<group>"; };
+		5ABC5FE120AD68CE00D04B09 /* MessageImplementProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageImplementProtocol.h; sourceTree = "<group>"; };
+		5ABC5FE220AD694E00D04B09 /* CommonMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMessage.h; sourceTree = "<group>"; };
+		5ABC5FE320AD694E00D04B09 /* CommonMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonMessage.m; sourceTree = "<group>"; };
+		5ABC5FE520AD695D00D04B09 /* UrgencyMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UrgencyMessage.h; sourceTree = "<group>"; };
+		5ABC5FE620AD695D00D04B09 /* UrgencyMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UrgencyMessage.m; sourceTree = "<group>"; };
+		5ABC5FE820AD696E00D04B09 /* SpecialUrgencyMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialUrgencyMessage.h; sourceTree = "<group>"; };
+		5ABC5FE920AD696E00D04B09 /* SpecialUrgencyMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecialUrgencyMessage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,19 +232,6 @@
 			path = SettingsInfo;
 			sourceTree = "<group>";
 		};
-		5A44869620AAD38F0084C8B3 /* 享元模式 */ = {
-			isa = PBXGroup;
-			children = (
-				5A44869720AAD3C30084C8B3 /* FlyWeightController.h */,
-				5A44869820AAD3C30084C8B3 /* FlyWeightController.m */,
-				5A4486A320AAD89E0084C8B3 /* FlowerView.h */,
-				5A4486A420AAD89E0084C8B3 /* FlowerView.m */,
-				5A4486A620AAD8E80084C8B3 /* FlowerFactory.h */,
-				5A4486A720AAD8E80084C8B3 /* FlowerFactory.m */,
-			);
-			path = "享元模式";
-			sourceTree = "<group>";
-		};
 		5A6CE7A220A529A20046585D = {
 			isa = PBXGroup;
 			children = (
@@ -248,23 +251,15 @@
 		5A6CE7AD20A529A20046585D /* Design_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5A6CE7B120A529A20046585D /* ViewController.h */,
+				5A6CE7B220A529A20046585D /* ViewController.m */,
+				5ABC5FCC20AD5B9800D04B09 /* 桥接模式 */,
 				5AFE99D920AD183200FBF19D /* 抽象工厂模式 */,
 				5A03F76620AC2AA70097BC4F /* 工厂方法模式 */,
 				5A03F75020AC044D0097BC4F /* 简单工厂模式 */,
-				5A6CE7AE20A529A20046585D /* AppDelegate.h */,
-				5A6CE7AF20A529A20046585D /* AppDelegate.m */,
-				5A6CE7B120A529A20046585D /* ViewController.h */,
-				5A6CE7B220A529A20046585D /* ViewController.m */,
-				5A6CE7B420A529A30046585D /* Main.storyboard */,
-				5A6CE7B720A529A40046585D /* Assets.xcassets */,
-				5A6CE7B920A529A40046585D /* LaunchScreen.storyboard */,
-				5A6CE7BC20A529A40046585D /* Info.plist */,
-				5A6CE7BD20A529A40046585D /* main.m */,
-				5A44869A20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.h */,
-				5A44869B20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m */,
+				5ABC5FEB20AD6C9A00D04B09 /* Other */,
 				5A4486A120AAD6D30084C8B3 /* Resource */,
-				5A44869620AAD38F0084C8B3 /* 享元模式 */,
-				5A03F75120AC05000097BC4F /* Constant.h */,
+				5A6CE7BC20A529A40046585D /* Info.plist */,
 			);
 			path = Design_Demo;
 			sourceTree = "<group>";
@@ -311,7 +306,7 @@
 		5ABC5FC420AD2D4100D04B09 /* 抽象工厂 */ = {
 			isa = PBXGroup;
 			children = (
-				5A03F76A20AC2B500097BC4F /* FactoryProtocol.h */,
+				5A03F76A20AC2B500097BC4F /* FactoryMethodProtocol.h */,
 			);
 			path = "抽象工厂";
 			sourceTree = "<group>";
@@ -384,6 +379,70 @@
 				5A03F75220AC05B60097BC4F /* CaculateProtocol.h */,
 			);
 			path = "抽象产品";
+			sourceTree = "<group>";
+		};
+		5ABC5FCC20AD5B9800D04B09 /* 桥接模式 */ = {
+			isa = PBXGroup;
+			children = (
+				5ABC5FCD20AD5BB400D04B09 /* BridgePatternController.h */,
+				5ABC5FD020AD604C00D04B09 /* 消息发送例子 */,
+			);
+			path = "桥接模式";
+			sourceTree = "<group>";
+		};
+		5ABC5FD020AD604C00D04B09 /* 消息发送例子 */ = {
+			isa = PBXGroup;
+			children = (
+				5ABC5FD220AD60E000D04B09 /* 实现部分 */,
+				5ABC5FD120AD60D400D04B09 /* 抽象部分 */,
+			);
+			path = "消息发送例子";
+			sourceTree = "<group>";
+		};
+		5ABC5FD120AD60D400D04B09 /* 抽象部分 */ = {
+			isa = PBXGroup;
+			children = (
+				5ABC5FD320AD65B400D04B09 /* AbstractMessage.h */,
+				5ABC5FD420AD65B400D04B09 /* AbstractMessage.m */,
+				5ABC5FE220AD694E00D04B09 /* CommonMessage.h */,
+				5ABC5FE320AD694E00D04B09 /* CommonMessage.m */,
+				5ABC5FE520AD695D00D04B09 /* UrgencyMessage.h */,
+				5ABC5FE620AD695D00D04B09 /* UrgencyMessage.m */,
+				5ABC5FE820AD696E00D04B09 /* SpecialUrgencyMessage.h */,
+				5ABC5FE920AD696E00D04B09 /* SpecialUrgencyMessage.m */,
+			);
+			path = "抽象部分";
+			sourceTree = "<group>";
+		};
+		5ABC5FD220AD60E000D04B09 /* 实现部分 */ = {
+			isa = PBXGroup;
+			children = (
+				5ABC5FE120AD68CE00D04B09 /* MessageImplementProtocol.h */,
+				5ABC5FD720AD670700D04B09 /* MessageSMS.h */,
+				5ABC5FD820AD670700D04B09 /* MessageSMS.m */,
+				5ABC5FDA20AD672D00D04B09 /* MessageEmail.h */,
+				5ABC5FDB20AD672D00D04B09 /* MessageEmail.m */,
+				5ABC5FDD20AD673A00D04B09 /* MessageMobile.h */,
+				5ABC5FDE20AD673A00D04B09 /* MessageMobile.m */,
+			);
+			path = "实现部分";
+			sourceTree = "<group>";
+		};
+		5ABC5FEB20AD6C9A00D04B09 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5A6CE7AE20A529A20046585D /* AppDelegate.h */,
+				5A6CE7AF20A529A20046585D /* AppDelegate.m */,
+				5ABC5FCE20AD5BB400D04B09 /* BridgePatternController.m */,
+				5A6CE7B420A529A30046585D /* Main.storyboard */,
+				5A6CE7B720A529A40046585D /* Assets.xcassets */,
+				5A6CE7B920A529A40046585D /* LaunchScreen.storyboard */,
+				5A6CE7BD20A529A40046585D /* main.m */,
+				5A44869A20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.h */,
+				5A44869B20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m */,
+				5A03F75120AC05000097BC4F /* Constant.h */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		5AFE99D920AD183200FBF19D /* 抽象工厂模式 */ = {
@@ -504,20 +563,25 @@
 				5A03F75820AC06C10097BC4F /* CalculateMinus.m in Sources */,
 				5A03F77120AC2D510097BC4F /* FactoryMethodCalculateAdd.m in Sources */,
 				5A355C1120AD237500A26F2F /* CoreDataUserInfo.m in Sources */,
+				5ABC5FDC20AD672D00D04B09 /* MessageEmail.m in Sources */,
+				5ABC5FCF20AD5BB400D04B09 /* BridgePatternController.m in Sources */,
 				5A03F75B20AC06D20097BC4F /* CalculateMultiply.m in Sources */,
 				5A44869C20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m in Sources */,
+				5ABC5FD520AD65B400D04B09 /* AbstractMessage.m in Sources */,
 				5A355C0E20AD237500A26F2F /* User.m in Sources */,
 				5A355C1020AD237500A26F2F /* CoreDataSearchInfo.m in Sources */,
 				5A03F76920AC2AD70097BC4F /* FactoryMethodController.m in Sources */,
+				5ABC5FDF20AD673A00D04B09 /* MessageMobile.m in Sources */,
 				5A03F76420AC10EE0097BC4F /* SimpleFactoryPatternController.m in Sources */,
 				5A6CE7B020A529A20046585D /* AppDelegate.m in Sources */,
+				5ABC5FE420AD694E00D04B09 /* CommonMessage.m in Sources */,
+				5ABC5FE720AD695D00D04B09 /* UrgencyMessage.m in Sources */,
 				5A03F78320AC2FD00097BC4F /* FactoryMethodCalculateDivide.m in Sources */,
-				5A4486A820AAD8E80084C8B3 /* FlowerFactory.m in Sources */,
+				5ABC5FD920AD670700D04B09 /* MessageSMS.m in Sources */,
 				5A355C1220AD237500A26F2F /* SqliteSearchInfo.m in Sources */,
 				5A03F78020AC2FBA0097BC4F /* FactoryDivide.m in Sources */,
 				5A03F77420AC2DC00097BC4F /* FactoryMinus.m in Sources */,
-				5A44869920AAD3C30084C8B3 /* FlyWeightController.m in Sources */,
-				5A4486A520AAD89E0084C8B3 /* FlowerView.m in Sources */,
+				5ABC5FEA20AD696E00D04B09 /* SpecialUrgencyMessage.m in Sources */,
 				5A355C1320AD237500A26F2F /* City.m in Sources */,
 				5A03F76120AC0E920097BC4F /* CalcluateFactory.m in Sources */,
 			);

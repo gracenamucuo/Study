@@ -11,6 +11,8 @@
 #import "FactoryMinus.h"
 #import "FactoryMultiply.h"
 #import "FactoryDivide.h"
+#import "CalculateMethodProtocol.h"
+#import "FactoryMethodProtocol.h"
 @interface FactoryMethodController ()
 @property (weak, nonatomic) IBOutlet UITextField *numA;
 @property (weak, nonatomic) IBOutlet UITextField *numB;

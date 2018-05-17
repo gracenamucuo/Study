@@ -10,7 +10,7 @@
 
 #import "CalculateMethodProtocol.h"
 
-@protocol FactoryProtocol <NSObject>
+@protocol FactoryMethodProtocol <NSObject>
 
 + (id<CalculateMethodProtocol>)factoryMethodForCalculate;
 
