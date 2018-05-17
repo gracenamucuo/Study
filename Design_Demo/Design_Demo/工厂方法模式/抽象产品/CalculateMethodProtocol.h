@@ -14,5 +14,7 @@
 @property (nonatomic,assign)CGFloat numberB;
 
 - (CGFloat)calculate;
-
+/*
+ 工厂方法模式，是一个工厂创建一种产品;需要创建多个产品的话，需要多个不同的具体工厂。在本例子中:需要加、减、乘、除四个计算器产品。需要创建四个不同的生产对应产品的工厂。
+ */
 @end

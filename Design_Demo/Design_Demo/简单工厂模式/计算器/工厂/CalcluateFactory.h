@@ -12,5 +12,7 @@
 @interface CalcluateFactory : NSObject
 
 + (id<CaculateProtocol>)createCalculate:(NSString*)calculateType;
-
+/*
+ 简单工厂模式是只有具体工厂，没有抽象工厂，具体工厂根据不同的类型判断生产出具体的产品。具体的产品调用抽象产品的接口来实现各自具体的功能。
+ */
 @end

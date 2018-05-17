@@ -22,6 +22,14 @@
 		5A03F77D20AC2F440097BC4F /* FactoryMethodCalculateMultiply.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A03F77C20AC2F440097BC4F /* FactoryMethodCalculateMultiply.m */; };
 		5A03F78020AC2FBA0097BC4F /* FactoryDivide.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A03F77F20AC2FBA0097BC4F /* FactoryDivide.m */; };
 		5A03F78320AC2FD00097BC4F /* FactoryMethodCalculateDivide.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A03F78220AC2FD00097BC4F /* FactoryMethodCalculateDivide.m */; };
+		5A355C0E20AD237500A26F2F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A355BFC20AD237400A26F2F /* User.m */; };
+		5A355C0F20AD237500A26F2F /* SqliteUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A355BFF20AD237400A26F2F /* SqliteUserInfo.m */; };
+		5A355C1020AD237500A26F2F /* CoreDataSearchInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A355C0420AD237400A26F2F /* CoreDataSearchInfo.m */; };
+		5A355C1120AD237500A26F2F /* CoreDataUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A355C0720AD237400A26F2F /* CoreDataUserInfo.m */; };
+		5A355C1220AD237500A26F2F /* SqliteSearchInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A355C0920AD237400A26F2F /* SqliteSearchInfo.m */; };
+		5A355C1320AD237500A26F2F /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A355C0B20AD237500A26F2F /* City.m */; };
+		5A355C1420AD237500A26F2F /* CoreDataSettingsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A355C0C20AD237500A26F2F /* CoreDataSettingsInfo.m */; };
+		5A355C1520AD237500A26F2F /* SqliteSettingsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A355C0D20AD237500A26F2F /* SqliteSettingsInfo.m */; };
 		5A44869920AAD3C30084C8B3 /* FlyWeightController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44869820AAD3C30084C8B3 /* FlyWeightController.m */; };
 		5A44869C20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44869B20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m */; };
 		5A4486A220AAD6D30084C8B3 /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 5A4486A120AAD6D30084C8B3 /* Resource */; };
@@ -33,6 +41,9 @@
 		5A6CE7B820A529A40046585D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CE7B720A529A40046585D /* Assets.xcassets */; };
 		5A6CE7BB20A529A40046585D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CE7B920A529A40046585D /* LaunchScreen.storyboard */; };
 		5A6CE7BE20A529A40046585D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CE7BD20A529A40046585D /* main.m */; };
+		5ABC5FB920AD24C800D04B09 /* SqliteFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FB820AD24C800D04B09 /* SqliteFactory.m */; };
+		5ABC5FBC20AD24D300D04B09 /* CoreDataFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FBB20AD24D300D04B09 /* CoreDataFactory.m */; };
+		5ABC5FC320AD28BD00D04B09 /* AbstractFactoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FC220AD28BD00D04B09 /* AbstractFactoryController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +81,26 @@
 		5A03F77F20AC2FBA0097BC4F /* FactoryDivide.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryDivide.m; sourceTree = "<group>"; };
 		5A03F78120AC2FD00097BC4F /* FactoryMethodCalculateDivide.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryMethodCalculateDivide.h; sourceTree = "<group>"; };
 		5A03F78220AC2FD00097BC4F /* FactoryMethodCalculateDivide.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryMethodCalculateDivide.m; sourceTree = "<group>"; };
+		5A355BFB20AD237400A26F2F /* CoreDataSettingsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataSettingsInfo.h; sourceTree = "<group>"; };
+		5A355BFC20AD237400A26F2F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		5A355BFD20AD237400A26F2F /* UserInfoProrocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoProrocol.h; sourceTree = "<group>"; };
+		5A355BFE20AD237400A26F2F /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		5A355BFF20AD237400A26F2F /* SqliteUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteUserInfo.m; sourceTree = "<group>"; };
+		5A355C0020AD237400A26F2F /* SqliteSearchInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteSearchInfo.h; sourceTree = "<group>"; };
+		5A355C0120AD237400A26F2F /* CoreDataSearchInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataSearchInfo.h; sourceTree = "<group>"; };
+		5A355C0220AD237400A26F2F /* CoreDataUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataUserInfo.h; sourceTree = "<group>"; };
+		5A355C0320AD237400A26F2F /* SettingsInfoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsInfoProtocol.h; sourceTree = "<group>"; };
+		5A355C0420AD237400A26F2F /* CoreDataSearchInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataSearchInfo.m; sourceTree = "<group>"; };
+		5A355C0520AD237400A26F2F /* SqliteSettingsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteSettingsInfo.h; sourceTree = "<group>"; };
+		5A355C0620AD237400A26F2F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		5A355C0720AD237400A26F2F /* CoreDataUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataUserInfo.m; sourceTree = "<group>"; };
+		5A355C0820AD237400A26F2F /* SearchInfoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchInfoProtocol.h; sourceTree = "<group>"; };
+		5A355C0920AD237400A26F2F /* SqliteSearchInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteSearchInfo.m; sourceTree = "<group>"; };
+		5A355C0A20AD237500A26F2F /* SqliteUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteUserInfo.h; sourceTree = "<group>"; };
+		5A355C0B20AD237500A26F2F /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		5A355C0C20AD237500A26F2F /* CoreDataSettingsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataSettingsInfo.m; sourceTree = "<group>"; };
+		5A355C0D20AD237500A26F2F /* SqliteSettingsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteSettingsInfo.m; sourceTree = "<group>"; };
+		5A355C1A20AD23C400A26F2F /* FactoryProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryProtocol.h; sourceTree = "<group>"; };
 		5A44869720AAD3C30084C8B3 /* FlyWeightController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlyWeightController.h; sourceTree = "<group>"; };
 		5A44869820AAD3C30084C8B3 /* FlyWeightController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyWeightController.m; sourceTree = "<group>"; };
 		5A44869A20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+loadFromStoryBoard.h"; sourceTree = "<group>"; };
@@ -89,6 +120,12 @@
 		5A6CE7BA20A529A40046585D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A6CE7BC20A529A40046585D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6CE7BD20A529A40046585D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5ABC5FB720AD24C800D04B09 /* SqliteFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SqliteFactory.h; sourceTree = "<group>"; };
+		5ABC5FB820AD24C800D04B09 /* SqliteFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqliteFactory.m; sourceTree = "<group>"; };
+		5ABC5FBA20AD24D300D04B09 /* CoreDataFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataFactory.h; sourceTree = "<group>"; };
+		5ABC5FBB20AD24D300D04B09 /* CoreDataFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataFactory.m; sourceTree = "<group>"; };
+		5ABC5FC120AD28BD00D04B09 /* AbstractFactoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractFactoryController.h; sourceTree = "<group>"; };
+		5ABC5FC220AD28BD00D04B09 /* AbstractFactoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractFactoryController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,17 +150,9 @@
 		5A03F76520AC187F0097BC4F /* 计算器 */ = {
 			isa = PBXGroup;
 			children = (
-				5A03F75220AC05B60097BC4F /* CaculateProtocol.h */,
-				5A03F75320AC06AE0097BC4F /* CalculateAdd.h */,
-				5A03F75420AC06AE0097BC4F /* CalculateAdd.m */,
-				5A03F75620AC06C10097BC4F /* CalculateMinus.h */,
-				5A03F75720AC06C10097BC4F /* CalculateMinus.m */,
-				5A03F75920AC06D20097BC4F /* CalculateMultiply.h */,
-				5A03F75A20AC06D20097BC4F /* CalculateMultiply.m */,
-				5A03F75C20AC06E20097BC4F /* CalculateDivide.h */,
-				5A03F75D20AC06E20097BC4F /* CalculateDivide.m */,
-				5A03F75F20AC0E920097BC4F /* CalcluateFactory.h */,
-				5A03F76020AC0E920097BC4F /* CalcluateFactory.m */,
+				5ABC5FCA20AD2EBB00D04B09 /* 抽象产品 */,
+				5ABC5FC920AD2EAD00D04B09 /* 具体产品 */,
+				5ABC5FC820AD2EA000D04B09 /* 工厂 */,
 				5A03F76220AC10EE0097BC4F /* SimpleFactoryPatternController.h */,
 				5A03F76320AC10EE0097BC4F /* SimpleFactoryPatternController.m */,
 			);
@@ -135,26 +164,56 @@
 			children = (
 				5A03F76720AC2AD70097BC4F /* FactoryMethodController.h */,
 				5A03F76820AC2AD70097BC4F /* FactoryMethodController.m */,
-				5A03F76A20AC2B500097BC4F /* FactoryProtocol.h */,
-				5A03F76B20AC2B730097BC4F /* CalculateMethodProtocol.h */,
-				5A03F76C20AC2CD50097BC4F /* FactoryAdd.h */,
-				5A03F76D20AC2CD50097BC4F /* FactoryAdd.m */,
-				5A03F76F20AC2D510097BC4F /* FactoryMethodCalculateAdd.h */,
-				5A03F77020AC2D510097BC4F /* FactoryMethodCalculateAdd.m */,
-				5A03F77220AC2DC00097BC4F /* FactoryMinus.h */,
-				5A03F77320AC2DC00097BC4F /* FactoryMinus.m */,
-				5A03F77520AC2DDB0097BC4F /* FactoryMethodCalculateMinus.h */,
-				5A03F77620AC2DDB0097BC4F /* FactoryMethodCalculateMinus.m */,
-				5A03F77820AC2F1B0097BC4F /* FactoryMultiply.h */,
-				5A03F77920AC2F1B0097BC4F /* FactoryMultiply.m */,
-				5A03F77B20AC2F440097BC4F /* FactoryMethodCalculateMultiply.h */,
-				5A03F77C20AC2F440097BC4F /* FactoryMethodCalculateMultiply.m */,
-				5A03F77E20AC2FBA0097BC4F /* FactoryDivide.h */,
-				5A03F77F20AC2FBA0097BC4F /* FactoryDivide.m */,
-				5A03F78120AC2FD00097BC4F /* FactoryMethodCalculateDivide.h */,
-				5A03F78220AC2FD00097BC4F /* FactoryMethodCalculateDivide.m */,
+				5ABC5FC420AD2D4100D04B09 /* 抽象工厂 */,
+				5ABC5FC520AD2D5700D04B09 /* 具体工厂 */,
+				5ABC5FC720AD2E6800D04B09 /* 抽象产品 */,
+				5ABC5FC620AD2D7A00D04B09 /* 具体产品 */,
 			);
 			path = "工厂方法模式";
+			sourceTree = "<group>";
+		};
+		5A355C1620AD237E00A26F2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A355BFE20AD237400A26F2F /* City.h */,
+				5A355C0B20AD237500A26F2F /* City.m */,
+				5A355C0620AD237400A26F2F /* User.h */,
+				5A355BFC20AD237400A26F2F /* User.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5A355C1720AD238F00A26F2F /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				5A355C0220AD237400A26F2F /* CoreDataUserInfo.h */,
+				5A355C0720AD237400A26F2F /* CoreDataUserInfo.m */,
+				5A355C0A20AD237500A26F2F /* SqliteUserInfo.h */,
+				5A355BFF20AD237400A26F2F /* SqliteUserInfo.m */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		5A355C1820AD239E00A26F2F /* SearchInfo */ = {
+			isa = PBXGroup;
+			children = (
+				5A355C0120AD237400A26F2F /* CoreDataSearchInfo.h */,
+				5A355C0420AD237400A26F2F /* CoreDataSearchInfo.m */,
+				5A355C0020AD237400A26F2F /* SqliteSearchInfo.h */,
+				5A355C0920AD237400A26F2F /* SqliteSearchInfo.m */,
+			);
+			path = SearchInfo;
+			sourceTree = "<group>";
+		};
+		5A355C1920AD23AA00A26F2F /* SettingsInfo */ = {
+			isa = PBXGroup;
+			children = (
+				5A355BFB20AD237400A26F2F /* CoreDataSettingsInfo.h */,
+				5A355C0C20AD237500A26F2F /* CoreDataSettingsInfo.m */,
+				5A355C0520AD237400A26F2F /* SqliteSettingsInfo.h */,
+				5A355C0D20AD237500A26F2F /* SqliteSettingsInfo.m */,
+			);
+			path = SettingsInfo;
 			sourceTree = "<group>";
 		};
 		5A44869620AAD38F0084C8B3 /* 享元模式 */ = {
@@ -189,6 +248,7 @@
 		5A6CE7AD20A529A20046585D /* Design_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5AFE99D920AD183200FBF19D /* 抽象工厂模式 */,
 				5A03F76620AC2AA70097BC4F /* 工厂方法模式 */,
 				5A03F75020AC044D0097BC4F /* 简单工厂模式 */,
 				5A6CE7AE20A529A20046585D /* AppDelegate.h */,
@@ -207,6 +267,153 @@
 				5A03F75120AC05000097BC4F /* Constant.h */,
 			);
 			path = Design_Demo;
+			sourceTree = "<group>";
+		};
+		5ABC5FBD20AD262200D04B09 /* 抽象工厂 */ = {
+			isa = PBXGroup;
+			children = (
+				5A355C1A20AD23C400A26F2F /* FactoryProtocol.h */,
+			);
+			path = "抽象工厂";
+			sourceTree = "<group>";
+		};
+		5ABC5FBE20AD263100D04B09 /* 具体工厂 */ = {
+			isa = PBXGroup;
+			children = (
+				5ABC5FB720AD24C800D04B09 /* SqliteFactory.h */,
+				5ABC5FB820AD24C800D04B09 /* SqliteFactory.m */,
+				5ABC5FBA20AD24D300D04B09 /* CoreDataFactory.h */,
+				5ABC5FBB20AD24D300D04B09 /* CoreDataFactory.m */,
+			);
+			path = "具体工厂";
+			sourceTree = "<group>";
+		};
+		5ABC5FBF20AD275C00D04B09 /* 抽象产品 */ = {
+			isa = PBXGroup;
+			children = (
+				5A355C0320AD237400A26F2F /* SettingsInfoProtocol.h */,
+				5A355C0820AD237400A26F2F /* SearchInfoProtocol.h */,
+				5A355BFD20AD237400A26F2F /* UserInfoProrocol.h */,
+			);
+			path = "抽象产品";
+			sourceTree = "<group>";
+		};
+		5ABC5FC020AD277000D04B09 /* 具体产品 */ = {
+			isa = PBXGroup;
+			children = (
+				5A355C1720AD238F00A26F2F /* UserInfo */,
+				5A355C1820AD239E00A26F2F /* SearchInfo */,
+				5A355C1920AD23AA00A26F2F /* SettingsInfo */,
+			);
+			path = "具体产品";
+			sourceTree = "<group>";
+		};
+		5ABC5FC420AD2D4100D04B09 /* 抽象工厂 */ = {
+			isa = PBXGroup;
+			children = (
+				5A03F76A20AC2B500097BC4F /* FactoryProtocol.h */,
+			);
+			path = "抽象工厂";
+			sourceTree = "<group>";
+		};
+		5ABC5FC520AD2D5700D04B09 /* 具体工厂 */ = {
+			isa = PBXGroup;
+			children = (
+				5A03F76C20AC2CD50097BC4F /* FactoryAdd.h */,
+				5A03F76D20AC2CD50097BC4F /* FactoryAdd.m */,
+				5A03F77220AC2DC00097BC4F /* FactoryMinus.h */,
+				5A03F77320AC2DC00097BC4F /* FactoryMinus.m */,
+				5A03F77820AC2F1B0097BC4F /* FactoryMultiply.h */,
+				5A03F77920AC2F1B0097BC4F /* FactoryMultiply.m */,
+				5A03F77E20AC2FBA0097BC4F /* FactoryDivide.h */,
+				5A03F77F20AC2FBA0097BC4F /* FactoryDivide.m */,
+			);
+			path = "具体工厂";
+			sourceTree = "<group>";
+		};
+		5ABC5FC620AD2D7A00D04B09 /* 具体产品 */ = {
+			isa = PBXGroup;
+			children = (
+				5A03F76F20AC2D510097BC4F /* FactoryMethodCalculateAdd.h */,
+				5A03F77020AC2D510097BC4F /* FactoryMethodCalculateAdd.m */,
+				5A03F77520AC2DDB0097BC4F /* FactoryMethodCalculateMinus.h */,
+				5A03F77620AC2DDB0097BC4F /* FactoryMethodCalculateMinus.m */,
+				5A03F77B20AC2F440097BC4F /* FactoryMethodCalculateMultiply.h */,
+				5A03F77C20AC2F440097BC4F /* FactoryMethodCalculateMultiply.m */,
+				5A03F78120AC2FD00097BC4F /* FactoryMethodCalculateDivide.h */,
+				5A03F78220AC2FD00097BC4F /* FactoryMethodCalculateDivide.m */,
+			);
+			path = "具体产品";
+			sourceTree = "<group>";
+		};
+		5ABC5FC720AD2E6800D04B09 /* 抽象产品 */ = {
+			isa = PBXGroup;
+			children = (
+				5A03F76B20AC2B730097BC4F /* CalculateMethodProtocol.h */,
+			);
+			path = "抽象产品";
+			sourceTree = "<group>";
+		};
+		5ABC5FC820AD2EA000D04B09 /* 工厂 */ = {
+			isa = PBXGroup;
+			children = (
+				5A03F75F20AC0E920097BC4F /* CalcluateFactory.h */,
+				5A03F76020AC0E920097BC4F /* CalcluateFactory.m */,
+			);
+			path = "工厂";
+			sourceTree = "<group>";
+		};
+		5ABC5FC920AD2EAD00D04B09 /* 具体产品 */ = {
+			isa = PBXGroup;
+			children = (
+				5A03F75320AC06AE0097BC4F /* CalculateAdd.h */,
+				5A03F75420AC06AE0097BC4F /* CalculateAdd.m */,
+				5A03F75620AC06C10097BC4F /* CalculateMinus.h */,
+				5A03F75720AC06C10097BC4F /* CalculateMinus.m */,
+				5A03F75920AC06D20097BC4F /* CalculateMultiply.h */,
+				5A03F75A20AC06D20097BC4F /* CalculateMultiply.m */,
+				5A03F75C20AC06E20097BC4F /* CalculateDivide.h */,
+				5A03F75D20AC06E20097BC4F /* CalculateDivide.m */,
+			);
+			path = "具体产品";
+			sourceTree = "<group>";
+		};
+		5ABC5FCA20AD2EBB00D04B09 /* 抽象产品 */ = {
+			isa = PBXGroup;
+			children = (
+				5A03F75220AC05B60097BC4F /* CaculateProtocol.h */,
+			);
+			path = "抽象产品";
+			sourceTree = "<group>";
+		};
+		5AFE99D920AD183200FBF19D /* 抽象工厂模式 */ = {
+			isa = PBXGroup;
+			children = (
+				5ABC5FC120AD28BD00D04B09 /* AbstractFactoryController.h */,
+				5ABC5FC220AD28BD00D04B09 /* AbstractFactoryController.m */,
+				5AFE9A1320AD1F9200FBF19D /* 工厂 */,
+				5AFE9A1220AD1F7C00FBF19D /* 产品 */,
+			);
+			path = "抽象工厂模式";
+			sourceTree = "<group>";
+		};
+		5AFE9A1220AD1F7C00FBF19D /* 产品 */ = {
+			isa = PBXGroup;
+			children = (
+				5ABC5FBF20AD275C00D04B09 /* 抽象产品 */,
+				5ABC5FC020AD277000D04B09 /* 具体产品 */,
+				5A355C1620AD237E00A26F2F /* Model */,
+			);
+			path = "产品";
+			sourceTree = "<group>";
+		};
+		5AFE9A1320AD1F9200FBF19D /* 工厂 */ = {
+			isa = PBXGroup;
+			children = (
+				5ABC5FBD20AD262200D04B09 /* 抽象工厂 */,
+				5ABC5FBE20AD263100D04B09 /* 具体工厂 */,
+			);
+			path = "工厂";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,27 +487,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A355C1520AD237500A26F2F /* SqliteSettingsInfo.m in Sources */,
+				5ABC5FB920AD24C800D04B09 /* SqliteFactory.m in Sources */,
+				5A355C1420AD237500A26F2F /* CoreDataSettingsInfo.m in Sources */,
 				5A03F75E20AC06E20097BC4F /* CalculateDivide.m in Sources */,
 				5A03F75520AC06AE0097BC4F /* CalculateAdd.m in Sources */,
+				5ABC5FC320AD28BD00D04B09 /* AbstractFactoryController.m in Sources */,
 				5A03F76E20AC2CD50097BC4F /* FactoryAdd.m in Sources */,
 				5A03F77A20AC2F1B0097BC4F /* FactoryMultiply.m in Sources */,
+				5ABC5FBC20AD24D300D04B09 /* CoreDataFactory.m in Sources */,
 				5A03F77D20AC2F440097BC4F /* FactoryMethodCalculateMultiply.m in Sources */,
 				5A03F77720AC2DDB0097BC4F /* FactoryMethodCalculateMinus.m in Sources */,
 				5A6CE7B320A529A30046585D /* ViewController.m in Sources */,
 				5A6CE7BE20A529A40046585D /* main.m in Sources */,
+				5A355C0F20AD237500A26F2F /* SqliteUserInfo.m in Sources */,
 				5A03F75820AC06C10097BC4F /* CalculateMinus.m in Sources */,
 				5A03F77120AC2D510097BC4F /* FactoryMethodCalculateAdd.m in Sources */,
+				5A355C1120AD237500A26F2F /* CoreDataUserInfo.m in Sources */,
 				5A03F75B20AC06D20097BC4F /* CalculateMultiply.m in Sources */,
 				5A44869C20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m in Sources */,
+				5A355C0E20AD237500A26F2F /* User.m in Sources */,
+				5A355C1020AD237500A26F2F /* CoreDataSearchInfo.m in Sources */,
 				5A03F76920AC2AD70097BC4F /* FactoryMethodController.m in Sources */,
 				5A03F76420AC10EE0097BC4F /* SimpleFactoryPatternController.m in Sources */,
 				5A6CE7B020A529A20046585D /* AppDelegate.m in Sources */,
 				5A03F78320AC2FD00097BC4F /* FactoryMethodCalculateDivide.m in Sources */,
 				5A4486A820AAD8E80084C8B3 /* FlowerFactory.m in Sources */,
+				5A355C1220AD237500A26F2F /* SqliteSearchInfo.m in Sources */,
 				5A03F78020AC2FBA0097BC4F /* FactoryDivide.m in Sources */,
 				5A03F77420AC2DC00097BC4F /* FactoryMinus.m in Sources */,
 				5A44869920AAD3C30084C8B3 /* FlyWeightController.m in Sources */,
 				5A4486A520AAD89E0084C8B3 /* FlowerView.m in Sources */,
+				5A355C1320AD237500A26F2F /* City.m in Sources */,
 				5A03F76120AC0E920097BC4F /* CalcluateFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
