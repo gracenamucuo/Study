@@ -17,6 +17,7 @@
     NSLog(@"我在诺基亚的手机上玩");
 
     [self.app runQQ];
+    [self.app runWeChat];
     
 }
 

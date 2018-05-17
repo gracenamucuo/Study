@@ -10,7 +10,7 @@
 
 @implementation AbstractMobile
 
-- (instancetype)initWithMobileImpApp:(id<MessageImplementProtocol>)impApp
+- (instancetype)initWithMobileImpApp:(id<MobileImplementProtocol>)impApp
 {
     if (self = [super init]) {
         _app = impApp;

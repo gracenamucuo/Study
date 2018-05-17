@@ -8,6 +8,14 @@
 
 #import "AppleMobile.h"
 
+#import "MobileImplementProtocol.h"
 @implementation AppleMobile
+
+- (void)useMobile
+{
+    NSLog(@"我在苹果手机上玩");
+    [self.app runCardGame];
+    [self.app runPlayGame];
+}
 
 @end
