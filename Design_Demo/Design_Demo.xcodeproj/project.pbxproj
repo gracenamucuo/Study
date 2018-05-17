@@ -38,6 +38,12 @@
 		5A6CE7B820A529A40046585D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CE7B720A529A40046585D /* Assets.xcassets */; };
 		5A6CE7BB20A529A40046585D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CE7B920A529A40046585D /* LaunchScreen.storyboard */; };
 		5A6CE7BE20A529A40046585D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CE7BD20A529A40046585D /* main.m */; };
+		5A8B349120AD7C15005EB56D /* AbstractMobile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B349020AD7C15005EB56D /* AbstractMobile.m */; };
+		5A8B349420AD7C2C005EB56D /* NokiaMobile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B349320AD7C2C005EB56D /* NokiaMobile.m */; };
+		5A8B349720AD7C3E005EB56D /* AppleMobile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B349620AD7C3E005EB56D /* AppleMobile.m */; };
+		5A8B349D20AD7F9F005EB56D /* MobileContractApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B349C20AD7F9F005EB56D /* MobileContractApp.m */; };
+		5A8B34A020AD7FB3005EB56D /* MobileWorkApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B349F20AD7FB3005EB56D /* MobileWorkApp.m */; };
+		5A8B34A320AD7FC0005EB56D /* MobileGameApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B34A220AD7FC0005EB56D /* MobileGameApp.m */; };
 		5ABC5FB920AD24C800D04B09 /* SqliteFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FB820AD24C800D04B09 /* SqliteFactory.m */; };
 		5ABC5FBC20AD24D300D04B09 /* CoreDataFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FBB20AD24D300D04B09 /* CoreDataFactory.m */; };
 		5ABC5FC320AD28BD00D04B09 /* AbstractFactoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FC220AD28BD00D04B09 /* AbstractFactoryController.m */; };
@@ -119,6 +125,19 @@
 		5A6CE7BA20A529A40046585D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A6CE7BC20A529A40046585D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6CE7BD20A529A40046585D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A8B348F20AD7C15005EB56D /* AbstractMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractMobile.h; sourceTree = "<group>"; };
+		5A8B349020AD7C15005EB56D /* AbstractMobile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractMobile.m; sourceTree = "<group>"; };
+		5A8B349220AD7C2C005EB56D /* NokiaMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NokiaMobile.h; sourceTree = "<group>"; };
+		5A8B349320AD7C2C005EB56D /* NokiaMobile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NokiaMobile.m; sourceTree = "<group>"; };
+		5A8B349520AD7C3E005EB56D /* AppleMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleMobile.h; sourceTree = "<group>"; };
+		5A8B349620AD7C3E005EB56D /* AppleMobile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppleMobile.m; sourceTree = "<group>"; };
+		5A8B349A20AD7CD7005EB56D /* MobileImplementProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileImplementProtocol.h; sourceTree = "<group>"; };
+		5A8B349B20AD7F9F005EB56D /* MobileContractApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileContractApp.h; sourceTree = "<group>"; };
+		5A8B349C20AD7F9F005EB56D /* MobileContractApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileContractApp.m; sourceTree = "<group>"; };
+		5A8B349E20AD7FB3005EB56D /* MobileWorkApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileWorkApp.h; sourceTree = "<group>"; };
+		5A8B349F20AD7FB3005EB56D /* MobileWorkApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileWorkApp.m; sourceTree = "<group>"; };
+		5A8B34A120AD7FC0005EB56D /* MobileGameApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileGameApp.h; sourceTree = "<group>"; };
+		5A8B34A220AD7FC0005EB56D /* MobileGameApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileGameApp.m; sourceTree = "<group>"; };
 		5ABC5FB720AD24C800D04B09 /* SqliteFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SqliteFactory.h; sourceTree = "<group>"; };
 		5ABC5FB820AD24C800D04B09 /* SqliteFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqliteFactory.m; sourceTree = "<group>"; };
 		5ABC5FBA20AD24D300D04B09 /* CoreDataFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataFactory.h; sourceTree = "<group>"; };
@@ -264,6 +283,42 @@
 			path = Design_Demo;
 			sourceTree = "<group>";
 		};
+		5A8B348E20AD7BE9005EB56D /* 手机例子 */ = {
+			isa = PBXGroup;
+			children = (
+				5A8B349920AD7CA5005EB56D /* 实现部分 */,
+				5A8B349820AD7C91005EB56D /* 抽象部分 */,
+			);
+			path = "手机例子";
+			sourceTree = "<group>";
+		};
+		5A8B349820AD7C91005EB56D /* 抽象部分 */ = {
+			isa = PBXGroup;
+			children = (
+				5A8B348F20AD7C15005EB56D /* AbstractMobile.h */,
+				5A8B349020AD7C15005EB56D /* AbstractMobile.m */,
+				5A8B349220AD7C2C005EB56D /* NokiaMobile.h */,
+				5A8B349320AD7C2C005EB56D /* NokiaMobile.m */,
+				5A8B349520AD7C3E005EB56D /* AppleMobile.h */,
+				5A8B349620AD7C3E005EB56D /* AppleMobile.m */,
+			);
+			path = "抽象部分";
+			sourceTree = "<group>";
+		};
+		5A8B349920AD7CA5005EB56D /* 实现部分 */ = {
+			isa = PBXGroup;
+			children = (
+				5A8B349A20AD7CD7005EB56D /* MobileImplementProtocol.h */,
+				5A8B349B20AD7F9F005EB56D /* MobileContractApp.h */,
+				5A8B349C20AD7F9F005EB56D /* MobileContractApp.m */,
+				5A8B349E20AD7FB3005EB56D /* MobileWorkApp.h */,
+				5A8B349F20AD7FB3005EB56D /* MobileWorkApp.m */,
+				5A8B34A120AD7FC0005EB56D /* MobileGameApp.h */,
+				5A8B34A220AD7FC0005EB56D /* MobileGameApp.m */,
+			);
+			path = "实现部分";
+			sourceTree = "<group>";
+		};
 		5ABC5FBD20AD262200D04B09 /* 抽象工厂 */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +440,7 @@
 			isa = PBXGroup;
 			children = (
 				5ABC5FCD20AD5BB400D04B09 /* BridgePatternController.h */,
+				5A8B348E20AD7BE9005EB56D /* 手机例子 */,
 				5ABC5FD020AD604C00D04B09 /* 消息发送例子 */,
 			);
 			path = "桥接模式";
@@ -555,6 +611,7 @@
 				5A03F76E20AC2CD50097BC4F /* FactoryAdd.m in Sources */,
 				5A03F77A20AC2F1B0097BC4F /* FactoryMultiply.m in Sources */,
 				5ABC5FBC20AD24D300D04B09 /* CoreDataFactory.m in Sources */,
+				5A8B34A320AD7FC0005EB56D /* MobileGameApp.m in Sources */,
 				5A03F77D20AC2F440097BC4F /* FactoryMethodCalculateMultiply.m in Sources */,
 				5A03F77720AC2DDB0097BC4F /* FactoryMethodCalculateMinus.m in Sources */,
 				5A6CE7B320A529A30046585D /* ViewController.m in Sources */,
@@ -575,14 +632,19 @@
 				5A03F76420AC10EE0097BC4F /* SimpleFactoryPatternController.m in Sources */,
 				5A6CE7B020A529A20046585D /* AppDelegate.m in Sources */,
 				5ABC5FE420AD694E00D04B09 /* CommonMessage.m in Sources */,
+				5A8B349D20AD7F9F005EB56D /* MobileContractApp.m in Sources */,
 				5ABC5FE720AD695D00D04B09 /* UrgencyMessage.m in Sources */,
 				5A03F78320AC2FD00097BC4F /* FactoryMethodCalculateDivide.m in Sources */,
 				5ABC5FD920AD670700D04B09 /* MessageSMS.m in Sources */,
 				5A355C1220AD237500A26F2F /* SqliteSearchInfo.m in Sources */,
+				5A8B349720AD7C3E005EB56D /* AppleMobile.m in Sources */,
 				5A03F78020AC2FBA0097BC4F /* FactoryDivide.m in Sources */,
+				5A8B349420AD7C2C005EB56D /* NokiaMobile.m in Sources */,
 				5A03F77420AC2DC00097BC4F /* FactoryMinus.m in Sources */,
 				5ABC5FEA20AD696E00D04B09 /* SpecialUrgencyMessage.m in Sources */,
+				5A8B349120AD7C15005EB56D /* AbstractMobile.m in Sources */,
 				5A355C1320AD237500A26F2F /* City.m in Sources */,
+				5A8B34A020AD7FB3005EB56D /* MobileWorkApp.m in Sources */,
 				5A03F76120AC0E920097BC4F /* CalcluateFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
