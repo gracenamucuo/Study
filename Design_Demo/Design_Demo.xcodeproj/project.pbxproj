@@ -37,13 +37,25 @@
 		5A409B6820ADCA22004A04FF /* ConcreteFlyDecrator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A409B6720ADCA22004A04FF /* ConcreteFlyDecrator.m */; };
 		5A409B6B20ADCA3B004A04FF /* ConcreteTalkDecrator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A409B6A20ADCA3B004A04FF /* ConcreteTalkDecrator.m */; };
 		5A44869C20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44869B20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m */; };
-		5A4486A220AAD6D30084C8B3 /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 5A4486A120AAD6D30084C8B3 /* Resource */; };
 		5A6CE7B020A529A20046585D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CE7AF20A529A20046585D /* AppDelegate.m */; };
 		5A6CE7B320A529A30046585D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CE7B220A529A20046585D /* ViewController.m */; };
 		5A6CE7B620A529A30046585D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CE7B420A529A30046585D /* Main.storyboard */; };
 		5A6CE7B820A529A40046585D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CE7B720A529A40046585D /* Assets.xcassets */; };
 		5A6CE7BB20A529A40046585D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CE7B920A529A40046585D /* LaunchScreen.storyboard */; };
 		5A6CE7BE20A529A40046585D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CE7BD20A529A40046585D /* main.m */; };
+		5A7BFDBE20AE65470035D99F /* AdapterPatternController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFDBD20AE65470035D99F /* AdapterPatternController.m */; };
+		5A7BFDC120AE6E8D0035D99F /* AdapterTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFDC020AE6E8D0035D99F /* AdapterTestView.m */; };
+		5A7BFDC320AE6E980035D99F /* AdapterTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7BFDC220AE6E980035D99F /* AdapterTestView.xib */; };
+		5A7BFDCE20AE71130035D99F /* FlyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFDCD20AE71130035D99F /* FlyModel.m */; };
+		5A7BFDD420AE76000035D99F /* ClassAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFDD320AE76000035D99F /* ClassAdapter.m */; };
+		5A7BFDD720AE761C0035D99F /* ObjectAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFDD620AE761C0035D99F /* ObjectAdapter.m */; };
+		5A7BFDDC20AE7CC30035D99F /* UIView+loadFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFDDB20AE7CC30035D99F /* UIView+loadFromNib.m */; };
+		5A7BFE0C20AE831A0035D99F /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7BFE0620AE831A0035D99F /* ball.png */; };
+		5A7BFE0D20AE831A0035D99F /* door.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7BFE0720AE831A0035D99F /* door.png */; };
+		5A7BFE0E20AE831A0035D99F /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7BFE0820AE831A0035D99F /* fire.png */; };
+		5A7BFE0F20AE831A0035D99F /* room.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7BFE0920AE831A0035D99F /* room.png */; };
+		5A7BFE1020AE831A0035D99F /* ship.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7BFE0A20AE831A0035D99F /* ship.png */; };
+		5A7BFE1120AE831A0035D99F /* sonw.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7BFE0B20AE831A0035D99F /* sonw.png */; };
 		5A8B349120AD7C15005EB56D /* AbstractMobile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B349020AD7C15005EB56D /* AbstractMobile.m */; };
 		5A8B349420AD7C2C005EB56D /* NokiaMobile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B349320AD7C2C005EB56D /* NokiaMobile.m */; };
 		5A8B349720AD7C3E005EB56D /* AppleMobile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B349620AD7C3E005EB56D /* AppleMobile.m */; };
@@ -132,7 +144,6 @@
 		5A409B6A20ADCA3B004A04FF /* ConcreteTalkDecrator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConcreteTalkDecrator.m; sourceTree = "<group>"; };
 		5A44869A20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+loadFromStoryBoard.h"; sourceTree = "<group>"; };
 		5A44869B20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+loadFromStoryBoard.m"; sourceTree = "<group>"; };
-		5A4486A120AAD6D30084C8B3 /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = "<group>"; };
 		5A6CE7AB20A529A20046585D /* Design_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Design_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6CE7AE20A529A20046585D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A6CE7AF20A529A20046585D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -143,6 +154,27 @@
 		5A6CE7BA20A529A40046585D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A6CE7BC20A529A40046585D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6CE7BD20A529A40046585D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A7BFDBC20AE65470035D99F /* AdapterPatternController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdapterPatternController.h; sourceTree = "<group>"; };
+		5A7BFDBD20AE65470035D99F /* AdapterPatternController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdapterPatternController.m; sourceTree = "<group>"; };
+		5A7BFDBF20AE6E8D0035D99F /* AdapterTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdapterTestView.h; sourceTree = "<group>"; };
+		5A7BFDC020AE6E8D0035D99F /* AdapterTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdapterTestView.m; sourceTree = "<group>"; };
+		5A7BFDC220AE6E980035D99F /* AdapterTestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdapterTestView.xib; sourceTree = "<group>"; };
+		5A7BFDC420AE6FA40035D99F /* TargetModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TargetModelProtocol.h; sourceTree = "<group>"; };
+		5A7BFDCC20AE71130035D99F /* FlyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlyModel.h; sourceTree = "<group>"; };
+		5A7BFDCD20AE71130035D99F /* FlyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlyModel.m; sourceTree = "<group>"; };
+		5A7BFDD220AE76000035D99F /* ClassAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassAdapter.h; sourceTree = "<group>"; };
+		5A7BFDD320AE76000035D99F /* ClassAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassAdapter.m; sourceTree = "<group>"; };
+		5A7BFDD520AE761C0035D99F /* ObjectAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectAdapter.h; sourceTree = "<group>"; };
+		5A7BFDD620AE761C0035D99F /* ObjectAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectAdapter.m; sourceTree = "<group>"; };
+		5A7BFDD820AE79660035D99F /* ClassAdapteeProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassAdapteeProtocol.h; sourceTree = "<group>"; };
+		5A7BFDDA20AE7CC30035D99F /* UIView+loadFromNib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+loadFromNib.h"; sourceTree = "<group>"; };
+		5A7BFDDB20AE7CC30035D99F /* UIView+loadFromNib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+loadFromNib.m"; sourceTree = "<group>"; };
+		5A7BFE0620AE831A0035D99F /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		5A7BFE0720AE831A0035D99F /* door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = door.png; sourceTree = "<group>"; };
+		5A7BFE0820AE831A0035D99F /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
+		5A7BFE0920AE831A0035D99F /* room.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = room.png; sourceTree = "<group>"; };
+		5A7BFE0A20AE831A0035D99F /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship.png; sourceTree = "<group>"; };
+		5A7BFE0B20AE831A0035D99F /* sonw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sonw.png; sourceTree = "<group>"; };
 		5A8B348F20AD7C15005EB56D /* AbstractMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractMobile.h; sourceTree = "<group>"; };
 		5A8B349020AD7C15005EB56D /* AbstractMobile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractMobile.m; sourceTree = "<group>"; };
 		5A8B349220AD7C2C005EB56D /* NokiaMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NokiaMobile.h; sourceTree = "<group>"; };
@@ -325,16 +357,81 @@
 			children = (
 				5A6CE7B120A529A20046585D /* ViewController.h */,
 				5A6CE7B220A529A20046585D /* ViewController.m */,
+				5A7BFDBB20AE65110035D99F /* 适配器模式 */,
 				5A409B5720ADC042004A04FF /* 装饰模式 */,
 				5ABC5FCC20AD5B9800D04B09 /* 桥接模式 */,
 				5AFE99D920AD183200FBF19D /* 抽象工厂模式 */,
 				5A03F76620AC2AA70097BC4F /* 工厂方法模式 */,
 				5A03F75020AC044D0097BC4F /* 简单工厂模式 */,
 				5ABC5FEB20AD6C9A00D04B09 /* Other */,
-				5A4486A120AAD6D30084C8B3 /* Resource */,
 				5A6CE7BC20A529A40046585D /* Info.plist */,
 			);
 			path = Design_Demo;
+			sourceTree = "<group>";
+		};
+		5A7BFDBB20AE65110035D99F /* 适配器模式 */ = {
+			isa = PBXGroup;
+			children = (
+				5A7BFDBC20AE65470035D99F /* AdapterPatternController.h */,
+				5A7BFDBD20AE65470035D99F /* AdapterPatternController.m */,
+				5A7BFDBF20AE6E8D0035D99F /* AdapterTestView.h */,
+				5A7BFDC020AE6E8D0035D99F /* AdapterTestView.m */,
+				5A7BFDC220AE6E980035D99F /* AdapterTestView.xib */,
+				5A7BFDC520AE702C0035D99F /* Target */,
+				5A7BFDC620AE70350035D99F /* Adapter */,
+				5A7BFDC820AE704F0035D99F /* Adaptee */,
+			);
+			path = "适配器模式";
+			sourceTree = "<group>";
+		};
+		5A7BFDC520AE702C0035D99F /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				5A7BFDC420AE6FA40035D99F /* TargetModelProtocol.h */,
+			);
+			path = Target;
+			sourceTree = "<group>";
+		};
+		5A7BFDC620AE70350035D99F /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				5A7BFDD220AE76000035D99F /* ClassAdapter.h */,
+				5A7BFDD320AE76000035D99F /* ClassAdapter.m */,
+				5A7BFDD520AE761C0035D99F /* ObjectAdapter.h */,
+				5A7BFDD620AE761C0035D99F /* ObjectAdapter.m */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		5A7BFDC820AE704F0035D99F /* Adaptee */ = {
+			isa = PBXGroup;
+			children = (
+				5A7BFDCC20AE71130035D99F /* FlyModel.h */,
+				5A7BFDCD20AE71130035D99F /* FlyModel.m */,
+				5A7BFDD920AE79750035D99F /* 类适配器 */,
+			);
+			path = Adaptee;
+			sourceTree = "<group>";
+		};
+		5A7BFDD920AE79750035D99F /* 类适配器 */ = {
+			isa = PBXGroup;
+			children = (
+				5A7BFDD820AE79660035D99F /* ClassAdapteeProtocol.h */,
+			);
+			path = "类适配器";
+			sourceTree = "<group>";
+		};
+		5A7BFE0520AE831A0035D99F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5A7BFE0620AE831A0035D99F /* ball.png */,
+				5A7BFE0720AE831A0035D99F /* door.png */,
+				5A7BFE0820AE831A0035D99F /* fire.png */,
+				5A7BFE0920AE831A0035D99F /* room.png */,
+				5A7BFE0A20AE831A0035D99F /* ship.png */,
+				5A7BFE0B20AE831A0035D99F /* sonw.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		5A8B348E20AD7BE9005EB56D /* 手机例子 */ = {
@@ -542,6 +639,7 @@
 		5ABC5FEB20AD6C9A00D04B09 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5A7BFE0520AE831A0035D99F /* Resource */,
 				5A6CE7AE20A529A20046585D /* AppDelegate.h */,
 				5A6CE7AF20A529A20046585D /* AppDelegate.m */,
 				5A6CE7B420A529A30046585D /* Main.storyboard */,
@@ -551,6 +649,8 @@
 				5A44869A20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.h */,
 				5A44869B20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m */,
 				5A03F75120AC05000097BC4F /* Constant.h */,
+				5A7BFDDA20AE7CC30035D99F /* UIView+loadFromNib.h */,
+				5A7BFDDB20AE7CC30035D99F /* UIView+loadFromNib.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -642,10 +742,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A4486A220AAD6D30084C8B3 /* Resource in Resources */,
+				5A7BFE0F20AE831A0035D99F /* room.png in Resources */,
+				5A7BFE0E20AE831A0035D99F /* fire.png in Resources */,
+				5A7BFE1020AE831A0035D99F /* ship.png in Resources */,
+				5A7BFDC320AE6E980035D99F /* AdapterTestView.xib in Resources */,
+				5A7BFE0C20AE831A0035D99F /* ball.png in Resources */,
 				5A6CE7BB20A529A40046585D /* LaunchScreen.storyboard in Resources */,
+				5A7BFE1120AE831A0035D99F /* sonw.png in Resources */,
 				5A6CE7B820A529A40046585D /* Assets.xcassets in Resources */,
 				5A6CE7B620A529A30046585D /* Main.storyboard in Resources */,
+				5A7BFE0D20AE831A0035D99F /* door.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +764,7 @@
 			files = (
 				5A355C1520AD237500A26F2F /* SqliteSettingsInfo.m in Sources */,
 				5ABC5FB920AD24C800D04B09 /* SqliteFactory.m in Sources */,
+				5A7BFDD720AE761C0035D99F /* ObjectAdapter.m in Sources */,
 				5A355C1420AD237500A26F2F /* CoreDataSettingsInfo.m in Sources */,
 				5A03F75E20AC06E20097BC4F /* CalculateDivide.m in Sources */,
 				5A03F75520AC06AE0097BC4F /* CalculateAdd.m in Sources */,
@@ -671,13 +778,17 @@
 				5A03F77720AC2DDB0097BC4F /* FactoryMethodCalculateMinus.m in Sources */,
 				5A6CE7B320A529A30046585D /* ViewController.m in Sources */,
 				5A409B6B20ADCA3B004A04FF /* ConcreteTalkDecrator.m in Sources */,
+				5A7BFDDC20AE7CC30035D99F /* UIView+loadFromNib.m in Sources */,
 				5A6CE7BE20A529A40046585D /* main.m in Sources */,
+				5A7BFDC120AE6E8D0035D99F /* AdapterTestView.m in Sources */,
 				5A355C0F20AD237500A26F2F /* SqliteUserInfo.m in Sources */,
 				5A03F75820AC06C10097BC4F /* CalculateMinus.m in Sources */,
 				5A03F77120AC2D510097BC4F /* FactoryMethodCalculateAdd.m in Sources */,
 				5A355C1120AD237500A26F2F /* CoreDataUserInfo.m in Sources */,
 				5ABC5FDC20AD672D00D04B09 /* MessageEmail.m in Sources */,
+				5A7BFDBE20AE65470035D99F /* AdapterPatternController.m in Sources */,
 				5ABC5FCF20AD5BB400D04B09 /* BridgePatternController.m in Sources */,
+				5A7BFDD420AE76000035D99F /* ClassAdapter.m in Sources */,
 				5A03F75B20AC06D20097BC4F /* CalculateMultiply.m in Sources */,
 				5A44869C20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m in Sources */,
 				5ABC5FD520AD65B400D04B09 /* AbstractMessage.m in Sources */,
@@ -702,6 +813,7 @@
 				5A8B349420AD7C2C005EB56D /* NokiaMobile.m in Sources */,
 				5A03F77420AC2DC00097BC4F /* FactoryMinus.m in Sources */,
 				5ABC5FEA20AD696E00D04B09 /* SpecialUrgencyMessage.m in Sources */,
+				5A7BFDCE20AE71130035D99F /* FlyModel.m in Sources */,
 				5A8B349120AD7C15005EB56D /* AbstractMobile.m in Sources */,
 				5A355C1320AD237500A26F2F /* City.m in Sources */,
 				5A8B34A020AD7FB3005EB56D /* MobileWorkApp.m in Sources */,
