@@ -56,6 +56,9 @@
 		5A7BFE0F20AE831A0035D99F /* room.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7BFE0920AE831A0035D99F /* room.png */; };
 		5A7BFE1020AE831A0035D99F /* ship.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7BFE0A20AE831A0035D99F /* ship.png */; };
 		5A7BFE1120AE831A0035D99F /* sonw.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A7BFE0B20AE831A0035D99F /* sonw.png */; };
+		5A7BFE1720AE9C6D0035D99F /* CompositePatternController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFE1620AE9C6D0035D99F /* CompositePatternController.m */; };
+		5A7BFE1E20AE9E630035D99F /* MenuComposite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFE1D20AE9E630035D99F /* MenuComposite.m */; };
+		5A7BFE2120AE9E750035D99F /* MenuItemLeaf.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFE2020AE9E750035D99F /* MenuItemLeaf.m */; };
 		5A8B349120AD7C15005EB56D /* AbstractMobile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B349020AD7C15005EB56D /* AbstractMobile.m */; };
 		5A8B349420AD7C2C005EB56D /* NokiaMobile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B349320AD7C2C005EB56D /* NokiaMobile.m */; };
 		5A8B349720AD7C3E005EB56D /* AppleMobile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8B349620AD7C3E005EB56D /* AppleMobile.m */; };
@@ -175,6 +178,13 @@
 		5A7BFE0920AE831A0035D99F /* room.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = room.png; sourceTree = "<group>"; };
 		5A7BFE0A20AE831A0035D99F /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship.png; sourceTree = "<group>"; };
 		5A7BFE0B20AE831A0035D99F /* sonw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sonw.png; sourceTree = "<group>"; };
+		5A7BFE1520AE9C6D0035D99F /* CompositePatternController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompositePatternController.h; sourceTree = "<group>"; };
+		5A7BFE1620AE9C6D0035D99F /* CompositePatternController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompositePatternController.m; sourceTree = "<group>"; };
+		5A7BFE1820AE9D180035D99F /* MenuComponentProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuComponentProtocol.h; sourceTree = "<group>"; };
+		5A7BFE1C20AE9E630035D99F /* MenuComposite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuComposite.h; sourceTree = "<group>"; };
+		5A7BFE1D20AE9E630035D99F /* MenuComposite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuComposite.m; sourceTree = "<group>"; };
+		5A7BFE1F20AE9E750035D99F /* MenuItemLeaf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuItemLeaf.h; sourceTree = "<group>"; };
+		5A7BFE2020AE9E750035D99F /* MenuItemLeaf.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuItemLeaf.m; sourceTree = "<group>"; };
 		5A8B348F20AD7C15005EB56D /* AbstractMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractMobile.h; sourceTree = "<group>"; };
 		5A8B349020AD7C15005EB56D /* AbstractMobile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractMobile.m; sourceTree = "<group>"; };
 		5A8B349220AD7C2C005EB56D /* NokiaMobile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NokiaMobile.h; sourceTree = "<group>"; };
@@ -357,6 +367,7 @@
 			children = (
 				5A6CE7B120A529A20046585D /* ViewController.h */,
 				5A6CE7B220A529A20046585D /* ViewController.m */,
+				5A7BFE1420AE9C3C0035D99F /* 组合模式 */,
 				5A7BFDBB20AE65110035D99F /* 适配器模式 */,
 				5A409B5720ADC042004A04FF /* 装饰模式 */,
 				5ABC5FCC20AD5B9800D04B09 /* 桥接模式 */,
@@ -432,6 +443,44 @@
 				5A7BFE0B20AE831A0035D99F /* sonw.png */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		5A7BFE1420AE9C3C0035D99F /* 组合模式 */ = {
+			isa = PBXGroup;
+			children = (
+				5A7BFE1520AE9C6D0035D99F /* CompositePatternController.h */,
+				5A7BFE1620AE9C6D0035D99F /* CompositePatternController.m */,
+				5A7BFE1920AE9D1C0035D99F /* 抽象组件 */,
+				5A7BFE1A20AE9E150035D99F /* 组合子节点 */,
+				5A7BFE1B20AE9E360035D99F /* 叶节点 */,
+			);
+			path = "组合模式";
+			sourceTree = "<group>";
+		};
+		5A7BFE1920AE9D1C0035D99F /* 抽象组件 */ = {
+			isa = PBXGroup;
+			children = (
+				5A7BFE1820AE9D180035D99F /* MenuComponentProtocol.h */,
+			);
+			path = "抽象组件";
+			sourceTree = "<group>";
+		};
+		5A7BFE1A20AE9E150035D99F /* 组合子节点 */ = {
+			isa = PBXGroup;
+			children = (
+				5A7BFE1C20AE9E630035D99F /* MenuComposite.h */,
+				5A7BFE1D20AE9E630035D99F /* MenuComposite.m */,
+			);
+			path = "组合子节点";
+			sourceTree = "<group>";
+		};
+		5A7BFE1B20AE9E360035D99F /* 叶节点 */ = {
+			isa = PBXGroup;
+			children = (
+				5A7BFE1F20AE9E750035D99F /* MenuItemLeaf.h */,
+				5A7BFE2020AE9E750035D99F /* MenuItemLeaf.m */,
+			);
+			path = "叶节点";
 			sourceTree = "<group>";
 		};
 		5A8B348E20AD7BE9005EB56D /* 手机例子 */ = {
@@ -764,6 +813,7 @@
 			files = (
 				5A355C1520AD237500A26F2F /* SqliteSettingsInfo.m in Sources */,
 				5ABC5FB920AD24C800D04B09 /* SqliteFactory.m in Sources */,
+				5A7BFE2120AE9E750035D99F /* MenuItemLeaf.m in Sources */,
 				5A7BFDD720AE761C0035D99F /* ObjectAdapter.m in Sources */,
 				5A355C1420AD237500A26F2F /* CoreDataSettingsInfo.m in Sources */,
 				5A03F75E20AC06E20097BC4F /* CalculateDivide.m in Sources */,
@@ -788,6 +838,7 @@
 				5ABC5FDC20AD672D00D04B09 /* MessageEmail.m in Sources */,
 				5A7BFDBE20AE65470035D99F /* AdapterPatternController.m in Sources */,
 				5ABC5FCF20AD5BB400D04B09 /* BridgePatternController.m in Sources */,
+				5A7BFE1E20AE9E630035D99F /* MenuComposite.m in Sources */,
 				5A7BFDD420AE76000035D99F /* ClassAdapter.m in Sources */,
 				5A03F75B20AC06D20097BC4F /* CalculateMultiply.m in Sources */,
 				5A44869C20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m in Sources */,
@@ -809,6 +860,7 @@
 				5A355C1220AD237500A26F2F /* SqliteSearchInfo.m in Sources */,
 				5A8B349720AD7C3E005EB56D /* AppleMobile.m in Sources */,
 				5A409B5A20ADC080004A04FF /* DecoratorPatternController.m in Sources */,
+				5A7BFE1720AE9C6D0035D99F /* CompositePatternController.m in Sources */,
 				5A03F78020AC2FBA0097BC4F /* FactoryDivide.m in Sources */,
 				5A8B349420AD7C2C005EB56D /* NokiaMobile.m in Sources */,
 				5A03F77420AC2DC00097BC4F /* FactoryMinus.m in Sources */,
