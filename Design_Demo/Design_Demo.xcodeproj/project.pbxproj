@@ -37,6 +37,14 @@
 		5A409B6820ADCA22004A04FF /* ConcreteFlyDecrator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A409B6720ADCA22004A04FF /* ConcreteFlyDecrator.m */; };
 		5A409B6B20ADCA3B004A04FF /* ConcreteTalkDecrator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A409B6A20ADCA3B004A04FF /* ConcreteTalkDecrator.m */; };
 		5A44869C20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A44869B20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m */; };
+		5A5B2FC620B567150027114E /* CommandPatternController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B2FC520B567150027114E /* CommandPatternController.m */; };
+		5A5B2FCE20B568310027114E /* Worker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B2FCD20B568310027114E /* Worker.m */; };
+		5A5B2FD120B568400027114E /* Waiter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B2FD020B568400027114E /* Waiter.m */; };
+		5A5B2FD520B5691B0027114E /* MuttonOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B2FD420B5691B0027114E /* MuttonOrder.m */; };
+		5A5B2FD820B56CE30027114E /* OrderPatternAbstractOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B2FD720B56CE30027114E /* OrderPatternAbstractOrder.m */; };
+		5A5B2FDB20B56D7A0027114E /* ChickenOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B2FDA20B56D7A0027114E /* ChickenOrder.m */; };
+		5A5B2FDE20B56DC90027114E /* DuckOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B2FDD20B56DC90027114E /* DuckOrder.m */; };
+		5A5B2FE120B571210027114E /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A5B2FE020B571210027114E /* Customer.m */; };
 		5A6CE7B020A529A20046585D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CE7AF20A529A20046585D /* AppDelegate.m */; };
 		5A6CE7B320A529A30046585D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CE7B220A529A20046585D /* ViewController.m */; };
 		5A6CE7B620A529A30046585D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CE7B420A529A30046585D /* Main.storyboard */; };
@@ -156,6 +164,23 @@
 		5A409B6A20ADCA3B004A04FF /* ConcreteTalkDecrator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConcreteTalkDecrator.m; sourceTree = "<group>"; };
 		5A44869A20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+loadFromStoryBoard.h"; sourceTree = "<group>"; };
 		5A44869B20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+loadFromStoryBoard.m"; sourceTree = "<group>"; };
+		5A5B2FC420B567150027114E /* CommandPatternController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandPatternController.h; sourceTree = "<group>"; };
+		5A5B2FC520B567150027114E /* CommandPatternController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommandPatternController.m; sourceTree = "<group>"; };
+		5A5B2FCC20B568310027114E /* Worker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Worker.h; sourceTree = "<group>"; };
+		5A5B2FCD20B568310027114E /* Worker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Worker.m; sourceTree = "<group>"; };
+		5A5B2FCF20B568400027114E /* Waiter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Waiter.h; sourceTree = "<group>"; };
+		5A5B2FD020B568400027114E /* Waiter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Waiter.m; sourceTree = "<group>"; };
+		5A5B2FD220B568940027114E /* OrderProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderProtocol.h; sourceTree = "<group>"; };
+		5A5B2FD320B5691B0027114E /* MuttonOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MuttonOrder.h; sourceTree = "<group>"; };
+		5A5B2FD420B5691B0027114E /* MuttonOrder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MuttonOrder.m; sourceTree = "<group>"; };
+		5A5B2FD620B56CE30027114E /* OrderPatternAbstractOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderPatternAbstractOrder.h; sourceTree = "<group>"; };
+		5A5B2FD720B56CE30027114E /* OrderPatternAbstractOrder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderPatternAbstractOrder.m; sourceTree = "<group>"; };
+		5A5B2FD920B56D7A0027114E /* ChickenOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChickenOrder.h; sourceTree = "<group>"; };
+		5A5B2FDA20B56D7A0027114E /* ChickenOrder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChickenOrder.m; sourceTree = "<group>"; };
+		5A5B2FDC20B56DC90027114E /* DuckOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuckOrder.h; sourceTree = "<group>"; };
+		5A5B2FDD20B56DC90027114E /* DuckOrder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuckOrder.m; sourceTree = "<group>"; };
+		5A5B2FDF20B571210027114E /* Customer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		5A5B2FE020B571210027114E /* Customer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
 		5A6CE7AB20A529A20046585D /* Design_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Design_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6CE7AE20A529A20046585D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A6CE7AF20A529A20046585D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -373,6 +398,62 @@
 			path = "装饰者";
 			sourceTree = "<group>";
 		};
+		5A5B2FC320B566DC0027114E /* 命令模式 */ = {
+			isa = PBXGroup;
+			children = (
+				5A5B2FC420B567150027114E /* CommandPatternController.h */,
+				5A5B2FC520B567150027114E /* CommandPatternController.m */,
+				5A5B2FDF20B571210027114E /* Customer.h */,
+				5A5B2FE020B571210027114E /* Customer.m */,
+				5A5B2FCA20B567FE0027114E /* 抽象命令类 */,
+				5A5B2FCB20B5680B0027114E /* 具体命令类 */,
+				5A5B2FC920B567E50027114E /* 调用者 */,
+				5A5B2FC720B5671F0027114E /* 接收者 */,
+			);
+			path = "命令模式";
+			sourceTree = "<group>";
+		};
+		5A5B2FC720B5671F0027114E /* 接收者 */ = {
+			isa = PBXGroup;
+			children = (
+				5A5B2FCC20B568310027114E /* Worker.h */,
+				5A5B2FCD20B568310027114E /* Worker.m */,
+			);
+			path = "接收者";
+			sourceTree = "<group>";
+		};
+		5A5B2FC920B567E50027114E /* 调用者 */ = {
+			isa = PBXGroup;
+			children = (
+				5A5B2FCF20B568400027114E /* Waiter.h */,
+				5A5B2FD020B568400027114E /* Waiter.m */,
+			);
+			path = "调用者";
+			sourceTree = "<group>";
+		};
+		5A5B2FCA20B567FE0027114E /* 抽象命令类 */ = {
+			isa = PBXGroup;
+			children = (
+				5A5B2FD220B568940027114E /* OrderProtocol.h */,
+				5A5B2FD620B56CE30027114E /* OrderPatternAbstractOrder.h */,
+				5A5B2FD720B56CE30027114E /* OrderPatternAbstractOrder.m */,
+			);
+			path = "抽象命令类";
+			sourceTree = "<group>";
+		};
+		5A5B2FCB20B5680B0027114E /* 具体命令类 */ = {
+			isa = PBXGroup;
+			children = (
+				5A5B2FD320B5691B0027114E /* MuttonOrder.h */,
+				5A5B2FD420B5691B0027114E /* MuttonOrder.m */,
+				5A5B2FD920B56D7A0027114E /* ChickenOrder.h */,
+				5A5B2FDA20B56D7A0027114E /* ChickenOrder.m */,
+				5A5B2FDC20B56DC90027114E /* DuckOrder.h */,
+				5A5B2FDD20B56DC90027114E /* DuckOrder.m */,
+			);
+			path = "具体命令类";
+			sourceTree = "<group>";
+		};
 		5A6CE7A220A529A20046585D = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +476,7 @@
 				5A6CE7B120A529A20046585D /* ViewController.h */,
 				5A6CE7B220A529A20046585D /* ViewController.m */,
 				5A75A6D320AF1136004307D8 /* 外观模式 */,
+				5A5B2FC320B566DC0027114E /* 命令模式 */,
 				5A7BFE1420AE9C3C0035D99F /* 组合模式 */,
 				5A7BFDBB20AE65110035D99F /* 适配器模式 */,
 				5A409B5720ADC042004A04FF /* 装饰模式 */,
@@ -912,10 +994,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A5B2FD820B56CE30027114E /* OrderPatternAbstractOrder.m in Sources */,
 				5A355C1520AD237500A26F2F /* SqliteSettingsInfo.m in Sources */,
 				5ABC5FB920AD24C800D04B09 /* SqliteFactory.m in Sources */,
 				5A7BFE2120AE9E750035D99F /* MenuItemLeaf.m in Sources */,
 				5A7BFDD720AE761C0035D99F /* ObjectAdapter.m in Sources */,
+				5A5B2FD520B5691B0027114E /* MuttonOrder.m in Sources */,
 				5A355C1420AD237500A26F2F /* CoreDataSettingsInfo.m in Sources */,
 				5A03F75E20AC06E20097BC4F /* CalculateDivide.m in Sources */,
 				5A03F75520AC06AE0097BC4F /* CalculateAdd.m in Sources */,
@@ -941,11 +1025,13 @@
 				5ABC5FDC20AD672D00D04B09 /* MessageEmail.m in Sources */,
 				5A7BFDBE20AE65470035D99F /* AdapterPatternController.m in Sources */,
 				5ABC5FCF20AD5BB400D04B09 /* BridgePatternController.m in Sources */,
+				5A5B2FDB20B56D7A0027114E /* ChickenOrder.m in Sources */,
 				5A7BFE1E20AE9E630035D99F /* MenuComposite.m in Sources */,
 				5A7BFDD420AE76000035D99F /* ClassAdapter.m in Sources */,
 				5A03F75B20AC06D20097BC4F /* CalculateMultiply.m in Sources */,
 				5A44869C20AAD4050084C8B3 /* UIViewController+loadFromStoryBoard.m in Sources */,
 				5ABC5FD520AD65B400D04B09 /* AbstractMessage.m in Sources */,
+				5A5B2FCE20B568310027114E /* Worker.m in Sources */,
 				5A409B6420ADC1A9004A04FF /* ChangerDecrator.m in Sources */,
 				5A355C0E20AD237500A26F2F /* User.m in Sources */,
 				5A409B6820ADCA22004A04FF /* ConcreteFlyDecrator.m in Sources */,
@@ -960,9 +1046,13 @@
 				5A75A6E020AF11E4004307D8 /* SystemTwo.m in Sources */,
 				5A8B349D20AD7F9F005EB56D /* MobileContractApp.m in Sources */,
 				5A75A6E620AF1A14004307D8 /* TravelAgency.m in Sources */,
+				5A5B2FC620B567150027114E /* CommandPatternController.m in Sources */,
+				5A8B349D20AD7F9F005EB56D /* MobileContractApp.m in Sources */,
+				5A5B2FE120B571210027114E /* Customer.m in Sources */,
 				5ABC5FE720AD695D00D04B09 /* UrgencyMessage.m in Sources */,
 				5A75A6ED20AF1A53004307D8 /* Hotel.m in Sources */,
 				5A03F78320AC2FD00097BC4F /* FactoryMethodCalculateDivide.m in Sources */,
+				5A5B2FD120B568400027114E /* Waiter.m in Sources */,
 				5ABC5FD920AD670700D04B09 /* MessageSMS.m in Sources */,
 				5A355C1220AD237500A26F2F /* SqliteSearchInfo.m in Sources */,
 				5A8B349720AD7C3E005EB56D /* AppleMobile.m in Sources */,
@@ -980,6 +1070,7 @@
 				5A355C1320AD237500A26F2F /* City.m in Sources */,
 				5A8B34A020AD7FB3005EB56D /* MobileWorkApp.m in Sources */,
 				5A03F76120AC0E920097BC4F /* CalcluateFactory.m in Sources */,
+				5A5B2FDE20B56DC90027114E /* DuckOrder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
