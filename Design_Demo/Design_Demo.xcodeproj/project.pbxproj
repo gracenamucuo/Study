@@ -43,6 +43,15 @@
 		5A6CE7B820A529A40046585D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CE7B720A529A40046585D /* Assets.xcassets */; };
 		5A6CE7BB20A529A40046585D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CE7B920A529A40046585D /* LaunchScreen.storyboard */; };
 		5A6CE7BE20A529A40046585D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CE7BD20A529A40046585D /* main.m */; };
+		5A75A6D620AF1162004307D8 /* FacadePatternController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A75A6D520AF1162004307D8 /* FacadePatternController.m */; };
+		5A75A6D920AF11AB004307D8 /* Facade.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A75A6D820AF11AB004307D8 /* Facade.m */; };
+		5A75A6DD20AF11D8004307D8 /* SystemOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A75A6DC20AF11D8004307D8 /* SystemOne.m */; };
+		5A75A6E020AF11E4004307D8 /* SystemTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A75A6DF20AF11E4004307D8 /* SystemTwo.m */; };
+		5A75A6E620AF1A14004307D8 /* TravelAgency.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A75A6E520AF1A14004307D8 /* TravelAgency.m */; };
+		5A75A6EA20AF1A4B004307D8 /* Transportation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A75A6E920AF1A4B004307D8 /* Transportation.m */; };
+		5A75A6ED20AF1A53004307D8 /* Hotel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A75A6EC20AF1A53004307D8 /* Hotel.m */; };
+		5A75A6F020AF1A6C004307D8 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A75A6EF20AF1A6C004307D8 /* Restaurant.m */; };
+		5A75A6F420AF1AB7004307D8 /* Spots.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A75A6F320AF1AB7004307D8 /* Spots.m */; };
 		5A7BFDBE20AE65470035D99F /* AdapterPatternController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFDBD20AE65470035D99F /* AdapterPatternController.m */; };
 		5A7BFDC120AE6E8D0035D99F /* AdapterTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFDC020AE6E8D0035D99F /* AdapterTestView.m */; };
 		5A7BFDC320AE6E980035D99F /* AdapterTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7BFDC220AE6E980035D99F /* AdapterTestView.xib */; };
@@ -157,6 +166,24 @@
 		5A6CE7BA20A529A40046585D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A6CE7BC20A529A40046585D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6CE7BD20A529A40046585D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A75A6D420AF1162004307D8 /* FacadePatternController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FacadePatternController.h; sourceTree = "<group>"; };
+		5A75A6D520AF1162004307D8 /* FacadePatternController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacadePatternController.m; sourceTree = "<group>"; };
+		5A75A6D720AF11AB004307D8 /* Facade.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Facade.h; sourceTree = "<group>"; };
+		5A75A6D820AF11AB004307D8 /* Facade.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Facade.m; sourceTree = "<group>"; };
+		5A75A6DB20AF11D8004307D8 /* SystemOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemOne.h; sourceTree = "<group>"; };
+		5A75A6DC20AF11D8004307D8 /* SystemOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemOne.m; sourceTree = "<group>"; };
+		5A75A6DE20AF11E4004307D8 /* SystemTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemTwo.h; sourceTree = "<group>"; };
+		5A75A6DF20AF11E4004307D8 /* SystemTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemTwo.m; sourceTree = "<group>"; };
+		5A75A6E420AF1A14004307D8 /* TravelAgency.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TravelAgency.h; sourceTree = "<group>"; };
+		5A75A6E520AF1A14004307D8 /* TravelAgency.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TravelAgency.m; sourceTree = "<group>"; };
+		5A75A6E820AF1A4B004307D8 /* Transportation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transportation.h; sourceTree = "<group>"; };
+		5A75A6E920AF1A4B004307D8 /* Transportation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Transportation.m; sourceTree = "<group>"; };
+		5A75A6EB20AF1A53004307D8 /* Hotel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hotel.h; sourceTree = "<group>"; };
+		5A75A6EC20AF1A53004307D8 /* Hotel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Hotel.m; sourceTree = "<group>"; };
+		5A75A6EE20AF1A6C004307D8 /* Restaurant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
+		5A75A6EF20AF1A6C004307D8 /* Restaurant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
+		5A75A6F220AF1AB7004307D8 /* Spots.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spots.h; sourceTree = "<group>"; };
+		5A75A6F320AF1AB7004307D8 /* Spots.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Spots.m; sourceTree = "<group>"; };
 		5A7BFDBC20AE65470035D99F /* AdapterPatternController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdapterPatternController.h; sourceTree = "<group>"; };
 		5A7BFDBD20AE65470035D99F /* AdapterPatternController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdapterPatternController.m; sourceTree = "<group>"; };
 		5A7BFDBF20AE6E8D0035D99F /* AdapterTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdapterTestView.h; sourceTree = "<group>"; };
@@ -367,6 +394,7 @@
 			children = (
 				5A6CE7B120A529A20046585D /* ViewController.h */,
 				5A6CE7B220A529A20046585D /* ViewController.m */,
+				5A75A6D320AF1136004307D8 /* 外观模式 */,
 				5A7BFE1420AE9C3C0035D99F /* 组合模式 */,
 				5A7BFDBB20AE65110035D99F /* 适配器模式 */,
 				5A409B5720ADC042004A04FF /* 装饰模式 */,
@@ -378,6 +406,79 @@
 				5A6CE7BC20A529A40046585D /* Info.plist */,
 			);
 			path = Design_Demo;
+			sourceTree = "<group>";
+		};
+		5A75A6D320AF1136004307D8 /* 外观模式 */ = {
+			isa = PBXGroup;
+			children = (
+				5A75A6E320AF19D4004307D8 /* 旅游例子 */,
+				5A75A6D420AF1162004307D8 /* FacadePatternController.h */,
+				5A75A6D520AF1162004307D8 /* FacadePatternController.m */,
+				5A75A6E220AF14DE004307D8 /* 无实际意义的例子 */,
+			);
+			path = "外观模式";
+			sourceTree = "<group>";
+		};
+		5A75A6DA20AF11AE004307D8 /* 外观类 */ = {
+			isa = PBXGroup;
+			children = (
+				5A75A6D720AF11AB004307D8 /* Facade.h */,
+				5A75A6D820AF11AB004307D8 /* Facade.m */,
+			);
+			path = "外观类";
+			sourceTree = "<group>";
+		};
+		5A75A6E120AF11EC004307D8 /* 子系统 */ = {
+			isa = PBXGroup;
+			children = (
+				5A75A6DB20AF11D8004307D8 /* SystemOne.h */,
+				5A75A6DC20AF11D8004307D8 /* SystemOne.m */,
+				5A75A6DE20AF11E4004307D8 /* SystemTwo.h */,
+				5A75A6DF20AF11E4004307D8 /* SystemTwo.m */,
+			);
+			path = "子系统";
+			sourceTree = "<group>";
+		};
+		5A75A6E220AF14DE004307D8 /* 无实际意义的例子 */ = {
+			isa = PBXGroup;
+			children = (
+				5A75A6DA20AF11AE004307D8 /* 外观类 */,
+				5A75A6E120AF11EC004307D8 /* 子系统 */,
+			);
+			path = "无实际意义的例子";
+			sourceTree = "<group>";
+		};
+		5A75A6E320AF19D4004307D8 /* 旅游例子 */ = {
+			isa = PBXGroup;
+			children = (
+				5A75A6E720AF1A19004307D8 /* Facade */,
+				5A75A6F120AF1A7F004307D8 /* 子系统 */,
+			);
+			path = "旅游例子";
+			sourceTree = "<group>";
+		};
+		5A75A6E720AF1A19004307D8 /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				5A75A6E420AF1A14004307D8 /* TravelAgency.h */,
+				5A75A6E520AF1A14004307D8 /* TravelAgency.m */,
+			);
+			path = Facade;
+			sourceTree = "<group>";
+		};
+		5A75A6F120AF1A7F004307D8 /* 子系统 */ = {
+			isa = PBXGroup;
+			children = (
+				5A75A6EB20AF1A53004307D8 /* Hotel.h */,
+				5A75A6EC20AF1A53004307D8 /* Hotel.m */,
+				5A75A6EE20AF1A6C004307D8 /* Restaurant.h */,
+				5A75A6EF20AF1A6C004307D8 /* Restaurant.m */,
+				5A75A6E820AF1A4B004307D8 /* Transportation.h */,
+				5A75A6E920AF1A4B004307D8 /* Transportation.m */,
+				5A75A6F220AF1AB7004307D8 /* Spots.h */,
+				5A75A6F320AF1AB7004307D8 /* Spots.m */,
+			);
+			path = "子系统";
 			sourceTree = "<group>";
 		};
 		5A7BFDBB20AE65110035D99F /* 适配器模式 */ = {
@@ -820,8 +921,10 @@
 				5A03F75520AC06AE0097BC4F /* CalculateAdd.m in Sources */,
 				5A409B5E20ADC119004A04FF /* Transformers.m in Sources */,
 				5ABC5FC320AD28BD00D04B09 /* AbstractFactoryController.m in Sources */,
+				5A75A6DD20AF11D8004307D8 /* SystemOne.m in Sources */,
 				5A03F76E20AC2CD50097BC4F /* FactoryAdd.m in Sources */,
 				5A03F77A20AC2F1B0097BC4F /* FactoryMultiply.m in Sources */,
+				5A75A6F020AF1A6C004307D8 /* Restaurant.m in Sources */,
 				5ABC5FBC20AD24D300D04B09 /* CoreDataFactory.m in Sources */,
 				5A8B34A320AD7FC0005EB56D /* MobileGameApp.m in Sources */,
 				5A03F77D20AC2F440097BC4F /* FactoryMethodCalculateMultiply.m in Sources */,
@@ -853,8 +956,12 @@
 				5A03F76420AC10EE0097BC4F /* SimpleFactoryPatternController.m in Sources */,
 				5A6CE7B020A529A20046585D /* AppDelegate.m in Sources */,
 				5ABC5FE420AD694E00D04B09 /* CommonMessage.m in Sources */,
+				5A75A6D620AF1162004307D8 /* FacadePatternController.m in Sources */,
+				5A75A6E020AF11E4004307D8 /* SystemTwo.m in Sources */,
 				5A8B349D20AD7F9F005EB56D /* MobileContractApp.m in Sources */,
+				5A75A6E620AF1A14004307D8 /* TravelAgency.m in Sources */,
 				5ABC5FE720AD695D00D04B09 /* UrgencyMessage.m in Sources */,
+				5A75A6ED20AF1A53004307D8 /* Hotel.m in Sources */,
 				5A03F78320AC2FD00097BC4F /* FactoryMethodCalculateDivide.m in Sources */,
 				5ABC5FD920AD670700D04B09 /* MessageSMS.m in Sources */,
 				5A355C1220AD237500A26F2F /* SqliteSearchInfo.m in Sources */,
@@ -864,7 +971,10 @@
 				5A03F78020AC2FBA0097BC4F /* FactoryDivide.m in Sources */,
 				5A8B349420AD7C2C005EB56D /* NokiaMobile.m in Sources */,
 				5A03F77420AC2DC00097BC4F /* FactoryMinus.m in Sources */,
+				5A75A6F420AF1AB7004307D8 /* Spots.m in Sources */,
 				5ABC5FEA20AD696E00D04B09 /* SpecialUrgencyMessage.m in Sources */,
+				5A75A6EA20AF1A4B004307D8 /* Transportation.m in Sources */,
+				5A75A6D920AF11AB004307D8 /* Facade.m in Sources */,
 				5A7BFDCE20AE71130035D99F /* FlyModel.m in Sources */,
 				5A8B349120AD7C15005EB56D /* AbstractMobile.m in Sources */,
 				5A355C1320AD237500A26F2F /* City.m in Sources */,
