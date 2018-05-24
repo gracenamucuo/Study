@@ -8,15 +8,23 @@
 
 #import "ObserverController.h"
 
-@interface ObserverController ()
+@interface ObserverController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)NSTimer *timer;
 @property (nonatomic,assign)CFRunLoopObserverRef obsever;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
-//runloop0x1c00a7f80 runloop0x1c00a7f80
+static NSString *cellID = @"cellID";
 @implementation ObserverController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
+    self.tableView.tableFooterView = [UIView new];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.rowHeight = self.view.bounds.size.height - 64;
+    
+    //======================================================================
     [self addObserver];
   NSTimer *timer = [NSTimer timerWithTimeInterval:2 target:self selector:@selector(print) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop]addTimer:timer forMode:NSDefaultRunLoopMode];
@@ -50,9 +58,12 @@
      */
     
     CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(CFAllocatorGetDefault(), kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
-        NSLog(@"---监听到Runloop状态发生改变--%lu",activity);
-
-        NSLog(@"当前runloop%p----mode为%@",[NSRunLoop currentRunLoop],[[NSRunLoop currentRunLoop]currentMode]);
+//        NSLog(@"---监听到Runloop状态发生改变--%lu",activity);
+        if (activity == 128) {
+            NSLog(@"退出");
+                NSLog(@"当前runloop----mode为%@",[[NSRunLoop currentRunLoop]currentMode]);
+        }
+//        NSLog(@"当前runloop%p----mode为%@",[NSRunLoop currentRunLoop],[[NSRunLoop currentRunLoop]currentMode]);
     });
     CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopCommonModes);//将观察者添加到common模式下，这样当default模式和UITrackingRunLoopMode两种模式下都有回调。
     self.obsever  = observer;
@@ -65,6 +76,19 @@
     [super viewWillAppear:animated];
     [self.timer invalidate];
     self.timer = nil;
+}
+
+#pragma mark -- UItableViewDataSource && UItableViewDelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 30;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    cell.textLabel.text = @"你好";
+    return cell;
 }
 
 - (void)dealloc//【需要找到合适的时机将timer废弃并且职位nil】
