@@ -20,7 +20,7 @@ static NSString *cellID = @"cellID";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     self.tableView.rowHeight = 50.f;
     self.dataArray = [NSMutableArray array];
-    [self.dataArray addObjectsFromArray:@[@"ObserverController",@"ResidentThreadController"]];
+    [self.dataArray addObjectsFromArray:@[@"ObserverController",@"ResidentThreadController",@"InputSourceController"]];
     self.tableView.tableFooterView = [UIView new];
     [self.tableView reloadData];
 }

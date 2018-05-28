@@ -19,7 +19,7 @@ static NSString *cellID = @"cellID";
     [super viewDidLoad];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     self.tableView.tableFooterView = [UIView new];
-    self.dataSource = [NSMutableArray arrayWithArray:@[@"SimpleFactoryPatternController",@"FactoryMethodController",@"AbstractFactoryController",@"BridgePatternController",@"DecoratorPatternController",@"AdapterPatternController",@"CompositePatternController"]];
+    self.dataSource = [NSMutableArray arrayWithArray:@[@"SimpleFactoryPatternController",@"FactoryMethodController",@"AbstractFactoryController",@"BridgePatternController",@"DecoratorPatternController",@"AdapterPatternController",@"CompositePatternController",@"CommandPatternController",@"FacadePatternController"]];
     self.tableView.rowHeight = 50.f;
     
 }

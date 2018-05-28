@@ -108,5 +108,20 @@
             </objects>
             <point key="canvasLocation" x="175" y="6"/>
         </scene>
+        <!--Input Source Controller-->
+        <scene sceneID="29g-tl-o2G">
+            <objects>
+                <viewController storyboardIdentifier="InputSourceController" id="5s5-sd-rcj" customClass="InputSourceController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pND-Iv-SWy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6UY-Um-dIH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VfY-lU-KnL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="6"/>
+        </scene>
     </scenes>
 </document>
