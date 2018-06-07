@@ -18,4 +18,6 @@ typedef NS_ENUM(NSUInteger,orderType) {
 
 - (OrderPatternAbstractOrder *)placeAnOrderWithOrderString:(NSString *)orderString type:(orderType)type;
 
+- (void)setCommandWithOrder:(OrderPatternAbstractOrder*)command;
+
 @end

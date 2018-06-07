@@ -10,9 +10,10 @@
 #import "MuttonOrder.h"
 #import "ChickenOrder.h"
 #import "DuckOrder.h"
+#import "Waiter.h"
 @implementation Customer
 
-- (OrderPatternAbstractOrder *)placeAnOrderWithOrderString:(NSString *)orderString type:(orderType)type
+-  (OrderPatternAbstractOrder *)placeAnOrderWithOrderString:(NSString *)orderString type:(orderType)type
 {
     switch (type) {
         case orderType_mutton:
@@ -26,6 +27,13 @@
             break;
     }
     return nil;
+}
+
+- (void)setCommandWithOrder:(OrderPatternAbstractOrder *)command
+{
+    Waiter *waiter = [[Waiter alloc]init];
+    [waiter addOrder:command];
+    [waiter executeOrder];
 }
 
 @end
