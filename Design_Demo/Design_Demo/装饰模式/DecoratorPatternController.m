@@ -13,7 +13,8 @@
 @interface DecoratorPatternController ()
 
 @end
-
+//同心圆  一层包一层，最里层是被装饰者，外层是装饰者，可以包装很多层装饰者。
+//装饰者和被装饰者必须是一样的类型，必须有共同
 @implementation DecoratorPatternController
 
 - (void)viewDidLoad {
