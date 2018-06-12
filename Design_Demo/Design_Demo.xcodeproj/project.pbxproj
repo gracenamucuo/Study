@@ -103,6 +103,7 @@
 		5ABC5FE420AD694E00D04B09 /* CommonMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FE320AD694E00D04B09 /* CommonMessage.m */; };
 		5ABC5FE720AD695D00D04B09 /* UrgencyMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FE620AD695D00D04B09 /* UrgencyMessage.m */; };
 		5ABC5FEA20AD696E00D04B09 /* SpecialUrgencyMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5FE920AD696E00D04B09 /* SpecialUrgencyMessage.m */; };
+		5AEE37AD20CCB66D00F68536 /* MediatorPatternController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEE37AC20CCB66D00F68536 /* MediatorPatternController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -304,6 +305,8 @@
 		5ABC5FE620AD695D00D04B09 /* UrgencyMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UrgencyMessage.m; sourceTree = "<group>"; };
 		5ABC5FE820AD696E00D04B09 /* SpecialUrgencyMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialUrgencyMessage.h; sourceTree = "<group>"; };
 		5ABC5FE920AD696E00D04B09 /* SpecialUrgencyMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecialUrgencyMessage.m; sourceTree = "<group>"; };
+		5AEE37AB20CCB66D00F68536 /* MediatorPatternController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediatorPatternController.h; sourceTree = "<group>"; };
+		5AEE37AC20CCB66D00F68536 /* MediatorPatternController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediatorPatternController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -541,6 +544,7 @@
 			children = (
 				5A6CE7B120A529A20046585D /* ViewController.h */,
 				5A6CE7B220A529A20046585D /* ViewController.m */,
+				5AEE37AE20CCB6EE00F68536 /* 中介者模式 */,
 				5A4A54C320CA336A002786EB /* 模板方法模式 */,
 				5A4A54AC20CA1B57002786EB /* 策略模式 */,
 				5A75A6D320AF1136004307D8 /* 外观模式 */,
@@ -955,6 +959,15 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		5AEE37AE20CCB6EE00F68536 /* 中介者模式 */ = {
+			isa = PBXGroup;
+			children = (
+				5AEE37AB20CCB66D00F68536 /* MediatorPatternController.h */,
+				5AEE37AC20CCB66D00F68536 /* MediatorPatternController.m */,
+			);
+			path = "中介者模式";
+			sourceTree = "<group>";
+		};
 		5AFE99D920AD183200FBF19D /* 抽象工厂模式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1147,6 +1160,7 @@
 				5A8B349120AD7C15005EB56D /* AbstractMobile.m in Sources */,
 				5A355C1320AD237500A26F2F /* City.m in Sources */,
 				5A8B34A020AD7FB3005EB56D /* MobileWorkApp.m in Sources */,
+				5AEE37AD20CCB66D00F68536 /* MediatorPatternController.m in Sources */,
 				5A03F76120AC0E920097BC4F /* CalcluateFactory.m in Sources */,
 				5A5B2FDE20B56DC90027114E /* DuckOrder.m in Sources */,
 			);
