@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d2b-8M-Bkk">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="h4c-Um-rL2"/>
@@ -63,7 +63,7 @@
                             <constraint firstItem="PFv-Y1-kNA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RlH-aW-ehF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d2b-8M-Bkk" secondAttribute="trailing" id="Sgd-Qh-WYM"/>
                             <constraint firstItem="d2b-8M-Bkk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bMa-EH-Qa5"/>
-                            <constraint firstItem="d2b-8M-Bkk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="dzU-m9-03c"/>
+                            <constraint firstItem="d2b-8M-Bkk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dzU-m9-03c"/>
                             <constraint firstItem="PFv-Y1-kNA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kdE-Rc-fHY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
