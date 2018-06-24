@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "Person.h"
 #import "ETSafeAccessHelper.h"
+#import "Food.h"
+#import "Son.h"
 @interface ViewController ()
 
 @end
@@ -24,9 +26,19 @@
     p.name = @"你好";
     p.age = @"124";
     NSLog(@"%d",[p conformsToProtocol:@protocol(NSCoding)]);
+    Food *f = [[Food alloc]init];
+    f.name = @"APPle";
+    p.food = f;
+    Son *s = [[Son alloc]init];
+    s.fav = @"meat";
+    s.name = @"儿子";
+    s.age = @"男男女女";
+    s.f = 22.3;
+    s.food = f;
     [helper1 setObject:p forKey:@"p"];
+    [helper1 setObject:s forKey:@"s"];
+    [helper1 setObject:f forKey:@"f"];
     
-    CFMutableDictionaryRef _dic;
     
 }
 

@@ -10,6 +10,7 @@
 #import "YYCache.h"
 @interface ETSafeAccessHelper()
 @property (nonatomic,strong)YYCache *cache;
+@property (nonatomic,copy)NSString *cacheFileName;
 @end
 
 @implementation ETSafeAccessHelper
@@ -27,6 +28,7 @@
     NSAssert1(env.length > 0, @"arg: 'env' couldn't be nil or empty%@", env);
     NSAssert1(user_ID.length > 0, @"arg: 'user_ID' couldn't be nil or empty%@", user_ID);
     NSString *cacheName = [NSString stringWithFormat:@"%@_%@",user_ID,env];
+    _cacheFileName = cacheName;
     if (self = [super init]) {
         _cache = [[YYCache alloc]initWithName:cacheName];
         _env = env;
@@ -59,4 +61,41 @@
     [self.cache removeAllObjects];
 }
 
+- (void)deleteFile
+{
+     NSString *cacheFolder = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *path = [cacheFolder stringByAppendingPathComponent:self.cacheFileName];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    BOOL result = [fileManager removeItemAtPath:path error:nil];
+    if (result) {
+        NSLog(@"删除成功");
+    }else{
+        NSLog(@"删除失败");
+    }
+        
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

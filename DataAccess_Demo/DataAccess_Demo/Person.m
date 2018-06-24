@@ -7,6 +7,11 @@
 //
 
 #import "Person.h"
+#import "Food.h"
+
+@interface Person()
+@property (nonatomic,copy)NSString *private;
+@end
 
 @implementation Person
 
@@ -15,14 +20,18 @@
     if (self = [super init]) {
         _name = [aDecoder decodeObjectForKey:@"name"];
        _age = [aDecoder decodeObjectForKey:@"age"];
+        _food = [aDecoder decodeObjectForKey:@"food"];
     }
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-    [aCoder encodeObject:_name forKey:@"name"];
-    [aCoder encodeObject:_age forKey:@"age"];
+    [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeObject:self.age forKey:@"age"];
+    [aCoder encodeObject:self.food forKey:@"food"];
 }
+
+
 
 @end

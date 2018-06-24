@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A9C1A6D20DDDB9700F55DBF /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C1A6C20DDDB9700F55DBF /* Food.m */; };
+		5A9C1A7020DDDDF700F55DBF /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C1A6F20DDDDF700F55DBF /* Son.m */; };
 		5AC9E4D920DC99080059A550 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC9E4D820DC99080059A550 /* AppDelegate.m */; };
 		5AC9E4DC20DC99080059A550 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC9E4DB20DC99080059A550 /* ViewController.m */; };
 		5AC9E4DF20DC99080059A550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AC9E4DD20DC99080059A550 /* Main.storyboard */; };
@@ -24,6 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A9C1A6B20DDDB9700F55DBF /* Food.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
+		5A9C1A6C20DDDB9700F55DBF /* Food.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
+		5A9C1A6E20DDDDF700F55DBF /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
+		5A9C1A6F20DDDDF700F55DBF /* Son.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
+		5A9C1A7120DDE5E300F55DBF /* MacroDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefine.h; sourceTree = "<group>"; };
 		5AC9E4D420DC99080059A550 /* DataAccess_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataAccess_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AC9E4D720DC99080059A550 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5AC9E4D820DC99080059A550 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -98,6 +105,11 @@
 				5AC9E50320DC9B400059A550 /* ETSafeAccessHelper.m */,
 				5AC9E50520DCA7AA0059A550 /* Person.h */,
 				5AC9E50620DCA7AA0059A550 /* Person.m */,
+				5A9C1A6B20DDDB9700F55DBF /* Food.h */,
+				5A9C1A6C20DDDB9700F55DBF /* Food.m */,
+				5A9C1A6E20DDDDF700F55DBF /* Son.h */,
+				5A9C1A6F20DDDDF700F55DBF /* Son.m */,
+				5A9C1A7120DDE5E300F55DBF /* MacroDefine.h */,
 			);
 			path = DataAccess_Demo;
 			sourceTree = "<group>";
@@ -202,12 +214,14 @@
 				5AC9E4F820DC9A550059A550 /* YYKVStorage.m in Sources */,
 				5AC9E4DC20DC99080059A550 /* ViewController.m in Sources */,
 				5AC9E50720DCA7AA0059A550 /* Person.m in Sources */,
+				5A9C1A7020DDDDF700F55DBF /* Son.m in Sources */,
 				5AC9E4F620DC9A550059A550 /* YYDiskCache.m in Sources */,
 				5AC9E50020DC9A5F0059A550 /* NSObject+YYModel.m in Sources */,
 				5AC9E4E720DC99090059A550 /* main.m in Sources */,
 				5AC9E50420DC9B400059A550 /* ETSafeAccessHelper.m in Sources */,
 				5AC9E4D920DC99080059A550 /* AppDelegate.m in Sources */,
 				5AC9E4F920DC9A550059A550 /* YYMemoryCache.m in Sources */,
+				5A9C1A6D20DDDB9700F55DBF /* Food.m in Sources */,
 				5AC9E50120DC9A5F0059A550 /* YYClassInfo.m in Sources */,
 				5AC9E4F720DC9A550059A550 /* YYCache.m in Sources */,
 			);
@@ -350,7 +364,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = DataAccess_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,7 +382,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = DataAccess_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

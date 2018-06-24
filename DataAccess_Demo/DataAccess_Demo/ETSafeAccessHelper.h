@@ -20,7 +20,7 @@
  @return 实例
  */
 - (instancetype)initWithEnv:(NSString *)env user_ID:(NSString *)user_ID;
-- (instancetype)init;UNAVAILABLE_ATTRIBUTE;
+- (instancetype)init UNAVAILABLE_ATTRIBUTE;
 
 /**
  给出的key是否有对应value
@@ -57,4 +57,9 @@
  */
 - (void)removeAllObjects;
 
+
+/**
+ 删除当前缓存文件夹
+ */
+- (void)deleteFile;
 @end
