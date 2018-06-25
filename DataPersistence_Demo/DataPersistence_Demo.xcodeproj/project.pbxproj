@@ -7,15 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A87DF2120DB3EF4005B9526 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A87DF2020DB3EF4005B9526 /* Person.m */; };
+		5A87DF2820DB4A29005B9526 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A87DF2420DB4A29005B9526 /* NSObject+YYModel.m */; };
+		5A87DF2920DB4A29005B9526 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A87DF2620DB4A29005B9526 /* YYClassInfo.m */; };
+		5A87DF3320DB4ADF005B9526 /* YYCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A87DF2C20DB4ADF005B9526 /* YYCache.m */; };
+		5A87DF3420DB4ADF005B9526 /* YYDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A87DF2E20DB4ADF005B9526 /* YYDiskCache.m */; };
+		5A87DF3520DB4ADF005B9526 /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A87DF3020DB4ADF005B9526 /* YYKVStorage.m */; };
+		5A87DF3620DB4ADF005B9526 /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A87DF3220DB4ADF005B9526 /* YYMemoryCache.m */; };
 		5ABF0BCA20DAA31700495CE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF0BC920DAA31700495CE6 /* AppDelegate.m */; };
 		5ABF0BCD20DAA31700495CE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF0BCC20DAA31700495CE6 /* ViewController.m */; };
 		5ABF0BD020DAA31700495CE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ABF0BCE20DAA31700495CE6 /* Main.storyboard */; };
 		5ABF0BD220DAA31800495CE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ABF0BD120DAA31800495CE6 /* Assets.xcassets */; };
 		5ABF0BD520DAA31800495CE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ABF0BD320DAA31800495CE6 /* LaunchScreen.storyboard */; };
 		5ABF0BD820DAA31800495CE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF0BD720DAA31800495CE6 /* main.m */; };
+		5ADC10A620DB77CE00B7D6D2 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC10A520DB77CE00B7D6D2 /* Food.m */; };
+		5ADC10A920DB915A00B7D6D2 /* ETSafeAccessHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC10A820DB915A00B7D6D2 /* ETSafeAccessHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A87DF1F20DB3EF4005B9526 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		5A87DF2020DB3EF4005B9526 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		5A87DF2320DB4A29005B9526 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
+		5A87DF2420DB4A29005B9526 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
+		5A87DF2520DB4A29005B9526 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		5A87DF2620DB4A29005B9526 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		5A87DF2720DB4A29005B9526 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
+		5A87DF2B20DB4ADF005B9526 /* YYCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCache.h; sourceTree = "<group>"; };
+		5A87DF2C20DB4ADF005B9526 /* YYCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCache.m; sourceTree = "<group>"; };
+		5A87DF2D20DB4ADF005B9526 /* YYDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDiskCache.h; sourceTree = "<group>"; };
+		5A87DF2E20DB4ADF005B9526 /* YYDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDiskCache.m; sourceTree = "<group>"; };
+		5A87DF2F20DB4ADF005B9526 /* YYKVStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKVStorage.h; sourceTree = "<group>"; };
+		5A87DF3020DB4ADF005B9526 /* YYKVStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKVStorage.m; sourceTree = "<group>"; };
+		5A87DF3120DB4ADF005B9526 /* YYMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMemoryCache.h; sourceTree = "<group>"; };
+		5A87DF3220DB4ADF005B9526 /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
 		5ABF0BC520DAA31700495CE6 /* DataPersistence_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataPersistence_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ABF0BC820DAA31700495CE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5ABF0BC920DAA31700495CE6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +50,10 @@
 		5ABF0BD420DAA31800495CE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5ABF0BD620DAA31800495CE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ABF0BD720DAA31800495CE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5ADC10A420DB77CE00B7D6D2 /* Food.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
+		5ADC10A520DB77CE00B7D6D2 /* Food.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
+		5ADC10A720DB915A00B7D6D2 /* ETSafeAccessHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETSafeAccessHelper.h; sourceTree = "<group>"; };
+		5ADC10A820DB915A00B7D6D2 /* ETSafeAccessHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETSafeAccessHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +67,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A87DF2220DB4A29005B9526 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				5A87DF2320DB4A29005B9526 /* NSObject+YYModel.h */,
+				5A87DF2420DB4A29005B9526 /* NSObject+YYModel.m */,
+				5A87DF2520DB4A29005B9526 /* YYClassInfo.h */,
+				5A87DF2620DB4A29005B9526 /* YYClassInfo.m */,
+				5A87DF2720DB4A29005B9526 /* YYModel.h */,
+			);
+			path = YYModel;
+			sourceTree = "<group>";
+		};
+		5A87DF2A20DB4ADF005B9526 /* YYCache */ = {
+			isa = PBXGroup;
+			children = (
+				5A87DF2B20DB4ADF005B9526 /* YYCache.h */,
+				5A87DF2C20DB4ADF005B9526 /* YYCache.m */,
+				5A87DF2D20DB4ADF005B9526 /* YYDiskCache.h */,
+				5A87DF2E20DB4ADF005B9526 /* YYDiskCache.m */,
+				5A87DF2F20DB4ADF005B9526 /* YYKVStorage.h */,
+				5A87DF3020DB4ADF005B9526 /* YYKVStorage.m */,
+				5A87DF3120DB4ADF005B9526 /* YYMemoryCache.h */,
+				5A87DF3220DB4ADF005B9526 /* YYMemoryCache.m */,
+			);
+			path = YYCache;
+			sourceTree = "<group>";
+		};
 		5ABF0BBC20DAA31700495CE6 = {
 			isa = PBXGroup;
 			children = (
@@ -62,11 +117,19 @@
 				5ABF0BC920DAA31700495CE6 /* AppDelegate.m */,
 				5ABF0BCB20DAA31700495CE6 /* ViewController.h */,
 				5ABF0BCC20DAA31700495CE6 /* ViewController.m */,
+				5ADC10A720DB915A00B7D6D2 /* ETSafeAccessHelper.h */,
+				5ADC10A820DB915A00B7D6D2 /* ETSafeAccessHelper.m */,
 				5ABF0BCE20DAA31700495CE6 /* Main.storyboard */,
 				5ABF0BD120DAA31800495CE6 /* Assets.xcassets */,
 				5ABF0BD320DAA31800495CE6 /* LaunchScreen.storyboard */,
 				5ABF0BD620DAA31800495CE6 /* Info.plist */,
 				5ABF0BD720DAA31800495CE6 /* main.m */,
+				5A87DF1F20DB3EF4005B9526 /* Person.h */,
+				5A87DF2020DB3EF4005B9526 /* Person.m */,
+				5ADC10A420DB77CE00B7D6D2 /* Food.h */,
+				5ADC10A520DB77CE00B7D6D2 /* Food.m */,
+				5A87DF2A20DB4ADF005B9526 /* YYCache */,
+				5A87DF2220DB4A29005B9526 /* YYModel */,
 			);
 			path = DataPersistence_Demo;
 			sourceTree = "<group>";
@@ -142,8 +205,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				5ABF0BCD20DAA31700495CE6 /* ViewController.m in Sources */,
+				5ADC10A920DB915A00B7D6D2 /* ETSafeAccessHelper.m in Sources */,
+				5A87DF3420DB4ADF005B9526 /* YYDiskCache.m in Sources */,
+				5ADC10A620DB77CE00B7D6D2 /* Food.m in Sources */,
+				5A87DF2820DB4A29005B9526 /* NSObject+YYModel.m in Sources */,
+				5A87DF3620DB4ADF005B9526 /* YYMemoryCache.m in Sources */,
+				5A87DF3520DB4ADF005B9526 /* YYKVStorage.m in Sources */,
 				5ABF0BD820DAA31800495CE6 /* main.m in Sources */,
+				5A87DF2120DB3EF4005B9526 /* Person.m in Sources */,
+				5A87DF2920DB4A29005B9526 /* YYClassInfo.m in Sources */,
 				5ABF0BCA20DAA31700495CE6 /* AppDelegate.m in Sources */,
+				5A87DF3320DB4ADF005B9526 /* YYCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +356,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = DataPersistence_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +374,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = DataPersistence_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
