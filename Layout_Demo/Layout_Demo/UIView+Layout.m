@@ -13,6 +13,13 @@
 - (void)makeLayout:(id<ETLayoutable>)layouter
 {
     [self mas_makeConstraints:[layouter layoutMaker]];
+    
+    NSLog(@"%@",[MASViewConstraint installedConstraintsForView:self]);
+    NSArray *arr = [MASViewConstraint installedConstraintsForView:self];
+    for (MASViewConstraint *viewConstraint in arr) {
+        NSLog(@"%ld",viewConstraint.firstViewAttribute.layoutAttribute);
+        
+    }
 }
 
 @end

@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import "Masonry.h"
-#import "RedViewLayout.h"
+#import "ETViewLayout.h"
 #import "UIView+Layout.h"
+#import "SecondController.h"
 @interface ViewController ()
 
 @end
@@ -21,12 +22,20 @@
     UIView *redView = [[UIView alloc]init];
     redView.backgroundColor = [UIColor redColor];
     [self.view addSubview:redView];
-    RedViewLayout *redLayout = [[RedViewLayout alloc]init];
-    redLayout.superView = self.view;
-    NSDictionary *dic1 = @{@"view":self.view,@"direction":@(NSLayoutAttributeTop),@"offset":@(100)};
-     NSDictionary *dic2 = @{@"view":self.view,@"direction":@(NSLayoutAttributeLeft),@"offset":@(100)};
-    redLayout.layoutAttris = @[dic1,dic2];
+    
+    ETViewLayout *redLayout = [[ETViewLayout alloc]init];
+    redLayout.left(self.view,NSLayoutAttributeLeft,160).top(self.view,NSLayoutAttributeTop,100).width(redView,NSLayoutAttributeWidth,50).height(redView, NSLayoutAttributeHeight, 150).leading(self.view, NSLayoutAttributeLeading, 100);
     [redView makeLayout:redLayout];
+    
+    
+    
+    
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    SecondController *sec = [[SecondController alloc]init];
+    [self.navigationController pushViewController:sec animated:YES];
 }
 
 

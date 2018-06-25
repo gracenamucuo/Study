@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A08230620E0CE5C001B1706 /* SecondController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A08230520E0CE5C001B1706 /* SecondController.m */; };
 		5A2FCE3320DFE62200A1B703 /* ETLayoutAttributeMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2FCE3220DFE62200A1B703 /* ETLayoutAttributeMaker.m */; };
 		5A6CF9F320DF4AA80067F06E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CF9F220DF4AA80067F06E /* AppDelegate.m */; };
 		5A6CF9F620DF4AA80067F06E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CF9F520DF4AA80067F06E /* ViewController.m */; };
@@ -26,10 +27,12 @@
 		5A6CFA2B20DF4AC40067F06E /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CFA2020DF4AC40067F06E /* MASViewAttribute.m */; };
 		5A6CFA2C20DF4AC40067F06E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CFA2120DF4AC40067F06E /* Info.plist */; };
 		5A6CFA3020DF4CE10067F06E /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CFA2F20DF4CE10067F06E /* UIView+Layout.m */; };
-		5A6CFA3320DF4F830067F06E /* RedViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CFA3220DF4F830067F06E /* RedViewLayout.m */; };
+		5A6CFA3320DF4F830067F06E /* ETViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CFA3220DF4F830067F06E /* ETViewLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A08230420E0CE5C001B1706 /* SecondController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SecondController.h; path = Assets.xcassets/SecondController.h; sourceTree = "<group>"; };
+		5A08230520E0CE5C001B1706 /* SecondController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SecondController.m; path = Assets.xcassets/SecondController.m; sourceTree = "<group>"; };
 		5A2FCE3120DFE62200A1B703 /* ETLayoutAttributeMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETLayoutAttributeMaker.h; sourceTree = "<group>"; };
 		5A2FCE3220DFE62200A1B703 /* ETLayoutAttributeMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETLayoutAttributeMaker.m; sourceTree = "<group>"; };
 		5A6CF9EE20DF4AA80067F06E /* Layout_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Layout_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,8 +74,8 @@
 		5A6CFA2D20DF4C240067F06E /* ETLayoutable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETLayoutable.h; sourceTree = "<group>"; };
 		5A6CFA2E20DF4CE10067F06E /* UIView+Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
 		5A6CFA2F20DF4CE10067F06E /* UIView+Layout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
-		5A6CFA3120DF4F830067F06E /* RedViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedViewLayout.h; sourceTree = "<group>"; };
-		5A6CFA3220DF4F830067F06E /* RedViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedViewLayout.m; sourceTree = "<group>"; };
+		5A6CFA3120DF4F830067F06E /* ETViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETViewLayout.h; sourceTree = "<group>"; };
+		5A6CFA3220DF4F830067F06E /* ETViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETViewLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				5A6CF9F220DF4AA80067F06E /* AppDelegate.m */,
 				5A6CF9F420DF4AA80067F06E /* ViewController.h */,
 				5A6CF9F520DF4AA80067F06E /* ViewController.m */,
+				5A08230420E0CE5C001B1706 /* SecondController.h */,
+				5A08230520E0CE5C001B1706 /* SecondController.m */,
 				5A6CF9F720DF4AA80067F06E /* Main.storyboard */,
 				5A6CF9FA20DF4AA90067F06E /* Assets.xcassets */,
 				5A6CF9FC20DF4AA90067F06E /* LaunchScreen.storyboard */,
@@ -118,8 +123,8 @@
 				5A6CFA2D20DF4C240067F06E /* ETLayoutable.h */,
 				5A6CFA2E20DF4CE10067F06E /* UIView+Layout.h */,
 				5A6CFA2F20DF4CE10067F06E /* UIView+Layout.m */,
-				5A6CFA3120DF4F830067F06E /* RedViewLayout.h */,
-				5A6CFA3220DF4F830067F06E /* RedViewLayout.m */,
+				5A6CFA3120DF4F830067F06E /* ETViewLayout.h */,
+				5A6CFA3220DF4F830067F06E /* ETViewLayout.m */,
 				5A2FCE3120DFE62200A1B703 /* ETLayoutAttributeMaker.h */,
 				5A2FCE3220DFE62200A1B703 /* ETLayoutAttributeMaker.m */,
 			);
@@ -129,31 +134,31 @@
 		5A6CFA0720DF4AC30067F06E /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
-				5A6CFA0820DF4AC40067F06E /* MASCompositeConstraint.h */,
+				5A6CFA1520DF4AC40067F06E /* NSLayoutConstraint+MASDebugAdditions.h */,
 				5A6CFA0920DF4AC40067F06E /* NSLayoutConstraint+MASDebugAdditions.m */,
+				5A6CFA1B20DF4AC40067F06E /* View+MASShorthandAdditions.h */,
 				5A6CFA1C20DF4AC40067F06E /* Masonry.h */,
 				5A6CFA0A20DF4AC40067F06E /* MASConstraint+Private.h */,
 				5A6CFA0B20DF4AC40067F06E /* MASLayoutConstraint.h */,
 				5A6CFA0C20DF4AC40067F06E /* NSArray+MASShorthandAdditions.h */,
-				5A6CFA0D20DF4AC40067F06E /* MASConstraintMaker.h */,
 				5A6CFA0E20DF4AC40067F06E /* View+MASAdditions.h */,
 				5A6CFA1A20DF4AC40067F06E /* View+MASAdditions.m */,
 				5A6CFA1020DF4AC40067F06E /* MASUtilities.h */,
 				5A6CFA1120DF4AC40067F06E /* MASViewAttribute.h */,
 				5A6CFA2020DF4AC40067F06E /* MASViewAttribute.m */,
-				5A6CFA1220DF4AC40067F06E /* ViewController+MASAdditions.m */,
 				5A6CFA1320DF4AC40067F06E /* MASViewConstraint.h */,
+				5A6CFA1F20DF4AC40067F06E /* MASViewConstraint.m */,
 				5A6CFA1420DF4AC40067F06E /* MASConstraint.h */,
 				5A6CFA1D20DF4AC40067F06E /* MASConstraint.m */,
-				5A6CFA1520DF4AC40067F06E /* NSLayoutConstraint+MASDebugAdditions.h */,
+				5A6CFA0820DF4AC40067F06E /* MASCompositeConstraint.h */,
 				5A6CFA1620DF4AC40067F06E /* MASCompositeConstraint.m */,
+				5A6CFA0D20DF4AC40067F06E /* MASConstraintMaker.h */,
 				5A6CFA1720DF4AC40067F06E /* MASConstraintMaker.m */,
 				5A6CFA1820DF4AC40067F06E /* MASLayoutConstraint.m */,
 				5A6CFA0F20DF4AC40067F06E /* NSArray+MASAdditions.h */,
 				5A6CFA1920DF4AC40067F06E /* NSArray+MASAdditions.m */,
-				5A6CFA1B20DF4AC40067F06E /* View+MASShorthandAdditions.h */,
 				5A6CFA1E20DF4AC40067F06E /* ViewController+MASAdditions.h */,
-				5A6CFA1F20DF4AC40067F06E /* MASViewConstraint.m */,
+				5A6CFA1220DF4AC40067F06E /* ViewController+MASAdditions.m */,
 				5A6CFA2120DF4AC40067F06E /* Info.plist */,
 			);
 			path = Masonry;
@@ -243,7 +248,8 @@
 				5A6CFA2420DF4AC40067F06E /* MASCompositeConstraint.m in Sources */,
 				5A6CFA2820DF4AC40067F06E /* View+MASAdditions.m in Sources */,
 				5A6CFA2220DF4AC40067F06E /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				5A6CFA3320DF4F830067F06E /* RedViewLayout.m in Sources */,
+				5A6CFA3320DF4F830067F06E /* ETViewLayout.m in Sources */,
+				5A08230620E0CE5C001B1706 /* SecondController.m in Sources */,
 				5A2FCE3320DFE62200A1B703 /* ETLayoutAttributeMaker.m in Sources */,
 				5A6CFA2B20DF4AC40067F06E /* MASViewAttribute.m in Sources */,
 			);
@@ -386,7 +392,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = Layout_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -402,7 +410,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = Layout_Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
