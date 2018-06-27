@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface UserModel : NSObject
+#import "YYModel.h"
+@interface UserModel : NSObject<YYModel>
 
 @property (nonatomic,copy)NSString *name;
 @property (nonatomic,copy)NSString *age;
