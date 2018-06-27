@@ -1,0 +1,22 @@
+[{"img":"","name":"基础管理","list":
+        [{"auth_id":"8","img":"more_product_icon","name":"商品管理","vcName":"ETProductController","pushType":"3"},
+         {"auth_id":"9","img":"more_store_icon","name":"仓库管理","vcName":"ETInventoryController","pushType":"5"},
+         {"auth_id":"27","img":"supplier_icon","name":"供货商","vcName":"ETSelectSupplierController","pushType":"4"}
+        ]},
+ {"img":"workspace_inPurchase_manager","name":"进货管理","list":
+        [{"auth_id":"12","img":"inPurchase_icon","name":"进货单","vcName":"ETPurchaseManagerController","pushType":"4"},{"auth_id":"12","img":"lack_in_stock_icon","name":"缺货进货","vcName":"ETNewShortStaffManagerController","pushType":"7"},{"auth_id":"13","img":"MoreTHD_icon","name":"进货退货单","vcName":"ETPurchaseManagerController","pushType":"4"}
+         ]},
+ {"img":"workspace_sale_manager","name":"销售管理","list":
+        [{"auth_id":"15","img":"sales_slip","name":"销售单","vcName":"ETSalesOrderChildController","pushType":"6"},{"auth_id":"16","img":"workspace_saleback","name":"销售退货单","vcName":"ETSalesOrderBackController","pushType":"6"}
+         ]},
+ {"img":"workspace_icon1","name":"库存管理","list":
+        [{"auth_id":"17","img":"work_space_search","name":"库存查询","vcName":"ETStockSearchController","pushType":"6"},
+         {"auth_id":"18","img":"inStorage_icon","name":"入库单","vcName":"ETInStorageManageController","pushType":"5"},
+         {"auth_id":"19","img":"Outbound_list","name":"出库单","vcName":"ETOutStorageManagePageController","pushType":"5"},
+         {"auth_id":"20","img":"allocation_icon","name":"调拨单","vcName":"ETAllocationManagerController","pushType":"4"},
+         {"auth_id":"36","img":"pan_10","name":"盘点单","vcName":"ETPanDianController","pushType":"4"}
+         ]},
+ {"img":"workspace_money_manager","name":"资金管理","list":
+        [{"auth_id":"22","img":"customer_arrears","name":"客户往来账","vcName":"ETMineDebtManageViewController","pushType":"2"},{"auth_id":"23","img":"supplier_pay_icon","name":"供货商欠款","vcName":"ETShouldPaySupplierDebtController","pushType":"6"},{"auth_id":"40","img":"snake_fund","name":"资金流水","vcName":"ETFundAccountController","pushType":"4"}
+         ]}
+ ]
