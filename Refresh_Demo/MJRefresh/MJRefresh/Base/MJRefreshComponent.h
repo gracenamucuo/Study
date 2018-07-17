@@ -17,15 +17,15 @@
 /** 刷新控件的状态 */
 typedef NS_ENUM(NSInteger, MJRefreshState) {
     /** 普通闲置状态 */
-    MJRefreshStateIdle = 1,
+    MJRefreshStateIdle = 1,       //红
     /** 松开就可以进行刷新的状态 */
-    MJRefreshStatePulling,
+    MJRefreshStatePulling,        //绿
     /** 正在刷新中的状态 */
-    MJRefreshStateRefreshing,
+    MJRefreshStateRefreshing,     //蓝
     /** 即将刷新的状态 */
-    MJRefreshStateWillRefresh,
+    MJRefreshStateWillRefresh,    //紫
     /** 所有数据加载完毕，没有更多的数据了 */
-    MJRefreshStateNoMoreData
+    MJRefreshStateNoMoreData      //灰色
 };
 
 /** 进入刷新状态的回调 */

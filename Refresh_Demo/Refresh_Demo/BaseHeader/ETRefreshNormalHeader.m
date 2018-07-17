@@ -1,22 +1,23 @@
 //
-//  MJRefreshNormalHeader.m
-//  MJRefreshExample
+//  ETRefreshNormalHeader.m
+//  Refresh_Demo
 //
-//  Created by MJ Lee on 15/4/24.
-//  Copyright (c) 2015年 小码哥. All rights reserved.
+//  Created by 戴运鹏 on 2018/7/17.
+//  Copyright © 2018年 戴运鹏. All rights reserved.
 //
 
-#import "MJRefreshNormalHeader.h"
+#import "ETRefreshNormalHeader.h"
 #import "NSBundle+MJRefresh.h"
 
-@interface MJRefreshNormalHeader()
+@interface ETRefreshNormalHeader()
 {
     __unsafe_unretained UIImageView *_arrowView;
 }
 @property (weak, nonatomic) UIActivityIndicatorView *loadingView;
 @end
 
-@implementation MJRefreshNormalHeader
+@implementation ETRefreshNormalHeader
+
 #pragma mark - 懒加载子控件
 - (UIImageView *)arrowView
 {
@@ -53,7 +54,6 @@
     [super prepare];
     
     self.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-    self.mj_h = 100;
 }
 
 - (void)placeSubviews
@@ -79,7 +79,7 @@
         self.arrowView.mj_size = self.arrowView.image.size;
         self.arrowView.center = arrowCenter;
     }
-        
+    
     // 圈圈
     if (self.loadingView.constraints.count == 0) {
         self.loadingView.center = arrowCenter;
@@ -126,4 +126,62 @@
         self.arrowView.hidden = YES;
     }
 }
+
+#pragma mark -- 扩展
+- (void)setArrowImage:(UIImage *)arrowImage
+{
+    _arrowView.image = arrowImage;
+    [self placeSubviews];
+    [self setArrowCenterX:self.arrowCenterX];
+    
+}
+
+- (void)setHeaderHeight:(float)headerHeight
+{//高度默认为54
+    if (self.headerHeight <= 0) {
+        return;
+    }
+    
+    self.mj_h = headerHeight;
+    [self placeSubviews];
+}
+
+- (void)setArrowCenterX:(float)arrowCenterX
+{
+    
+    if (arrowCenterX < self.arrowView.image.size.width / 2) {
+        arrowCenterX = self.arrowView.image.size.width / 2;
+    }
+    
+    CGFloat centerX = self.mj_w * 0.5;
+    if (!self.stateLabel.hidden) {
+        CGFloat stateWidth = self.stateLabel.mj_textWith;
+        CGFloat timeWidth = 0.0;
+        if (!self.lastUpdatedTimeLabel.hidden) {
+            timeWidth = self.lastUpdatedTimeLabel.mj_textWith;
+        }
+        CGFloat textWidth = MAX(stateWidth, timeWidth);
+        centerX -= textWidth / 2 + self.labelLeftInset;
+    }
+    
+    if (arrowCenterX > centerX) {
+        arrowCenterX = centerX;
+    }
+    
+    // 箭头
+    if (self.arrowView.constraints.count == 0) {
+        self.arrowView.mj_size = self.arrowView.image.size;
+        self.arrowView.center = CGPointMake(arrowCenterX, self.mj_h / 2);
+    }
+    
+    // 圈圈
+    if (self.loadingView.constraints.count == 0) {
+        self.loadingView.center = self.arrowView.center;
+    }
+    
+    
+    
+}
+
+
 @end

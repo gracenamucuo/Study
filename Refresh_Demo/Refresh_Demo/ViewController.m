@@ -11,6 +11,8 @@
 #import "NormalHeaderController.h"
 #import "StateHeaderController.h"
 #import "GifHeaderController.h"
+#import "BackFooterController.h"
+#import "AutoFooterController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *dataArray;
@@ -22,7 +24,7 @@ static NSString *cellID = @"cellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataArray = [NSMutableArray array];
-    [self.dataArray addObjectsFromArray:@[@"header",@"StateHeaderController",@"NormalHeaderController",@"GifHeaderController"]];
+    [self.dataArray addObjectsFromArray:@[@"header",@"StateHeaderController",@"NormalHeaderController",@"GifHeaderController",@"FooterController",@"AutoFooterController"]];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     
     
@@ -49,6 +51,10 @@ static NSString *cellID = @"cellID";
         [self normalHeaderControllerAction];
     }else if (indexPath.row == 3){
         [self gifHeaderControllerAction];
+    }else if (indexPath.row == 4){
+        [self footerControllerAction];
+    }else if (indexPath.row == 5){
+        [self autoFooterControllerAction];
     }
 }
 
@@ -73,5 +79,16 @@ static NSString *cellID = @"cellID";
 {
     GifHeaderController *gif = [[GifHeaderController alloc]init];
     [self.navigationController pushViewController:gif animated:YES];
+}
+- (void)footerControllerAction
+{
+    BackFooterController *footer = [[BackFooterController alloc]init];
+    [self.navigationController pushViewController:footer animated:YES];
+}
+
+- (void)autoFooterControllerAction
+{
+    AutoFooterController *footer = [[AutoFooterController alloc]init];
+    [self.navigationController pushViewController:footer animated:YES];
 }
 @end

@@ -41,6 +41,7 @@
 {
     if (!_lastUpdatedTimeLabel) {
         [self addSubview:_lastUpdatedTimeLabel = [UILabel mj_label]];
+//        _lastUpdatedTimeLabel.hidden = YES;
     }
     return _lastUpdatedTimeLabel;
 }
@@ -136,6 +137,7 @@
         if (noConstrainsOnStatusLabel) self.stateLabel.frame = self.bounds;
     } else {
         CGFloat stateLabelH = self.mj_h * 0.5;
+//        CGFloat stateLabelH = self.mj_h ;
         // 状态
         if (noConstrainsOnStatusLabel) {
             self.stateLabel.mj_x = 0;

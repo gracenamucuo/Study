@@ -97,6 +97,30 @@
     } else if (pullingPercent < 1) {
         self.pullingPercent = pullingPercent;
     }
+    
+    switch (self.state) {
+        case MJRefreshStateIdle:
+            self.backgroundColor = [UIColor redColor];//下拉距离没有超过刷新头部的高度时，而且手还没有松开的时候，(拉到超过高度时 ，再手动退回未超过高度时候，依然是该状态)
+            break;
+        case MJRefreshStatePulling:
+            self.backgroundColor = [UIColor greenColor];//手动拉到高度超过刷新头部的高度。
+            break;
+        case MJRefreshStateRefreshing:
+            self.backgroundColor = [UIColor blueColor];//手动拉到高度超过自身的头部高度后，松手，头部自动回弹到自身高度的偏移量处，。开始刷新(刷新状态的时候，再手动拉的时候就没有效果了)
+            break;
+        case MJRefreshStateWillRefresh:
+            self.backgroundColor = [UIColor purpleColor];
+            break;
+        case MJRefreshStateNoMoreData:
+            self.backgroundColor = [UIColor grayColor];
+            break;
+            
+        default:
+            break;
+    }
+    NSLog(@"%@",NSStringFromCGRect(self.frame));
+    
+    NSLog(@"%f",self.scrollView.contentOffset.y);
 }
 
 - (void)setState:(MJRefreshState)state

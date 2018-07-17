@@ -1,21 +1,21 @@
 //
-//  NormalHeaderController.m
+//  AutoFooterController.m
 //  Refresh_Demo
 //
-//  Created by 戴运鹏 on 2018/7/16.
+//  Created by 戴运鹏 on 2018/7/17.
 //  Copyright © 2018年 戴运鹏. All rights reserved.
 //
 
-#import "NormalHeaderController.h"
+#import "AutoFooterController.h"
 #import "MJRefresh.h"
-#import "ETRefreshHeader.h"
-@interface NormalHeaderController ()<UITableViewDataSource,UITableViewDelegate>
+@interface AutoFooterController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *dataArray;
 
 @end
 static NSString *cellID = @"cellID";
-@implementation NormalHeaderController
+@implementation AutoFooterController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,26 +25,23 @@ static NSString *cellID = @"cellID";
 {
     self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64) style:UITableViewStylePlain];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
-    MJRefreshNormalHeader *refreshHeader = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshAction)];
-    refreshHeader.backgroundColor = [UIColor redColor];
-    
-    ETRefreshHeader *header = [ETRefreshHeader normalHeaderWithRefreshingTarget:self refreshingAction:@selector(refreshAction)];
-    
-    ETRefreshHeader *header1 = [ETRefreshHeader normalHeaderWithRefreshingBlock:^{
-        
-    }];
-    
-    self.tableView.mj_header = header1;
+    MJRefreshAutoFooter *refreshFooter = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadAction)];
+    self.tableView.mj_footer = refreshFooter;
+    refreshFooter.backgroundColor = [UIColor redColor];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.tableFooterView = [UIView new];
     
 }
-#pragma mark -- header
-- (void)refreshAction
+
+- (void)loadAction
 {
+    
 }
+
+
 #pragma mark --Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -54,10 +51,8 @@ static NSString *cellID = @"cellID";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
-    cell.textLabel.text = @"NormalHeaderController";
+    cell.textLabel.text = @"footer";
     return cell;
 }
-
-
 
 @end
