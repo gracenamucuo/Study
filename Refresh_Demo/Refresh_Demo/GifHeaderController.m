@@ -43,8 +43,8 @@ static NSString *cellID = @"cellID";
         [logoImages addObject:image];
     }
     
-    
-//    [refreshHeader setImages:images forState:MJRefreshStatePulling];
+    self.navigationController.navigationBar.translucent = YES;
+    [refreshHeader setImages:logoImages forState:MJRefreshStateIdle];
     [refreshHeader setImages:logoImages forState:MJRefreshStatePulling];
     self.tableView.mj_header = refreshHeader;
     self.view.backgroundColor = [UIColor whiteColor];

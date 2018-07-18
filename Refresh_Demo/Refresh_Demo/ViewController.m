@@ -13,6 +13,9 @@
 #import "GifHeaderController.h"
 #import "BackFooterController.h"
 #import "AutoFooterController.h"
+#import "ETNormalController.h"
+#import "ETGifController.h"
+#import "ETAutoFooterController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *dataArray;
@@ -24,7 +27,7 @@ static NSString *cellID = @"cellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataArray = [NSMutableArray array];
-    [self.dataArray addObjectsFromArray:@[@"header",@"StateHeaderController",@"NormalHeaderController",@"GifHeaderController",@"FooterController",@"AutoFooterController"]];
+    [self.dataArray addObjectsFromArray:@[@"header",@"StateHeaderController",@"NormalHeaderController",@"GifHeaderController",@"FooterController",@"AutoFooterController",@"ETNormalController",@"ETGifController",@"ETAutoFooterController"]];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     
     
@@ -55,6 +58,12 @@ static NSString *cellID = @"cellID";
         [self footerControllerAction];
     }else if (indexPath.row == 5){
         [self autoFooterControllerAction];
+    }else if(indexPath.row == 6){
+        [self etNormalController];
+    }else if (indexPath.row == 7){
+        [self etGifController];
+    }else if (indexPath.row == 8){
+        [self etAutoFooterController];
     }
 }
 
@@ -90,5 +99,22 @@ static NSString *cellID = @"cellID";
 {
     AutoFooterController *footer = [[AutoFooterController alloc]init];
     [self.navigationController pushViewController:footer animated:YES];
+}
+
+- (void)etNormalController
+{
+    ETNormalController *normal = [[ETNormalController alloc]init];
+    [self.navigationController pushViewController:normal animated:YES];
+    
+}
+- (void)etGifController
+{
+    ETGifController *gif = [[ETGifController alloc]init];
+    [self.navigationController pushViewController:gif animated:YES];
+}
+- (void)etAutoFooterController
+{
+    ETAutoFooterController *autoVC = [[ETAutoFooterController alloc]init];
+    [self.navigationController pushViewController:autoVC animated:YES];
 }
 @end

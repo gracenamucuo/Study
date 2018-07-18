@@ -40,7 +40,14 @@
 		5A080F4E20FC93B0008067FB /* NormalHeaderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A080F4D20FC93B0008067FB /* NormalHeaderController.m */; };
 		5A080F5120FC952E008067FB /* StateHeaderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A080F5020FC952E008067FB /* StateHeaderController.m */; };
 		5A080F5420FC9684008067FB /* GifHeaderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A080F5320FC9684008067FB /* GifHeaderController.m */; };
-		5A80B22C20FD925400FB5E45 /* ETRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A80B22B20FD925400FB5E45 /* ETRefreshHeader.m */; };
+		5A46DE3920FED60600A24D14 /* ETRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A46DE3820FED60600A24D14 /* ETRefreshAutoNormalFooter.m */; };
+		5A46DE3D20FED77600A24D14 /* ETRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A46DE3C20FED77600A24D14 /* ETRefreshBackNormalFooter.m */; };
+		5A46DE4220FED8E700A24D14 /* ETRefreshAutoGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A46DE4120FED8E700A24D14 /* ETRefreshAutoGifFooter.m */; };
+		5A46DE4520FED93400A24D14 /* ETRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A46DE4420FED93400A24D14 /* ETRefreshBackGifFooter.m */; };
+		5A46DE4820FEDBF500A24D14 /* ETNormalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A46DE4720FEDBF500A24D14 /* ETNormalController.m */; };
+		5A46DE4B20FEDC0800A24D14 /* ETGifController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A46DE4A20FEDC0800A24D14 /* ETGifController.m */; };
+		5A46DE4F20FEDFFF00A24D14 /* UITableView+ETRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A46DE4E20FEDFFF00A24D14 /* UITableView+ETRefresh.m */; };
+		5A46DE5220FF11F500A24D14 /* ETAutoFooterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A46DE5120FF11F500A24D14 /* ETAutoFooterController.m */; };
 		5A80B23020FD9A3E00FB5E45 /* ETRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A80B22F20FD9A3E00FB5E45 /* ETRefreshNormalHeader.m */; };
 		5A80B23320FD9A5400FB5E45 /* ETRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A80B23220FD9A5400FB5E45 /* ETRefreshGifHeader.m */; };
 		5A80B23920FDEE2800FB5E45 /* BackFooterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A80B23820FDEE2800FB5E45 /* BackFooterController.m */; };
@@ -109,8 +116,22 @@
 		5A080F5020FC952E008067FB /* StateHeaderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StateHeaderController.m; sourceTree = "<group>"; };
 		5A080F5220FC9684008067FB /* GifHeaderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GifHeaderController.h; sourceTree = "<group>"; };
 		5A080F5320FC9684008067FB /* GifHeaderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GifHeaderController.m; sourceTree = "<group>"; };
-		5A80B22A20FD925400FB5E45 /* ETRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETRefreshHeader.h; sourceTree = "<group>"; };
-		5A80B22B20FD925400FB5E45 /* ETRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETRefreshHeader.m; sourceTree = "<group>"; };
+		5A46DE3720FED60600A24D14 /* ETRefreshAutoNormalFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETRefreshAutoNormalFooter.h; sourceTree = "<group>"; };
+		5A46DE3820FED60600A24D14 /* ETRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
+		5A46DE3B20FED77600A24D14 /* ETRefreshBackNormalFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETRefreshBackNormalFooter.h; sourceTree = "<group>"; };
+		5A46DE3C20FED77600A24D14 /* ETRefreshBackNormalFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETRefreshBackNormalFooter.m; sourceTree = "<group>"; };
+		5A46DE4020FED8E700A24D14 /* ETRefreshAutoGifFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETRefreshAutoGifFooter.h; sourceTree = "<group>"; };
+		5A46DE4120FED8E700A24D14 /* ETRefreshAutoGifFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETRefreshAutoGifFooter.m; sourceTree = "<group>"; };
+		5A46DE4320FED93400A24D14 /* ETRefreshBackGifFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETRefreshBackGifFooter.h; sourceTree = "<group>"; };
+		5A46DE4420FED93400A24D14 /* ETRefreshBackGifFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETRefreshBackGifFooter.m; sourceTree = "<group>"; };
+		5A46DE4620FEDBF500A24D14 /* ETNormalController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETNormalController.h; sourceTree = "<group>"; };
+		5A46DE4720FEDBF500A24D14 /* ETNormalController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETNormalController.m; sourceTree = "<group>"; };
+		5A46DE4920FEDC0800A24D14 /* ETGifController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETGifController.h; sourceTree = "<group>"; };
+		5A46DE4A20FEDC0800A24D14 /* ETGifController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETGifController.m; sourceTree = "<group>"; };
+		5A46DE4D20FEDFFF00A24D14 /* UITableView+ETRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+ETRefresh.h"; sourceTree = "<group>"; };
+		5A46DE4E20FEDFFF00A24D14 /* UITableView+ETRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+ETRefresh.m"; sourceTree = "<group>"; };
+		5A46DE5020FF11F500A24D14 /* ETAutoFooterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETAutoFooterController.h; sourceTree = "<group>"; };
+		5A46DE5120FF11F500A24D14 /* ETAutoFooterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETAutoFooterController.m; sourceTree = "<group>"; };
 		5A80B22E20FD9A3E00FB5E45 /* ETRefreshNormalHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETRefreshNormalHeader.h; sourceTree = "<group>"; };
 		5A80B22F20FD9A3E00FB5E45 /* ETRefreshNormalHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETRefreshNormalHeader.m; sourceTree = "<group>"; };
 		5A80B23120FD9A5400FB5E45 /* ETRefreshGifHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETRefreshGifHeader.h; sourceTree = "<group>"; };
@@ -174,11 +195,11 @@
 				5A080F4D20FC93B0008067FB /* NormalHeaderController.m */,
 				5A080F5220FC9684008067FB /* GifHeaderController.h */,
 				5A080F5320FC9684008067FB /* GifHeaderController.m */,
-				5A80B22D20FD926000FB5E45 /* BaseHeader */,
 				5A80B23720FDEE2800FB5E45 /* BackFooterController.h */,
 				5A80B23820FDEE2800FB5E45 /* BackFooterController.m */,
 				5A80B23A20FDF07B00FB5E45 /* AutoFooterController.h */,
 				5A80B23B20FDF07B00FB5E45 /* AutoFooterController.m */,
+				5A46DE4C20FEDF5500A24D14 /* ETRefresh */,
 			);
 			path = Refresh_Demo;
 			sourceTree = "<group>";
@@ -288,17 +309,63 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
-		5A80B22D20FD926000FB5E45 /* BaseHeader */ = {
+		5A46DE3A20FED60F00A24D14 /* Footer */ = {
 			isa = PBXGroup;
 			children = (
-				5A80B22A20FD925400FB5E45 /* ETRefreshHeader.h */,
-				5A80B22B20FD925400FB5E45 /* ETRefreshHeader.m */,
+				5A46DE3E20FED78100A24D14 /* Auto */,
+				5A46DE3F20FED78A00A24D14 /* Back */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		5A46DE3E20FED78100A24D14 /* Auto */ = {
+			isa = PBXGroup;
+			children = (
+				5A46DE3720FED60600A24D14 /* ETRefreshAutoNormalFooter.h */,
+				5A46DE3820FED60600A24D14 /* ETRefreshAutoNormalFooter.m */,
+				5A46DE4020FED8E700A24D14 /* ETRefreshAutoGifFooter.h */,
+				5A46DE4120FED8E700A24D14 /* ETRefreshAutoGifFooter.m */,
+			);
+			path = Auto;
+			sourceTree = "<group>";
+		};
+		5A46DE3F20FED78A00A24D14 /* Back */ = {
+			isa = PBXGroup;
+			children = (
+				5A46DE3B20FED77600A24D14 /* ETRefreshBackNormalFooter.h */,
+				5A46DE3C20FED77600A24D14 /* ETRefreshBackNormalFooter.m */,
+				5A46DE4320FED93400A24D14 /* ETRefreshBackGifFooter.h */,
+				5A46DE4420FED93400A24D14 /* ETRefreshBackGifFooter.m */,
+			);
+			path = Back;
+			sourceTree = "<group>";
+		};
+		5A46DE4C20FEDF5500A24D14 /* ETRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				5A46DE4D20FEDFFF00A24D14 /* UITableView+ETRefresh.h */,
+				5A46DE4E20FEDFFF00A24D14 /* UITableView+ETRefresh.m */,
+				5A80B22D20FD926000FB5E45 /* Header */,
+				5A46DE3A20FED60F00A24D14 /* Footer */,
+				5A46DE4620FEDBF500A24D14 /* ETNormalController.h */,
+				5A46DE4720FEDBF500A24D14 /* ETNormalController.m */,
+				5A46DE4920FEDC0800A24D14 /* ETGifController.h */,
+				5A46DE4A20FEDC0800A24D14 /* ETGifController.m */,
+				5A46DE5020FF11F500A24D14 /* ETAutoFooterController.h */,
+				5A46DE5120FF11F500A24D14 /* ETAutoFooterController.m */,
+			);
+			path = ETRefresh;
+			sourceTree = "<group>";
+		};
+		5A80B22D20FD926000FB5E45 /* Header */ = {
+			isa = PBXGroup;
+			children = (
 				5A80B22E20FD9A3E00FB5E45 /* ETRefreshNormalHeader.h */,
 				5A80B22F20FD9A3E00FB5E45 /* ETRefreshNormalHeader.m */,
 				5A80B23120FD9A5400FB5E45 /* ETRefreshGifHeader.h */,
 				5A80B23220FD9A5400FB5E45 /* ETRefreshGifHeader.m */,
 			);
-			path = BaseHeader;
+			path = Header;
 			sourceTree = "<group>";
 		};
 		6D215B2F954CF760FF3C9B4F /* Frameworks */ = {
@@ -419,31 +486,38 @@
 				5A080F3A20FC460A008067FB /* MJRefreshAutoNormalFooter.m in Sources */,
 				5A80B23320FD9A5400FB5E45 /* ETRefreshGifHeader.m in Sources */,
 				5A80B23C20FDF07B00FB5E45 /* AutoFooterController.m in Sources */,
+				5A46DE5220FF11F500A24D14 /* ETAutoFooterController.m in Sources */,
 				5A080F3920FC460A008067FB /* MJRefreshAutoGifFooter.m in Sources */,
+				5A46DE3D20FED77600A24D14 /* ETRefreshBackNormalFooter.m in Sources */,
 				5A080F5420FC9684008067FB /* GifHeaderController.m in Sources */,
 				5A080F4B20FC7082008067FB /* HeaderController.m in Sources */,
 				5A080F4520FC460A008067FB /* UIScrollView+MJExtension.m in Sources */,
 				5A80B23020FD9A3E00FB5E45 /* ETRefreshNormalHeader.m in Sources */,
 				5A080F3F20FC460A008067FB /* MJRefreshGifHeader.m in Sources */,
 				5A080EFB20FC356C008067FB /* main.m in Sources */,
-				5A80B22C20FD925400FB5E45 /* ETRefreshHeader.m in Sources */,
 				5A080F3620FC460A008067FB /* MJRefreshComponent.m in Sources */,
 				5A080F3820FC460A008067FB /* MJRefreshHeader.m in Sources */,
 				5A080F4720FC460A008067FB /* UIView+MJExtension.m in Sources */,
 				5A080F3E20FC460A008067FB /* MJRefreshBackStateFooter.m in Sources */,
+				5A46DE4820FEDBF500A24D14 /* ETNormalController.m in Sources */,
 				5A080F3420FC460A008067FB /* MJRefreshAutoFooter.m in Sources */,
 				5A080F4620FC460A008067FB /* UIScrollView+MJRefresh.m in Sources */,
 				5A080F3C20FC460A008067FB /* MJRefreshBackGifFooter.m in Sources */,
 				5A080F4020FC460A008067FB /* MJRefreshNormalHeader.m in Sources */,
+				5A46DE4B20FEDC0800A24D14 /* ETGifController.m in Sources */,
 				5A080F3B20FC460A008067FB /* MJRefreshAutoStateFooter.m in Sources */,
+				5A46DE3920FED60600A24D14 /* ETRefreshAutoNormalFooter.m in Sources */,
 				5A080F3520FC460A008067FB /* MJRefreshBackFooter.m in Sources */,
 				5A080EED20FC356A008067FB /* AppDelegate.m in Sources */,
 				5A080F4320FC460A008067FB /* MJRefreshConst.m in Sources */,
 				5A080F5120FC952E008067FB /* StateHeaderController.m in Sources */,
 				5A80B23920FDEE2800FB5E45 /* BackFooterController.m in Sources */,
+				5A46DE4220FED8E700A24D14 /* ETRefreshAutoGifFooter.m in Sources */,
+				5A46DE4F20FEDFFF00A24D14 /* UITableView+ETRefresh.m in Sources */,
 				5A080F3D20FC460A008067FB /* MJRefreshBackNormalFooter.m in Sources */,
 				5A080F4120FC460A008067FB /* MJRefreshStateHeader.m in Sources */,
 				5A080F3720FC460A008067FB /* MJRefreshFooter.m in Sources */,
+				5A46DE4520FED93400A24D14 /* ETRefreshBackGifFooter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

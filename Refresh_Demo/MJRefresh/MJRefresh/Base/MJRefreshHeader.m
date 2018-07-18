@@ -118,9 +118,9 @@
         default:
             break;
     }
-    NSLog(@"%@",NSStringFromCGRect(self.frame));
-    
-    NSLog(@"%f",self.scrollView.contentOffset.y);
+//    NSLog(@"%@",NSStringFromCGRect(self.frame));
+//    
+//    NSLog(@"%f",self.scrollView.contentOffset.y);
 }
 
 - (void)setState:(MJRefreshState)state

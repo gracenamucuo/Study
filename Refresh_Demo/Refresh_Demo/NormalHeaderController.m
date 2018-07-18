@@ -8,7 +8,7 @@
 
 #import "NormalHeaderController.h"
 #import "MJRefresh.h"
-#import "ETRefreshHeader.h"
+#import "ETRefreshNormalHeader.h"
 @interface NormalHeaderController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *dataArray;
@@ -27,14 +27,8 @@ static NSString *cellID = @"cellID";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
     MJRefreshNormalHeader *refreshHeader = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshAction)];
     refreshHeader.backgroundColor = [UIColor redColor];
+                                
     
-    ETRefreshHeader *header = [ETRefreshHeader normalHeaderWithRefreshingTarget:self refreshingAction:@selector(refreshAction)];
-    
-    ETRefreshHeader *header1 = [ETRefreshHeader normalHeaderWithRefreshingBlock:^{
-        
-    }];
-    
-    self.tableView.mj_header = header1;
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;

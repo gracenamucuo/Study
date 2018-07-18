@@ -22,7 +22,6 @@
 {
     if (!_arrowView) {
         UIImageView *arrowView = [[UIImageView alloc] initWithImage:[NSBundle mj_arrowImage]];
-        arrowView.backgroundColor = [UIColor blackColor];
         [self addSubview:_arrowView = arrowView];
     }
     return _arrowView;

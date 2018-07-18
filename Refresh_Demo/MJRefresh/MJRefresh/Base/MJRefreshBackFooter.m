@@ -66,6 +66,22 @@
     } else if (pullingPercent < 1) {
         self.pullingPercent = pullingPercent;
     }
+    
+    switch (self.state) {
+        case MJRefreshStateIdle:
+            self.backgroundColor = [UIColor redColor];//没有松手时候，向上拉出来刷新底部但还没有完全出来的时候
+            break;
+        case MJRefreshStatePulling:
+            self.backgroundColor = [UIColor greenColor];//刷新底部完全出来的时候
+            break;
+        case MJRefreshStateNoMoreData:
+            self.backgroundColor = [UIColor blueColor];
+            break;
+        case MJRefreshStateWillRefresh:
+            self.backgroundColor = [UIColor lightGrayColor];
+        default:
+            break;
+    }
 }
 
 - (void)scrollViewContentSizeDidChange:(NSDictionary *)change

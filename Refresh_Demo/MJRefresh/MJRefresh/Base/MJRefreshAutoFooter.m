@@ -86,6 +86,22 @@
             [self beginRefreshing];
         }
     }
+
+    switch (self.state) {
+        case MJRefreshStateIdle:
+            self.backgroundColor = [UIColor redColor];
+            break;
+        case MJRefreshStatePulling:
+            self.backgroundColor = [UIColor greenColor];
+            break;
+        case MJRefreshStateNoMoreData:
+            self.backgroundColor = [UIColor blueColor];
+            break;
+        case MJRefreshStateWillRefresh:
+            self.backgroundColor = [UIColor lightGrayColor];
+        default:
+            break;
+    }
 }
 
 - (void)scrollViewPanStateDidChange:(NSDictionary *)change
@@ -107,6 +123,23 @@
         }
     } else if (panState == UIGestureRecognizerStateBegan) {
         self.oneNewPan = YES;
+    }
+    
+    
+    switch (self.state) {
+        case MJRefreshStateIdle:
+            self.backgroundColor = [UIColor redColor];
+            break;
+        case MJRefreshStatePulling:
+            self.backgroundColor = [UIColor greenColor];
+            break;
+        case MJRefreshStateNoMoreData:
+            self.backgroundColor = [UIColor blueColor];
+            break;
+        case MJRefreshStateWillRefresh:
+            self.backgroundColor = [UIColor lightGrayColor];
+        default:
+            break;
     }
 }
 
@@ -131,6 +164,22 @@
                 self.endRefreshingCompletionBlock();
             }
         }
+    }
+    
+    switch (self.state) {
+        case MJRefreshStateIdle:
+            self.backgroundColor = [UIColor redColor];
+            break;
+        case MJRefreshStatePulling:
+            self.backgroundColor = [UIColor greenColor];
+            break;
+        case MJRefreshStateNoMoreData:
+            self.backgroundColor = [UIColor blueColor];
+            break;
+        case MJRefreshStateWillRefresh:
+            self.backgroundColor = [UIColor lightGrayColor];
+        default:
+            break;
     }
 }
 
