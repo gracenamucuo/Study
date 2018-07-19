@@ -34,15 +34,15 @@
     return row.rowHeight;
 }
 
-- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-        id<ETSectionConvertableProtocol> sectionModel = self.manager.sections[section];
-    return sectionModel.viewForHeader(tableView,section);
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-      id<ETSectionConvertableProtocol> sectionModel = self.manager.sections[section];
-    return sectionModel.heightForHeader;
-}
+//- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//        id<ETSectionConvertableProtocol> sectionModel = self.manager.sections[section];
+//    return sectionModel.viewForHeader(tableView,section);
+//}
+//
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+//{
+//      id<ETSectionConvertableProtocol> sectionModel = self.manager.sections[section];
+//    return sectionModel.heightForHeader;
+//}
 @end

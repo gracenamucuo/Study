@@ -12,12 +12,14 @@
 @synthesize cellForRowAt;
 @synthesize reuseIdentifier;
 @synthesize rowHeight;
+@synthesize initType;
+@synthesize cellClassName;
 - (RowCellBlock)cellForRowAt
 {
     return ^(UITableView *tableView,NSIndexPath *indexPath){
-        if ([tableView dequeueReusableCellWithIdentifier:self.reuseIdentifier forIndexPath:indexPath]) {
-        return [tableView dequeueReusableCellWithIdentifier:self.reuseIdentifier forIndexPath:indexPath];
-        }
+//        if ([tableView dequeueReusableCellWithIdentifier:self.reuseIdentifier forIndexPath:indexPath]) {
+//        return [tableView dequeueReusableCellWithIdentifier:self.reuseIdentifier forIndexPath:indexPath];
+//        }
         switch (self.initType) {
             case ETTableViewCellInitalType_Code:
                 [tableView registerClass:NSClassFromString(self.cellClassName) forCellReuseIdentifier:self.reuseIdentifier];

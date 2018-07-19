@@ -12,6 +12,7 @@
 #import "ETBaseSectionViewModel.h"
 #import "ETBaseCellViewModel.h"
 #import "ETBaseTableViewCell.h"
+#import "ETTableDelegate.h"
 @interface ViewController ()
 @end
 
@@ -36,7 +37,12 @@
     ETBaseSectionViewModel *sectionVM = [[ETBaseSectionViewModel alloc]init];
     sectionVM.rows = @[vm1,vm2];
     
-    ETTableManager *manager = [ETTableManager alloc]initWithSections:<#(NSArray *)#> tableViewDelegate:<#(ETTableDelegate *)#>;
+    ETTableDelegate *delegate = [[ETTableDelegate alloc]init];
+    ETTableManager *manager = [[ETTableManager alloc]initWithSections:@[sectionVM] tableViewDelegate:delegate];
+    delegate.manager = manager;
+    tableView.manager = manager;
+    
+    
 }
 
 
