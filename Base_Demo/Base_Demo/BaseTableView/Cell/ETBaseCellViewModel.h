@@ -11,4 +11,6 @@
 @interface ETBaseCellViewModel : NSObject<ETRowConvertableProtocol>
 @property (nonatomic,copy)NSString *title;
 @property (nonatomic,copy)NSString *icon;
+
+- (void)configViewModelWithCellClassName:(NSString *)clsName initType:(ETTableViewCellInitalType)initType tableView:(UITableView *)tableView;
 @end

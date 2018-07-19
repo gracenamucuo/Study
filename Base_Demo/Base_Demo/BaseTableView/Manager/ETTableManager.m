@@ -26,11 +26,17 @@
     self.tableView = tableView;
     tableView.dataSource = self.delegate;
     tableView.delegate = self.delegate;
+    
 }
 #pragma mark -- 获得viewModel
 - (id<ETRowConvertableProtocol>)rowAtIndexPath:(NSIndexPath *)indexPath
 {
     id<ETSectionConvertableProtocol> sectionModel = self.sections[indexPath.section];
     return sectionModel.rows[indexPath.row];
+}
+
+- (void)reloadData
+{
+    [self.tableView reloadData];
 }
 @end

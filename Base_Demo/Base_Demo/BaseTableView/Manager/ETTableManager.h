@@ -15,4 +15,5 @@
 @property (nonatomic,weak)UITableView *tableView;
 - (instancetype)initWithSections:(NSArray *)sections tableViewDelegate:(ETTableDelegate*)delegate;
 - (void)bindToTableView:(UITableView *)tableView;
+- (void)reloadData;
 @end

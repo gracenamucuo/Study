@@ -12,11 +12,15 @@ typedef NS_ENUM(NSUInteger, ETTableViewCellInitalType) {
     ETTableViewCellInitalType_xib
 };
 typedef UITableViewCell *(^RowCellBlock)(UITableView *tableView,NSIndexPath *indexPath);
-
+typedef void(^RegisterBlock)(UITableView *tableView,Class cellClas,ETTableViewCellInitalType initialType);
 @protocol ETRowConvertableProtocol <NSObject>
 @property (nonatomic,copy)RowCellBlock cellForRowAt;
 @property (nonatomic,copy)NSString *reuseIdentifier;
 @property (nonatomic,assign)CGFloat rowHeight;
 @property (nonatomic,assign)ETTableViewCellInitalType initType;
 @property (nonatomic,copy)NSString *cellClassName;
+@property (nonatomic,copy)RegisterBlock registerBlock;
+@required
+- (void)configViewModelWithCellClassName:(NSString *)clsName initType:(ETTableViewCellInitalType)initType tableView:(UITableView *)tableView;
+
 @end
