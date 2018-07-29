@@ -2,7 +2,7 @@
 platform :ios, '9.0'
 
 target 'Base_Demo' do
-    pod 'FBRetainCycleDetector'
-    pod 'MLeaksFinder'
-    pod 'MJRefresh'
+  #  pod 'FBRetainCycleDetector'
+   # pod 'MLeaksFinder'
+    #pod 'MJRefresh'
 end
