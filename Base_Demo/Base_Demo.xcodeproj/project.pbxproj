@@ -47,7 +47,7 @@
 		5A784D4321006222009204C2 /* ETTableDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETTableDelegate.h; sourceTree = "<group>"; };
 		5A784D4421006222009204C2 /* ETTableDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETTableDelegate.m; sourceTree = "<group>"; };
 		5A784D4621007E00009204C2 /* ETBaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ETBaseTableViewCell.xib; sourceTree = "<group>"; };
-		5ADD62B62100DE2600B9986C /* ETTableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETTableManager.h; sourceTree = "<group>"; };
+		5A991CF52104277300418818 /* ETTableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETTableManager.h; sourceTree = "<group>"; };
 		5ADD62B72100DE2600B9986C /* ETTableManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETTableManager.m; sourceTree = "<group>"; };
 		5ADD62BD2100E3D800B9986C /* UITableViewCell+ETRenderUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+ETRenderUI.h"; sourceTree = "<group>"; };
 		5ADD62BE2100E3D800B9986C /* UITableViewCell+ETRenderUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+ETRenderUI.m"; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		5A784D422100620A009204C2 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				5ADD62B62100DE2600B9986C /* ETTableManager.h */,
+				5A991CF52104277300418818 /* ETTableManager.h */,
 				5ADD62B72100DE2600B9986C /* ETTableManager.m */,
 				5A784D2C21003A2A009204C2 /* UITableView+ETManager.h */,
 				5A784D2D21003A2A009204C2 /* UITableView+ETManager.m */,
