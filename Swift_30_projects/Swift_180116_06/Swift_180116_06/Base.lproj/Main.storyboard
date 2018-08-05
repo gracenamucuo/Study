@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bMC-8p-tex">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Light</string>
+        </array>
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--News Table View Controller-->
+        <scene sceneID="Y8I-iV-t8c">
+            <objects>
+                <tableViewController id="bMC-8p-tex" customClass="NewsTableViewController" customModule="Swift_180116_06" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xom-V7-dYe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="152" id="pEq-4e-6bi" customClass="NewsTableViewCell" customModule="Swift_180116_06" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="152"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pEq-4e-6bi" id="GcV-Fm-b2U">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="151.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFr-Cv-lGX">
+                                            <rect key="frame" x="10" y="0.0" width="355" height="35"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Gs-OW-BkM">
+                                            <rect key="frame" x="10" y="36" width="355" height="94.5"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
+                                            <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwp-Rx-7UH">
+                                            <rect key="frame" x="10" y="132.5" width="355" height="19.5"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="NFr-Cv-lGX" secondAttribute="trailing" constant="10" id="4Ck-Jb-yzK"/>
+                                        <constraint firstAttribute="trailing" secondItem="3Gs-OW-BkM" secondAttribute="trailing" constant="10" id="ABK-pC-Fkf"/>
+                                        <constraint firstItem="uwp-Rx-7UH" firstAttribute="leading" secondItem="GcV-Fm-b2U" secondAttribute="leading" constant="10" id="Jkp-dA-KYK"/>
+                                        <constraint firstItem="3Gs-OW-BkM" firstAttribute="top" secondItem="NFr-Cv-lGX" secondAttribute="bottom" constant="1" id="LQM-uv-0bb"/>
+                                        <constraint firstAttribute="bottom" secondItem="uwp-Rx-7UH" secondAttribute="bottom" id="XdU-Et-pag"/>
+                                        <constraint firstAttribute="trailing" secondItem="uwp-Rx-7UH" secondAttribute="trailing" constant="10" id="YU0-4k-cGk"/>
+                                        <constraint firstItem="NFr-Cv-lGX" firstAttribute="top" secondItem="GcV-Fm-b2U" secondAttribute="top" id="i5L-Nm-09Q"/>
+                                        <constraint firstItem="uwp-Rx-7UH" firstAttribute="top" secondItem="3Gs-OW-BkM" secondAttribute="bottom" constant="2" id="iaS-tq-iF7"/>
+                                        <constraint firstItem="3Gs-OW-BkM" firstAttribute="leading" secondItem="GcV-Fm-b2U" secondAttribute="leading" constant="10" id="lGd-dl-bLZ"/>
+                                        <constraint firstItem="NFr-Cv-lGX" firstAttribute="leading" secondItem="GcV-Fm-b2U" secondAttribute="leading" constant="10" id="oJE-R9-n6R"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="3Gs-OW-BkM" id="9es-3U-6UJ"/>
+                                    <outlet property="descriptionLabel" destination="uwp-Rx-7UH" id="lbI-Gl-1zR"/>
+                                    <outlet property="titleLabel" destination="NFr-Cv-lGX" id="mP0-zH-gFT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bMC-8p-tex" id="eGO-Fk-naJ"/>
+                            <outlet property="delegate" destination="bMC-8p-tex" id="lOZ-AI-B1O"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rfe-Id-CaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="130.88455772113943"/>
+        </scene>
+    </scenes>
+</document>
