@@ -16,7 +16,40 @@
 		5AA2BD6620D8A18000083DA9 /* UIView+loadFromNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2BD6320D8A17F00083DA9 /* UIView+loadFromNib.m */; };
 		5AA2BD6720D8A18000083DA9 /* UIViewController+loadFromStoryBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2BD6520D8A18000083DA9 /* UIViewController+loadFromStoryBoard.m */; };
 		5AA2BD6B20D8A32C00083DA9 /* SortController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2BD6A20D8A32C00083DA9 /* SortController.m */; };
+		5AEA5D9C2117E98800CC9E05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA5D9B2117E98800CC9E05 /* main.m */; };
+		5AEA5DA72117EDCB00CC9E05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA5DA62117EDCB00CC9E05 /* main.m */; };
+		5AEA5DB22117F73000CC9E05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA5DB12117F73000CC9E05 /* main.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5AEA5D972117E98800CC9E05 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		5AEA5DA22117EDCB00CC9E05 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		5AEA5DAD2117F73000CC9E05 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5AA2BD4920D8A0C100083DA9 /* Arithmetic_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arithmetic_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,10 +68,37 @@
 		5AA2BD6520D8A18000083DA9 /* UIViewController+loadFromStoryBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+loadFromStoryBoard.m"; sourceTree = "<group>"; };
 		5AA2BD6920D8A32C00083DA9 /* SortController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortController.h; sourceTree = "<group>"; };
 		5AA2BD6A20D8A32C00083DA9 /* SortController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortController.m; sourceTree = "<group>"; };
+		5AEA5D992117E98800CC9E05 /* 桶排序 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "桶排序"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AEA5D9B2117E98800CC9E05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AEA5DA42117EDCB00CC9E05 /* 冒泡排序 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "冒泡排序"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AEA5DA62117EDCB00CC9E05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AEA5DAF2117F73000CC9E05 /* 快速排序 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "快速排序"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AEA5DB12117F73000CC9E05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5AA2BD4620D8A0C100083DA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AEA5D962117E98800CC9E05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AEA5DA12117EDCB00CC9E05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AEA5DAC2117F73000CC9E05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -52,6 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				5AA2BD4B20D8A0C100083DA9 /* Arithmetic_Demo */,
+				5AEA5D9A2117E98800CC9E05 /* 桶排序 */,
+				5AEA5DA52117EDCB00CC9E05 /* 冒泡排序 */,
+				5AEA5DB02117F73000CC9E05 /* 快速排序 */,
 				5AA2BD4A20D8A0C100083DA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +123,9 @@
 			isa = PBXGroup;
 			children = (
 				5AA2BD4920D8A0C100083DA9 /* Arithmetic_Demo.app */,
+				5AEA5D992117E98800CC9E05 /* 桶排序 */,
+				5AEA5DA42117EDCB00CC9E05 /* 冒泡排序 */,
+				5AEA5DAF2117F73000CC9E05 /* 快速排序 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +160,30 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		5AEA5D9A2117E98800CC9E05 /* 桶排序 */ = {
+			isa = PBXGroup;
+			children = (
+				5AEA5D9B2117E98800CC9E05 /* main.m */,
+			);
+			path = "桶排序";
+			sourceTree = "<group>";
+		};
+		5AEA5DA52117EDCB00CC9E05 /* 冒泡排序 */ = {
+			isa = PBXGroup;
+			children = (
+				5AEA5DA62117EDCB00CC9E05 /* main.m */,
+			);
+			path = "冒泡排序";
+			sourceTree = "<group>";
+		};
+		5AEA5DB02117F73000CC9E05 /* 快速排序 */ = {
+			isa = PBXGroup;
+			children = (
+				5AEA5DB12117F73000CC9E05 /* main.m */,
+			);
+			path = "快速排序";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,6 +204,57 @@
 			productReference = 5AA2BD4920D8A0C100083DA9 /* Arithmetic_Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5AEA5D982117E98800CC9E05 /* 桶排序 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AEA5D9D2117E98800CC9E05 /* Build configuration list for PBXNativeTarget "桶排序" */;
+			buildPhases = (
+				5AEA5D952117E98800CC9E05 /* Sources */,
+				5AEA5D962117E98800CC9E05 /* Frameworks */,
+				5AEA5D972117E98800CC9E05 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "桶排序";
+			productName = "桶排序";
+			productReference = 5AEA5D992117E98800CC9E05 /* 桶排序 */;
+			productType = "com.apple.product-type.tool";
+		};
+		5AEA5DA32117EDCB00CC9E05 /* 冒泡排序 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AEA5DA82117EDCB00CC9E05 /* Build configuration list for PBXNativeTarget "冒泡排序" */;
+			buildPhases = (
+				5AEA5DA02117EDCB00CC9E05 /* Sources */,
+				5AEA5DA12117EDCB00CC9E05 /* Frameworks */,
+				5AEA5DA22117EDCB00CC9E05 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "冒泡排序";
+			productName = "冒泡排序";
+			productReference = 5AEA5DA42117EDCB00CC9E05 /* 冒泡排序 */;
+			productType = "com.apple.product-type.tool";
+		};
+		5AEA5DAE2117F73000CC9E05 /* 快速排序 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AEA5DB32117F73000CC9E05 /* Build configuration list for PBXNativeTarget "快速排序" */;
+			buildPhases = (
+				5AEA5DAB2117F73000CC9E05 /* Sources */,
+				5AEA5DAC2117F73000CC9E05 /* Frameworks */,
+				5AEA5DAD2117F73000CC9E05 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "快速排序";
+			productName = "快速排序";
+			productReference = 5AEA5DAF2117F73000CC9E05 /* 快速排序 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -125,6 +266,15 @@
 				TargetAttributes = {
 					5AA2BD4820D8A0C100083DA9 = {
 						CreatedOnToolsVersion = 9.3.1;
+					};
+					5AEA5D982117E98800CC9E05 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					5AEA5DA32117EDCB00CC9E05 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					5AEA5DAE2117F73000CC9E05 = {
+						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
 			};
@@ -142,6 +292,9 @@
 			projectRoot = "";
 			targets = (
 				5AA2BD4820D8A0C100083DA9 /* Arithmetic_Demo */,
+				5AEA5D982117E98800CC9E05 /* 桶排序 */,
+				5AEA5DA32117EDCB00CC9E05 /* 冒泡排序 */,
+				5AEA5DAE2117F73000CC9E05 /* 快速排序 */,
 			);
 		};
 /* End PBXProject section */
@@ -170,6 +323,30 @@
 				5AA2BD6B20D8A32C00083DA9 /* SortController.m in Sources */,
 				5AA2BD5C20D8A0C500083DA9 /* main.m in Sources */,
 				5AA2BD4E20D8A0C100083DA9 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AEA5D952117E98800CC9E05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AEA5D9C2117E98800CC9E05 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AEA5DA02117EDCB00CC9E05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AEA5DA72117EDCB00CC9E05 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AEA5DAB2117F73000CC9E05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AEA5DB22117F73000CC9E05 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +518,72 @@
 			};
 			name = Release;
 		};
+		5AEA5D9E2117E98800CC9E05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5AEA5D9F2117E98800CC9E05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5AEA5DA92117EDCB00CC9E05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5AEA5DAA2117EDCB00CC9E05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5AEA5DB42117F73000CC9E05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5AEA5DB52117F73000CC9E05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -358,6 +601,33 @@
 			buildConfigurations = (
 				5AA2BD6020D8A0C500083DA9 /* Debug */,
 				5AA2BD6120D8A0C500083DA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AEA5D9D2117E98800CC9E05 /* Build configuration list for PBXNativeTarget "桶排序" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AEA5D9E2117E98800CC9E05 /* Debug */,
+				5AEA5D9F2117E98800CC9E05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AEA5DA82117EDCB00CC9E05 /* Build configuration list for PBXNativeTarget "冒泡排序" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AEA5DA92117EDCB00CC9E05 /* Debug */,
+				5AEA5DAA2117EDCB00CC9E05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AEA5DB32117F73000CC9E05 /* Build configuration list for PBXNativeTarget "快速排序" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AEA5DB42117F73000CC9E05 /* Debug */,
+				5AEA5DB52117F73000CC9E05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

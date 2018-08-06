@@ -35,19 +35,19 @@
         NSInteger min_temp = [self.data[i] integerValue] <= [self.data[total - i - 1] integerValue] ? [self.data[i] integerValue] : [self.data[total - i - 1] integerValue];
         
     NSInteger  min_index_temp = [self.data[i] integerValue] <= [self.data[total - i - 1] integerValue] ? i : (total - i - 1);
-        NSLog(@"中间小%ld",min_index_temp);
+        NSLog(@"中间小%ld",(long)min_index_temp);
     NSInteger max_index_temp = [self.data[i] integerValue] >= [self.data[total - i - 1] integerValue] ? i : (total - i - 1);
-     NSLog(@"中间大%ld",max_index_temp);
+        NSLog(@"中间大%ld",(long)max_index_temp);
         
         min = min > min_temp ? min_temp : min;
         min_index = min >= min_temp ? min_index_temp : min_index;
-        NSLog(@"小%ld",min_index);
+        NSLog(@"小%ld",(long)min_index);
         max = max < max_temp ? max_temp : max;
         max_index = max <= max_temp ? max_index_temp : max_index;
-        NSLog(@"大%ld",max_index);
+        NSLog(@"大%ld",(long)max_index);
     }
     
-    NSLog(@"最大值%ld 最大值索引%ld 最小值%ld  最小值索引%ld",max,min,max_index,min_index);
+    NSLog(@"最大值%ld 最大值索引%ld 最小值%ld  最小值索引%ld",(long)max,(long)min,(long)max_index,(long)min_index);
 }
 
 @end
