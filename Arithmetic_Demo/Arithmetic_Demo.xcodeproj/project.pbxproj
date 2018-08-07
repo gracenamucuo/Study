@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AA0822F211933EA00512FEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA0822E211933EA00512FEA /* main.m */; };
+		5AA0823A21193C7300512FEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA0823921193C7300512FEA /* main.m */; };
+		5AA0824521194B5000512FEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA0824421194B5000512FEA /* main.m */; };
 		5AA2BD4E20D8A0C100083DA9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2BD4D20D8A0C100083DA9 /* AppDelegate.m */; };
 		5AA2BD5120D8A0C100083DA9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA2BD5020D8A0C100083DA9 /* ViewController.m */; };
 		5AA2BD5420D8A0C200083DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA2BD5220D8A0C200083DA9 /* Main.storyboard */; };
@@ -22,6 +25,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		5AA0822A211933EA00512FEA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		5AA0823521193C7300512FEA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		5AA0824021194B5000512FEA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		5AEA5D972117E98800CC9E05 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,6 +82,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5AA0822C211933EA00512FEA /* 队列 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "队列"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AA0822E211933EA00512FEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AA0823721193C7300512FEA /* 栈 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "栈"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AA0823921193C7300512FEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AA0824221194B5000512FEA /* 纸牌(接竹竿)游戏 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "纸牌(接竹竿)游戏"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AA0824421194B5000512FEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5AA2BD4920D8A0C100083DA9 /* Arithmetic_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arithmetic_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA2BD4C20D8A0C100083DA9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5AA2BD4D20D8A0C100083DA9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,6 +113,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5AA08229211933EA00512FEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AA0823421193C7300512FEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AA0823F21194B5000512FEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5AA2BD4620D8A0C100083DA9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,6 +165,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AA0822D211933EA00512FEA /* 队列 */ = {
+			isa = PBXGroup;
+			children = (
+				5AA0822E211933EA00512FEA /* main.m */,
+			);
+			path = "队列";
+			sourceTree = "<group>";
+		};
+		5AA0823821193C7300512FEA /* 栈 */ = {
+			isa = PBXGroup;
+			children = (
+				5AA0823921193C7300512FEA /* main.m */,
+			);
+			path = "栈";
+			sourceTree = "<group>";
+		};
+		5AA0824321194B5000512FEA /* 纸牌(接竹竿)游戏 */ = {
+			isa = PBXGroup;
+			children = (
+				5AA0824421194B5000512FEA /* main.m */,
+			);
+			path = "纸牌(接竹竿)游戏";
+			sourceTree = "<group>";
+		};
 		5AA2BD4020D8A0C100083DA9 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +196,9 @@
 				5AEA5D9A2117E98800CC9E05 /* 桶排序 */,
 				5AEA5DA52117EDCB00CC9E05 /* 冒泡排序 */,
 				5AEA5DB02117F73000CC9E05 /* 快速排序 */,
+				5AA0822D211933EA00512FEA /* 队列 */,
+				5AA0823821193C7300512FEA /* 栈 */,
+				5AA0824321194B5000512FEA /* 纸牌(接竹竿)游戏 */,
 				5AA2BD4A20D8A0C100083DA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -126,6 +210,9 @@
 				5AEA5D992117E98800CC9E05 /* 桶排序 */,
 				5AEA5DA42117EDCB00CC9E05 /* 冒泡排序 */,
 				5AEA5DAF2117F73000CC9E05 /* 快速排序 */,
+				5AA0822C211933EA00512FEA /* 队列 */,
+				5AA0823721193C7300512FEA /* 栈 */,
+				5AA0824221194B5000512FEA /* 纸牌(接竹竿)游戏 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,6 +274,57 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5AA0822B211933EA00512FEA /* 队列 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AA08232211933EA00512FEA /* Build configuration list for PBXNativeTarget "队列" */;
+			buildPhases = (
+				5AA08228211933EA00512FEA /* Sources */,
+				5AA08229211933EA00512FEA /* Frameworks */,
+				5AA0822A211933EA00512FEA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "队列";
+			productName = "队列";
+			productReference = 5AA0822C211933EA00512FEA /* 队列 */;
+			productType = "com.apple.product-type.tool";
+		};
+		5AA0823621193C7300512FEA /* 栈 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AA0823B21193C7300512FEA /* Build configuration list for PBXNativeTarget "栈" */;
+			buildPhases = (
+				5AA0823321193C7300512FEA /* Sources */,
+				5AA0823421193C7300512FEA /* Frameworks */,
+				5AA0823521193C7300512FEA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "栈";
+			productName = "栈";
+			productReference = 5AA0823721193C7300512FEA /* 栈 */;
+			productType = "com.apple.product-type.tool";
+		};
+		5AA0824121194B5000512FEA /* 纸牌(接竹竿)游戏 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AA0824621194B5000512FEA /* Build configuration list for PBXNativeTarget "纸牌(接竹竿)游戏" */;
+			buildPhases = (
+				5AA0823E21194B5000512FEA /* Sources */,
+				5AA0823F21194B5000512FEA /* Frameworks */,
+				5AA0824021194B5000512FEA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "纸牌(接竹竿)游戏";
+			productName = "纸牌(接竹竿)游戏";
+			productReference = 5AA0824221194B5000512FEA /* 纸牌(接竹竿)游戏 */;
+			productType = "com.apple.product-type.tool";
+		};
 		5AA2BD4820D8A0C100083DA9 /* Arithmetic_Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AA2BD5F20D8A0C500083DA9 /* Build configuration list for PBXNativeTarget "Arithmetic_Demo" */;
@@ -264,6 +402,15 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "戴运鹏";
 				TargetAttributes = {
+					5AA0822B211933EA00512FEA = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					5AA0823621193C7300512FEA = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					5AA0824121194B5000512FEA = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					5AA2BD4820D8A0C100083DA9 = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
@@ -295,6 +442,9 @@
 				5AEA5D982117E98800CC9E05 /* 桶排序 */,
 				5AEA5DA32117EDCB00CC9E05 /* 冒泡排序 */,
 				5AEA5DAE2117F73000CC9E05 /* 快速排序 */,
+				5AA0822B211933EA00512FEA /* 队列 */,
+				5AA0823621193C7300512FEA /* 栈 */,
+				5AA0824121194B5000512FEA /* 纸牌(接竹竿)游戏 */,
 			);
 		};
 /* End PBXProject section */
@@ -313,6 +463,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5AA08228211933EA00512FEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AA0822F211933EA00512FEA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AA0823321193C7300512FEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AA0823A21193C7300512FEA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AA0823E21194B5000512FEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AA0824521194B5000512FEA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5AA2BD4520D8A0C100083DA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,6 +546,72 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5AA08230211933EA00512FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5AA08231211933EA00512FEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5AA0823C21193C7300512FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5AA0823D21193C7300512FEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5AA0824721194B5000512FEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5AA0824821194B5000512FEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		5AA2BD5D20D8A0C500083DA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -587,6 +827,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5AA08232211933EA00512FEA /* Build configuration list for PBXNativeTarget "队列" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AA08230211933EA00512FEA /* Debug */,
+				5AA08231211933EA00512FEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AA0823B21193C7300512FEA /* Build configuration list for PBXNativeTarget "栈" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AA0823C21193C7300512FEA /* Debug */,
+				5AA0823D21193C7300512FEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AA0824621194B5000512FEA /* Build configuration list for PBXNativeTarget "纸牌(接竹竿)游戏" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AA0824721194B5000512FEA /* Debug */,
+				5AA0824821194B5000512FEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5AA2BD4420D8A0C100083DA9 /* Build configuration list for PBXProject "Arithmetic_Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

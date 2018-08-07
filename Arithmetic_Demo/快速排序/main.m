@@ -44,7 +44,50 @@ void  quicksort(int left,int right)
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-
+        int i,j,t;
+        scanf("%d",&n);
+        for (i = 1; i <= n; i++) {
+            scanf("%d",&a[i]);
+        }
+        quicksort(1, n);
+        for (i = 1; i <= n; i++) {
+            printf("%d ",a[i]);
+        }
+        
+        getchar();getchar();
     }
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
