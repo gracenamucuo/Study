@@ -41,6 +41,13 @@
 		5AEA5D9C2117E98800CC9E05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA5D9B2117E98800CC9E05 /* main.m */; };
 		5AEA5DA72117EDCB00CC9E05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA5DA62117EDCB00CC9E05 /* main.m */; };
 		5AEA5DB22117F73000CC9E05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA5DB12117F73000CC9E05 /* main.m */; };
+		5AFAC410211FC63800BDBC29 /* 负权回路.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFAC40F211FC63800BDBC29 /* 负权回路.png */; };
+		5AFAC418211FC69800BDBC29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAC417211FC69800BDBC29 /* main.m */; };
+		5AFAC41D211FC7C400BDBC29 /* 单源最短路径.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFAC41C211FC7C400BDBC29 /* 单源最短路径.png */; };
+		5AFAC425211FDB4100BDBC29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAC424211FDB4100BDBC29 /* main.m */; };
+		5AFAC430211FE08D00BDBC29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAC42F211FE08D00BDBC29 /* main.m */; };
+		5AFAC43B212016D500BDBC29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFAC43A212016D500BDBC29 /* main.m */; };
+		5AFAC4402120178700BDBC29 /* 队列优化.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFAC43F2120178700BDBC29 /* 队列优化.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -242,6 +249,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		5AFAC413211FC69800BDBC29 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		5AFAC420211FDB4100BDBC29 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		5AFAC42B211FE08D00BDBC29 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		5AFAC436212016D500BDBC29 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -308,6 +351,17 @@
 		5AEA5DA62117EDCB00CC9E05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5AEA5DAF2117F73000CC9E05 /* 快速排序 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "快速排序"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AEA5DB12117F73000CC9E05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AFAC40F211FC63800BDBC29 /* 负权回路.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "负权回路.png"; sourceTree = "<group>"; };
+		5AFAC415211FC69800BDBC29 /* Dijkstra_通过边实现松弛 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Dijkstra_通过边实现松弛"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AFAC417211FC69800BDBC29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AFAC41C211FC7C400BDBC29 /* 单源最短路径.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单源最短路径.png"; sourceTree = "<group>"; };
+		5AFAC422211FDB4100BDBC29 /* 邻接表存储 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "邻接表存储"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AFAC424211FDB4100BDBC29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AFAC42D211FE08D00BDBC29 /* Bellman_Ford_解决负权边 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Bellman_Ford_解决负权边"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AFAC42F211FE08D00BDBC29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AFAC438212016D500BDBC29 /* Bellman_Ford队列优化 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Bellman_Ford队列优化"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AFAC43A212016D500BDBC29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5AFAC43F2120178700BDBC29 /* 队列优化.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "队列优化.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -472,6 +526,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5AFAC412211FC69800BDBC29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AFAC41F211FDB4100BDBC29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AFAC42A211FE08D00BDBC29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AFAC435212016D500BDBC29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -601,6 +683,7 @@
 			isa = PBXGroup;
 			children = (
 				5A879ADD211ED47A00F58804 /* main.m */,
+				5AFAC40F211FC63800BDBC29 /* 负权回路.png */,
 				5A879AE2211ED4A000F58804 /* 最短路径.png */,
 			);
 			path = "最短路径";
@@ -656,6 +739,10 @@
 				5A879AC2211EC83F00F58804 /* 城市地图_最短路径 */,
 				5A879ACF211ECF4B00F58804 /* 图的BFS遍历 */,
 				5A879ADC211ED47A00F58804 /* 最短路径 */,
+				5AFAC416211FC69800BDBC29 /* Dijkstra_通过边实现松弛 */,
+				5AFAC423211FDB4100BDBC29 /* 邻接表存储 */,
+				5AFAC42E211FE08D00BDBC29 /* Bellman_Ford_解决负权边 */,
+				5AFAC439212016D500BDBC29 /* Bellman_Ford队列优化 */,
 				5AA2BD4A20D8A0C100083DA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -686,6 +773,10 @@
 				5A879AC1211EC83F00F58804 /* 城市地图_最短路径 */,
 				5A879ACE211ECF4B00F58804 /* 图的BFS遍历 */,
 				5A879ADB211ED47A00F58804 /* 最短路径 */,
+				5AFAC415211FC69800BDBC29 /* Dijkstra_通过边实现松弛 */,
+				5AFAC422211FDB4100BDBC29 /* 邻接表存储 */,
+				5AFAC42D211FE08D00BDBC29 /* Bellman_Ford_解决负权边 */,
+				5AFAC438212016D500BDBC29 /* Bellman_Ford队列优化 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -742,6 +833,40 @@
 				5AEA5DB12117F73000CC9E05 /* main.m */,
 			);
 			path = "快速排序";
+			sourceTree = "<group>";
+		};
+		5AFAC416211FC69800BDBC29 /* Dijkstra_通过边实现松弛 */ = {
+			isa = PBXGroup;
+			children = (
+				5AFAC41C211FC7C400BDBC29 /* 单源最短路径.png */,
+				5AFAC417211FC69800BDBC29 /* main.m */,
+			);
+			path = "Dijkstra_通过边实现松弛";
+			sourceTree = "<group>";
+		};
+		5AFAC423211FDB4100BDBC29 /* 邻接表存储 */ = {
+			isa = PBXGroup;
+			children = (
+				5AFAC424211FDB4100BDBC29 /* main.m */,
+			);
+			path = "邻接表存储";
+			sourceTree = "<group>";
+		};
+		5AFAC42E211FE08D00BDBC29 /* Bellman_Ford_解决负权边 */ = {
+			isa = PBXGroup;
+			children = (
+				5AFAC42F211FE08D00BDBC29 /* main.m */,
+			);
+			path = "Bellman_Ford_解决负权边";
+			sourceTree = "<group>";
+		};
+		5AFAC439212016D500BDBC29 /* Bellman_Ford队列优化 */ = {
+			isa = PBXGroup;
+			children = (
+				5AFAC43F2120178700BDBC29 /* 队列优化.png */,
+				5AFAC43A212016D500BDBC29 /* main.m */,
+			);
+			path = "Bellman_Ford队列优化";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1138,6 +1263,74 @@
 			productReference = 5AEA5DAF2117F73000CC9E05 /* 快速排序 */;
 			productType = "com.apple.product-type.tool";
 		};
+		5AFAC414211FC69800BDBC29 /* Dijkstra_通过边实现松弛 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AFAC419211FC69800BDBC29 /* Build configuration list for PBXNativeTarget "Dijkstra_通过边实现松弛" */;
+			buildPhases = (
+				5AFAC411211FC69800BDBC29 /* Sources */,
+				5AFAC412211FC69800BDBC29 /* Frameworks */,
+				5AFAC413211FC69800BDBC29 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dijkstra_通过边实现松弛";
+			productName = "Dijkstra_通过边实现松弛";
+			productReference = 5AFAC415211FC69800BDBC29 /* Dijkstra_通过边实现松弛 */;
+			productType = "com.apple.product-type.tool";
+		};
+		5AFAC421211FDB4100BDBC29 /* 邻接表存储 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AFAC426211FDB4100BDBC29 /* Build configuration list for PBXNativeTarget "邻接表存储" */;
+			buildPhases = (
+				5AFAC41E211FDB4100BDBC29 /* Sources */,
+				5AFAC41F211FDB4100BDBC29 /* Frameworks */,
+				5AFAC420211FDB4100BDBC29 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "邻接表存储";
+			productName = "邻接表存储";
+			productReference = 5AFAC422211FDB4100BDBC29 /* 邻接表存储 */;
+			productType = "com.apple.product-type.tool";
+		};
+		5AFAC42C211FE08D00BDBC29 /* Bellman_Ford_解决负权边 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AFAC431211FE08D00BDBC29 /* Build configuration list for PBXNativeTarget "Bellman_Ford_解决负权边" */;
+			buildPhases = (
+				5AFAC429211FE08D00BDBC29 /* Sources */,
+				5AFAC42A211FE08D00BDBC29 /* Frameworks */,
+				5AFAC42B211FE08D00BDBC29 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bellman_Ford_解决负权边";
+			productName = "Bellman_Ford_解决负权边";
+			productReference = 5AFAC42D211FE08D00BDBC29 /* Bellman_Ford_解决负权边 */;
+			productType = "com.apple.product-type.tool";
+		};
+		5AFAC437212016D500BDBC29 /* Bellman_Ford队列优化 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AFAC43C212016D500BDBC29 /* Build configuration list for PBXNativeTarget "Bellman_Ford队列优化" */;
+			buildPhases = (
+				5AFAC434212016D500BDBC29 /* Sources */,
+				5AFAC435212016D500BDBC29 /* Frameworks */,
+				5AFAC436212016D500BDBC29 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bellman_Ford队列优化";
+			productName = "Bellman_Ford队列优化";
+			productReference = 5AFAC438212016D500BDBC29 /* Bellman_Ford队列优化 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1217,6 +1410,18 @@
 					5AEA5DAE2117F73000CC9E05 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
+					5AFAC414211FC69800BDBC29 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					5AFAC421211FDB4100BDBC29 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					5AFAC42C211FE08D00BDBC29 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					5AFAC437212016D500BDBC29 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 5AA2BD4420D8A0C100083DA9 /* Build configuration list for PBXProject "Arithmetic_Demo" */;
@@ -1255,6 +1460,10 @@
 				5A879AC0211EC83F00F58804 /* 城市地图_最短路径 */,
 				5A879ACD211ECF4B00F58804 /* 图的BFS遍历 */,
 				5A879ADA211ED47A00F58804 /* 最短路径 */,
+				5AFAC414211FC69800BDBC29 /* Dijkstra_通过边实现松弛 */,
+				5AFAC421211FDB4100BDBC29 /* 邻接表存储 */,
+				5AFAC42C211FE08D00BDBC29 /* Bellman_Ford_解决负权边 */,
+				5AFAC437212016D500BDBC29 /* Bellman_Ford队列优化 */,
 			);
 		};
 /* End PBXProject section */
@@ -1266,10 +1475,13 @@
 			files = (
 				5AA2BD5920D8A0C500083DA9 /* LaunchScreen.storyboard in Resources */,
 				5A879AE3211ED4A000F58804 /* 最短路径.png in Resources */,
+				5AFAC41D211FC7C400BDBC29 /* 单源最短路径.png in Resources */,
+				5AFAC410211FC63800BDBC29 /* 负权回路.png in Resources */,
 				5A879AD6211ED04F00F58804 /* 转机路线.png in Resources */,
 				5A879AC9211ECF2900F58804 /* 城市路线.png in Resources */,
 				5AA2BD5620D8A0C500083DA9 /* Assets.xcassets in Resources */,
 				5AA2BD5420D8A0C200083DA9 /* Main.storyboard in Resources */,
+				5AFAC4402120178700BDBC29 /* 队列优化.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1462,6 +1674,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AEA5DB22117F73000CC9E05 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AFAC411211FC69800BDBC29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AFAC418211FC69800BDBC29 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AFAC41E211FDB4100BDBC29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AFAC425211FDB4100BDBC29 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AFAC429211FE08D00BDBC29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AFAC430211FE08D00BDBC29 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AFAC434212016D500BDBC29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AFAC43B212016D500BDBC29 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2123,6 +2367,94 @@
 			};
 			name = Release;
 		};
+		5AFAC41A211FC69800BDBC29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5AFAC41B211FC69800BDBC29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5AFAC427211FDB4100BDBC29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5AFAC428211FDB4100BDBC29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5AFAC432211FE08D00BDBC29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5AFAC433211FE08D00BDBC29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5AFAC43D212016D500BDBC29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5AFAC43E212016D500BDBC29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2338,6 +2670,42 @@
 			buildConfigurations = (
 				5AEA5DB42117F73000CC9E05 /* Debug */,
 				5AEA5DB52117F73000CC9E05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AFAC419211FC69800BDBC29 /* Build configuration list for PBXNativeTarget "Dijkstra_通过边实现松弛" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AFAC41A211FC69800BDBC29 /* Debug */,
+				5AFAC41B211FC69800BDBC29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AFAC426211FDB4100BDBC29 /* Build configuration list for PBXNativeTarget "邻接表存储" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AFAC427211FDB4100BDBC29 /* Debug */,
+				5AFAC428211FDB4100BDBC29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AFAC431211FE08D00BDBC29 /* Build configuration list for PBXNativeTarget "Bellman_Ford_解决负权边" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AFAC432211FE08D00BDBC29 /* Debug */,
+				5AFAC433211FE08D00BDBC29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AFAC43C212016D500BDBC29 /* Build configuration list for PBXNativeTarget "Bellman_Ford队列优化" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AFAC43D212016D500BDBC29 /* Debug */,
+				5AFAC43E212016D500BDBC29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
