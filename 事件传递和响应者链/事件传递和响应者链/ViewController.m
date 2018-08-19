@@ -31,7 +31,7 @@
     [b addSubview:c];
     [c setTitle:@"点击" forState:UIControlStateNormal];
     [c setBackgroundColor:[UIColor blueColor]];
-    [c addTarget:self action:@selector(tapAction) forControlEvents:UIControlEventTouchUpInside];
+//    [c addTarget:self action:@selector(tapAction) forControlEvents:UIControlEventTouchUpInside];
     
 }
 - (void)tapAction

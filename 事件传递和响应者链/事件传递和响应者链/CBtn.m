@@ -31,7 +31,18 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    [self printResponderChain];
+    [super touchesBegan:touches withEvent:event];
     NSLog(@"%s",__func__);
+}
+- (void)printResponderChain
+{
+    UIResponder *responder = self;
+    NSLog(@"%@",NSStringFromClass([responder class]));
+    while (responder.nextResponder) {
+        responder = responder.nextResponder;
+        NSLog(@"---->%@",NSStringFromClass([responder class]));
+    }
 }
 
 
