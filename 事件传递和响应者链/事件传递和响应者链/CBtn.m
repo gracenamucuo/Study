@@ -31,7 +31,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self printResponderChain];
+    [self printResponderChain];//已进入这个方法，就说明事件被消耗了。
     [super touchesBegan:touches withEvent:event];
     NSLog(@"%s",__func__);
 }

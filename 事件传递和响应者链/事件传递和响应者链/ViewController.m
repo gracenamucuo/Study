@@ -31,12 +31,22 @@
     [b addSubview:c];
     [c setTitle:@"点击" forState:UIControlStateNormal];
     [c setBackgroundColor:[UIColor blueColor]];
-//    [c addTarget:self action:@selector(tapAction) forControlEvents:UIControlEventTouchUpInside];
+//    c.userInteractionEnabled = NO;
+  
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(testAation)];
+    
+    [c addGestureRecognizer:tap];
+    [c addTarget:self action:@selector(tapAction) forControlEvents:UIControlEventTouchUpInside];
     
 }
 - (void)tapAction
 {
     NSLog(@"点击");
+}
+
+- (void)testAation
+{
+    NSLog(@"手势点击");
 }
 
 
