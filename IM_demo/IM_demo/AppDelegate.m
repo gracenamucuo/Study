@@ -1,14 +1,13 @@
 //
 //  AppDelegate.m
-//  IM_demo
+//  IM_Demo
 //
-//  Created by 戴运鹏 on 2018/9/7.
+//  Created by 戴运鹏 on 2018/9/11.
 //  Copyright © 2018年 戴运鹏. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import <NIMKit/NIMKit.h>
-#import "TestDataProvider.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,24 +16,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self configIMUI];
+    // Override point for customization after application launch.
     return YES;
 }
 
-- (void)configIMUI
-{
-       [[NIMSDK sharedSDK] registerWithAppID:@"8fc95f505b6cbaedf613677c8e08fc0b" cerName:nil];
-    [[NIMSDK sharedSDK].loginManager login:@"lilei" token:@"123456" completion:^(NSError *error) {
-        if (!error) {
-            NSLog(@"登录成功");
-            //创建会话列表页
-        }else{
-            NSLog(@"登录失败");
-        }
-    }];
-    [[NIMKit sharedKit] registerLayoutConfig:[NIMCellLayoutConfig new]];
-    [NIMKit sharedKit].provider = [TestDataProvider new];
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

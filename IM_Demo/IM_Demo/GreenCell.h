@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  GreenCell.h
 //  IM_Demo
 //
 //  Created by 戴运鹏 on 2018/9/11.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface GreenCell : UITableViewCell
 
 @end
-
