@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface GreenCell : UITableViewCell
-
+- (void)refreshData:(NSString *)data;
 @end

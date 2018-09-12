@@ -8,6 +8,11 @@
 
 #import "GreenCell.h"
 
+@interface GreenCell()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@end
+
 @implementation GreenCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -17,11 +22,10 @@
     }
     return self;
 }
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (void)refreshData:(NSString *)data
+{
+    self.titleLabel.text = [NSString stringWithFormat:@"我是绿色%@",data];
 }
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

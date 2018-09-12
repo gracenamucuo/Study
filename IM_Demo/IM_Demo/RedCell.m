@@ -8,6 +8,11 @@
 
 #import "RedCell.h"
 
+@interface RedCell()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@end
+
 @implementation RedCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -17,6 +22,12 @@
     }
     return self;
 }
+
+- (void)refreshData:(NSString *)data
+{
+    self.titleLabel.text = [NSString stringWithFormat:@"我是红色%@",data];
+}
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];

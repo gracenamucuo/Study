@@ -7,30 +7,33 @@
 //
 
 #import "CellFactory.h"
-
+#import "GreenCell.h"
+#import "RedCell.h"
 
 @implementation CellFactory
 
-- (UITableViewCell *)redCellInTable:(UITableView *)table
+- (UITableViewCell *)redCellInTable:(UITableView *)table model:(NSString *)model
 {
     NSString *identity = @"RedCell";
-    UITableViewCell *cell = [table dequeueReusableCellWithIdentifier:identity];
+    RedCell *cell = (RedCell*)[table dequeueReusableCellWithIdentifier:identity];
     if (!cell) {
         NSString *cellCls = @"RedCell";
         [table registerNib:[UINib nibWithNibName:cellCls bundle:nil] forCellReuseIdentifier:identity];
-         cell = [table dequeueReusableCellWithIdentifier:identity];
+         cell = (RedCell*)[table dequeueReusableCellWithIdentifier:identity];
     }
+    [cell refreshData:model];
     return cell;
 }
-- (UITableViewCell *)greenCellInTable:(UITableView *)table
+- (UITableViewCell *)greenCellInTable:(UITableView *)table model:(NSString *)model
 {
     NSString *identity = @"GreenCell";
-    UITableViewCell *cell = [table dequeueReusableCellWithIdentifier:identity];
+    GreenCell *cell = (GreenCell*)[table dequeueReusableCellWithIdentifier:identity];
     if (!cell) {
         NSString *cellCls = @"GreenCell";
         [table registerNib:[UINib nibWithNibName:cellCls bundle:nil] forCellReuseIdentifier:identity];
-        cell = [table dequeueReusableCellWithIdentifier:identity];
+        cell = (GreenCell*)[table dequeueReusableCellWithIdentifier:identity];
     }
+    [cell refreshData:model];
     return cell;
 }
 @end

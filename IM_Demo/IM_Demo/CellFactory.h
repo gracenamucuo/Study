@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 @interface CellFactory : NSObject
-- (UITableViewCell *)redCellInTable:(UITableView *)table;
-- (UITableViewCell *)greenCellInTable:(UITableView *)table;
+- (UITableViewCell *)redCellInTable:(UITableView *)table model:(NSString *)model;
+- (UITableViewCell *)greenCellInTable:(UITableView *)table model:(NSString *)model;
 @end

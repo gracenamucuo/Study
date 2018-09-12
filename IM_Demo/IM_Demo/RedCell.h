@@ -10,4 +10,6 @@
 
 @interface RedCell : UITableViewCell
 
+- (void)refreshData:(NSString *)data;
+
 @end
