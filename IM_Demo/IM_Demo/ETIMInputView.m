@@ -9,16 +9,25 @@
 #import "ETIMInputView.h"
 #import "ETInputView.h"
 #import "YZInputView.h"
-@interface ETIMInputView()
+#import "Masonry.h"
+@interface ETIMInputView()<UITextViewDelegate>
 @property (nonatomic,assign)ETIMInputViewType inputType;
+@property (nonatomic,strong)ETInputView *inputView;
 @end
 
 @implementation ETIMInputView
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+           [self buileTextTypeUI];
+}
 
 - (instancetype)initWithInputType:(ETIMInputViewType)inputType
 {
     if (self = [super init]) {
         _inputType = inputType;
+        [self buileTextTypeUI];
     }
     return self;
 }
@@ -29,7 +38,7 @@
     switch (self.inputType) {
         case ETIMInputViewType_text:
         {
-            [self buileTextTypeUI];
+            
         }
             break;
         default:
@@ -41,17 +50,42 @@
 - (void)buileTextTypeUI
 {
     self.backgroundColor = [UIColor greenColor];
-//    ETInputView *input = [[ETInputView alloc]initWithFrame:CGRectMake(5, 5, [UIScreen mainScreen].bounds.size.width - 10, 40)];
-    YZInputView *input = [[YZInputView alloc]initWithFrame:CGRectMake(5, 5, [UIScreen mainScreen].bounds.size.width - 10, 40)];
-    input.font =[UIFont systemFontOfSize:14];
+    
+    ETInputView *input = [[ETInputView alloc]initWithFrame:CGRectZero];
+    input.font =[UIFont systemFontOfSize:16];
     input.maxNumberOfLines = 4;
+    self.inputView = input;
+    self.inputView.delegate = self;
+    [self addSubview:input];
+    [input mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.equalTo(self).offset(5);
+        make.right.equalTo(self.mas_right).offset(-5);
+        make.bottom.equalTo(self.mas_bottom).offset(-5);
+    }];
     __weak typeof(self) weakSelf = self;
-    input.yz_textHeightChangeBlock = ^(NSString *text, CGFloat textHeight) {
+    input.textHeightChangeBlock = ^(NSString *text, CGFloat textHeight) {
         if (weakSelf.hBlock) {
             weakSelf.hBlock(textHeight + 10);
         }
     };
-    [self addSubview:input];
+    
+}
+#pragma mark -- UITextViewDelegate
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"]) {
+        textView.text = @"";
+        [textView resignFirstResponder];
+        if (self.inputView.textHeightChangeBlock) {
+            self.inputView.textHeightChangeBlock(@"", 40);
+        }
+        return NO;
+    }
+    return YES;
 }
 
+- (void)setText:(NSString *)text
+{
+    self.inputView.text = text;
+}
 @end

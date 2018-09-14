@@ -14,5 +14,5 @@ typedef NS_ENUM(NSUInteger, ETIMInputViewType) {
 @interface ETIMInputView : UIView
 @property (nonatomic,copy)void(^hBlock)(CGFloat height);
 - (instancetype)initWithInputType:(ETIMInputViewType)inputType;
-
+- (void)setText:(NSString *)text;
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A604EC9214A4E0C00F1D17E /* ETIMSessionTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A604EC8214A4E0C00F1D17E /* ETIMSessionTableViewDataSource.m */; };
+		5A604ECC214A4E4F00F1D17E /* ETIMMsgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A604ECB214A4E4F00F1D17E /* ETIMMsgModel.m */; };
 		5A64AA022148F0F100A863F8 /* ETIMInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A64AA012148F0F100A863F8 /* ETIMInputView.m */; };
 		5A64AA1D2148F18400A863F8 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A64AA052148F18300A863F8 /* MASCompositeConstraint.m */; };
 		5A64AA1E2148F18400A863F8 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A64AA082148F18300A863F8 /* MASConstraint.m */; };
@@ -34,6 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A604EC7214A4E0C00F1D17E /* ETIMSessionTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETIMSessionTableViewDataSource.h; sourceTree = "<group>"; };
+		5A604EC8214A4E0C00F1D17E /* ETIMSessionTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETIMSessionTableViewDataSource.m; sourceTree = "<group>"; };
+		5A604ECA214A4E4F00F1D17E /* ETIMMsgModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETIMMsgModel.h; sourceTree = "<group>"; };
+		5A604ECB214A4E4F00F1D17E /* ETIMMsgModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETIMMsgModel.m; sourceTree = "<group>"; };
 		5A64AA002148F0F100A863F8 /* ETIMInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETIMInputView.h; sourceTree = "<group>"; };
 		5A64AA012148F0F100A863F8 /* ETIMInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETIMInputView.m; sourceTree = "<group>"; };
 		5A64AA042148F18300A863F8 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
@@ -171,6 +177,10 @@
 				5A64AA012148F0F100A863F8 /* ETIMInputView.m */,
 				5A64AA272149101800A863F8 /* ETInputView.h */,
 				5A64AA282149101800A863F8 /* ETInputView.m */,
+				5A604EC7214A4E0C00F1D17E /* ETIMSessionTableViewDataSource.h */,
+				5A604EC8214A4E0C00F1D17E /* ETIMSessionTableViewDataSource.m */,
+				5A604ECA214A4E4F00F1D17E /* ETIMMsgModel.h */,
+				5A604ECB214A4E4F00F1D17E /* ETIMMsgModel.m */,
 			);
 			path = IM_Demo;
 			sourceTree = "<group>";
@@ -247,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A604EC9214A4E0C00F1D17E /* ETIMSessionTableViewDataSource.m in Sources */,
 				5A64AA232148F18400A863F8 /* NSArray+MASAdditions.m in Sources */,
 				5A64AA222148F18400A863F8 /* MASViewConstraint.m in Sources */,
 				5A7DF19C2147C36600A8C385 /* ViewController.m in Sources */,
@@ -264,6 +275,7 @@
 				5A64AA202148F18400A863F8 /* MASLayoutConstraint.m in Sources */,
 				5A7DF1B52147C3DE00A8C385 /* GreenCell.m in Sources */,
 				5A7DF1992147C36600A8C385 /* AppDelegate.m in Sources */,
+				5A604ECC214A4E4F00F1D17E /* ETIMMsgModel.m in Sources */,
 				5A64AA262148F18400A863F8 /* ViewController+MASAdditions.m in Sources */,
 				5A7DF1B02147C3CE00A8C385 /* RedCell.m in Sources */,
 			);

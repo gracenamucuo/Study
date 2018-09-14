@@ -9,12 +9,18 @@
 #import "ViewController.h"
 #import "CellFactory.h"
 #import "ETIMInputView.h"
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+#import "Masonry.h"
+#import "ETIMSessionTableViewDataSource.h"
+@interface ViewController ()<UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong)CellFactory *cellFactory;
-@property (nonatomic,strong)ETIMInputView *inputView;
+@property (weak, nonatomic) IBOutlet ETIMInputView *inputView;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *Hconstraint;
 @property (nonatomic,assign)CGFloat height;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
+@property (nonatomic,strong)ETIMSessionTableViewDataSource *dataSource;
 @end
 
 @implementation ViewController
@@ -26,60 +32,41 @@
     [self.tableView reloadData];
     self.tableView.tableFooterView = [UIView new];
     [self layoutUI];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 50, 0);
+    self.tableView.rowHeight = 50;
+    ETIMSessionTableViewDataSource *dataSource = [[ETIMSessionTableViewDataSource alloc]initWithTableView:self.tableView];
+    self.dataSource = dataSource;
+//    NSString *str = @"😁😢⤴️👀🤡🤠😙🀂🀀🦆🦆🙊🙊🌶🥔🥓🍇🍅🤾‍♀️🤺🏂🚌🚜🚚⏳🔋📺💴💶♏️♍️🔯💔☯️♏️🆘🇧🇴🇧🇪";
+//    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
+//    [self.inputView setText:[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]];
+    
+    
 }
-
 -(void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-    if ([self tableView:self.tableView numberOfRowsInSection:0]>0) {
-        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:[self tableView:self.tableView numberOfRowsInSection:0]-1 inSection:0] atScrollPosition:UITableViewScrollPositionNone animated:YES];
+    if ([self.dataSource totalCount] > 0) {
+        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:[self.dataSource totalCount]-1 inSection:0] atScrollPosition:UITableViewScrollPositionNone animated:YES];
     }
-}
+    
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 10;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = nil;
-    if (indexPath.row % 2 == 0) {
-        cell = [self.cellFactory redCellInTable:tableView model:[NSString stringWithFormat:@"%ld",(long)indexPath.row]];
-    }else{
-        cell = [self.cellFactory greenCellInTable:tableView model:[NSString stringWithFormat:@"%ld",(long)indexPath.row]];
-    }
-    return cell;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 50;
 }
 
 #pragma mark -- InputUI
 - (void)layoutUI
 {
-    ETIMInputView *inputView = [[ETIMInputView alloc]initWithInputType:ETIMInputViewType_text];
-    inputView.frame = CGRectMake(0, self.view.frame.size.height - 50, self.view.frame.size.width, 50);
-    self.inputView = inputView;
     __weak typeof(self) weakSelf = self;
     self.inputView.hBlock = ^(CGFloat height) {
-        weakSelf.height = height;
-//            weakSelf.inputView.frame =CGRectMake(0, weakSelf.view.frame.size.height - 50, weakSelf.view.frame.size.width, weakSelf.height>0?weakSelf.height:50);
-        CGRect frame = weakSelf.inputView.frame;
-        frame.size.height = height;
-        weakSelf.inputView.frame = frame;
-        [weakSelf.inputView layoutIfNeeded];
+        weakSelf.Hconstraint.constant = height;
     };
-    [self.view addSubview:inputView];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [super touchesBegan:touches withEvent:event];
+    [[[UIApplication sharedApplication]keyWindow]endEditing:YES];
     [self.view endEditing:YES];
 }
 
@@ -87,30 +74,33 @@
 {
     NSDictionary *userInfo = notification.userInfo;
     CGRect endFrame   = [userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-//    _isVisiable = endFrame.origin.y != [UIApplication sharedApplication].keyWindow.frame.size.height;
-//    _keyboardHeight = _isVisiable? endFrame.size.height: 0;
-//    [[NSNotificationCenter defaultCenter] postNotificationName:NIMKitKeyboardWillChangeFrameNotification object:nil userInfo:notification.userInfo];
+//    if (endFrame.size.height< 260) {
+//        return;
+//    }
     
-    [UIView animateWithDuration:0.3 animations:^{
-        self.inputView.frame = CGRectMake(0, self.view.frame.size.height-50-endFrame.size.height, self.view.frame.size.width, self.height>0?self.height:50);
+
+    self.bottomConstraint.constant = endFrame.size.height;
+    double time = [userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, self.bottomConstraint.constant+50, 0);
+
+    [UIView animateWithDuration:time animations:^{
+        [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
-        [self.inputView setNeedsLayout];
     }];
 }
 
-
-
 - (void)keyboardWillHide:(NSNotification *)notification
 {
-//    _isVisiable = NO;
-//    _keyboardHeight = 0;
-//    [[NSNotificationCenter defaultCenter] postNotificationName:NIMKitKeyboardWillHideNotification object:nil userInfo:notification.userInfo];
     
-    [UIView animateWithDuration:0.3 animations:^{
-        self.inputView.frame =CGRectMake(0, self.view.frame.size.height - 50, self.view.frame.size.width, self.height>0?self.height:50);
+     double time = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    self.bottomConstraint.constant = 0;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, self.bottomConstraint.constant+50, 0);
+
+    [UIView animateWithDuration:time animations:^{
+        [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
-        [self.inputView setNeedsLayout];
     }];
+
 }
 
 

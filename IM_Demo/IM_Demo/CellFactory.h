@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+@class ETIMMsgModel;
 @interface CellFactory : NSObject
 - (UITableViewCell *)redCellInTable:(UITableView *)table model:(NSString *)model;
 - (UITableViewCell *)greenCellInTable:(UITableView *)table model:(NSString *)model;
+- (UITableViewCell *)cellInTable:(UITableView *)table model:(ETIMMsgModel *)model;
 @end
