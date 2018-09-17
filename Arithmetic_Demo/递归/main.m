@@ -19,9 +19,25 @@ int fact(int n)
     }
 }
 
+//尾递归
+
+int facttail(int n,int a)
+{
+    if (n < 0) {
+        return 0;
+    }else if (n == 0 || n == 1){
+        return a;
+    }else{
+        return facttail(n - 1, n * a);//函数返回时，调用自己，并且不含表达式
+    }
+}
+
+
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        printf("%d",fact(5));
+        printf("%d\n",fact(15));
+//        printf("%d\n",facttail(11, 1));
     }
     return 0;
 }
