@@ -36,8 +36,8 @@ int facttail(int n,int a)
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        printf("%d\n",fact(15));
-//        printf("%d\n",facttail(11, 1));
+//        printf("%d\n",fact(15));
+        printf("%d\n",facttail(12, 1));
     }
     return 0;
 }
