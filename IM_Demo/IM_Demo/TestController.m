@@ -37,11 +37,9 @@
       self.cellFactory = [[CellFactory alloc]init];
     ETIMSessionTableViewDataSource *dataSource = [[ETIMSessionTableViewDataSource alloc]initWithTableView:self.tableView];
     self.tableData = dataSource;
-    self.tableView.frame = CGRectMake(0, 0, WIDTH, HEIGHT - 50);
     [self.view addSubview:self.tableView];
     self.tableView.rowHeight = 50;
     self.tableView.tableFooterView = [UIView new];
-    self.inputView.frame = CGRectMake(0, HEIGHT-50, WIDTH, 50);
     self.inputView.delegate = self;
     [self.view addSubview:self.inputView];
     
@@ -60,6 +58,15 @@
         }];
 
     };
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    self.tableView.frame = CGRectMake(0, 0, WIDTH, HEIGHT - 50);
+    self.inputView.frame = CGRectMake(0, HEIGHT-50, WIDTH, 50);
+
+
 }
 
 - (void)keyboardWillChangeFrame:(NSNotification *)noti
