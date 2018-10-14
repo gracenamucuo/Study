@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A04EE582172DAA200945838 /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A04EE572172DAA200945838 /* TestController.m */; };
+		5A191C622172DFEF00FA168D /* IMTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A191C612172DFEF00FA168D /* IMTableView.m */; };
 		5A604EC9214A4E0C00F1D17E /* ETIMSessionTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A604EC8214A4E0C00F1D17E /* ETIMSessionTableViewDataSource.m */; };
 		5A604ECC214A4E4F00F1D17E /* ETIMMsgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A604ECB214A4E4F00F1D17E /* ETIMMsgModel.m */; };
 		5A64AA022148F0F100A863F8 /* ETIMInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A64AA012148F0F100A863F8 /* ETIMInputView.m */; };
@@ -36,6 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A04EE562172DAA200945838 /* TestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestController.h; sourceTree = "<group>"; };
+		5A04EE572172DAA200945838 /* TestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestController.m; sourceTree = "<group>"; };
+		5A191C602172DFEF00FA168D /* IMTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMTableView.h; sourceTree = "<group>"; };
+		5A191C612172DFEF00FA168D /* IMTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMTableView.m; sourceTree = "<group>"; };
 		5A604EC7214A4E0C00F1D17E /* ETIMSessionTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETIMSessionTableViewDataSource.h; sourceTree = "<group>"; };
 		5A604EC8214A4E0C00F1D17E /* ETIMSessionTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ETIMSessionTableViewDataSource.m; sourceTree = "<group>"; };
 		5A604ECA214A4E4F00F1D17E /* ETIMMsgModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ETIMMsgModel.h; sourceTree = "<group>"; };
@@ -181,6 +187,10 @@
 				5A604EC8214A4E0C00F1D17E /* ETIMSessionTableViewDataSource.m */,
 				5A604ECA214A4E4F00F1D17E /* ETIMMsgModel.h */,
 				5A604ECB214A4E4F00F1D17E /* ETIMMsgModel.m */,
+				5A04EE562172DAA200945838 /* TestController.h */,
+				5A04EE572172DAA200945838 /* TestController.m */,
+				5A191C602172DFEF00FA168D /* IMTableView.h */,
+				5A191C612172DFEF00FA168D /* IMTableView.m */,
 			);
 			path = IM_Demo;
 			sourceTree = "<group>";
@@ -219,7 +229,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5A7DF18F2147C36500A8C385 /* Build configuration list for PBXProject "IM_Demo" */;
+			buildConfigurationList = 5A7DF18F2147C36500A8C385 /* Build configuration list for PBXProject "IM_demo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -266,6 +276,7 @@
 				5A64AA022148F0F100A863F8 /* ETIMInputView.m in Sources */,
 				5A64AA292149101800A863F8 /* ETInputView.m in Sources */,
 				5A64AA1E2148F18400A863F8 /* MASConstraint.m in Sources */,
+				5A04EE582172DAA200945838 /* TestController.m in Sources */,
 				5A7DF1A72147C36A00A8C385 /* main.m in Sources */,
 				5A64AA212148F18400A863F8 /* MASViewAttribute.m in Sources */,
 				5A64AA242148F18400A863F8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
@@ -275,6 +286,7 @@
 				5A64AA202148F18400A863F8 /* MASLayoutConstraint.m in Sources */,
 				5A7DF1B52147C3DE00A8C385 /* GreenCell.m in Sources */,
 				5A7DF1992147C36600A8C385 /* AppDelegate.m in Sources */,
+				5A191C622172DFEF00FA168D /* IMTableView.m in Sources */,
 				5A604ECC214A4E4F00F1D17E /* ETIMMsgModel.m in Sources */,
 				5A64AA262148F18400A863F8 /* ViewController+MASAdditions.m in Sources */,
 				5A7DF1B02147C3CE00A8C385 /* RedCell.m in Sources */,
@@ -452,7 +464,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5A7DF18F2147C36500A8C385 /* Build configuration list for PBXProject "IM_Demo" */ = {
+		5A7DF18F2147C36500A8C385 /* Build configuration list for PBXProject "IM_demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A7DF1A82147C36A00A8C385 /* Debug */,

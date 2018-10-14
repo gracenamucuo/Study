@@ -38,12 +38,12 @@
     self.tableView.rowHeight = 50;
     ETIMSessionTableViewDataSource *dataSource = [[ETIMSessionTableViewDataSource alloc]initWithTableView:self.tableView];
     self.dataSource = dataSource;
-//    NSString *str = @"😁😢⤴️👀🤡🤠😙🀂🀀🦆🦆🙊🙊🌶🥔🥓🍇🍅🤾‍♀️🤺🏂🚌🚜🚚⏳🔋📺💴💶♏️♍️🔯💔☯️♏️🆘🇧🇴🇧🇪";
-//    NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
-//    [self.inputView setText:[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]];
-    
     
 }
+
+
+
+
 -(void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];

@@ -12,4 +12,5 @@
 
 - (instancetype)initWithTableView:(UITableView *)table;
 - (NSInteger)totalCount;
+- (void)addNewMessage:(NSString *)msg;
 @end
