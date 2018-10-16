@@ -63,8 +63,15 @@
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-    self.tableView.frame = CGRectMake(0, 0, WIDTH, HEIGHT - 50);
-    self.inputView.frame = CGRectMake(0, HEIGHT-50, WIDTH, 50);
+    UIEdgeInsets safe = UIEdgeInsetsZero;
+    
+    
+    
+    if (@available(iOS 11.0, *)) {
+        safe = self.view.safeAreaInsets;
+    }
+    self.tableView.frame = CGRectMake(0, 0, WIDTH, HEIGHT - 50 - safe.bottom);
+    self.inputView.frame = CGRectMake(0, HEIGHT-50 - safe.bottom, WIDTH, 50);
 
 
 }
@@ -76,12 +83,13 @@
     
     CGRect tableFrame = self.tableView.frame;
     CGRect inputFrame = self.inputView.frame;
-    tableFrame.origin.y  = tableFrame.origin.y - endframe.size.height;
-    inputFrame.origin.y = inputFrame.origin.y - endframe.size.height;
+    tableFrame.origin.y  = tableFrame.origin.y - endframe.size.height + 34;
+    inputFrame.origin.y = inputFrame.origin.y - endframe.size.height + 34;
     [UIView animateWithDuration:duration animations:^{
         self.tableView.frame = tableFrame;
         self.inputView.frame = inputFrame;
     }];
+    
     
 }
 
@@ -91,8 +99,8 @@
     CGRect endframe = [noti.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
     CGRect tableFrame = self.tableView.frame;
     CGRect inputFrame = self.inputView.frame;
-    tableFrame.origin.y  = tableFrame.origin.y + endframe.size.height;
-    inputFrame.origin.y = inputFrame.origin.y + endframe.size.height;
+    tableFrame.origin.y  = tableFrame.origin.y + endframe.size.height - 34;
+    inputFrame.origin.y = inputFrame.origin.y + endframe.size.height - 34;
     [UIView animateWithDuration:duration animations:^{
         self.tableView.frame = tableFrame;
         self.inputView.frame = inputFrame;
