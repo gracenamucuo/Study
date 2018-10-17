@@ -25,13 +25,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(inputModeDidChange:) name:UITextInputCurrentInputModeDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(didShow:) name:UIKeyboardWillChangeFrameNotification object:nil];
     DataBaseHelper *dbHelper = [[DataBaseHelper alloc]init];
     self.dbHelper = dbHelper;
     [self.dbHelper createTableWithName:@"table_msg"];
     
     DataBaseHelper *db = [[DataBaseHelper alloc]init];
     self.dbHelper1 = db;
-    [self.dbHelper1 createTableWithName:@"table2"];
+    [self.dbHelper createTableWithName:@"table2"];
     
     
     NSOperationQueue *queue = [[NSOperationQueue alloc]init];
@@ -41,8 +44,8 @@
     
     NSInvocationOperation *op3 = [[NSInvocationOperation alloc]initWithTarget:self selector:@selector(insertOperation2) object:nil];
     NSInvocationOperation *op4 = [[NSInvocationOperation alloc]initWithTarget:self selector:@selector(readOperation2) object:nil];
-    [op2 addDependency:op1];
-    [op4 addDependency:op3];
+//    [op2 addDependency:op1];
+//    [op4 addDependency:op3];
     
     [queue addOperation:op1];
     [queue addOperation:op2];
@@ -50,6 +53,16 @@
     [queue addOperation:op4];
 }
 
+- (void)inputModeDidChange:(NSNotification*)noti
+{
+    NSLog(@"--- %@",noti.userInfo);
+}
+
+
+- (void)didShow:(NSNotification *)noti
+{
+    NSLog(@"hh  %@",noti.userInfo);
+}
 - (void)insertOperation1
 {
     NSMutableArray *arr = [NSMutableArray array];
@@ -72,7 +85,7 @@
         MsgModel *msg = [[MsgModel alloc]initWithContent:content height:12+i];
         [arr addObject:msg];
     }
-    NSArray *indexArr = [self.dbHelper1 insertMessages:arr inTableName:@"table2"];
+    NSArray *indexArr = [self.dbHelper insertMessages:arr inTableName:@"table2"];
     if (indexArr.count <= 0) {
         NSLog(@"多插成功");
     }
@@ -91,7 +104,7 @@
 - (void)readOperation2
 {
     NSLog(@"读取%@",[NSThread currentThread]);
-    NSArray *result2 = [self.dbHelper1 lookUpAllDataWithTable:@"table2" completion:^(NSArray * _Nonnull arr) {
+    NSArray *result2 = [self.dbHelper lookUpAllDataWithTable:@"table2" completion:^(NSArray * _Nonnull arr) {
         NSLog(@"%@",arr);
     }];
     
