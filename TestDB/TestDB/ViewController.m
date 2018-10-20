@@ -29,11 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-    self.count = 10;
-    NSLog(@"======");
-//    [self testYYLabel];
-//    [self testDataBase];
-    [self testModel];
+//    self.count = 10;
+//    NSLog(@"======");
+    [self testYYLabel];
+////    [self testDataBase];
+//    [self testModel];
     
 }
 
@@ -52,20 +52,20 @@
 //    label.textContainerInset = UIEdgeInsetsMake(0, 0, 0, 0);
     label.textInsets = UIEdgeInsetsMake(0, 30, 0, 30);
     label.backgroundColor = [UIColor redColor];
-    TestModel *model = [TestModel initWithStr:@"The story is essentially hat, 'Hey, there's this Scotchgard chemical and uh, it's getting into the fish right next to the old tannery that, you know, by the way happened to use this stuff Ellison said as he walked along the Rogue River in Rockford.Scotchgard, made by 3M, was used to waterproof the Wolverine company's Hush Puppy line of shoes. Scotchgard is made with a PFAS chemical. The tannery was right next to the Rogue River in downtown Rockford"];
+    TestModel *model = [TestModel initWithStr:@"2春宵一刻值千金，花有清香月有阴。\n歌管楼台声细细，秋千院落夜沉沉。"];
     NSMutableAttributedString *attri = [[NSMutableAttributedString alloc]initWithString:model.content];
     ETIMCellLayoutConfig *config = [ETIMCellLayoutConfig new];
     [attri addAttributes:[config textMsgAtttiDicWithTextColor:nil] range:NSMakeRange(0, model.content.length)];
     label.attributedText = attri;
     label.numberOfLines = 0;// that, 'Hey, there's this Scotchgard chemical and uh, it's getting into the fish right next to the old tannery that, you know, by the way happened to use this stuff Ellison said as he walked along the Rogue River in Rockford.Scotchgard, made by 3M, was used to waterproof the Wolverine company's Hush Puppy line of shoes. Scotchgard is made with a PFAS chemical. The tannery was right next to the Rogue River in downtown Rockford.
     label.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:14];
-    CGSize size = [label sizeThatFits:CGSizeMake(self.view.frame.size.width, MAXFLOAT)];
-    label.frame = CGRectMake(0, 90, [[UIScreen mainScreen] bounds].size.width, size.height);
+    CGSize size = [label sizeThatFits:CGSizeMake(MAXFLOAT, 10)];
+    label.frame = CGRectMake(0, 90, size.width + 60, size.height);
     
     
     
-   CGFloat boundsHeght = [model textHeight];
-       label.frame = CGRectMake(0, 90, [[UIScreen mainScreen] bounds].size.width, boundsHeght);
+//   CGFloat boundsHeght = [model textHeight];
+//       label.frame = CGRectMake(0, 90, [[UIScreen mainScreen] bounds].size.width, boundsHeght);
     [self.view addSubview:label];
 }
 

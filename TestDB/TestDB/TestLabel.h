@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "YYText/YYLabel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TestLabel : UILabel
