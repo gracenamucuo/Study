@@ -699,14 +699,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5A0F1DDB2169A6F60037C4EA /* 分治 */ = {
+		5A0F1DDB2169A6F60037C4EA /*  算法图解 */ = {
 			isa = PBXGroup;
 			children = (
 				5A0F1DDC2169A6F60037C4EA /* main.m */,
 				5A0F1DE12169A7170037C4EA /* Test.h */,
 				5A0F1DE22169A7170037C4EA /* Test.m */,
 			);
-			path = "分治";
+			path = " 算法图解";
 			sourceTree = "<group>";
 		};
 		5A226E982119DAE600E8B651 /* 链表 */ = {
@@ -952,7 +952,7 @@
 				5A50601321280D60006DC40D /* 二分图 */,
 				5A229275214BAC6D00673264 /* Test */,
 				5A229281214BBB8A00673264 /* 递归 */,
-				5A0F1DDB2169A6F60037C4EA /* 分治 */,
+				5A0F1DDB2169A6F60037C4EA /*  算法图解 */,
 				5AA2BD4A20D8A0C100083DA9 /* Products */,
 			);
 			sourceTree = "<group>";

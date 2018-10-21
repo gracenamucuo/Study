@@ -71,5 +71,40 @@
         
         return arr;
     }
+
+- (NSSet*)greedyAlgorithm
+{
+    NSMutableSet *states_needed = [[NSMutableSet alloc]initWithArray:@[@"mt",@"wa",@"or",@"id",@"nv",@"ut",@"ca",@"az"]];
+    NSMutableDictionary *stations = [NSMutableDictionary dictionary];
+    [stations setObject:[NSSet setWithObjects:@"id",@"nv",@"ut",nil] forKey:@"kone"];
+    [stations setObject:[NSSet setWithObjects:@"wa",@"id",@"mt", nil] forKey:@"ktwo"];
+    [stations setObject:[NSSet setWithObjects:@"or",@"nv",@"ca", nil] forKey:@"kthree"];
+    [stations setObject:[NSSet setWithObjects:@"nv",@"ut", nil] forKey:@"kfour"];
+    [stations setObject:[NSSet setWithObjects:@"ca",@"az", nil] forKey:@"kfive"];
+    NSMutableSet *final_stations = [NSMutableSet set];
+
     
+
+    while (states_needed.count > 0) {
+        __block NSString *bestStation = nil;
+        __block NSMutableSet *states_coverd = [NSMutableSet set];
+        [stations enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            NSMutableSet *covered = [NSMutableSet setWithSet:states_needed];
+                [covered intersectSet:obj];
+            
+            if (covered.count > states_coverd.count) {
+                bestStation = key;
+                states_coverd = covered;
+            }
+            
+
+        }];
+        [states_needed minusSet:states_coverd];
+        [final_stations addObject:bestStation];
+        [stations removeObjectForKey:bestStation];
+    }
+    
+  
+    return final_stations;
+}
 @end
