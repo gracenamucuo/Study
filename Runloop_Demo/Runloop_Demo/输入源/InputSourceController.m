@@ -17,9 +17,15 @@
 //    CFRunLoopRef _childRunloop;
 }
 
+static CFDataRef CallBack(CFMessagePortRef local,SInt32 msgid,CFDataRef data,void *info){
+    NSLog(@"This is a message");
+    NSLog(@"%@",[NSThread currentThread]);
+    return NULL;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [NSThread detachNewThreadSelector:@selector(createSource0) toTarget:self withObject:nil];
+    [NSThread detachNewThreadSelector:@selector(createSource1) toTarget:self withObject:nil];
 }
 
 
@@ -77,11 +83,7 @@ static void performSource0(void *info)
     CFMessagePortSendRequest(remotePort, kCFMessagePortSuccess, NULL, 0, 100, kCFRunLoopDefaultMode, NULL);
 }
 
-static CFDataRef CallBack(CFMessagePortRef local,SInt32 msgid,CFDataRef data,void *info){
-    NSLog(@"This is a message");
-    NSLog(@"%@",[NSThread currentThread]);
-    return NULL;
-}
+
 @end
 
 
