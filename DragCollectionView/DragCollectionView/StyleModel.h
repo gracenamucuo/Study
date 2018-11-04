@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign)NSInteger style;//样式  1显示黑线  2显示蓝线高亮  0正常
 @property (nonatomic,assign)BOOL hidden;//是否隐藏
 @property (nonatomic,assign)NSInteger index;
+@property (nonatomic,copy)NSString *content;
 @end
 
 NS_ASSUME_NONNULL_END

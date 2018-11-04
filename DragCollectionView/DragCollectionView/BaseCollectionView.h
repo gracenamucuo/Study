@@ -12,7 +12,7 @@
 @protocol BaseCollectionViewOperateDelegate <NSObject>
 
 - (void)willChangeIndexPath:(NSIndexPath *)oldIndexPath;
-- (void)showOldIndexPath:(NSIndexPath *)oldIndexPath;
+- (void)moveEndOldIndexPath:(NSIndexPath *)oldIndexPath currentIndexPath:(NSIndexPath *)newIndexPath;
 - (void)moveToCurrentIndexPath:(NSIndexPath*)currentIndexPath empty:(BOOL)empty;
 @end
 

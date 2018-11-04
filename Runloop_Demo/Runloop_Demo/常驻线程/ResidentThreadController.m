@@ -12,6 +12,7 @@
 @property (nonatomic,strong)NSThread *residentThread;
 @property (nonatomic,strong)NSRunLoop *runloop;
 @property (nonatomic,strong)NSPort *port;
+@property (nonatomic,strong)NSTimer *timer;
 @end
 
 @implementation ResidentThreadController
@@ -25,15 +26,22 @@
 
 - (void)print
 {/*
-  将子线程所在的runloop加入端口后，该线程就常驻，没有退出。但是还是出现了没走dealloc的情况。
+  将子线程所在的runloop加入端口后，该线程就常驻。
+  如果不s
   */
     NSLog(@"线程初次打印");
     NSLog(@"%@",[NSThread currentThread]);
     self.port = [NSPort port];
     [[NSRunLoop currentRunLoop]addPort:self.port forMode:NSDefaultRunLoopMode];
-    [[NSRunLoop currentRunLoop]runUntilDate:[NSDate dateWithTimeIntervalSinceNow:5]];
-//    [[NSRunLoop currentRunLoop]run];
+    [[NSRunLoop currentRunLoop]runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0]];
+
+    NSTimer *timer = [NSTimer timerWithTimeInterval:5 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        NSLog(@"添加到runloop内的定时器");
+    }];
+    self.timer = timer;
     self.runloop = [NSRunLoop currentRunLoop];
+    [[NSRunLoop currentRunLoop]addTimer:timer forMode:NSDefaultRunLoopMode];
+//    [[NSRunLoop currentRunLoop]run];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -42,18 +50,21 @@
     [self performSelector:@selector(print) onThread:self.residentThread withObject:nil waitUntilDone:NO];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
+- (void)viewDidDisappear:(BOOL)animated
 {
-    [super viewWillDisappear:animated];
-//
-//    [self.runloop removePort:self.port forMode:NSDefaultRunLoopMode];
-//    [self.residentThread cancel];
-//    self.residentThread = nil;
-//    self.runloop = nil;
+    [super viewDidDisappear:animated];
+    [self.timer invalidate];
+    self.timer = nil;
+    self.runloop = nil;
+    self.residentThread = nil;
+    
 }
 
 - (void)dealloc
 {
+    self.residentThread = nil;
+    [self.timer invalidate];
+    self.timer = nil;
     NSLog(@"常驻线程销毁");
 }
 

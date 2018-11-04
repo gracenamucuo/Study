@@ -12,6 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SpaceCell : BaseCell
+@property (nonatomic,strong)StyleModel *model;
 - (void)configUIWithModel:(StyleModel *)model;
 @end
 

@@ -27,17 +27,18 @@
 
 - (void)configUIWithModel:(StyleModel *)model
 {
-    self.insertLabel.text = [NSString stringWithFormat:@"插入处%ld",(long)model.index];
+    _model = model;
+    self.userInteractionEnabled = NO;
     self.hidden = model.hidden;
     
     switch (model.style) {
         case 1:
-            self.contentView.layer.borderColor = [UIColor blackColor].CGColor;
-            self.contentView.layer.borderWidth = 1.5f;
+            self.contentView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+            self.contentView.layer.borderWidth = 0.5f;
             break;
         case 2:
             self.contentView.layer.borderColor = [UIColor blueColor].CGColor;
-            self.contentView.layer.borderWidth = 2.f;
+            self.contentView.layer.borderWidth = 0.5f;
             break;
         default:
             self.contentView.layer.borderColor = nil;

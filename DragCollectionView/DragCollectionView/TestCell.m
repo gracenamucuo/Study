@@ -24,16 +24,20 @@
 }
 - (void)configUIWithModel:(StyleModel *)model
 {
-    self.replaceLabel.text = [NSString stringWithFormat:@"可替换%ld",model.index];
+    _model = model;
+    self.replaceLabel.hidden = model.content.length <=0;
+    if (model.content.length > 0) {
+        self.replaceLabel.text = model.content;
+    }
     self.hidden = model.hidden;
     switch (model.style) {
         case 1:
-            self.contentView.layer.borderColor = [UIColor blackColor].CGColor;
-            self.contentView.layer.borderWidth = 1.5f;
+            self.contentView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+            self.contentView.layer.borderWidth = 0.5f;
             break;
         case 2:
             self.contentView.layer.borderColor = [UIColor blueColor].CGColor;
-            self.contentView.layer.borderWidth = 2.f;
+            self.contentView.layer.borderWidth = 0.5f;
             break;
         default:
             self.contentView.layer.borderColor = nil;

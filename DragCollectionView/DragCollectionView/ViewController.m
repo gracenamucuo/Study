@@ -11,6 +11,7 @@
 #import "TestCell.h"
 #import "StyleModel.h"
 #import "BaseCollectionView.h"
+#import "UICollectionView+Rect.h"
 #define WIDTH [[UIScreen mainScreen]bounds].size.width
 @interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,BaseCollectionViewOperateDelegate>
 @property (weak, nonatomic) IBOutlet BaseCollectionView *collectionView;
@@ -37,22 +38,51 @@ static NSString *testCellID = @"testCellID";
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     self.collectionView.operateDelegate = self;
-    for (NSInteger i = 0; i < 4; i++) {
+    
+
+    
+    
+    
+    for (NSInteger i = 0; i < 6; i++) {
         StyleModel *model = [[StyleModel alloc]init];
         model.index = i;
-        if (i < 2) {
+        
+        if (i == 0) {
+            model.content = @"商品单价";
             model.type = 1;
-        }else{
+        }
+        if (i == 1) {
+            model.content = @"";
+            model.type =1;
+        }
+        
+        if (i == 2 || i == 3) {
             model.type = 2;
         }
+        
+        if (i ==4) {
+            model.content = @"颜色";
+            model.type = 1;
+        }
+        if (i == 5) {
+            model.content = @"尺码";
+            model.type = 1;
+        }
+        
         [self.dataArray addObject:model];
     }
 }
 
 - (void)willChangeIndexPath:(NSIndexPath *)oldIndexPath
 {
+    
+    
     if (self.dataArray.count > oldIndexPath.item) {
         StyleModel *oldModel = self.dataArray[oldIndexPath.item];
+        if (oldModel.type == 2 || oldModel.content.length <= 0) {
+            return;
+        }
+        
         oldModel.hidden = YES;
     }
     
@@ -76,8 +106,143 @@ static NSString *testCellID = @"testCellID";
     [self handleModelWithStyle:0];
 }
 
+- (void)moveEndOldIndexPath:(NSIndexPath *)oldIndexPath currentIndexPath:(NSIndexPath *)newIndexPath
+{
+    //原位置不动
+    if (oldIndexPath.item == newIndexPath.item||newIndexPath == nil) {
+        if (self.dataArray.count > oldIndexPath.item) {
+            StyleModel *oldModel = self.dataArray[oldIndexPath.item];
+            oldModel.hidden = NO;
+        }
+        [self handleModelWithStyle:0];
+        return;
+    }
+    
+    
+    if (self.dataArray.count > oldIndexPath.item && self.dataArray.count > newIndexPath.item) {
+        StyleModel *oldModel = self.dataArray[oldIndexPath.item];
+        oldModel.hidden = NO;
+        StyleModel *newModel = self.dataArray[newIndexPath.item];
+        if (newModel.type == 1) {//替换
+            [self.dataArray replaceObjectAtIndex:newIndexPath.item withObject:oldModel];
+            StyleModel *defaultModel = [[StyleModel alloc]init];
+            defaultModel.type = 1;
+            defaultModel.index = oldIndexPath.item;
+            [self.dataArray replaceObjectAtIndex:oldIndexPath.item withObject:defaultModel];
+            // 旧行处理
+//            [self handleOldLineWithOldIndexPath:oldIndexPath];
+            [self handleOldLineWithReplaceModel:defaultModel];
+         
+        }
+        
+        if (newModel.type == 2) {//插入
+            StyleModel *defaultModel = [[StyleModel alloc]init];
+            defaultModel.type = 1;
+            defaultModel.index = oldIndexPath.item;
+            [self.dataArray replaceObjectAtIndex:oldIndexPath.item withObject:defaultModel];
+            [self handleNewLineWithNewIndexPath:newIndexPath oldModel:oldModel];
+            [self handleOldLineWithReplaceModel:defaultModel];
+        }
+        
+        [self handleModelWithStyle:0];
+    }
+    
+    
+}
+
+///
+- (void)handleOldLineWithReplaceModel:(StyleModel *)replaceModel
+{
+    NSInteger index = [self.dataArray indexOfObject:replaceModel];
+    NSIndexPath *replacePath = [NSIndexPath indexPathForRow:index inSection:0];
+    CGRect oldFrame = [self.collectionView rectForRowAtIndexPath:replacePath];
+    if (CGRectGetMaxX(oldFrame) == self.view.frame.size.width / 2) {//靠左
+        if (self.dataArray.count > replacePath.item + 1) {
+            StyleModel *nextModel = self.dataArray[replacePath.item + 1];
+            if (nextModel.content.length <= 0 && replaceModel.content.length <= 0) {
+                [self.dataArray removeObject:replaceModel];
+                [self.dataArray removeObject:nextModel];
+                [self.dataArray removeObjectAtIndex:self.dataArray.count - 1];
+                [self.dataArray removeObjectAtIndex:self.dataArray.count - 1];
+            }
+        }
+        
+    }else{
+        
+        StyleModel *formerModel = self.dataArray[replacePath.item - 1];
+        if (formerModel.content.length <= 0&&replaceModel.content.length <=0) {
+            [self.dataArray removeObject:replaceModel];
+            [self.dataArray removeObject:formerModel];
+            [self.dataArray removeObjectAtIndex:self.dataArray.count - 1];
+            [self.dataArray removeObjectAtIndex:self.dataArray.count - 1];
+        }
+        
+    }
+
+    
+}
+
+///替换处理旧行
+- (void)handleOldLineWithOldIndexPath:(NSIndexPath *)oldIndexPath
+{
+    CGRect oldFrame = [self.collectionView rectForRowAtIndexPath:oldIndexPath];
+    StyleModel *oldModel = self.dataArray[oldIndexPath.item];
+    if (CGRectGetMaxX(oldFrame) == self.view.frame.size.width / 2) {
+        if (self.dataArray.count > oldIndexPath.item + 1) {
+            
+            StyleModel *nextModel = self.dataArray[oldIndexPath.item + 1];
+            if (nextModel.content.length <= 0 && oldModel.content.length <= 0) {
+                [self.dataArray removeObject:oldModel];
+                [self.dataArray removeObject:nextModel];
+            }
+        }
+    }else{
+        
+            StyleModel *formerModel = self.dataArray[oldIndexPath.item - 1];
+            if (formerModel.content.length <= 0&&oldModel.content.length <=0) {
+                [self.dataArray removeObject:oldModel];
+                [self.dataArray removeObject:formerModel];
+            }
+        
+    }
+}
+
+
+///插入处理新行
+- (void)handleNewLineWithNewIndexPath:(NSIndexPath*)newIndexPath oldModel:(StyleModel *)oldModel
+{
+    NSMutableArray *tmp = [NSMutableArray array];
+    for (NSInteger i = 0; i < 3; i++) {
+        StyleModel *model = [[StyleModel alloc]init];
+        if (i == 0) {
+            model.type = 1;
+        }else{
+            model.type = 2;
+        }
+        [tmp addObject:model];
+    }
+    if (newIndexPath.item %2 == 0) {
+        [self.dataArray insertObject:oldModel atIndex:newIndexPath.item + 2];
+        [self.dataArray insertObject:tmp[0] atIndex:newIndexPath.item + 3];
+        [self.dataArray insertObject:tmp[1] atIndex:newIndexPath.item + 4];
+        [self.dataArray insertObject:tmp[2] atIndex:newIndexPath.item + 5];
+    }else{
+        [self.dataArray insertObject:tmp[0] atIndex:newIndexPath.item + 1];
+        [self.dataArray insertObject:oldModel atIndex:newIndexPath.item + 2];
+        [self.dataArray insertObject:tmp[1] atIndex:newIndexPath.item + 3];
+        [self.dataArray insertObject:tmp[2] atIndex:newIndexPath.item + 4];
+    }
+ 
+    
+}
+
+
 - (void)moveToCurrentIndexPath:(NSIndexPath *)currentIndexPath empty:(BOOL)empty
 {
+//    if (empty) {
+//        NSLog(@"空的");
+//        return;
+//    }
     if (self.dataArray.count > currentIndexPath.item) {
       
         for (NSInteger i = 0; i < self.dataArray.count; i++) {
@@ -124,13 +289,15 @@ static NSString *testCellID = @"testCellID";
     if (self.dataArray.count > indexPath.row) {
         StyleModel *model = self.dataArray[indexPath.row];
         if (model.type == 1) {
-            return CGSizeMake(WIDTH / 2, 50);
+            return CGSizeMake(WIDTH / 2, 30);
         }else{
-            return CGSizeMake(WIDTH/2, 20);
+            return CGSizeMake(WIDTH/2, 15);
         }
     }
     return CGSizeZero;
 }
+
+
 //- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section;
 //- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section;
 //- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section;

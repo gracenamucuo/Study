@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TestCell : BaseCell
-
+@property (nonatomic,strong)StyleModel *model;
 - (void)configUIWithModel:(StyleModel *)model;
 
 @end
