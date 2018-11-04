@@ -129,8 +129,7 @@ static NSString *testCellID = @"testCellID";
             defaultModel.type = 1;
             defaultModel.index = oldIndexPath.item;
             [self.dataArray replaceObjectAtIndex:oldIndexPath.item withObject:defaultModel];
-            // 旧行处理
-//            [self handleOldLineWithOldIndexPath:oldIndexPath];
+        
             [self handleOldLineWithReplaceModel:defaultModel];
          
         }
@@ -150,7 +149,7 @@ static NSString *testCellID = @"testCellID";
     
 }
 
-///
+///旧行处理
 - (void)handleOldLineWithReplaceModel:(StyleModel *)replaceModel
 {
     NSInteger index = [self.dataArray indexOfObject:replaceModel];
@@ -181,32 +180,6 @@ static NSString *testCellID = @"testCellID";
 
     
 }
-
-///替换处理旧行
-- (void)handleOldLineWithOldIndexPath:(NSIndexPath *)oldIndexPath
-{
-    CGRect oldFrame = [self.collectionView rectForRowAtIndexPath:oldIndexPath];
-    StyleModel *oldModel = self.dataArray[oldIndexPath.item];
-    if (CGRectGetMaxX(oldFrame) == self.view.frame.size.width / 2) {
-        if (self.dataArray.count > oldIndexPath.item + 1) {
-            
-            StyleModel *nextModel = self.dataArray[oldIndexPath.item + 1];
-            if (nextModel.content.length <= 0 && oldModel.content.length <= 0) {
-                [self.dataArray removeObject:oldModel];
-                [self.dataArray removeObject:nextModel];
-            }
-        }
-    }else{
-        
-            StyleModel *formerModel = self.dataArray[oldIndexPath.item - 1];
-            if (formerModel.content.length <= 0&&oldModel.content.length <=0) {
-                [self.dataArray removeObject:oldModel];
-                [self.dataArray removeObject:formerModel];
-            }
-        
-    }
-}
-
 
 ///插入处理新行
 - (void)handleNewLineWithNewIndexPath:(NSIndexPath*)newIndexPath oldModel:(StyleModel *)oldModel
