@@ -15,6 +15,14 @@
 		5A21972D20B9AD1A000ABA7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A21972C20B9AD1A000ABA7D /* Assets.xcassets */; };
 		5A21973020B9AD1A000ABA7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A21972E20B9AD1A000ABA7D /* LaunchScreen.storyboard */; };
 		5A21973320B9AD1A000ABA7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A21973220B9AD1A000ABA7D /* main.m */; };
+		5A530BF621902349001EFEF7 /* WeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A530BF521902349001EFEF7 /* WeakProxy.m */; };
+		5A530C072190282A001EFEF7 /* PLeakSniffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A530BF82190282A001EFEF7 /* PLeakSniffer.m */; };
+		5A530C082190282A001EFEF7 /* NSObject+PLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A530BF92190282A001EFEF7 /* NSObject+PLeak.m */; };
+		5A530C092190282A001EFEF7 /* NSObject+PLeakTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A530BFB2190282A001EFEF7 /* NSObject+PLeakTrack.m */; };
+		5A530C0A2190282A001EFEF7 /* UINavigationController+PLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A530BFC2190282A001EFEF7 /* UINavigationController+PLeak.m */; };
+		5A530C0B2190282A001EFEF7 /* PObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A530BFD2190282A001EFEF7 /* PObjectProxy.m */; };
+		5A530C0C2190282A001EFEF7 /* UIView+PLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A530BFE2190282A001EFEF7 /* UIView+PLeak.m */; };
+		5A530C0E2190282A001EFEF7 /* UIViewController+PLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A530C002190282A001EFEF7 /* UIViewController+PLeak.m */; };
 		5A7403E520B64E8400F701AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7403E420B64E8400F701AB /* AppDelegate.m */; };
 		5A7403E820B64E8400F701AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7403E720B64E8400F701AB /* ViewController.m */; };
 		5A7403EB20B64E8400F701AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7403E920B64E8400F701AB /* Main.storyboard */; };
@@ -41,6 +49,22 @@
 		5A21972F20B9AD1A000ABA7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A21973120B9AD1A000ABA7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A21973220B9AD1A000ABA7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A530BF421902349001EFEF7 /* WeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakProxy.h; sourceTree = "<group>"; };
+		5A530BF521902349001EFEF7 /* WeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakProxy.m; sourceTree = "<group>"; };
+		5A530BF82190282A001EFEF7 /* PLeakSniffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLeakSniffer.m; sourceTree = "<group>"; };
+		5A530BF92190282A001EFEF7 /* NSObject+PLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PLeak.m"; sourceTree = "<group>"; };
+		5A530BFA2190282A001EFEF7 /* UIViewController+PLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PLeak.h"; sourceTree = "<group>"; };
+		5A530BFB2190282A001EFEF7 /* NSObject+PLeakTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PLeakTrack.m"; sourceTree = "<group>"; };
+		5A530BFC2190282A001EFEF7 /* UINavigationController+PLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+PLeak.m"; sourceTree = "<group>"; };
+		5A530BFD2190282A001EFEF7 /* PObjectProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PObjectProxy.m; sourceTree = "<group>"; };
+		5A530BFE2190282A001EFEF7 /* UIView+PLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PLeak.m"; sourceTree = "<group>"; };
+		5A530C002190282A001EFEF7 /* UIViewController+PLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PLeak.m"; sourceTree = "<group>"; };
+		5A530C012190282A001EFEF7 /* NSObject+PLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PLeak.h"; sourceTree = "<group>"; };
+		5A530C022190282A001EFEF7 /* PLeakSniffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLeakSniffer.h; sourceTree = "<group>"; };
+		5A530C032190282A001EFEF7 /* UIView+PLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PLeak.h"; sourceTree = "<group>"; };
+		5A530C042190282A001EFEF7 /* PObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PObjectProxy.h; sourceTree = "<group>"; };
+		5A530C052190282A001EFEF7 /* NSObject+PLeakTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PLeakTrack.h"; sourceTree = "<group>"; };
+		5A530C062190282A001EFEF7 /* UINavigationController+PLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+PLeak.h"; sourceTree = "<group>"; };
 		5A7403E020B64E8400F701AB /* Runloop_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runloop_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7403E320B64E8400F701AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A7403E420B64E8400F701AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -97,9 +121,31 @@
 			path = SmoothPush;
 			sourceTree = "<group>";
 		};
+		5A530BF72190282A001EFEF7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5A530BF82190282A001EFEF7 /* PLeakSniffer.m */,
+				5A530BF92190282A001EFEF7 /* NSObject+PLeak.m */,
+				5A530BFA2190282A001EFEF7 /* UIViewController+PLeak.h */,
+				5A530BFB2190282A001EFEF7 /* NSObject+PLeakTrack.m */,
+				5A530BFC2190282A001EFEF7 /* UINavigationController+PLeak.m */,
+				5A530BFD2190282A001EFEF7 /* PObjectProxy.m */,
+				5A530BFE2190282A001EFEF7 /* UIView+PLeak.m */,
+				5A530C002190282A001EFEF7 /* UIViewController+PLeak.m */,
+				5A530C012190282A001EFEF7 /* NSObject+PLeak.h */,
+				5A530C022190282A001EFEF7 /* PLeakSniffer.h */,
+				5A530C032190282A001EFEF7 /* UIView+PLeak.h */,
+				5A530C042190282A001EFEF7 /* PObjectProxy.h */,
+				5A530C052190282A001EFEF7 /* NSObject+PLeakTrack.h */,
+				5A530C062190282A001EFEF7 /* UINavigationController+PLeak.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		5A7403D720B64E8400F701AB = {
 			isa = PBXGroup;
 			children = (
+				5A530BF72190282A001EFEF7 /* Classes */,
 				5A7403E220B64E8400F701AB /* Runloop_Demo */,
 				5A21972220B9AD19000ABA7D /* SmoothPush */,
 				5A7403E120B64E8400F701AB /* Products */,
@@ -142,6 +188,8 @@
 			children = (
 				5A74040520B68C2200F701AB /* ResidentThreadController.h */,
 				5A74040620B68C2200F701AB /* ResidentThreadController.m */,
+				5A530BF421902349001EFEF7 /* WeakProxy.h */,
+				5A530BF521902349001EFEF7 /* WeakProxy.m */,
 			);
 			path = "常驻线程";
 			sourceTree = "<group>";
@@ -288,12 +336,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A530C0B2190282A001EFEF7 /* PObjectProxy.m in Sources */,
+				5A530BF621902349001EFEF7 /* WeakProxy.m in Sources */,
 				5A74040020B6531B00F701AB /* UIView+loadFromNib.m in Sources */,
+				5A530C0C2190282A001EFEF7 /* UIView+PLeak.m in Sources */,
 				5A74040420B657D400F701AB /* ObserverController.m in Sources */,
 				5A7403E820B64E8400F701AB /* ViewController.m in Sources */,
 				5A74040120B6531B00F701AB /* UIViewController+loadFromStoryBoard.m in Sources */,
 				5A7403F320B64E8500F701AB /* main.m in Sources */,
+				5A530C0E2190282A001EFEF7 /* UIViewController+PLeak.m in Sources */,
+				5A530C082190282A001EFEF7 /* NSObject+PLeak.m in Sources */,
 				5A7403E520B64E8400F701AB /* AppDelegate.m in Sources */,
+				5A530C072190282A001EFEF7 /* PLeakSniffer.m in Sources */,
+				5A530C092190282A001EFEF7 /* NSObject+PLeakTrack.m in Sources */,
+				5A530C0A2190282A001EFEF7 /* UINavigationController+PLeak.m in Sources */,
 				5A74040720B68C2200F701AB /* ResidentThreadController.m in Sources */,
 				5AEE7AA720B94164001C47FE /* InputSourceController.m in Sources */,
 			);
