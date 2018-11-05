@@ -11,7 +11,7 @@
 @property (nonatomic,strong)NSThread *residentThread;
 @property (nonatomic,strong)NSRunLoop *runloop;
 @property (nonatomic,strong)NSPort *port;
-@property (nonatomic,strong)NSTimer *timer;
+//@property (nonatomic,strong)NSTimer *timer;
 @end
 
 @implementation ResidentThreadController
@@ -38,10 +38,11 @@
     
         [[NSRunLoop currentRunLoop]addPort:self.port forMode:NSDefaultRunLoopMode];
     
-        self.timer =  [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
-        [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSDefaultRunLoopMode];
+//        self.timer =  [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
+//        [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSDefaultRunLoopMode];
         self.runloop = [NSRunLoop currentRunLoop];
-    [[NSRunLoop currentRunLoop]runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+//    [[NSRunLoop currentRunLoop]runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+    [[NSRunLoop currentRunLoop]runUntilDate:[NSDate distantFuture]];
 
 
 }
@@ -65,7 +66,7 @@
 //    self.timer = nil;
     [self.runloop removePort:self.port forMode:NSRunLoopCommonModes];
     CFRunLoopStop(self.runloop.getCFRunLoop);
-    self.runloop = nil;
+//    self.runloop = nil;
     [self.residentThread cancel];
      self.residentThread = nil;
 }
