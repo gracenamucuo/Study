@@ -7,21 +7,20 @@
 //
 
 #import "ResidentThreadController.h"
-
 @interface ResidentThreadController ()
 @property (nonatomic,strong)NSThread *residentThread;
 @property (nonatomic,strong)NSRunLoop *runloop;
 @property (nonatomic,strong)NSPort *port;
-@property (nonatomic,strong)NSTimer *timer;
+//@property (nonatomic,strong)NSTimer *timer;
 @end
 
 @implementation ResidentThreadController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.residentThread = [[NSThread alloc]initWithTarget:self selector:@selector(print) object:nil];
     [self.residentThread start];
-//    NSLog(@"%@",[NSRunLoop currentRunLoop]);
 }
 
 - (void)print
@@ -29,42 +28,54 @@
   将子线程所在的runloop加入端口后，该线程就常驻。
   如果不s
   */
-    NSLog(@"线程初次打印");
-    NSLog(@"%@",[NSThread currentThread]);
-    self.port = [NSPort port];
-    [[NSRunLoop currentRunLoop]addPort:self.port forMode:NSDefaultRunLoopMode];
-    [[NSRunLoop currentRunLoop]runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0]];
+  
 
-    NSTimer *timer = [NSTimer timerWithTimeInterval:5 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        NSLog(@"添加到runloop内的定时器");
-    }];
-    self.timer = timer;
-    self.runloop = [NSRunLoop currentRunLoop];
-    [[NSRunLoop currentRunLoop]addTimer:timer forMode:NSDefaultRunLoopMode];
-//    [[NSRunLoop currentRunLoop]run];
+        NSLog(@"线程初次打印");
+        NSLog(@"%@",[NSThread currentThread]);
+    if (!self.port) {
+        self.port = [NSPort port];
+    }
+    
+        [[NSRunLoop currentRunLoop]addPort:self.port forMode:NSDefaultRunLoopMode];
+    
+//        self.timer =  [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
+//        [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSDefaultRunLoopMode];
+        self.runloop = [NSRunLoop currentRunLoop];
+//    [[NSRunLoop currentRunLoop]runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
+    [[NSRunLoop currentRunLoop]runUntilDate:[NSDate distantFuture]];
+
+
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [super touchesBegan:touches withEvent:event];
     [self performSelector:@selector(print) onThread:self.residentThread withObject:nil waitUntilDone:NO];
+
+}
+
+- (void)timerAction
+{
+    NSLog(@"定时器任务%@",[NSThread currentThread]);
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    [self.timer invalidate];
-    self.timer = nil;
-    self.runloop = nil;
-    self.residentThread = nil;
-    
+//    [self.timer invalidate];
+//    self.timer = nil;
+    [self.runloop removePort:self.port forMode:NSRunLoopCommonModes];
+    CFRunLoopStop(self.runloop.getCFRunLoop);
+//    self.runloop = nil;
+    [self.residentThread cancel];
+     self.residentThread = nil;
 }
+
 
 - (void)dealloc
 {
+
     self.residentThread = nil;
-    [self.timer invalidate];
-    self.timer = nil;
     NSLog(@"常驻线程销毁");
 }
 
