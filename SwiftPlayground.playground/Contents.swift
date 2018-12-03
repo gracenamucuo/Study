@@ -100,6 +100,47 @@ for index in 1...5 {
 for index in 1..<5 {
     print("我是开区间的第\(index)个")
 }
+//单侧区间
+var names = ["A","B","C","D","F"]
+for name in names[1...] {
+    print(name)
+}
+
+for name in names[2..<3] {
+    print(name)
+}
+
+let range = ...5//但是这种表达方式无法知道 单侧区间的取值范围 无法遍历
+let mulitLines = """
+first line
+second line
+thrid line
+"""
+print(mulitLines)
+
+var emptyString = "123"
+print(emptyString,emptyString.isEmpty)
+//字符串是值类型 每一次的赋值和传递，字符串都会被复制一次，传递走的是拷贝而不是原本 ❓❓❓❓❓❓❓❓❓
+//Swift 编译器优化了字符串使用的资源，实际上拷贝只会在确实需要的时候才进行
+var test = emptyString
+test += "4"
+var test1 = "1234"
+print(test1 == test)
+func printAddress(values:AnyObject...){
+    for value in values {
+        print(Unmanaged.passUnretained(value).toOpaque())
+        print("打印-------")
+    }
+    
+}
+
+printAddress(values: emptyString as AnyObject,test as AnyObject,test1 as AnyObject)
+
+let catCharacters:[Character] = ["c","a","t","!"]
+let catString = String(catCharacters)
+
+
+
 
 
 
