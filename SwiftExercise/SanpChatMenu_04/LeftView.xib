@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LeftView" customModule="SanpChatMenu_04" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="193" height="484"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left" translatesAutoresizingMaskIntoConstraints="NO" id="mNP-tO-a0e">
+                    <rect key="frame" x="0.0" y="0.0" width="193" height="484"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="mNP-tO-a0e" secondAttribute="bottom" id="ID8-Gz-E3S"/>
+                <constraint firstAttribute="trailing" secondItem="mNP-tO-a0e" secondAttribute="trailing" id="SRo-4f-9Y7"/>
+                <constraint firstItem="mNP-tO-a0e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Tom-e1-fND"/>
+                <constraint firstItem="mNP-tO-a0e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ljY-vA-VEm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-15.199999999999999" y="71.064467766116948"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="left" width="320" height="568"/>
+    </resources>
+</document>
