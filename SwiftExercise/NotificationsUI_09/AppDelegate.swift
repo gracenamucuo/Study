@@ -30,11 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //触发通知
     func scheduleNotification(at date:Date) {
-        UNUserNotificationCenter.current().delegate = self
+//        UNUserNotificationCenter.current().delegate = self
         
         let calendar = Calendar(identifier: .gregorian)
         let components = calendar.dateComponents(in: .current, from: date)
-        let newComponents = DateComponents(calendar: calendar, timeZone: .current, era: components.era, year: components.year, month: components.month, day: components.day, hour: components.hour, minute: components.minute, second: components.second, nanosecond: components.nanosecond, weekday: components.weekday, weekdayOrdinal: components.weekdayOrdinal, quarter: components.quarter, weekOfMonth: components.weekOfMonth, weekOfYear: components.weekOfYear, yearForWeekOfYear: components.yearForWeekOfYear)
+         let newComponents = DateComponents.init(calendar: calendar, timeZone: .current, month: components.month, day: components.day, hour: components.hour, minute: components.minute)
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: newComponents, repeats: false)
         let content = UNMutableNotificationContent()
@@ -72,16 +72,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
-extension AppDelegate:UNUserNotificationCenterDelegate
-{
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        if response.actionIdentifier == "remindLater" {
-            let newDate = Date(timeInterval: 60, since: Date())
-            scheduleNotification(at: newDate)
-            
-        }
-    }
-}
+//extension AppDelegate:UNUserNotificationCenterDelegate
+//{
+//    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+//        if response.actionIdentifier == "remindLater" {
+//            let newDate = Date(timeInterval: 60, since: Date())
+//            print("回调代理")
+//            scheduleNotification(at: newDate)
+//
+//        }
+//    }
+//}
 
 
 
