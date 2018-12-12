@@ -13,8 +13,9 @@ import Foundation
 //直接在tableView上画的cell 直接用在storyoboard中注册就好
 
 //❓❓❓❓❓❓
-// as! 和 as?
+// as! 和 as? 【as!强制转类型】
 //类型后加！
 //获得类的字符串名称
 //闭包里引用self必须显示的使用self
+//初始化类型的时候，存储属性是否需要赋值或者声明为可选类型
 
