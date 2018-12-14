@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A104D7A21C20AD7001F6E1E /* AnnotatedPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A104D7921C20AD7001F6E1E /* AnnotatedPhotoCell.swift */; };
+		5A104D7C21C20B10001F6E1E /* RoundedCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A104D7B21C20B10001F6E1E /* RoundedCornersView.swift */; };
 		5A26318121BC9E0400946A01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A26318021BC9E0400946A01 /* AppDelegate.swift */; };
 		5A26318321BC9E0400946A01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A26318221BC9E0400946A01 /* ViewController.swift */; };
 		5A26318621BC9E0400946A01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A26318421BC9E0400946A01 /* Main.storyboard */; };
@@ -114,6 +116,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A104D7921C20AD7001F6E1E /* AnnotatedPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotatedPhotoCell.swift; sourceTree = "<group>"; };
+		5A104D7B21C20B10001F6E1E /* RoundedCornersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersView.swift; sourceTree = "<group>"; };
 		5A26317E21BC9E0400946A01 /* StopWatch_01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch_01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A26318021BC9E0400946A01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A26318221BC9E0400946A01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -319,6 +323,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A104D7D21C20B14001F6E1E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5A104D7921C20AD7001F6E1E /* AnnotatedPhotoCell.swift */,
+				5A104D7B21C20B10001F6E1E /* RoundedCornersView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5A26317F21BC9E0400946A01 /* StopWatch_01 */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,6 +559,7 @@
 				5A82EAA321C09D6B00B3547E /* Models */,
 				5A82EAA621C0A22D00B3547E /* Extensions */,
 				5A82EAA921C0AA7400B3547E /* Layouts */,
+				5A104D7D21C20B14001F6E1E /* Views */,
 			);
 			path = Pinterest_10;
 			sourceTree = "<group>";
@@ -1136,8 +1150,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A82EAA821C0AA6F00B3547E /* PinterestLayout.swift in Sources */,
+				5A104D7A21C20AD7001F6E1E /* AnnotatedPhotoCell.swift in Sources */,
 				5A82EAA221C09D6700B3547E /* Photo.swift in Sources */,
 				5A82EAA521C0A1BC00B3547E /* UIImage+Decompression.swift in Sources */,
+				5A104D7C21C20B10001F6E1E /* RoundedCornersView.swift in Sources */,
 				5A82EA8D21C09C9700B3547E /* ViewController.swift in Sources */,
 				5A82EA8B21C09C9700B3547E /* AppDelegate.swift in Sources */,
 			);

@@ -53,7 +53,7 @@ class PinterestLayout:UICollectionViewLayout {
             //x偏移量
             var xOffset = [CGFloat]()
             for column in 0 ..< numberOfColumns{
-                xOffset.append(CGFloat(column) * contentWidth)
+                xOffset.append(CGFloat(column) * columnWidth)
             }
             //y偏移量
             var column = 0
@@ -74,15 +74,14 @@ class PinterestLayout:UICollectionViewLayout {
                 let attributes = PinterestLayoutAttributes(forCellWith: indxePath)
                 attributes.photoHeight = photoHeight
                 attributes.frame = insetFrame
+                print(insetFrame)
                 cache.append(attributes)
                 
                 contentHeight = max(contentHeight, frame.maxY)
                 yOffset[column] = yOffset[column] + height
                 column = column >= (numberOfColumns-1) ? 0 : column+1
-                
+                print(column)
             }
-            
-            
         }
     }
     
