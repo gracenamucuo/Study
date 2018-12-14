@@ -1,0 +1,306 @@
+//
+//  ViewController.swift
+//  BlueLibrarySwift_11
+//
+//  Created by 戴运鹏 on 2018/12/14.
+//  Copyright © 2018 戴运鹏. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+    @IBOutlet weak var scroller: HorizontalScrollerView!
+    @IBOutlet weak var dataTable: UITableView!
+    @IBOutlet weak var toolBar: UIToolbar!
+    
+   fileprivate var allAlbums = [Album]()
+   fileprivate var currentAlbumData:[AlbumData]?
+   fileprivate var currentAlbumIndex = 0
+   fileprivate var undoStack:[(Album,Int)] = []
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    func setUI()  {
+        navigationController?.navigationBar.isTranslucent = false
+    }
+
+    func setData()  {
+        currentAlbumIndex = 0
+        allAlbums = LibraryAPI.sharedInstance.getAlbums()
+    }
+    
+    func setComponents() {
+        dataTable.backgroundView = nil
+        loadPreviousState()
+        scroller.delegate = self
+        scroller.dataSource = self
+        reloadScroller()
+        scroller.scrollToView(at: currentAlbumIndex)
+        
+        let undoButton = UIBarButtonItem(barButtonSystemItem: .undo, target: self, action: Selector.undoAction)
+        undoButton.isEnabled = false
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let trashButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: Selector.deleteAlbum)
+        let toolbarButtonItems = [undoButton,space,trashButton]
+        toolBar.setItems(toolbarButtonItems, animated: true)
+    }
+    
+    func showDataForAlbum(at index:Int) {
+        if index < allAlbums.count && index > -1 {
+            let album = allAlbums[index]
+            currentAlbumData = album.tableRepresentation
+        }else{
+            currentAlbumData = nil
+        }
+        dataTable.reloadData()
+    }
+    
+   @objc func saveCurrentState() {
+        UserDefaults.standard.set(currentAlbumIndex, forKey: Constants.indexRestorationKey)
+    LibraryAPI.sharedInstance.saveAlbums()
+    }
+    
+    func loadPreviousState() {
+        currentAlbumIndex = UserDefaults.standard.integer(forKey: Constants.indexRestorationKey)
+        showDataForAlbum(at: currentAlbumIndex)
+    }
+    
+    func reloadScroller()  {
+        allAlbums = LibraryAPI.sharedInstance.getAlbums()
+        if currentAlbumIndex < 0{
+            currentAlbumIndex = 0
+        }else if currentAlbumIndex >= allAlbums.count{
+            currentAlbumIndex = allAlbums.count - 1
+        }
+        scroller.reload()
+        showDataForAlbum(at: currentAlbumIndex)
+    }
+    
+    func addAlbumAtIndex(_ album:Album,index:Int) {
+        LibraryAPI.sharedInstance.addAlbum(album, index: index)
+        currentAlbumIndex = index
+        reloadScroller()
+    }
+    
+   @objc func deleteAlbum()  {
+    let deletedAlbum:Album = allAlbums[currentAlbumIndex]
+    
+    let undoAction = (deletedAlbum,currentAlbumIndex)
+    undoStack.insert(undoAction, at: 0)
+    LibraryAPI.sharedInstance.deleteAlbum(currentAlbumIndex)
+    reloadScroller()
+    
+    let barButtonItems = toolBar.items! as [UIBarButtonItem]
+    let undoButton:UIBarButtonItem = barButtonItems[0]
+    undoButton.isEnabled = true
+    if allAlbums.count == 0 {
+        let trashButton:UIBarButtonItem = barButtonItems[2]
+        trashButton.isEnabled = false
+    }
+    
+    
+    
+    }
+    
+   @objc func undoAction()  {
+    let barButtonItems = toolBar.items! as [UIBarButtonItem]
+    if undoStack.count > 0 {
+        let (deletedAlbum,index) = undoStack.remove(at: 0)
+        addAlbumAtIndex(deletedAlbum, index: index)
+        
+        if undoStack.count == 0{
+        let undoButton:UIBarButtonItem = barButtonItems[0]
+        undoButton.isEnabled = false
+        }
+        
+        let trashButton:UIBarButtonItem = barButtonItems[2]
+        trashButton.isEnabled = true
+        
+        
+    }
+    
+    }
+    
+  
+}
+
+extension ViewController:UITableViewDataSource
+{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let albumData = currentAlbumData {
+            return albumData.count
+        }else{
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifirt, for: indexPath)
+        if let albumData = currentAlbumData {
+            cell.textLabel?.text = albumData[indexPath.row].title
+            cell.detailTextLabel?.text = albumData[indexPath.row].value
+        }
+        
+        return cell
+    }
+    
+    
+}
+
+extension ViewController:HorizontalScrollerDataSource
+{
+    func numberOfViews(in horizontalScrollerView: HorizontalScrollerView) -> Int {
+        return allAlbums.count
+    }
+    
+    func horizontalScrollerView(_ horizontalScrollerView: HorizontalScrollerView, viewAt index: Int) -> UIView {
+        let album = allAlbums[index]
+        let albumView = AlbumView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), coverUrl: album.coverUrl)
+        if currentAlbumIndex == index {
+            albumView.highlightAlbum(true)
+        }else{
+            albumView.highlightAlbum(false)
+        }
+        return albumView
+        
+    }
+    
+    
+}
+
+extension ViewController:HorizontalScrollerDelegate
+{
+    func horizontalScrollerView(_ horizontalScrollView: HorizontalScrollerView, didSelectViewAt index: Int) {
+        let previousAlbumView = scroller.viewAtIndex(currentAlbumIndex) as! AlbumView
+        previousAlbumView.highlightAlbum(false)
+        currentAlbumIndex = index
+        let albumView = scroller.viewAtIndex(currentAlbumIndex) as! AlbumView
+        albumView.highlightAlbum(true)
+        showDataForAlbum(at: currentAlbumIndex)
+        
+    }
+    
+    
+}
+
+fileprivate enum Constants {
+    static let cellIdentifirt = "Cell"
+    static let indexRestorationKey = "currentAlbumIndex"
+    
+}
+
+fileprivate extension Selector{
+    static let undoAction = #selector(ViewController.undoAction)
+    static let deleteAlbum = #selector(ViewController.deleteAlbum)
+    static let saveCurrentState = #selector(ViewController.saveCurrentState)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
