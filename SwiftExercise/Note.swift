@@ -18,4 +18,11 @@ import Foundation
 //获得类的字符串名称
 //闭包里引用self必须显示的使用self
 //初始化类型的时候，存储属性是否需要赋值或者声明为可选类型
-
+/*
+ lazy var downloadQueue:OperationQueue = {
+ let queue = OperationQueue()
+ queue.name = "Download queue"
+ queue.maxConcurrentOperationCount = 1
+ return queue
+ }()
+ */
