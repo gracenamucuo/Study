@@ -69,7 +69,7 @@ class HorizontalScrollerView: UIView {
     }
     
     override func didMoveToSuperview() {
-        
+        reload()
     }
     
     func scrollToView(at index:Int,animated:Bool = true) {

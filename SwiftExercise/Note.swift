@@ -11,7 +11,7 @@ import Foundation
 //作为选择子#selector()的方法，需要在前边加上@objc
 //使用自定义字体的时候，需要将字体加入到plist文件中 key是Fonts provided by application
 //直接在tableView上画的cell 直接用在storyoboard中注册就好
-
+//Data(contentsOf:url!)是可以下载图片的
 //❓❓❓❓❓❓
 // as! 和 as? 【as!强制转类型】
 //类型后加！

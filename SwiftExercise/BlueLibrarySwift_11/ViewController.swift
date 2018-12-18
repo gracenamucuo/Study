@@ -22,32 +22,38 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    func setUI()  {
-        navigationController?.navigationBar.isTranslucent = false
-    }
-
-    func setData()  {
-        currentAlbumIndex = 0
-        allAlbums = LibraryAPI.sharedInstance.getAlbums()
+        func setUI()  {
+            navigationController?.navigationBar.isTranslucent = false
+        }
+        
+        func setData()  {
+            currentAlbumIndex = 0
+            allAlbums = LibraryAPI.sharedInstance.getAlbums()
+        }
+        
+        func setComponents() {
+            dataTable.backgroundView = nil
+            loadPreviousState()
+            scroller.delegate = self
+            scroller.dataSource = self
+            reloadScroller()
+            scroller.scrollToView(at: currentAlbumIndex)
+            
+            let undoButton = UIBarButtonItem(barButtonSystemItem: .undo, target: self, action: Selector.undoAction)
+            undoButton.isEnabled = false
+            let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+            let trashButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: Selector.deleteAlbum)
+            let toolbarButtonItems = [undoButton,space,trashButton]
+            toolBar.setItems(toolbarButtonItems, animated: true)
+        }
+        
+        setUI()
+        setData()
+        setComponents()
+        showDataForAlbum(at: currentAlbumIndex)
+        NotificationCenter.default.addObserver(self, selector: Selector.saveCurrentState, name: Notification.Name.init("UIApplicationDidEnterBackgroundNotification"), object: nil)
     }
     
-    func setComponents() {
-        dataTable.backgroundView = nil
-        loadPreviousState()
-        scroller.delegate = self
-        scroller.dataSource = self
-        reloadScroller()
-        scroller.scrollToView(at: currentAlbumIndex)
-        
-        let undoButton = UIBarButtonItem(barButtonSystemItem: .undo, target: self, action: Selector.undoAction)
-        undoButton.isEnabled = false
-        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let trashButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: Selector.deleteAlbum)
-        let toolbarButtonItems = [undoButton,space,trashButton]
-        toolBar.setItems(toolbarButtonItems, animated: true)
-    }
     
     func showDataForAlbum(at index:Int) {
         if index < allAlbums.count && index > -1 {

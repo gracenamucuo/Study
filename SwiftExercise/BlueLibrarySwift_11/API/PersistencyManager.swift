@@ -7,6 +7,9 @@
 //
 
 import UIKit
+
+
+/// 该类的作用，持久化。初始化的时候，先从沙盒里读取数据，如果没有的话，从bundle中读取json文件。同时给出了删除和添加专辑的接口
 final class PersistencyManager: NSObject {
    fileprivate var albums = [Album]()
    fileprivate var cache :URL{
