@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5A104D7A21C20AD7001F6E1E /* AnnotatedPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A104D7921C20AD7001F6E1E /* AnnotatedPhotoCell.swift */; };
 		5A104D7C21C20B10001F6E1E /* RoundedCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A104D7B21C20B10001F6E1E /* RoundedCornersView.swift */; };
+		5A19BD8221CA392700E16766 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A19BD8121CA392700E16766 /* main.m */; };
+		5A19BD8821CA396C00E16766 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A19BD8721CA396C00E16766 /* Person.m */; };
 		5A26318121BC9E0400946A01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A26318021BC9E0400946A01 /* AppDelegate.swift */; };
 		5A26318321BC9E0400946A01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A26318221BC9E0400946A01 /* ViewController.swift */; };
 		5A26318621BC9E0400946A01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A26318421BC9E0400946A01 /* Main.storyboard */; };
@@ -133,6 +135,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		5A19BD7D21CA392600E16766 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		5A70B8C121A0037900422A4B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -156,6 +167,10 @@
 /* Begin PBXFileReference section */
 		5A104D7921C20AD7001F6E1E /* AnnotatedPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotatedPhotoCell.swift; sourceTree = "<group>"; };
 		5A104D7B21C20B10001F6E1E /* RoundedCornersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersView.swift; sourceTree = "<group>"; };
+		5A19BD7F21CA392600E16766 /* OCTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OCTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A19BD8121CA392700E16766 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A19BD8621CA396C00E16766 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		5A19BD8721CA396C00E16766 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		5A26317E21BC9E0400946A01 /* StopWatch_01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch_01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A26318021BC9E0400946A01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A26318221BC9E0400946A01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -314,6 +329,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5A19BD7C21CA392600E16766 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A26317B21BC9E0400946A01 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -452,6 +474,16 @@
 				5A104D7B21C20B10001F6E1E /* RoundedCornersView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5A19BD8021CA392700E16766 /* OCTest */ = {
+			isa = PBXGroup;
+			children = (
+				5A19BD8121CA392700E16766 /* main.m */,
+				5A19BD8621CA396C00E16766 /* Person.h */,
+				5A19BD8721CA396C00E16766 /* Person.m */,
+			);
+			path = OCTest;
 			sourceTree = "<group>";
 		};
 		5A26317F21BC9E0400946A01 /* StopWatch_01 */ = {
@@ -709,6 +741,7 @@
 			isa = PBXGroup;
 			children = (
 				5A26319021BCA2CC00946A01 /* Note.swift */,
+				5A19BD8021CA392700E16766 /* OCTest */,
 				5A70B8AC21A0035800422A4B /* SwiftExercise */,
 				5A70B8CF21A14D0E00422A4B /* InitializeExercise */,
 				5A70B8C421A0037900422A4B /* PropertyExercise */,
@@ -753,6 +786,7 @@
 				5A43AD5E21C766F1000643B5 /* ClassicPhotos_13.app */,
 				5A43AD7921C79FDA000643B5 /* DotsAnimations_14.app */,
 				5A43AD8F21C7A2C6000643B5 /* LaunchAnimation_15.app */,
+				5A19BD7F21CA392600E16766 /* OCTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -843,6 +877,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5A19BD7E21CA392600E16766 /* OCTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A19BD8521CA392700E16766 /* Build configuration list for PBXNativeTarget "OCTest" */;
+			buildPhases = (
+				5A19BD7B21CA392600E16766 /* Sources */,
+				5A19BD7C21CA392600E16766 /* Frameworks */,
+				5A19BD7D21CA392600E16766 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OCTest;
+			productName = OCTest;
+			productReference = 5A19BD7F21CA392600E16766 /* OCTest */;
+			productType = "com.apple.product-type.tool";
+		};
 		5A26317D21BC9E0400946A01 /* StopWatch_01 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A26318D21BC9E0600946A01 /* Build configuration list for PBXNativeTarget "StopWatch_01" */;
@@ -1159,6 +1210,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "戴运鹏";
 				TargetAttributes = {
+					5A19BD7E21CA392600E16766 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					5A26317D21BC9E0400946A01 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -1246,6 +1300,7 @@
 				5A43AD5D21C766F1000643B5 /* ClassicPhotos_13 */,
 				5A43AD7821C79FDA000643B5 /* DotsAnimations_14 */,
 				5A43AD8E21C7A2C6000643B5 /* LaunchAnimation_15 */,
+				5A19BD7E21CA392600E16766 /* OCTest */,
 			);
 		};
 /* End PBXProject section */
@@ -1429,6 +1484,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5A19BD7B21CA392600E16766 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A19BD8821CA396C00E16766 /* Person.m in Sources */,
+				5A19BD8221CA392700E16766 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A26317A21BC9E0400946A01 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1875,6 +1939,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5A19BD8321CA392700E16766 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5A19BD8421CA392700E16766 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		5A26318E21BC9E0600946A01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2616,6 +2702,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5A19BD8521CA392700E16766 /* Build configuration list for PBXNativeTarget "OCTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A19BD8321CA392700E16766 /* Debug */,
+				5A19BD8421CA392700E16766 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5A26318D21BC9E0600946A01 /* Build configuration list for PBXNativeTarget "StopWatch_01" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

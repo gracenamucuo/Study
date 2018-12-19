@@ -8,30 +8,36 @@
 
 import Foundation
 
-//struct Celsius {
-//    var temperatureIncelsius:Double
-//    init(fromFahrenheit fahrenheit:Double) {
-//        temperatureIncelsius = (fahrenheit - 32.0) / 1.8
-//    }
-//    init(fromKelvin kelvin:Double) {
-//        temperatureIncelsius = kelvin - 273.15;
-//    }
-//
-//}
-//
-//struct Color {
-//    let red,green,blue:Double
-//    init(red:Double,green:Double,blue:Double) {
-//        self.red = red
-//        self.green = green
-//        self.blue = blue
-//    }
-//    init(white:Double) {
-//        red = white
-//        self.green = white
-//        self.blue = white
-//    }
-//}
+class Person {
+    var name:String
+    var age:Int{
+        return 10
+    }
+    init(name:String) {
+        self.name = name
+    }
+    
+}
+
+class Son: Person {
+    var sex = "male"
+}
+
+
+let son = Son(name: "儿子")
+let arr = [son]
+if arr[0] is Person{
+    print("是")
+}
+var name:String?
+var name1:String!
+
+var n = "1"
+
+n = name ?? ""
+var n1 = name1
+
+
 
 
 
