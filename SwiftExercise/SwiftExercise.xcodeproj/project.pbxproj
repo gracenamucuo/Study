@@ -2106,6 +2106,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = Carousel_05/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2123,6 +2124,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = Carousel_05/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

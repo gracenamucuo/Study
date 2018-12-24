@@ -15,15 +15,14 @@ import Foundation
 //调用带有throws关键字的函数的话，最好写在do{}catch{}里
 //❓❓❓❓❓❓
 // as! 和 as? 【as!强制转类型】
-//is来检测一个实例是否属于一个类的子类。类似于OC的isKindOfClass
-//as? 向下转换类型 if let movie = item as? Movie{}
-//as! 强制向下转换
+//✅is来检测一个实例是否属于一个类的子类。类似于OC的isKindOfClass
+//✅as? 向下转换类型 if let movie = item as? Movie{}
+//✅as! 强制向下转换
 
-//类型后加！为隐式展开可选项 隐式展开可选项可以直接赋值给一个非可选项类型，可选项需要可选绑定或者用三目运算符 ？？ 给定一个默认值
-//获得类的字符串名称
-//闭包里引用self必须显示的使用self
-//初始化类型的时候，存储属性是否需要赋值或者声明为可选类型
-//struct没有便利构造方法？
+//✅类型后加！为隐式展开可选项 隐式展开可选项可以直接赋值给一个非可选项类型，可选项需要可选绑定或者用三目运算符 ？？ 给定一个默认值
+//✅获得类的字符串名称 String(describing: UITableViewCell.self)
+//✅闭包里引用self必须显示的使用self
+//✅struct没有便利构造方法  只有类有便利初始化器和便利初始化器
 
 //可选项
 let name:String? = "1"
@@ -36,7 +35,7 @@ if let unwrapped_name = name {//可选项绑定
 var unwrappedName = name ?? "默认值" //也可以用三目运算符
 
 
-//可选链：调用和查询可选属性、方法和下标的过程，可能为nil  可选链调用返回的是可选x值
+//✅可选链：调用和查询可选属性、方法和下标的过程，可能为nil  可选链调用返回的是可选值
 //john.residence?.address?.street 可选链
 //if let johnStreet = john.residence?.address?.street{
     //也可以用可选项绑定
