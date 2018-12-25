@@ -29,7 +29,10 @@ class ViewController: UIViewController {
     var counter = 0.0
     let dic = ["03":"50.42","04":"61.72","05":"49.14","06":"55.91","07":"63.26","08":"72.85","09":"178.5","10":"205.4","11":"153.9","12":"116.1"]
     var images = ["03","04","05","06","07","08","09","10","11","12"]
-    var colors = [UIColor.red,UIColor.green,UIColor.orange,UIColor.green,UIColor.yellow,UIColor.cyan,UIColor.brown,UIColor.purple,UIColor.magenta,UIColor.orange]
+//    var colors = [UIColor.red,UIColor.green,UIColor.orange,UIColor.green,UIColor.yellow,UIColor.cyan,UIColor.brown,UIColor.purple,UIColor.magenta,UIColor.orange]
+    var colors:[UIColor]{
+        return [UIColorFromRGB(color_vaule: 0x7bcfa6),UIColorFromRGB(color_vaule: 0xa4e2c6),UIColorFromRGB(color_vaule: 0x7fecad),UIColorFromRGB(color_vaule: 0x2edfa3),UIColorFromRGB(color_vaule: 0x2add9c),UIColorFromRGB(color_vaule: 0x3de1ad),UIColorFromRGB(color_vaule: 0x00e09e),UIColorFromRGB(color_vaule: 0x00e079),UIColorFromRGB(color_vaule: 0x40de5a),UIColorFromRGB(color_vaule: 0x00e500)]
+    }
     
     var WIDTH:Double{
         return Double(view.frame.width)
@@ -171,4 +174,5 @@ extension ViewController:UICollectionViewDelegateFlowLayout{
         return CGSize(width:view.frame.width, height: view.frame.height)
     }
 }
+
 
