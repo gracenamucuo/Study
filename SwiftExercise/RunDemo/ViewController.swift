@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         totalLabel.alpha = 0
         
          borderView.layer.borderWidth = 5
-         borderView.layer.borderColor = UIColor.red.cgColor
+         borderView.layer.borderColor = UIColorFromRGB(color_vaule: 0x7bcfa6).cgColor
          borderView.layer.cornerRadius = 5
          borderView.layer.masksToBounds = true
          borderView.frame = CGRect(x: 0, y: 45, width: 90, height: 60)
@@ -127,8 +127,8 @@ extension ViewController{
                     self.bottomLabel.text = String(format: "%.2f km", self.month)
                     self.index += 1
                     if self.month > 1000 {
-                        self.height.constant = 120
-                        self.bottomView.backgroundColor = self.UIColorFromRGB(color_vaule: 0x50a7ff)
+//                        self.height.constant = 120
+//                        self.bottomView.backgroundColor = self.UIColorFromRGB(color_vaule: 0x50a7ff)
                     }
                     
                     
