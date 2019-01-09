@@ -276,7 +276,139 @@ extension FIFOQueue:ExpressibleByArrayLiteral
 
 enum List<Element> {
     case end
-    indirect case node(Element,next:List<Element>)
+    indirect case node(Element,next:List<Element>)//indirect告诉编译器该枚举值应该被看做引用
 }
 
+extension List
+{
+    func cons(_ x:Element) -> List {
+        return .node(x,next:self)
+    }
+}
+
+extension List : ExpressibleByArrayLiteral
+{
+    init(arrayLiteral elements: Element...) {
+        self = elements.reversed().reduce(.end, { (partialList, element) in
+            partialList.cons(element)
+        })
+    }
+}
+let list:List = [3,2,1]
+
+//====================================【【【【栈】】】】】=========================================================
+
+protocol Stack {
+    associatedtype Element
+    mutating func push(_ x:Element)
+    mutating func pop() -> Element?
+}
+
+extension Array:Stack
+{
+   mutating func push(_ x: Element) {
+        append(x)
+    }
+    
+   mutating func pop() -> Element? {
+        return popLast()
+    }
+}
+
+extension List:Stack{
+   mutating func push(_ x: Element) {
+        self = self.cons(x)
+    }
+    
+   mutating func pop() -> Element? {
+        switch self {
+        case .end:
+            return nil
+        case let .node(x, next: xs):
+            self = xs
+            return x
+        }
+    }
+}
+
+extension List:IteratorProtocol,Sequence
+{
+    mutating func next() -> Element? {
+        return pop()
+    }
+}
+
+
+fileprivate enum ListNode<Element> {
+    case end
+   indirect case node(Element,next:ListNode<Element>)
+    func cons(_ x:Element) -> ListNode<Element> {
+        return .node(x,next:self)
+    }
+}
+
+public struct ListIndex<Element>:CustomStringConvertible {
+   fileprivate let node:ListNode<Element>
+   fileprivate let tag:Int
+   public var description: String{
+        return "ListIndex\(tag)"
+    }
+}
+
+extension ListIndex:Comparable
+{
+    public static func == <T>(lhs:ListIndex<T>,rhs:ListIndex<T>) -> Bool {
+        return lhs.tag == rhs.tag
+    }
+    public static func < <T>(lhs:ListIndex<T>,rhs:ListIndex<T>) -> Bool {
+    return lhs.tag > rhs.tag
+    }
+}
+
+public struct ListType<Element>:Collection {
+    public typealias Index = ListIndex<Element>
+    public let startIndex: Index
+    public let endIndex: Index
+    public subscript(position:Index) -> Element{
+        switch position.node{
+        case .end:fatalError("Subscript out of range")
+        case let .node(x,_):return x
+        }
+    }
+   public func index(after idx:Index) -> Index {
+    switch idx.node {
+    case .end:fatalError("Out of range")
+    case let .node(_,next):return Index(node: next, tag: idx.tag - 1)
+    }
+    }
+}
+
+extension ListType:ExpressibleByArrayLiteral
+{
+    public init(arrayLiteral elements: Element...) {
+        startIndex = ListIndex(node: elements.reversed().reduce(.end, { part, element  in
+            part.cons(element)
+        }), tag: elements.count)
+        endIndex = ListIndex(node: .end, tag: 0)
+    }
+}
+
+extension ListType:CustomStringConvertible{
+    public var description: String
+    {
+        let elements = self.map {String(describing: $0)}.joined(separator: ",")
+        return "List:\(elements)"
+    }
+}
+
+extension ListType{
+   public var count:Int{
+        return startIndex.tag - endIndex.tag
+    }
+}
+
+
+
 print("====")
+
+
