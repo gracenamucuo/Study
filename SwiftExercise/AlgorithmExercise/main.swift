@@ -150,6 +150,22 @@ func quickSort<T:Comparable>(_ originalData: inout [T]) {
     func partition<T:Comparable>(_ originalData:inout [T],_ start:Int,_ end:Int,by order:(_ a:T,_ b:T)->Bool) -> Int {
         var temp = originalData
         let pivot = temp[end]
+        
+        var endPoint = end
+        var i = start
+        while i < endPoint {
+            if order(pivot, originalData[i]) {
+                endPoint -= 1
+                originalData.swapAt(i, endPoint)
+            }
+            else {
+                i += 1
+            }
+        }
+        
+        originalData.swapAt(endPoint, end)
+        return endPoint
+        /*
         var i = start
         for j in start..<end {
             if order(pivot,originalData[j]){
@@ -158,7 +174,7 @@ func quickSort<T:Comparable>(_ originalData: inout [T]) {
             }
         }
         originalData.swapAt(i, end)
-        return i
+        return i */
     }
     quickSortResolve(&originalData, 0, originalData.count - 1)
 }
@@ -206,4 +222,4 @@ func findK<T:Comparable>(_ k:Int,in originalData: inout [T]) -> T {
     }
     return quickSortResolve(&originalData, 0, originalData.count - 1)
 }
-print(findK(1, in: &arr))
+//print(findK(1, in: &arr))
