@@ -163,8 +163,6 @@ func quickSort<T:Comparable>(_ originalData: inout [T]) {
     quickSortResolve(&originalData, 0, originalData.count - 1)
 }
 
-
-
 var arr = [4,2,9,-1,0,-9,10,14,15]
 quickSort(&arr)
 print(arr)

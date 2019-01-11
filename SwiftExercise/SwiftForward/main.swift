@@ -407,7 +407,76 @@ extension ListType{
     }
 }
 
+///===============================【【【【可选值】】】】================================
 
+
+let strs = ["1","2","three"]
+let maybeInts = strs.map {Int($0)}
+
+for mayInt  in maybeInts
+{
+    if let value = mayInt{
+        print(value)
+    }
+}
+
+for case let i? in maybeInts{
+    print(i)
+}
+for case let .some(i) in maybeInts{
+    print(i)
+}
+
+func unimplemented() -> Never {
+    fatalError("wait a moment")
+}
+
+extension Array{
+    subscript(safe idx:Int)->Element?{
+        return idx < endIndex ? self[idx] : nil
+    }
+}
+var arr0 = [1,3,4]
+
+let characters:[Character] = []
+let first = characters.first.map {String($0)}
+print(first ?? 0)
+
+extension Optional{
+    func map<U>(transform:(Wrapped)->U) -> U? {
+        if let value = self {
+            return transform(value)
+        }
+        return nil
+    }
+}
+
+//不接受初始值的reduce
+extension Array{
+    func reduce1(_ nextPartialResult:(Element,Element)->Element) -> Element? {
+        guard let fst = first else {
+            return nil
+        }
+        return dropFirst().reduce(fst, nextPartialResult)
+    }
+}
+
+extension Optional{
+    func flatMap<U>(transform:(Wrapped)->U?) -> U? {
+        if let value = self,let transformed = transform(value) {
+            return transformed
+        }
+        return nil
+    }
+}
+
+func ==<T:Equatable>(lhs:T?,rhs:T?) -> Bool {
+    switch (lhs,rhs) {
+    case (nil,nil):return true
+    case let (x?,y?):return x==y
+    case (_?,nil),(nil,_?):return false
+    }
+}
 
 print("====")
 
