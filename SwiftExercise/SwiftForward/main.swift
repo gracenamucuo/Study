@@ -480,4 +480,53 @@ func ==<T:Equatable>(lhs:T?,rhs:T?) -> Bool {
 
 print("====")
 
+let mutableArray:NSMutableArray = [1,2,3]
+//for _ in mutableArray
+//{
+//    print("移除了几次")
+//    mutableArray.removeAllObjects()
+////    print("移除了几次")
+//}
+//
+//print("数组移除\(mutableArray)")
 
+var iterator = mutableArray.makeIterator()
+var ite1 = iterator
+//while let element = iterator.next()
+//{
+//    print("打印\(mutableArray)")
+//    mutableArray.removeLastObject()
+//}
+//
+//while let element = ite1.next()
+//{
+//    print("打印\(mutableArray)")
+//    mutableArray.removeLastObject()
+//}
+
+//print(iterator.next())
+//print(iterator.next())
+var ite2 = iterator
+var i = 0
+
+//for _ in mutableArray
+//{
+//    mutableArray.removeAllObjects()
+//     ite2 = mutableArray.makeIterator()
+//    i += 1
+//    if i == 3 {
+//     break
+//    }
+//}
+var arr3:[Int] = [1,2,3]
+var ite3 = arr.makeIterator()
+
+
+while  ite2.next() != nil
+{
+//    arr3.removeAll()
+    mutableArray.removeAllObjects()
+//    mutableArray.removeLastObject()
+    print("==========")
+}
+//print("保存状态===\(ite2.next())")
