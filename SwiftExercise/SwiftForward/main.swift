@@ -479,16 +479,16 @@ func ==<T:Equatable>(lhs:T?,rhs:T?) -> Bool {
 }
 
 print("====")
-
-let mutableArray:NSMutableArray = [1,2,3]
-//for _ in mutableArray
-//{
+/* 迭代器
+var mutableArray:Array = [1,2,3]
+for _ in mutableArray
+{
+    print("移除了几次")
+    mutableArray.removeAll()
 //    print("移除了几次")
-//    mutableArray.removeAllObjects()
-////    print("移除了几次")
-//}
-//
-//print("数组移除\(mutableArray)")
+}
+
+print("数组移除\(mutableArray)")
 
 var iterator = mutableArray.makeIterator()
 var ite1 = iterator
@@ -522,11 +522,239 @@ var arr3:[Int] = [1,2,3]
 var ite3 = arr.makeIterator()
 
 
-while  ite2.next() != nil
-{
-//    arr3.removeAll()
-    mutableArray.removeAllObjects()
-//    mutableArray.removeLastObject()
-    print("==========")
-}
+//while  ite2.next() != nil
+//{
+////    arr3.removeAll()
+//    mutableArray.removeAllObjects()
+////    mutableArray.removeLastObject()
+//    print("==========")
+//}
 //print("保存状态===\(ite2.next())")
+
+*/
+struct Point {
+    var x:Double
+    var y:Double
+    
+    
+}
+
+struct Rectangle {
+    var width:Double
+    var length:Double
+    var origin:Point
+    
+}
+
+extension Rectangle{
+    init(size:CGSize,point:Point) {
+        width = Double(size.width)
+        length = Double(size.height)
+        origin = point
+    }
+}
+
+var rect = Rectangle.init(width: 40, length: 40, origin: Point(x: 0, y: 0)){
+    didSet{
+        print("我被设置了")
+    }
+}
+rect.length = 4
+rect.origin.x = 5
+
+var rects = [rect]{
+    didSet{
+        print("数组变动了")
+    }
+}
+rects[0].origin.y = 9//加到数组里了，就不能再用原来的变量rect了，因为是结构体，是值类型，装到数组中的时候，在需要的时候就会复制一份。
+
+var input:[UInt8] = [0x0b,0xad,0xf0,0x0d]
+var other:[UInt8] = [0x0d]
+var d = Data(bytes: input)//Data是值类型
+var e = d
+d.append(contentsOf: other)
+print(d,e)
+
+var f = NSMutableData(bytes: &input, length: input.count)
+var g = f
+f.append(&other, length: other.count)
+print(f,g)
+//=======================写时复制=========
+//非
+struct MyData {
+    var _data:NSMutableData
+    init(_ data:NSData) {
+        self._data = data.mutableCopy() as! NSMutableData
+    }
+}
+
+let theData = NSData(base64Encoded: "wAEP/w==", options: [])!
+let x = MyData(theData)
+let y = x
+print(x._data === y._data)//true
+//高效
+class Son {
+   var name:String
+    init(name:String) {
+        self.name = name
+    }
+}
+
+var p = Son.init(name: "son")
+print(isKnownUniquelyReferenced(&p))
+
+final class Box<A> {
+    var unBox:A
+    init(_ value:A) {
+        self.unBox = value
+    }
+}
+
+var box = Box(NSMutableData())
+print(isKnownUniquelyReferenced(&box))//true
+var box1 = box
+print(isKnownUniquelyReferenced(&box))//false
+
+struct MyCopyData {
+    fileprivate var _data:Box<NSMutableData>
+    var _dataForWriting:NSMutableData{
+       mutating get{
+        if !isKnownUniquelyReferenced(&_data) {
+            _data = Box(_data.unBox.mutableCopy() as! NSMutableData)
+            print("Making a copy")
+        }
+        return _data.unBox
+        }
+    }
+    init(_ data:NSData) {
+        self._data = Box(data.mutableCopy() as! NSMutableData)
+    }
+}
+
+extension MyCopyData{
+   mutating func append(_ other:MyCopyData){
+        _dataForWriting.append(other._data.unBox as Data)
+    }
+}
+let someBytes = MyCopyData(NSData(base64Encoded: "wAEP/w==", options: [])!)
+var empty = MyCopyData(NSData())
+var emptyCopy  = empty
+for _ in 0..<5 {
+    empty.append(someBytes)
+}
+
+print(empty,emptyCopy)
+
+//=========================闭包====================
+print("闭包=======================")
+var i = 0
+func uniqueInteger() -> Int {
+    i += 1
+    return i
+}
+
+uniqueInteger()
+uniqueInteger()
+print(uniqueInteger())
+
+let otherFunction = uniqueInteger
+otherFunction()
+print(otherFunction())
+
+func uniqueIntegerProvider() -> ()->Int {
+    var i = 0
+    return {
+        i += 1
+        return i
+    }
+}
+
+let pro1 = uniqueIntegerProvider()
+pro1()
+pro1()
+pro1()
+print(pro1())
+let pro2 = uniqueIntegerProvider()
+print(pro2())
+
+//let doublerAlt = {(i:Int)-> Int in return i * 2}
+
+final class Father: NSObject {
+    @objc var first:String
+    @objc var last:String
+     var yearOfBirth:Int
+    init(first:String,last:String,yearOfBirth:Int) {
+        self.first = first
+        self.last = last
+        self.yearOfBirth = yearOfBirth
+    }
+}
+
+let people = [Father(first: "Jo", last: "Smith", yearOfBirth: 1970),
+Father(first: "Joe", last: "Smith", yearOfBirth: 1970),
+Father(first: "Joe", last: "Smyth", yearOfBirth: 1970),
+Father(first: "Joanne", last: "smith", yearOfBirth: 1985),
+Father(first: "Joanne", last: "smith", yearOfBirth: 1970),
+Father(first: "Robert", last: "Jones", yearOfBirth: 1970),]
+
+//OC写法
+let lastDescriptor = NSSortDescriptor(key: #keyPath(Father.last), ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
+let firstDescriptor = NSSortDescriptor(key: #keyPath(Father.first), ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
+//let yearDescriptor = NSSortDescriptor(key: #keyPath(Father.yearOfBirth), ascending: true)
+
+//let descriptors = [lastDescriptor,firstDescriptor,yearDescriptor]
+//(people as NSArray).sortedArray(using: descriptors)
+//Swift 函数作为数据
+
+typealias SortDescriptor<Value> = (Value,Value)->Bool
+
+func sortDescriptor<Value,Key>(key:@escaping (Value)->Key,ascending:Bool=true,_ comparator:@escaping(Key)->(Key)->ComparisonResult) -> SortDescriptor<Value> {
+    return { lhs,rhs in
+        let order:ComparisonResult = ascending ?.orderedAscending:.orderedDescending
+        return comparator(key(lhs))(key(rhs)) == order
+    }
+}
+
+let sortByFirstName:SortDescriptor<Father> = sortDescriptor(key: {$0.first}, String.localizedCaseInsensitiveCompare)
+let sortByLastName:SortDescriptor<Father> = sortDescriptor(key: {$0.last}, String.localizedCaseInsensitiveCompare)
+//let sortByYear:SortDescriptor<Father> = sortDescriptor(key: {(f:Father) -> Int in return f.yearOfBirth }) { (h) -> ComparisonResult in
+//    return .orderedAscending
+//}
+people.sorted(by: sortByFirstName)
+
+func combine<Value>(sortDescriptors:[SortDescriptor<Value>]) -> SortDescriptor<Value> {
+    return {lhs,rhs in
+        for areInIncreasingOrder in sortDescriptors {
+            if areInIncreasingOrder(lhs,rhs){return true}
+            if areInIncreasingOrder(rhs,lhs){return false}
+        }
+        return false
+    }
+}
+//let combined:SortDescriptor<Father> = combine(sortDescriptors: <#T##[(Value, Value) -> Bool]#>)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
