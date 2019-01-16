@@ -181,7 +181,7 @@ func quickSort<T:Comparable>(_ originalData: inout [T]) {
 
 var arr = [4,2,9,-1,0,-9,10,14,15]
 quickSort(&arr)
-print(arr)
+//print(arr)
 
 ///借助快速排序 找第K大的数
 func findK<T:Comparable>(_ k:Int,in originalData: inout [T]) -> T {
@@ -223,3 +223,49 @@ func findK<T:Comparable>(_ k:Int,in originalData: inout [T]) -> T {
     return quickSortResolve(&originalData, 0, originalData.count - 1)
 }
 //print(findK(1, in: &arr))
+//===========================二分查找==============================================
+func binarySearch<T:Comparable>(_ originalData:[T],_ destinationData:T) -> Int? {
+    guard originalData.count > 0 else {
+        return nil
+    }
+    var high = originalData.endIndex - 1
+    var low = 0
+    
+    while low < high && originalData[high] > destinationData && originalData[low] < destinationData {
+        let mid = low + (high - low ) / 2
+        let midData = originalData[mid]
+        if destinationData > midData{
+            low = mid + 1
+        }else if(destinationData < midData){
+            high = mid - 1
+        }else{
+            return mid
+        }
+    }
+    if originalData[high] < destinationData || destinationData < originalData[low] {
+        return nil
+    }else{
+        return low
+    }
+}
+//print(binarySearch([7,9,12,18,24,85], 0))
+//递归二分查找
+func  recursionBinarySearch<T:Comparable>(_ originalData:[T],_ destinationData:T) -> Int? {
+    guard originalData.count > 0 else {
+        return nil
+    }
+    var high = originalData.endIndex - 1
+    var low = 0
+        let mid = low + (high - low ) / 2
+        let midData = originalData[mid]
+        if destinationData > midData{
+            low = mid + 1
+            return recursionBinarySearch(Array(originalData[low...high]), destinationData)
+        }else if(destinationData < midData){
+            high = mid - 1
+            return recursionBinarySearch(Array(originalData[low...high]), destinationData)
+        }else{
+            return mid
+        }
+}
+print(recursionBinarySearch([7,9,12,18,24,85], 18))
