@@ -721,7 +721,7 @@ let sortByLastName:SortDescriptor<Father> = sortDescriptor(key: {$0.last}, Strin
 //let sortByYear:SortDescriptor<Father> = sortDescriptor(key: {(f:Father) -> Int in return f.yearOfBirth }) { (h) -> ComparisonResult in
 //    return .orderedAscending
 //}
-people.sorted(by: sortByFirstName)
+//people.sorted(by: sortByFirstName)
 
 func combine<Value>(sortDescriptors:[SortDescriptor<Value>]) -> SortDescriptor<Value> {
     return {lhs,rhs in
@@ -734,21 +734,100 @@ func combine<Value>(sortDescriptors:[SortDescriptor<Value>]) -> SortDescriptor<V
 }
 //let combined:SortDescriptor<Father> = combine(sortDescriptors: <#T##[(Value, Value) -> Bool]#>)
 
+var subArr = [1,3,5,7,6]
+print(subArr.suffix(2),subArr.prefix(4))
+//=========================================【【【【闭包】】】】===============================================
+//仿照 && 操作符
+func and(_ l:Bool,_ r:()->Bool) -> Bool {
+    guard l else {
+        return false
+    }
+    return r()
+}
 
+if and(!subArr.isEmpty, {subArr[0] > 10}){
+    print("进来了")
+}
 
+func and(_ l:Bool,_ r:@autoclosure()->Bool) -> Bool {
+    guard l else {
+        return false
+    }
+    return r()
+}
+if and(!subArr.isEmpty, subArr[0]>10) {
+    print("使用自动闭包")
+}
 
+func logtest(condition:Bool,msg:@autoclosure()->(String),file:String = #file,line function:String = #function,line:Int = #line){
+    if condition{
+        return
+    }
+    print("failed\(msg()),\(file):\(function):\(line)")
+}
 
+logtest(condition: false, msg: "This is a test")
 
+//=========================================【【【【泛型】】】】===============================================
+func raise(_ base:Double,to exponent:Double) -> Double {
+    return pow(base,exponent)
+}
 
+func raise(_ base:Float,to exponent:Float) -> Float {
+    return powf(base, exponent)
+}
 
+let double = raise(2.0,to: 3.0)
+let float:Float = raise(2.0,to: 4.0)
+print(type(of: double))
 
+extension Sequence where Iterator.Element:Equatable{
+    func isSubset(of other:[Iterator.Element]) -> Bool {
+        for ele in self {
+            guard other.contains(ele) else{
+                return false
+            }
+        }
+        return true//O(n * m)
+    }
+}
+let isEven = {(ele:Int)->Bool in
+    print("走了\(ele)")
+    return ele % 2 == 0
+}
+[1,5,6,9].contains(where: isEven)
+//泛型二分查找
 
+extension RandomAccessCollection{
+    func binarySearch(for value:Iterator.Element,areInIncreasingOrder:(Iterator.Element,Iterator.Element)->Bool)->Index? {
+        guard !isEmpty else {
+            return nil
+        }
+        var left = startIndex
+        var right = index(before: endIndex)
+        while left <= right {
+            let dist = distance(from: left, to: right)
+            let mid = index(left, offsetBy: dist/2)
+            let candidate = self[mid]
+            
+            if areInIncreasingOrder(candidate,value){
+             left = index(after: mid)
+            }else if areInIncreasingOrder(value,candidate){
+                right = index(before: mid)
+            }else{
+                return mid
+            }
+            
+            
+        }
+        return nil
+        
+    }
+}
 
-
-
-
-
-
+let a = ["a","b","c","d","e","f","g"]
+let r = a.reversed()
+print(r.binarySearch(for: "a", areInIncreasingOrder: >))
 
 
 

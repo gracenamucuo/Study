@@ -193,6 +193,7 @@
 		5A081B2521E46B7A000E4CFD /* AlgorithmExercise */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AlgorithmExercise; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A081B2721E46B7A000E4CFD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5A0A420C21D0CB8D0041E407 /* RunImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunImageCell.swift; sourceTree = "<group>"; };
+		5A0E190E21F6BB4400CE2F29 /* Questions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Questions.m; sourceTree = "<group>"; };
 		5A104D7921C20AD7001F6E1E /* AnnotatedPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotatedPhotoCell.swift; sourceTree = "<group>"; };
 		5A104D7B21C20B10001F6E1E /* RoundedCornersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersView.swift; sourceTree = "<group>"; };
 		5A12305921D0703F001200BD /* RunDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -819,6 +820,7 @@
 		5A70B8A121A0035800422A4B = {
 			isa = PBXGroup;
 			children = (
+				5A0E190E21F6BB4400CE2F29 /* Questions.m */,
 				5A26319021BCA2CC00946A01 /* Note.swift */,
 				5A19BD8021CA392700E16766 /* OCTest */,
 				5A70B8AC21A0035800422A4B /* SwiftExercise */,
