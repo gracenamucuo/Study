@@ -833,7 +833,52 @@ print(r.binarySearch(for: "a", areInIncreasingOrder: >))
 
 
 
+protocol TestProtocol {
+    static var name:String{get}
+    static func method()
+    
+}
 
+class StarShip:TestProtocol {
+    static var name: String{
+        get{
+            return "123"
+        }
+    }
+    
+    class func method() {
+        print("我是类型方法")
+    }
+    
+    var prefix:String?
+    
+}
 
+class TesPro {
+    var name: String {
+        get{
+            return "结构体"
+        }
+    }
+    
+}
 
+extension TestProtocol{
+    var age:Int {
+        get {
+            return 10
+        }
+    }
+}
 
+struct Test:TestProtocol {
+    static var name: String{
+        return "12"
+    }
+    
+    static func method() {
+        
+    }
+    
+    
+}
