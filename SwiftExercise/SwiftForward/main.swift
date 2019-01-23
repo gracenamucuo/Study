@@ -709,18 +709,36 @@ let firstDescriptor = NSSortDescriptor(key: #keyPath(Father.first), ascending: t
 
 typealias SortDescriptor<Value> = (Value,Value)->Bool
 
-func sortDescriptor<Value,Key>(key:@escaping (Value)->Key,ascending:Bool=true,_ comparator:@escaping(Key)->(Key)->ComparisonResult) -> SortDescriptor<Value> {
+func sortDescriptor3434<Value,Key>(key:@escaping (Value)->Key,ascending:Bool=true,_ comparator:@escaping(Key)->(Key)->ComparisonResult) -> SortDescriptor<Value> {
     return { lhs,rhs in
         let order:ComparisonResult = ascending ?.orderedAscending:.orderedDescending
         return comparator(key(lhs))(key(rhs)) == order
     }
 }
 
-let sortByFirstName:SortDescriptor<Father> = sortDescriptor(key: {$0.first}, String.localizedCaseInsensitiveCompare)
-let sortByLastName:SortDescriptor<Father> = sortDescriptor(key: {$0.last}, String.localizedCaseInsensitiveCompare)
+//let sortByFirstName:SortDescriptor<Father> = sortDescriptor(key: {$0.first}, String.localizedCaseInsensitiveCompare)
+//let sortByLastName:SortDescriptor<Father> = sortDescriptor(key: {$0.last}, String.localizedCaseInsensitiveCompare)
 //let sortByYear:SortDescriptor<Father> = sortDescriptor(key: {(f:Father) -> Int in return f.yearOfBirth }) { (h) -> ComparisonResult in
 //    return .orderedAscending
 //}
+
+let sortByFirstName1: SortDescriptor<Father> = sortDescriptor3434(key: { $0.first }, ascending: true) { (lhs: String) -> (String) -> ComparisonResult in
+    
+    return { lhs.localizedCaseInsensitiveCompare($0) }
+}
+
+let sortByYear1:SortDescriptor<Father> = sortDescriptor3434(key: { $0.yearOfBirth }, ascending: true) { (lhs:Int) -> (Int) -> ComparisonResult in
+    return { lhs < $0 ? .orderedAscending : .orderedDescending }
+}
+
+struct TestKey {
+    func test(_ a:TestKey) -> ComparisonResult {
+        return .orderedAscending
+    }
+}
+//_ = sortDescriptor(key:{(key:TestKey) in false}, TestKey.test)
+print("\(type(of: TestKey.test))啊啊啊啊啊啊啊啊啊")
+
 //people.sorted(by: sortByFirstName)
 
 func combine<Value>(sortDescriptors:[SortDescriptor<Value>]) -> SortDescriptor<Value> {

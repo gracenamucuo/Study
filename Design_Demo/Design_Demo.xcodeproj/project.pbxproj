@@ -22,6 +22,11 @@
 		5A03F77D20AC2F440097BC4F /* FactoryMethodCalculateMultiply.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A03F77C20AC2F440097BC4F /* FactoryMethodCalculateMultiply.m */; };
 		5A03F78020AC2FBA0097BC4F /* FactoryDivide.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A03F77F20AC2FBA0097BC4F /* FactoryDivide.m */; };
 		5A03F78320AC2FD00097BC4F /* FactoryMethodCalculateDivide.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A03F78220AC2FD00097BC4F /* FactoryMethodCalculateDivide.m */; };
+		5A082ECB21F8476F00015759 /* AlertFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A082ECA21F8476F00015759 /* AlertFactory.m */; };
+		5A082ED121F847B100015759 /* ConfirmAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A082ED021F847B100015759 /* ConfirmAlert.m */; };
+		5A082ED421F847C200015759 /* SelectAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A082ED321F847C100015759 /* SelectAlert.m */; };
+		5A082ED621F847CD00015759 /* SelectAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A082ED521F847CD00015759 /* SelectAlert.xib */; };
+		5A082ED821F849B500015759 /* ConfirmAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A082ED721F849B500015759 /* ConfirmAlert.xib */; };
 		5A355C0E20AD237500A26F2F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A355BFC20AD237400A26F2F /* User.m */; };
 		5A355C0F20AD237500A26F2F /* SqliteUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A355BFF20AD237400A26F2F /* SqliteUserInfo.m */; };
 		5A355C1020AD237500A26F2F /* CoreDataSearchInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A355C0420AD237400A26F2F /* CoreDataSearchInfo.m */; };
@@ -141,6 +146,15 @@
 		5A03F77F20AC2FBA0097BC4F /* FactoryDivide.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryDivide.m; sourceTree = "<group>"; };
 		5A03F78120AC2FD00097BC4F /* FactoryMethodCalculateDivide.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FactoryMethodCalculateDivide.h; sourceTree = "<group>"; };
 		5A03F78220AC2FD00097BC4F /* FactoryMethodCalculateDivide.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryMethodCalculateDivide.m; sourceTree = "<group>"; };
+		5A082EC721F8474200015759 /* AlertShowProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertShowProtocol.h; sourceTree = "<group>"; };
+		5A082EC921F8476F00015759 /* AlertFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertFactory.h; sourceTree = "<group>"; };
+		5A082ECA21F8476F00015759 /* AlertFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertFactory.m; sourceTree = "<group>"; };
+		5A082ECF21F847B100015759 /* ConfirmAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmAlert.h; sourceTree = "<group>"; };
+		5A082ED021F847B100015759 /* ConfirmAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfirmAlert.m; sourceTree = "<group>"; };
+		5A082ED221F847C100015759 /* SelectAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectAlert.h; sourceTree = "<group>"; };
+		5A082ED321F847C100015759 /* SelectAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectAlert.m; sourceTree = "<group>"; };
+		5A082ED521F847CD00015759 /* SelectAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectAlert.xib; sourceTree = "<group>"; };
+		5A082ED721F849B500015759 /* ConfirmAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmAlert.xib; sourceTree = "<group>"; };
 		5A355BFB20AD237400A26F2F /* CoreDataSettingsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataSettingsInfo.h; sourceTree = "<group>"; };
 		5A355BFC20AD237400A26F2F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		5A355BFD20AD237400A26F2F /* UserInfoProrocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoProrocol.h; sourceTree = "<group>"; };
@@ -324,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				5A03F76520AC187F0097BC4F /* 计算器 */,
+				5A082EC821F8474A00015759 /* Alert */,
 			);
 			path = "简单工厂模式";
 			sourceTree = "<group>";
@@ -351,6 +366,22 @@
 				5ABC5FC620AD2D7A00D04B09 /* 具体产品 */,
 			);
 			path = "工厂方法模式";
+			sourceTree = "<group>";
+		};
+		5A082EC821F8474A00015759 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				5A082EC721F8474200015759 /* AlertShowProtocol.h */,
+				5A082EC921F8476F00015759 /* AlertFactory.h */,
+				5A082ECA21F8476F00015759 /* AlertFactory.m */,
+				5A082ECF21F847B100015759 /* ConfirmAlert.h */,
+				5A082ED021F847B100015759 /* ConfirmAlert.m */,
+				5A082ED721F849B500015759 /* ConfirmAlert.xib */,
+				5A082ED221F847C100015759 /* SelectAlert.h */,
+				5A082ED321F847C100015759 /* SelectAlert.m */,
+				5A082ED521F847CD00015759 /* SelectAlert.xib */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		5A355C1620AD237E00A26F2F /* Model */ = {
@@ -1062,8 +1093,10 @@
 				5A7BFE0C20AE831A0035D99F /* ball.png in Resources */,
 				5A6CE7BB20A529A40046585D /* LaunchScreen.storyboard in Resources */,
 				5A7BFE1120AE831A0035D99F /* sonw.png in Resources */,
+				5A082ED821F849B500015759 /* ConfirmAlert.xib in Resources */,
 				5A6CE7B820A529A40046585D /* Assets.xcassets in Resources */,
 				5A6CE7B620A529A30046585D /* Main.storyboard in Resources */,
+				5A082ED621F847CD00015759 /* SelectAlert.xib in Resources */,
 				5A7BFE0D20AE831A0035D99F /* door.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1097,6 +1130,7 @@
 				5A6CE7B320A529A30046585D /* ViewController.m in Sources */,
 				5A409B6B20ADCA3B004A04FF /* ConcreteTalkDecrator.m in Sources */,
 				5A7BFDDC20AE7CC30035D99F /* UIView+loadFromNib.m in Sources */,
+				5A082ED421F847C200015759 /* SelectAlert.m in Sources */,
 				5A4A54B520CA22BD002786EB /* RedDuck.m in Sources */,
 				5A6CE7BE20A529A40046585D /* main.m in Sources */,
 				5A7BFDC120AE6E8D0035D99F /* AdapterTestView.m in Sources */,
@@ -1163,6 +1197,8 @@
 				5AEE37AD20CCB66D00F68536 /* MediatorPatternController.m in Sources */,
 				5A03F76120AC0E920097BC4F /* CalcluateFactory.m in Sources */,
 				5A5B2FDE20B56DC90027114E /* DuckOrder.m in Sources */,
+				5A082ECB21F8476F00015759 /* AlertFactory.m in Sources */,
+				5A082ED121F847B100015759 /* ConfirmAlert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
