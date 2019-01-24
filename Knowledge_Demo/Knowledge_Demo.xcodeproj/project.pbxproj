@@ -14,7 +14,20 @@
 		5AFB5C0C21F9845A0052674F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0A21F9845A0052674F /* LaunchScreen.storyboard */; };
 		5AFB5C0F21F9845A0052674F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0E21F9845A0052674F /* main.m */; };
 		5AFB5C1621F9846E0052674F /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C1521F9846E0052674F /* Note.m */; };
+		5AFB5C1F21F9A9D60052674F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C1E21F9A9D60052674F /* main.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5AFB5C1A21F9A9D60052674F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5AFB5BFC21F984590052674F /* Knowledge_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Knowledge_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,10 +41,19 @@
 		5AFB5C0D21F9845A0052674F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AFB5C0E21F9845A0052674F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5AFB5C1521F9846E0052674F /* Note.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		5AFB5C1C21F9A9D60052674F /* C语言 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C语言"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AFB5C1E21F9A9D60052674F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5AFB5BF921F984590052674F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AFB5C1921F9A9D60052674F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +68,7 @@
 			children = (
 				5AFB5C1521F9846E0052674F /* Note.m */,
 				5AFB5BFE21F984590052674F /* Knowledge_Demo */,
+				5AFB5C1D21F9A9D60052674F /* C语言 */,
 				5AFB5BFD21F984590052674F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				5AFB5BFC21F984590052674F /* Knowledge_Demo.app */,
+				5AFB5C1C21F9A9D60052674F /* C语言 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +96,14 @@
 				5AFB5C0E21F9845A0052674F /* main.m */,
 			);
 			path = Knowledge_Demo;
+			sourceTree = "<group>";
+		};
+		5AFB5C1D21F9A9D60052674F /* C语言 */ = {
+			isa = PBXGroup;
+			children = (
+				5AFB5C1E21F9A9D60052674F /* main.m */,
+			);
+			path = "C语言";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +126,23 @@
 			productReference = 5AFB5BFC21F984590052674F /* Knowledge_Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5AFB5C1B21F9A9D60052674F /* C语言 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AFB5C2221F9A9D60052674F /* Build configuration list for PBXNativeTarget "C语言" */;
+			buildPhases = (
+				5AFB5C1821F9A9D60052674F /* Sources */,
+				5AFB5C1921F9A9D60052674F /* Frameworks */,
+				5AFB5C1A21F9A9D60052674F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "C语言";
+			productName = "C语言";
+			productReference = 5AFB5C1C21F9A9D60052674F /* C语言 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -104,6 +153,9 @@
 				ORGANIZATIONNAME = "戴运鹏";
 				TargetAttributes = {
 					5AFB5BFB21F984590052674F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					5AFB5C1B21F9A9D60052674F = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -122,6 +174,7 @@
 			projectRoot = "";
 			targets = (
 				5AFB5BFB21F984590052674F /* Knowledge_Demo */,
+				5AFB5C1B21F9A9D60052674F /* C语言 */,
 			);
 		};
 /* End PBXProject section */
@@ -148,6 +201,14 @@
 				5AFB5C0F21F9845A0052674F /* main.m in Sources */,
 				5AFB5C0121F984590052674F /* AppDelegate.m in Sources */,
 				5AFB5C1621F9846E0052674F /* Note.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AFB5C1821F9A9D60052674F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AFB5C1F21F9A9D60052674F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +378,28 @@
 			};
 			name = Release;
 		};
+		5AFB5C2021F9A9D60052674F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5AFB5C2121F9A9D60052674F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -334,6 +417,15 @@
 			buildConfigurations = (
 				5AFB5C1321F9845A0052674F /* Debug */,
 				5AFB5C1421F9845A0052674F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AFB5C2221F9A9D60052674F /* Build configuration list for PBXNativeTarget "C语言" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AFB5C2021F9A9D60052674F /* Debug */,
+				5AFB5C2121F9A9D60052674F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

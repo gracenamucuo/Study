@@ -900,29 +900,19 @@ struct Test:TestProtocol {
     
     
 }
-
-
-struct Test1 {
-    var test1:Test2?
-    
+//=============================字符串====================、
+let str = "123"
+print(str.utf16.count)
+//let bits = unsafeBitCast(str, to: _StringCore.self)
+struct StringCoreClone {
+    var _baseAddress:UnsafeMutableRawPointer?
+    var _countAndFlags:UInt
+    var _owner:AnyObject?
 }
+let clone = unsafeBitCast(str, to: _StringGuts.self)
+print(clone)
+//print(clone._countAndFlags)
 
-struct Test2 {
-    var address:String?
-    
-}
 
-let t2 = Test2.init(address: "name")
-let t1 = Test1.init(test1: nil)
 
-if let t = t1.test1?.address?.hasPrefix("o"){
-    if t {
-    print(type(of: t))
-        print("那你")
-    }else{
-        print("你")
-    }
-}else{
-    print("空")
-}
 
