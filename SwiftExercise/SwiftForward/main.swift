@@ -900,3 +900,29 @@ struct Test:TestProtocol {
     
     
 }
+
+
+struct Test1 {
+    var test1:Test2?
+    
+}
+
+struct Test2 {
+    var address:String?
+    
+}
+
+let t2 = Test2.init(address: "name")
+let t1 = Test1.init(test1: nil)
+
+if let t = t1.test1?.address?.hasPrefix("o"){
+    if t {
+    print(type(of: t))
+        print("那你")
+    }else{
+        print("你")
+    }
+}else{
+    print("空")
+}
+
