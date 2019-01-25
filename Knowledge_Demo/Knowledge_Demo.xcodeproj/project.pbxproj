@@ -7,17 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A010EA521FAA38900579480 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A010EA421FAA38900579480 /* main.m */; };
+		5A010EAB21FAA3A700579480 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A010EAA21FAA3A700579480 /* Person.m */; };
+		5A010EAE21FAA3D400579480 /* Person+PropertyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A010EAD21FAA3D400579480 /* Person+PropertyCategory.m */; };
+		5A010EB321FABB1900579480 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A010EB121FABB1900579480 /* Person.m */; };
+		5A010EB621FADC8200579480 /* WeakInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A010EB521FADC8200579480 /* WeakInstance.m */; };
+		5A010EB921FAE09B00579480 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A010EB821FAE09B00579480 /* Son.m */; };
+		5A010EBC21FAE12600579480 /* Person+WeakAssociated.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A010EBB21FAE12600579480 /* Person+WeakAssociated.m */; };
 		5AFB5C0121F984590052674F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0021F984590052674F /* AppDelegate.m */; };
 		5AFB5C0421F9845A0052674F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0321F9845A0052674F /* ViewController.m */; };
 		5AFB5C0721F9845A0052674F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0521F9845A0052674F /* Main.storyboard */; };
 		5AFB5C0921F9845A0052674F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0821F9845A0052674F /* Assets.xcassets */; };
 		5AFB5C0C21F9845A0052674F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0A21F9845A0052674F /* LaunchScreen.storyboard */; };
 		5AFB5C0F21F9845A0052674F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0E21F9845A0052674F /* main.m */; };
-		5AFB5C1621F9846E0052674F /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C1521F9846E0052674F /* Note.m */; };
 		5AFB5C1F21F9A9D60052674F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C1E21F9A9D60052674F /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		5A010EA021FAA38900579480 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		5AFB5C1A21F9A9D60052674F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -30,6 +45,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A010EA221FAA38900579480 /* 类别与扩展 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "类别与扩展"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A010EA421FAA38900579480 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A010EA921FAA3A700579480 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		5A010EAA21FAA3A700579480 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		5A010EAC21FAA3D400579480 /* Person+PropertyCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+PropertyCategory.h"; sourceTree = "<group>"; };
+		5A010EAD21FAA3D400579480 /* Person+PropertyCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+PropertyCategory.m"; sourceTree = "<group>"; };
+		5A010EAF21FAA9EA00579480 /* Person+TestExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+TestExtension.h"; sourceTree = "<group>"; };
+		5A010EB121FABB1900579480 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		5A010EB221FABB1900579480 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		5A010EB421FADC8200579480 /* WeakInstance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakInstance.h; sourceTree = "<group>"; };
+		5A010EB521FADC8200579480 /* WeakInstance.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakInstance.m; sourceTree = "<group>"; };
+		5A010EB721FAE09B00579480 /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
+		5A010EB821FAE09B00579480 /* Son.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
+		5A010EBA21FAE12600579480 /* Person+WeakAssociated.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+WeakAssociated.h"; sourceTree = "<group>"; };
+		5A010EBB21FAE12600579480 /* Person+WeakAssociated.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+WeakAssociated.m"; sourceTree = "<group>"; };
 		5AFB5BFC21F984590052674F /* Knowledge_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Knowledge_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFB5BFF21F984590052674F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5AFB5C0021F984590052674F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -46,6 +76,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5A010E9F21FAA38900579480 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5AFB5BF921F984590052674F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,12 +100,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A010EA321FAA38900579480 /* 类别与扩展 */ = {
+			isa = PBXGroup;
+			children = (
+				5A010EA421FAA38900579480 /* main.m */,
+				5A010EA921FAA3A700579480 /* Person.h */,
+				5A010EAA21FAA3A700579480 /* Person.m */,
+				5A010EAC21FAA3D400579480 /* Person+PropertyCategory.h */,
+				5A010EAD21FAA3D400579480 /* Person+PropertyCategory.m */,
+				5A010EAF21FAA9EA00579480 /* Person+TestExtension.h */,
+			);
+			path = "类别与扩展";
+			sourceTree = "<group>";
+		};
 		5AFB5BF321F984590052674F = {
 			isa = PBXGroup;
 			children = (
 				5AFB5C1521F9846E0052674F /* Note.m */,
 				5AFB5BFE21F984590052674F /* Knowledge_Demo */,
 				5AFB5C1D21F9A9D60052674F /* C语言 */,
+				5A010EA321FAA38900579480 /* 类别与扩展 */,
 				5AFB5BFD21F984590052674F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +129,7 @@
 			children = (
 				5AFB5BFC21F984590052674F /* Knowledge_Demo.app */,
 				5AFB5C1C21F9A9D60052674F /* C语言 */,
+				5A010EA221FAA38900579480 /* 类别与扩展 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,11 +141,19 @@
 				5AFB5C0021F984590052674F /* AppDelegate.m */,
 				5AFB5C0221F984590052674F /* ViewController.h */,
 				5AFB5C0321F9845A0052674F /* ViewController.m */,
+				5A010EB221FABB1900579480 /* Person.h */,
+				5A010EB121FABB1900579480 /* Person.m */,
 				5AFB5C0521F9845A0052674F /* Main.storyboard */,
 				5AFB5C0821F9845A0052674F /* Assets.xcassets */,
 				5AFB5C0A21F9845A0052674F /* LaunchScreen.storyboard */,
 				5AFB5C0D21F9845A0052674F /* Info.plist */,
 				5AFB5C0E21F9845A0052674F /* main.m */,
+				5A010EB421FADC8200579480 /* WeakInstance.h */,
+				5A010EB521FADC8200579480 /* WeakInstance.m */,
+				5A010EB721FAE09B00579480 /* Son.h */,
+				5A010EB821FAE09B00579480 /* Son.m */,
+				5A010EBA21FAE12600579480 /* Person+WeakAssociated.h */,
+				5A010EBB21FAE12600579480 /* Person+WeakAssociated.m */,
 			);
 			path = Knowledge_Demo;
 			sourceTree = "<group>";
@@ -109,6 +169,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5A010EA121FAA38900579480 /* 类别与扩展 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A010EA821FAA38900579480 /* Build configuration list for PBXNativeTarget "类别与扩展" */;
+			buildPhases = (
+				5A010E9E21FAA38900579480 /* Sources */,
+				5A010E9F21FAA38900579480 /* Frameworks */,
+				5A010EA021FAA38900579480 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "类别与扩展";
+			productName = "类别与扩展";
+			productReference = 5A010EA221FAA38900579480 /* 类别与扩展 */;
+			productType = "com.apple.product-type.tool";
+		};
 		5AFB5BFB21F984590052674F /* Knowledge_Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AFB5C1221F9845A0052674F /* Build configuration list for PBXNativeTarget "Knowledge_Demo" */;
@@ -152,6 +229,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "戴运鹏";
 				TargetAttributes = {
+					5A010EA121FAA38900579480 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					5AFB5BFB21F984590052674F = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -175,6 +255,7 @@
 			targets = (
 				5AFB5BFB21F984590052674F /* Knowledge_Demo */,
 				5AFB5C1B21F9A9D60052674F /* C语言 */,
+				5A010EA121FAA38900579480 /* 类别与扩展 */,
 			);
 		};
 /* End PBXProject section */
@@ -193,14 +274,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5A010E9E21FAA38900579480 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A010EAB21FAA3A700579480 /* Person.m in Sources */,
+				5A010EAE21FAA3D400579480 /* Person+PropertyCategory.m in Sources */,
+				5A010EA521FAA38900579480 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5AFB5BF821F984590052674F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A010EB921FAE09B00579480 /* Son.m in Sources */,
+				5A010EB621FADC8200579480 /* WeakInstance.m in Sources */,
+				5A010EBC21FAE12600579480 /* Person+WeakAssociated.m in Sources */,
+				5A010EB321FABB1900579480 /* Person.m in Sources */,
 				5AFB5C0421F9845A0052674F /* ViewController.m in Sources */,
 				5AFB5C0F21F9845A0052674F /* main.m in Sources */,
 				5AFB5C0121F984590052674F /* AppDelegate.m in Sources */,
-				5AFB5C1621F9846E0052674F /* Note.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +316,7 @@
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		5AFB5C0A21F9845A0052674F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -234,6 +329,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5A010EA621FAA38900579480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5A010EA721FAA38900579480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		5AFB5C1021F9845A0052674F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -351,6 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = Knowledge_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -367,6 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
 				INFOPLIST_FILE = Knowledge_Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -403,6 +522,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5A010EA821FAA38900579480 /* Build configuration list for PBXNativeTarget "类别与扩展" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A010EA621FAA38900579480 /* Debug */,
+				5A010EA721FAA38900579480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5AFB5BF721F984590052674F /* Build configuration list for PBXProject "Knowledge_Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

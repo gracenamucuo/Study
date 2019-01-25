@@ -8,11 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+struct Person{
+    char name[3];
+    int age;
+};
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSString *str = @"123";
-        char *c = [str cStringUsingEncoding:NSUTF8StringEncoding];
-        puts(c);
+        struct Person p = {"124",10};
+        struct Person *p1 =&p;
+        
+        
         
     }
     return 0;
