@@ -21,8 +21,21 @@ static NSString *nameWithRuntimeKey = @"nameWithRuntimeKey";
     return objc_getAssociatedObject(self, &nameWithRuntimeKey);
 }
 
+
 - (void)originalMethod
 {
     //===
+}
+
+//验证当对象本身置为nil的时候，其关联对象是否销毁
+
+- (void)setAssociateSon:(Son *)associateSon
+{
+    objc_setAssociatedObject(self, @selector(associateSon), associateSon, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (Son *)associateSon
+{
+    return objc_getAssociatedObject(self, @selector(associateSon));
 }
 @end

@@ -5,6 +5,7 @@
 //  Created by 戴运鹏 on 2019/1/24.
 //  Copyright © 2019 戴运鹏. All rights reserved.
 //
+//概念   应用  原理
 
 //琐碎知识点
 //Category和Extension
@@ -28,8 +29,8 @@ struct objc_category {
 
 //匿名类别 编译期添加到类中，
 匿名类别可以声明属性，方法，和实例变量，但都是私有的。
-Extension一般用来隐藏类的私有消息，你必须有一个类的源码才能添加一个类的Extension，所以对于系统一些类，如NSString，就无法添加类扩展
-伴随着类的产生而产生，也随着类的消失而消失。
+Extension一般用来隐藏类的私有消息，你必须有一个类的源码才能添加一个类的Extension，所以对于系统一些类，如NSString，就无法添加.。
+类扩展伴随着类的产生而产生，也随着类的消失而消失。
 extension可以添加实例变量，category不可以，因为在运行期对象的内存布局已经确定，添加实例变量会破坏类的内部布局。
 //=====================atomic====只能保证getter方法能够返回一个完整的value  属性是数组的时候，在多线程中对数组元素进行添加，取值操作，可能会崩溃
 属性中不声明atomic默认就是atomic
@@ -91,8 +92,32 @@ weak 的实现原理可以概括一下三步：
 2、添加引用时：objc_initWeak函数会调用 objc_storeWeak() 函数， objc_storeWeak() 的作用是更新指针指向，创建对应的弱引用表。
 3、释放时，调用clearDeallocating函数。clearDeallocating函数首先根据对象地址获取所有weak指针地址的数组，然后遍历这个数组把其中的数据设为nil，最后把这个entry从weak表中删除，最后清理对象的记录。
 //=================================关联对象================================
-
+概念
+关联策略 关联属性为block时是copy
+key的几种表示
+应用
+分类与关联对象是OC的扩展机制的两个特性:分类用来扩展方法，关联对象用来扩展属性。
+给UIButton关联对象  关联方法 能够埋点
+有时候我们在分类中使用NSNotificationCenter或者KVO，推荐使用关联的对象作为观察者，尽量避免对象观察自身❓
+原理
+关键的几个类:
+AssociationsManager
+AssociationsHashMap
+ObjectAssociationMap
+ObjcAssociation
+AssociationsManager持有一个AssociationsHashMap,hashmap以被关联对象(被包装)为key,以ObjectAssociationMap类型为value(map里存有该被关联对象上所有的关联对象)。objectAssociationMap是以设置关联对象的key为key。以policy和value封装成的ObjcAssociation类型作为value。
+关联对象并不是存储在被关联对象本身内存中，而是存储在全局的统一的一个AssociationsManager中，如果设置关联对象为nil，就相当于是移除关联对象。
+当被关联对象销毁的时候，其上的所有关联对象都会被销毁。不需要手动将所有关联对象置为nil
 //========================属性@property=====================================================
 动态生成属性的getter和setter方法的话，使用@dynamic,而且需要手动声明实例变量成员。
 如果setter和getter方法都重写了，则需要手动写出合成@synthesize nameStr = _nameStr;否则，编译器没有声明对应的实例变量。
 不可变对象属性修饰符使用copy，可变对象属性修饰符使用strong
+//========KVC=====================
+valueForKey:
+1:访问器匹配:先寻找与key，isKey，getKey(还有_key)同名的方法，返回值为对象类型。
+2:实例变量匹配:寻找与key,_key,isKey,_isKey同名的实例变量。
+setValueForKey:
+1:存取器匹配:先寻找与setKey同名的方法，且参数是一个对象类型。
+2:实例变量匹配:寻找与key，_isKey,_key,isKey同名的实例变量，直接赋值。
+//=========KVO====================
+苹果使用了一种isa交换的技术，当objectA被观察后，objectA对象的isa指针被指向了一个新建的ASClassA的子类NSKVONotifying_ASClassA，且这个子类重写了被观察值的setter方法和class方法，dealloc和_isKVO方法，然后使objectA对象的isa指针指向这个新建的类，然后事实上objectA变为了NSKVONotifying_ASClassA的实例对象，执行方法要从这个类的方法列表里找。(同时苹果警告我们，通过isa获取类的类型是不可靠的，通过class方法总是能得到正确的类).

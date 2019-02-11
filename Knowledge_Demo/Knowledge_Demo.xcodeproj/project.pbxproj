@@ -14,6 +14,12 @@
 		5A010EB621FADC8200579480 /* WeakInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A010EB521FADC8200579480 /* WeakInstance.m */; };
 		5A010EB921FAE09B00579480 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A010EB821FAE09B00579480 /* Son.m */; };
 		5A010EBC21FAE12600579480 /* Person+WeakAssociated.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A010EBB21FAE12600579480 /* Person+WeakAssociated.m */; };
+		5A4712AE221140EE009E3383 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4712AD221140EE009E3383 /* Son.m */; };
+		5A4712E22211642B009E3383 /* KVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4712E12211642B009E3383 /* KVCModel.m */; };
+		5A4712E522116437009E3383 /* KVCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4712E422116437009E3383 /* KVCClass.m */; };
+		5A4712E9221172AE009E3383 /* KVOClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4712E8221172AE009E3383 /* KVOClassA.m */; };
+		5A4712EC221172BA009E3383 /* KVOClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4712EB221172BA009E3383 /* KVOClassB.m */; };
+		5A4712EF221172C4009E3383 /* KVOClassC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4712EE221172C4009E3383 /* KVOClassC.m */; };
 		5AFB5C0121F984590052674F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0021F984590052674F /* AppDelegate.m */; };
 		5AFB5C0421F9845A0052674F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0321F9845A0052674F /* ViewController.m */; };
 		5AFB5C0721F9845A0052674F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0521F9845A0052674F /* Main.storyboard */; };
@@ -60,6 +66,18 @@
 		5A010EB821FAE09B00579480 /* Son.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
 		5A010EBA21FAE12600579480 /* Person+WeakAssociated.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+WeakAssociated.h"; sourceTree = "<group>"; };
 		5A010EBB21FAE12600579480 /* Person+WeakAssociated.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+WeakAssociated.m"; sourceTree = "<group>"; };
+		5A4712AC221140EE009E3383 /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
+		5A4712AD221140EE009E3383 /* Son.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
+		5A4712E02211642B009E3383 /* KVCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCModel.h; sourceTree = "<group>"; };
+		5A4712E12211642B009E3383 /* KVCModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCModel.m; sourceTree = "<group>"; };
+		5A4712E322116437009E3383 /* KVCClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCClass.h; sourceTree = "<group>"; };
+		5A4712E422116437009E3383 /* KVCClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCClass.m; sourceTree = "<group>"; };
+		5A4712E7221172AE009E3383 /* KVOClassA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOClassA.h; sourceTree = "<group>"; };
+		5A4712E8221172AE009E3383 /* KVOClassA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOClassA.m; sourceTree = "<group>"; };
+		5A4712EA221172BA009E3383 /* KVOClassB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOClassB.h; sourceTree = "<group>"; };
+		5A4712EB221172BA009E3383 /* KVOClassB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOClassB.m; sourceTree = "<group>"; };
+		5A4712ED221172C4009E3383 /* KVOClassC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOClassC.h; sourceTree = "<group>"; };
+		5A4712EE221172C4009E3383 /* KVOClassC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOClassC.m; sourceTree = "<group>"; };
 		5AFB5BFC21F984590052674F /* Knowledge_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Knowledge_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFB5BFF21F984590052674F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5AFB5C0021F984590052674F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -103,14 +121,72 @@
 		5A010EA321FAA38900579480 /* 类别与扩展 */ = {
 			isa = PBXGroup;
 			children = (
+				5A4712DF221163E4009E3383 /* 类别 */,
+				5A4712E62211643C009E3383 /* KVC */,
+				5A4712F0221172CA009E3383 /* KVO */,
+			);
+			path = "类别与扩展";
+			sourceTree = "<group>";
+		};
+		5A4712A922110B21009E3383 /* 属性测试 */ = {
+			isa = PBXGroup;
+			children = (
+				5A010EB221FABB1900579480 /* Person.h */,
+				5A010EB121FABB1900579480 /* Person.m */,
+			);
+			path = "属性测试";
+			sourceTree = "<group>";
+		};
+		5A4712AB22114085009E3383 /* weak运用 */ = {
+			isa = PBXGroup;
+			children = (
+				5A010EB421FADC8200579480 /* WeakInstance.h */,
+				5A010EB521FADC8200579480 /* WeakInstance.m */,
+				5A010EB721FAE09B00579480 /* Son.h */,
+				5A010EB821FAE09B00579480 /* Son.m */,
+				5A010EBA21FAE12600579480 /* Person+WeakAssociated.h */,
+				5A010EBB21FAE12600579480 /* Person+WeakAssociated.m */,
+			);
+			path = "weak运用";
+			sourceTree = "<group>";
+		};
+		5A4712DF221163E4009E3383 /* 类别 */ = {
+			isa = PBXGroup;
+			children = (
 				5A010EA421FAA38900579480 /* main.m */,
 				5A010EA921FAA3A700579480 /* Person.h */,
 				5A010EAA21FAA3A700579480 /* Person.m */,
 				5A010EAC21FAA3D400579480 /* Person+PropertyCategory.h */,
 				5A010EAD21FAA3D400579480 /* Person+PropertyCategory.m */,
+				5A4712AC221140EE009E3383 /* Son.h */,
+				5A4712AD221140EE009E3383 /* Son.m */,
 				5A010EAF21FAA9EA00579480 /* Person+TestExtension.h */,
 			);
-			path = "类别与扩展";
+			path = "类别";
+			sourceTree = "<group>";
+		};
+		5A4712E62211643C009E3383 /* KVC */ = {
+			isa = PBXGroup;
+			children = (
+				5A4712E02211642B009E3383 /* KVCModel.h */,
+				5A4712E12211642B009E3383 /* KVCModel.m */,
+				5A4712E322116437009E3383 /* KVCClass.h */,
+				5A4712E422116437009E3383 /* KVCClass.m */,
+			);
+			path = KVC;
+			sourceTree = "<group>";
+		};
+		5A4712F0221172CA009E3383 /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				5A4712E7221172AE009E3383 /* KVOClassA.h */,
+				5A4712E8221172AE009E3383 /* KVOClassA.m */,
+				5A4712EA221172BA009E3383 /* KVOClassB.h */,
+				5A4712EB221172BA009E3383 /* KVOClassB.m */,
+				5A4712ED221172C4009E3383 /* KVOClassC.h */,
+				5A4712EE221172C4009E3383 /* KVOClassC.m */,
+			);
+			path = KVO;
 			sourceTree = "<group>";
 		};
 		5AFB5BF321F984590052674F = {
@@ -141,19 +217,13 @@
 				5AFB5C0021F984590052674F /* AppDelegate.m */,
 				5AFB5C0221F984590052674F /* ViewController.h */,
 				5AFB5C0321F9845A0052674F /* ViewController.m */,
-				5A010EB221FABB1900579480 /* Person.h */,
-				5A010EB121FABB1900579480 /* Person.m */,
+				5A4712A922110B21009E3383 /* 属性测试 */,
 				5AFB5C0521F9845A0052674F /* Main.storyboard */,
 				5AFB5C0821F9845A0052674F /* Assets.xcassets */,
 				5AFB5C0A21F9845A0052674F /* LaunchScreen.storyboard */,
 				5AFB5C0D21F9845A0052674F /* Info.plist */,
 				5AFB5C0E21F9845A0052674F /* main.m */,
-				5A010EB421FADC8200579480 /* WeakInstance.h */,
-				5A010EB521FADC8200579480 /* WeakInstance.m */,
-				5A010EB721FAE09B00579480 /* Son.h */,
-				5A010EB821FAE09B00579480 /* Son.m */,
-				5A010EBA21FAE12600579480 /* Person+WeakAssociated.h */,
-				5A010EBB21FAE12600579480 /* Person+WeakAssociated.m */,
+				5A4712AB22114085009E3383 /* weak运用 */,
 			);
 			path = Knowledge_Demo;
 			sourceTree = "<group>";
@@ -278,9 +348,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A4712E9221172AE009E3383 /* KVOClassA.m in Sources */,
+				5A4712AE221140EE009E3383 /* Son.m in Sources */,
 				5A010EAB21FAA3A700579480 /* Person.m in Sources */,
 				5A010EAE21FAA3D400579480 /* Person+PropertyCategory.m in Sources */,
+				5A4712E522116437009E3383 /* KVCClass.m in Sources */,
+				5A4712E22211642B009E3383 /* KVCModel.m in Sources */,
+				5A4712EC221172BA009E3383 /* KVOClassB.m in Sources */,
 				5A010EA521FAA38900579480 /* main.m in Sources */,
+				5A4712EF221172C4009E3383 /* KVOClassC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
