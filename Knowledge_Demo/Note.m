@@ -120,4 +120,102 @@ setValueForKey:
 1:存取器匹配:先寻找与setKey同名的方法，且参数是一个对象类型。
 2:实例变量匹配:寻找与key，_isKey,_key,isKey同名的实例变量，直接赋值。
 //=========KVO====================
-苹果使用了一种isa交换的技术，当objectA被观察后，objectA对象的isa指针被指向了一个新建的ASClassA的子类NSKVONotifying_ASClassA，且这个子类重写了被观察值的setter方法和class方法，dealloc和_isKVO方法，然后使objectA对象的isa指针指向这个新建的类，然后事实上objectA变为了NSKVONotifying_ASClassA的实例对象，执行方法要从这个类的方法列表里找。(同时苹果警告我们，通过isa获取类的类型是不可靠的，通过class方法总是能得到正确的类).
+苹果使用了一种isa交换的技术，当objectA被观察后，objectA对象的isa指针被指向了一个新建的ASClassA的子类NSKVONotifying_ASClassA，且这个子类重写了被观察值的setter方法和class方法【重写了这个方法，是为了将得到的class类型还是原来的类，隐藏运行时生成的NSKVONotifying类。】，dealloc和_isKVO方法，然后使objectA对象的isa指针指向这个新建的类，然后事实上objectA变为了NSKVONotifying_ASClassA的实例对象，执行方法要从这个类的方法列表里找。(同时苹果警告我们，通过isa获取类的类型是不可靠的，通过class方法总是能得到正确的类).
+NSKVONotifying_ASClassA作为子类重写了setage方法:1、调用willChangeValueForKey 2、调用父类的setter方法，进行赋值 3、调用didChangeValueForKey 该方法会调用监听器的监听方法，最终执行监听者的observeValueForKeyPath方法。
+手动触发KVO
+手动调用 willChangeValeuForKey 和 didChangeValeuForKey就可以 两者必须调。
+可以在重写didChangeValeuForKey方法中调用[super didChangeValeuForKey:@""]之前(这时新值已经赋值成功，在这里做判断条件可以不触发kvo)
+//=========OC对象======
+ NSObjcet实际上是只有一个名为isa的指针的结构体，因此占用一个指针变量所占用的内存空间大小，如果64bit占用8个字节，如果32bit占用4个字节。
+一个自定对象的内存大小是isa指针的内存加上该类的实例变量的内存。
+class_getInstanceSize([m class])//可以获得一个实例的内存大小
+instance 实例对象 里存储isa和实例变量的值 isa ☞ class
+class 类对象 每一种类只有一个类对象    存放isa，superclass,属性信息，对象方法信息，协议信息，成员变量信息 isa ☞ meta-class
+meta-class 元类对象 每个类在内存中也只要一个元类对象 存放isa,superclass,类方法信息等  isa ☞ root-meta-class ;root-meta-class 指向自己
+//=========Class==========
+struct objc_class : objc_object {
+    // Class ISA;
+    Class superclass;
+    cache_t cache;             // formerly cache pointer and vtable
+    class_data_bits_t bits;    // class_rw_t * plus custom rr/alloc flags
+    
+    class_rw_t *data() {
+        return bits.data();
+    }
+    void setData(class_rw_t *newData) {
+        bits.setData(newData);
+    }
+    
+    void setInfo(uint32_t set) {
+        assert(isFuture()  ||  isRealized());
+        data()->setFlags(set);
+    }
+    
+    void clearInfo(uint32_t clear) {
+        assert(isFuture()  ||  isRealized());
+        data()->clearFlags(clear);
+    }
+//----------- class_rw_t
+    struct class_rw_t {
+        // Be warned that Symbolication knows the layout of this structure.
+        uint32_t flags;
+        uint32_t version;
+        
+        const class_ro_t *ro;
+        
+        method_array_t methods;
+        property_array_t properties;
+        protocol_array_t protocols;
+        
+        Class firstSubclass;
+        Class nextSiblingClass;
+//------------ class_ro_t
+        struct class_ro_t {
+            uint32_t flags;
+            uint32_t instanceStart;
+            uint32_t instanceSize;
+#ifdef __LP64__
+            uint32_t reserved;
+#endif
+            
+            const uint8_t * ivarLayout;
+            
+            const char * name;
+            method_list_t * baseMethodList;
+            protocol_list_t * baseProtocols;
+            const ivar_list_t * ivars;
+            
+            const uint8_t * weakIvarLayout;
+            property_list_t *baseProperties;
+            
+            method_list_t *baseMethods() const {
+                return baseMethodList;
+            }
+        };
+//=========方法的调用=======
+1:对象调用实例方法时，通过isa指针找到类对象，在类对象的方法列表中找到对应的方法进行执行。 【如果每一个对象都保存了自己能执行的方法，那么对内存的占用有极大的影响】
+2:当类调用类方法时候，通过其isa指针找到meta-class对象，在其中找到类方法的实现进行调用。
+3:对象调用父类的实例方法时,通过isa找到自己的类对象，再通过其中的superclass指针找到父类类对象，然后找到对象方法实现进行调用。如果到父类里还没有找到，就进行继续往上找，直到找到NSObject的类对象。
+//======autoreleasepool======
+什么对象被添加到自动释放池？
+在ARC环境下，以alloc/new/copy/mutableCopy开头的方法返回值取得的对象是自己生成并且持有的，其他情况是非自己持有的对象，会自动加入到autoreleasepoo【 NSString *str = [NSString stringWithFormat:@"%d",i]】此时对象的持有者就是AutoreleasePool。
+自动释放池释放的时机？
+没有手动加AutoreleasePool的情况下，Autorelease对象是在当前的Runloop迭代结束的时候释放的。手动添加的Autorelease对象也是自动计数的，当引用计数为0的时候，被释放掉。
+runloop中有关autorelease的两个回调是1)即将进入loop，_wrapRunLoopWithAutoreleasePoolHandler回调会_objc_autoreleasePoolPush() 创建自动释放池。BeforeWaiting(准备进入休眠) 时调用_objc_autoreleasePoolPop() 和 _objc_autoreleasePoolPush() 释放旧的池并创建新池；Exit(即将退出Loop) 时调用 _objc_autoreleasePoolPop() 来释放自动释放池。
+自动释放池的定义？
+自动释放池是由autoreleasePoolPage类型的对象以双向链表的方式实现
+当对象调用autorelease方法时，会将对象加入autoreleasePoolPage的栈中。当当前page满后，会创建新的page
+调用autoreleasePoolPage::pop方法会向栈中的对象发送release消息释放。
+//=======内存管理=======
+//=========埋点========
+//======内省方法====
+-(BOOL) isKindOfClass: 判断是否是这个类或者这个类的子类的实例
+-(BOOL) isMemberOfClass: 判断是否是这个类的实例
+
+-(BOOL) respondsToSelector:  需要实现该方法才能够真正返回YES  实例调该方法，就是判断有没有该实例方法，类调该方法 就是判断有没有该类方法
++(BOOL) instancesRespondToSelector: 判断该类的实例是否有这个方法 还是检查的实例方法
+conformsToProtocol:protocol检测是否遵循某个协议
+class 实例对象调用的话，返回类对象，类调用的话，返回自身
+objc_getClass 相当于isa指针指向
+//======class_rw_t 和 class_ro_t=============
+class_rw_t作为objc_class结构体的成员 里边存储类的方法，协议 属性列表 class_rw_t也是结构体，方法成员中含有结构体class_ro_t 里边含有实例变量，class_ro_t 中存储了当前类在编译期就已经确定的属性、方法以及遵循的协议。

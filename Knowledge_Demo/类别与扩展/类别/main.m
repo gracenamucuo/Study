@@ -16,6 +16,8 @@
 #import "KVOClassA.h"
 #import "KVOClassB.h"
 #import "KVOClassC.h"
+#import "KVOPerson.h"
+#import "KVOObeserve.h"
 void kvcTest(){
     KVCClass *obj = [[KVCClass alloc]init];
     obj.stringA = @"stringA setter";
@@ -39,7 +41,17 @@ void kvcTest(){
     //1，3，4，6执行了setter方法，7,8执行了getter方法，2，5，9直接访问实例变量
     
 }
-void kvoTest();
+void kvoTest(void);
+void keoTestTriggerObeserve(void)
+{
+    KVOPerson *p = [[KVOPerson alloc]init];
+    p.age = 10;
+    
+    KVOObeserve *obe = [KVOObeserve new];
+    [p addObserver:obe forKeyPath:@"age" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
+    p.age = 99;
+    
+}
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 //        Person *p = [[Person alloc]init];
@@ -69,7 +81,9 @@ int main(int argc, const char * argv[]) {
         //KVC
 //        kvcTest();
         //KVO
-        kvoTest();
+//        kvoTest();
+        //KVOTest触发观察者
+        keoTestTriggerObeserve();
     }
     return 0;
 }

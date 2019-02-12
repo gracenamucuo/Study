@@ -14,6 +14,16 @@
 		5A010EB621FADC8200579480 /* WeakInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A010EB521FADC8200579480 /* WeakInstance.m */; };
 		5A010EB921FAE09B00579480 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A010EB821FAE09B00579480 /* Son.m */; };
 		5A010EBC21FAE12600579480 /* Person+WeakAssociated.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A010EBB21FAE12600579480 /* Person+WeakAssociated.m */; };
+		5A41079C2212651D0014261B /* KVOPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41079B2212651D0014261B /* KVOPerson.m */; };
+		5A41079F221266440014261B /* KVOObeserve.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41079E221266440014261B /* KVOObeserve.m */; };
+		5A4107A8221274890014261B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4107A7221274890014261B /* AppDelegate.m */; };
+		5A4107AB221274890014261B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4107AA221274890014261B /* ViewController.m */; };
+		5A4107AE221274890014261B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4107AC221274890014261B /* Main.storyboard */; };
+		5A4107B02212748C0014261B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A4107AF2212748C0014261B /* Assets.xcassets */; };
+		5A4107B32212748C0014261B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A4107B12212748C0014261B /* LaunchScreen.storyboard */; };
+		5A4107B62212748C0014261B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4107B52212748C0014261B /* main.m */; };
+		5A4107BC22128F060014261B /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4107BB22128F060014261B /* Model.m */; };
+		5A4107BF22129E8B0014261B /* Model+Memory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4107BE22129E8B0014261B /* Model+Memory.m */; };
 		5A4712AE221140EE009E3383 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4712AD221140EE009E3383 /* Son.m */; };
 		5A4712E22211642B009E3383 /* KVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4712E12211642B009E3383 /* KVCModel.m */; };
 		5A4712E522116437009E3383 /* KVCClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4712E422116437009E3383 /* KVCClass.m */; };
@@ -66,6 +76,24 @@
 		5A010EB821FAE09B00579480 /* Son.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
 		5A010EBA21FAE12600579480 /* Person+WeakAssociated.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+WeakAssociated.h"; sourceTree = "<group>"; };
 		5A010EBB21FAE12600579480 /* Person+WeakAssociated.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+WeakAssociated.m"; sourceTree = "<group>"; };
+		5A41079A2212651D0014261B /* KVOPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOPerson.h; sourceTree = "<group>"; };
+		5A41079B2212651D0014261B /* KVOPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOPerson.m; sourceTree = "<group>"; };
+		5A41079D221266440014261B /* KVOObeserve.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOObeserve.h; sourceTree = "<group>"; };
+		5A41079E221266440014261B /* KVOObeserve.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOObeserve.m; sourceTree = "<group>"; };
+		5A4107A4221274890014261B /* 内存.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "内存.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A4107A6221274890014261B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5A4107A7221274890014261B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5A4107A9221274890014261B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5A4107AA221274890014261B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5A4107AD221274890014261B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A4107AF2212748C0014261B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A4107B22212748C0014261B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A4107B42212748C0014261B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A4107B52212748C0014261B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A4107BA22128F060014261B /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		5A4107BB22128F060014261B /* Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		5A4107BD22129E8B0014261B /* Model+Memory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Model+Memory.h"; sourceTree = "<group>"; };
+		5A4107BE22129E8B0014261B /* Model+Memory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Model+Memory.m"; sourceTree = "<group>"; };
 		5A4712AC221140EE009E3383 /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
 		5A4712AD221140EE009E3383 /* Son.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
 		5A4712E02211642B009E3383 /* KVCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCModel.h; sourceTree = "<group>"; };
@@ -101,6 +129,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5A4107A1221274890014261B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5AFB5BF921F984590052674F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -126,6 +161,26 @@
 				5A4712F0221172CA009E3383 /* KVO */,
 			);
 			path = "类别与扩展";
+			sourceTree = "<group>";
+		};
+		5A4107A5221274890014261B /* 内存 */ = {
+			isa = PBXGroup;
+			children = (
+				5A4107A6221274890014261B /* AppDelegate.h */,
+				5A4107A7221274890014261B /* AppDelegate.m */,
+				5A4107A9221274890014261B /* ViewController.h */,
+				5A4107AA221274890014261B /* ViewController.m */,
+				5A4107AC221274890014261B /* Main.storyboard */,
+				5A4107AF2212748C0014261B /* Assets.xcassets */,
+				5A4107B12212748C0014261B /* LaunchScreen.storyboard */,
+				5A4107B42212748C0014261B /* Info.plist */,
+				5A4107B52212748C0014261B /* main.m */,
+				5A4107BA22128F060014261B /* Model.h */,
+				5A4107BB22128F060014261B /* Model.m */,
+				5A4107BD22129E8B0014261B /* Model+Memory.h */,
+				5A4107BE22129E8B0014261B /* Model+Memory.m */,
+			);
+			path = "内存";
 			sourceTree = "<group>";
 		};
 		5A4712A922110B21009E3383 /* 属性测试 */ = {
@@ -185,6 +240,10 @@
 				5A4712EB221172BA009E3383 /* KVOClassB.m */,
 				5A4712ED221172C4009E3383 /* KVOClassC.h */,
 				5A4712EE221172C4009E3383 /* KVOClassC.m */,
+				5A41079A2212651D0014261B /* KVOPerson.h */,
+				5A41079B2212651D0014261B /* KVOPerson.m */,
+				5A41079D221266440014261B /* KVOObeserve.h */,
+				5A41079E221266440014261B /* KVOObeserve.m */,
 			);
 			path = KVO;
 			sourceTree = "<group>";
@@ -196,6 +255,7 @@
 				5AFB5BFE21F984590052674F /* Knowledge_Demo */,
 				5AFB5C1D21F9A9D60052674F /* C语言 */,
 				5A010EA321FAA38900579480 /* 类别与扩展 */,
+				5A4107A5221274890014261B /* 内存 */,
 				5AFB5BFD21F984590052674F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -206,6 +266,7 @@
 				5AFB5BFC21F984590052674F /* Knowledge_Demo.app */,
 				5AFB5C1C21F9A9D60052674F /* C语言 */,
 				5A010EA221FAA38900579480 /* 类别与扩展 */,
+				5A4107A4221274890014261B /* 内存.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -256,6 +317,23 @@
 			productReference = 5A010EA221FAA38900579480 /* 类别与扩展 */;
 			productType = "com.apple.product-type.tool";
 		};
+		5A4107A3221274890014261B /* 内存 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A4107B72212748C0014261B /* Build configuration list for PBXNativeTarget "内存" */;
+			buildPhases = (
+				5A4107A0221274890014261B /* Sources */,
+				5A4107A1221274890014261B /* Frameworks */,
+				5A4107A2221274890014261B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "内存";
+			productName = "内存";
+			productReference = 5A4107A4221274890014261B /* 内存.app */;
+			productType = "com.apple.product-type.application";
+		};
 		5AFB5BFB21F984590052674F /* Knowledge_Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AFB5C1221F9845A0052674F /* Build configuration list for PBXNativeTarget "Knowledge_Demo" */;
@@ -302,6 +380,9 @@
 					5A010EA121FAA38900579480 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					5A4107A3221274890014261B = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					5AFB5BFB21F984590052674F = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -326,11 +407,22 @@
 				5AFB5BFB21F984590052674F /* Knowledge_Demo */,
 				5AFB5C1B21F9A9D60052674F /* C语言 */,
 				5A010EA121FAA38900579480 /* 类别与扩展 */,
+				5A4107A3221274890014261B /* 内存 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5A4107A2221274890014261B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A4107B32212748C0014261B /* LaunchScreen.storyboard in Resources */,
+				5A4107B02212748C0014261B /* Assets.xcassets in Resources */,
+				5A4107AE221274890014261B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5AFB5BFA21F984590052674F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,14 +441,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A4712E9221172AE009E3383 /* KVOClassA.m in Sources */,
+				5A41079C2212651D0014261B /* KVOPerson.m in Sources */,
 				5A4712AE221140EE009E3383 /* Son.m in Sources */,
 				5A010EAB21FAA3A700579480 /* Person.m in Sources */,
 				5A010EAE21FAA3D400579480 /* Person+PropertyCategory.m in Sources */,
 				5A4712E522116437009E3383 /* KVCClass.m in Sources */,
 				5A4712E22211642B009E3383 /* KVCModel.m in Sources */,
+				5A41079F221266440014261B /* KVOObeserve.m in Sources */,
 				5A4712EC221172BA009E3383 /* KVOClassB.m in Sources */,
 				5A010EA521FAA38900579480 /* main.m in Sources */,
 				5A4712EF221172C4009E3383 /* KVOClassC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A4107A0221274890014261B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A4107AB221274890014261B /* ViewController.m in Sources */,
+				5A4107BF22129E8B0014261B /* Model+Memory.m in Sources */,
+				5A4107B62212748C0014261B /* main.m in Sources */,
+				5A4107A8221274890014261B /* AppDelegate.m in Sources */,
+				5A4107BC22128F060014261B /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +491,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		5A4107AC221274890014261B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A4107AD221274890014261B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A4107B12212748C0014261B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A4107B22212748C0014261B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		5AFB5C0521F9845A0052674F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -424,6 +546,40 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5A4107B82212748C0014261B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
+				INFOPLIST_FILE = "内存/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dyp.--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A4107B92212748C0014261B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
+				INFOPLIST_FILE = "内存/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dyp.--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -603,6 +759,15 @@
 			buildConfigurations = (
 				5A010EA621FAA38900579480 /* Debug */,
 				5A010EA721FAA38900579480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A4107B72212748C0014261B /* Build configuration list for PBXNativeTarget "内存" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A4107B82212748C0014261B /* Debug */,
+				5A4107B92212748C0014261B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
