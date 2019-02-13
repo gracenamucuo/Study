@@ -14,6 +14,15 @@
 		5A010EB621FADC8200579480 /* WeakInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A010EB521FADC8200579480 /* WeakInstance.m */; };
 		5A010EB921FAE09B00579480 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A010EB821FAE09B00579480 /* Son.m */; };
 		5A010EBC21FAE12600579480 /* Person+WeakAssociated.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A010EBB21FAE12600579480 /* Person+WeakAssociated.m */; };
+		5A0F9D902213B435008B2DAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F9D8F2213B435008B2DAD /* AppDelegate.swift */; };
+		5A0F9D922213B435008B2DAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F9D912213B435008B2DAD /* ViewController.swift */; };
+		5A0F9D952213B435008B2DAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0F9D932213B435008B2DAD /* Main.storyboard */; };
+		5A0F9D972213B438008B2DAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A0F9D962213B438008B2DAD /* Assets.xcassets */; };
+		5A0F9D9A2213B438008B2DAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0F9D982213B438008B2DAD /* LaunchScreen.storyboard */; };
+		5A0F9DA22213B487008B2DAD /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F9DA12213B487008B2DAD /* Command.swift */; };
+		5A0F9DA42213B8A6008B2DAD /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F9DA32213B8A6008B2DAD /* Composite.swift */; };
+		5A0F9DA72213E36A008B2DAD /* AppDelegate+Cate1.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F9DA62213E36A008B2DAD /* AppDelegate+Cate1.m */; };
+		5A0F9DAA2213E376008B2DAD /* AppDelegate+Cate2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F9DA92213E376008B2DAD /* AppDelegate+Cate2.m */; };
 		5A41079C2212651D0014261B /* KVOPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41079B2212651D0014261B /* KVOPerson.m */; };
 		5A41079F221266440014261B /* KVOObeserve.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41079E221266440014261B /* KVOObeserve.m */; };
 		5A4107A8221274890014261B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4107A7221274890014261B /* AppDelegate.m */; };
@@ -76,6 +85,19 @@
 		5A010EB821FAE09B00579480 /* Son.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
 		5A010EBA21FAE12600579480 /* Person+WeakAssociated.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+WeakAssociated.h"; sourceTree = "<group>"; };
 		5A010EBB21FAE12600579480 /* Person+WeakAssociated.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+WeakAssociated.m"; sourceTree = "<group>"; };
+		5A0F9D8D2213B435008B2DAD /* Appdelegate解耦.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Appdelegate解耦.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0F9D8F2213B435008B2DAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5A0F9D912213B435008B2DAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5A0F9D942213B435008B2DAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A0F9D962213B438008B2DAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A0F9D992213B438008B2DAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A0F9D9B2213B438008B2DAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A0F9DA12213B487008B2DAD /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		5A0F9DA32213B8A6008B2DAD /* Composite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Composite.swift; sourceTree = "<group>"; };
+		5A0F9DA52213E36A008B2DAD /* AppDelegate+Cate1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Cate1.h"; sourceTree = "<group>"; };
+		5A0F9DA62213E36A008B2DAD /* AppDelegate+Cate1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Cate1.m"; sourceTree = "<group>"; };
+		5A0F9DA82213E376008B2DAD /* AppDelegate+Cate2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Cate2.h"; sourceTree = "<group>"; };
+		5A0F9DA92213E376008B2DAD /* AppDelegate+Cate2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Cate2.m"; sourceTree = "<group>"; };
 		5A41079A2212651D0014261B /* KVOPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOPerson.h; sourceTree = "<group>"; };
 		5A41079B2212651D0014261B /* KVOPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOPerson.m; sourceTree = "<group>"; };
 		5A41079D221266440014261B /* KVOObeserve.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOObeserve.h; sourceTree = "<group>"; };
@@ -129,6 +151,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5A0F9D8A2213B435008B2DAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A4107A1221274890014261B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,6 +192,21 @@
 			path = "类别与扩展";
 			sourceTree = "<group>";
 		};
+		5A0F9D8E2213B435008B2DAD /* Appdelegate解耦 */ = {
+			isa = PBXGroup;
+			children = (
+				5A0F9D8F2213B435008B2DAD /* AppDelegate.swift */,
+				5A0F9D912213B435008B2DAD /* ViewController.swift */,
+				5A0F9DA12213B487008B2DAD /* Command.swift */,
+				5A0F9DA32213B8A6008B2DAD /* Composite.swift */,
+				5A0F9D932213B435008B2DAD /* Main.storyboard */,
+				5A0F9D962213B438008B2DAD /* Assets.xcassets */,
+				5A0F9D982213B438008B2DAD /* LaunchScreen.storyboard */,
+				5A0F9D9B2213B438008B2DAD /* Info.plist */,
+			);
+			path = "Appdelegate解耦";
+			sourceTree = "<group>";
+		};
 		5A4107A5221274890014261B /* 内存 */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +223,10 @@
 				5A4107BB22128F060014261B /* Model.m */,
 				5A4107BD22129E8B0014261B /* Model+Memory.h */,
 				5A4107BE22129E8B0014261B /* Model+Memory.m */,
+				5A0F9DA52213E36A008B2DAD /* AppDelegate+Cate1.h */,
+				5A0F9DA62213E36A008B2DAD /* AppDelegate+Cate1.m */,
+				5A0F9DA82213E376008B2DAD /* AppDelegate+Cate2.h */,
+				5A0F9DA92213E376008B2DAD /* AppDelegate+Cate2.m */,
 			);
 			path = "内存";
 			sourceTree = "<group>";
@@ -256,6 +304,7 @@
 				5AFB5C1D21F9A9D60052674F /* C语言 */,
 				5A010EA321FAA38900579480 /* 类别与扩展 */,
 				5A4107A5221274890014261B /* 内存 */,
+				5A0F9D8E2213B435008B2DAD /* Appdelegate解耦 */,
 				5AFB5BFD21F984590052674F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -267,6 +316,7 @@
 				5AFB5C1C21F9A9D60052674F /* C语言 */,
 				5A010EA221FAA38900579480 /* 类别与扩展 */,
 				5A4107A4221274890014261B /* 内存.app */,
+				5A0F9D8D2213B435008B2DAD /* Appdelegate解耦.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -316,6 +366,23 @@
 			productName = "类别与扩展";
 			productReference = 5A010EA221FAA38900579480 /* 类别与扩展 */;
 			productType = "com.apple.product-type.tool";
+		};
+		5A0F9D8C2213B435008B2DAD /* Appdelegate解耦 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0F9D9E2213B438008B2DAD /* Build configuration list for PBXNativeTarget "Appdelegate解耦" */;
+			buildPhases = (
+				5A0F9D892213B435008B2DAD /* Sources */,
+				5A0F9D8A2213B435008B2DAD /* Frameworks */,
+				5A0F9D8B2213B435008B2DAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Appdelegate解耦";
+			productName = "Appdelegate解耦";
+			productReference = 5A0F9D8D2213B435008B2DAD /* Appdelegate解耦.app */;
+			productType = "com.apple.product-type.application";
 		};
 		5A4107A3221274890014261B /* 内存 */ = {
 			isa = PBXNativeTarget;
@@ -374,10 +441,14 @@
 		5AFB5BF421F984590052674F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "戴运鹏";
 				TargetAttributes = {
 					5A010EA121FAA38900579480 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					5A0F9D8C2213B435008B2DAD = {
 						CreatedOnToolsVersion = 10.1;
 					};
 					5A4107A3221274890014261B = {
@@ -408,11 +479,22 @@
 				5AFB5C1B21F9A9D60052674F /* C语言 */,
 				5A010EA121FAA38900579480 /* 类别与扩展 */,
 				5A4107A3221274890014261B /* 内存 */,
+				5A0F9D8C2213B435008B2DAD /* Appdelegate解耦 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5A0F9D8B2213B435008B2DAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0F9D9A2213B438008B2DAD /* LaunchScreen.storyboard in Resources */,
+				5A0F9D972213B438008B2DAD /* Assets.xcassets in Resources */,
+				5A0F9D952213B435008B2DAD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A4107A2221274890014261B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -454,6 +536,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5A0F9D892213B435008B2DAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0F9D922213B435008B2DAD /* ViewController.swift in Sources */,
+				5A0F9DA42213B8A6008B2DAD /* Composite.swift in Sources */,
+				5A0F9D902213B435008B2DAD /* AppDelegate.swift in Sources */,
+				5A0F9DA22213B487008B2DAD /* Command.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A4107A0221274890014261B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -461,6 +554,8 @@
 				5A4107AB221274890014261B /* ViewController.m in Sources */,
 				5A4107BF22129E8B0014261B /* Model+Memory.m in Sources */,
 				5A4107B62212748C0014261B /* main.m in Sources */,
+				5A0F9DA72213E36A008B2DAD /* AppDelegate+Cate1.m in Sources */,
+				5A0F9DAA2213E376008B2DAD /* AppDelegate+Cate2.m in Sources */,
 				5A4107A8221274890014261B /* AppDelegate.m in Sources */,
 				5A4107BC22128F060014261B /* Model.m in Sources */,
 			);
@@ -491,6 +586,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		5A0F9D932213B435008B2DAD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A0F9D942213B435008B2DAD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A0F9D982213B438008B2DAD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A0F9D992213B438008B2DAD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		5A4107AC221274890014261B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -546,6 +657,46 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5A0F9D9C2213B438008B2DAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
+				INFOPLIST_FILE = "Appdelegate解耦/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dyp.Appdelegate--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A0F9D9D2213B438008B2DAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
+				INFOPLIST_FILE = "Appdelegate解耦/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dyp.Appdelegate--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -759,6 +910,15 @@
 			buildConfigurations = (
 				5A010EA621FAA38900579480 /* Debug */,
 				5A010EA721FAA38900579480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A0F9D9E2213B438008B2DAD /* Build configuration list for PBXNativeTarget "Appdelegate解耦" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0F9D9C2213B438008B2DAD /* Debug */,
+				5A0F9D9D2213B438008B2DAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

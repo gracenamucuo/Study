@@ -91,6 +91,10 @@ weak 的实现原理可以概括一下三步：
 1、初始化时：runtime会调用objc_initWeak函数，初始化一个新的weak指针指向对象的地址。
 2、添加引用时：objc_initWeak函数会调用 objc_storeWeak() 函数， objc_storeWeak() 的作用是更新指针指向，创建对应的弱引用表。
 3、释放时，调用clearDeallocating函数。clearDeallocating函数首先根据对象地址获取所有weak指针地址的数组，然后遍历这个数组把其中的数据设为nil，最后把这个entry从weak表中删除，最后清理对象的记录。
+
+__weak修饰
+获取存储weak对象的map，这个map的key是对象的地址，value是weak引用的地址。
+当对象被释放的时候，根据对象的地址可以找到对应的weak引用的地址，将其置为nil即可。
 //=================================关联对象================================
 概念
 关联策略 关联属性为block时是copy
@@ -201,14 +205,32 @@ struct objc_class : objc_object {
 在ARC环境下，以alloc/new/copy/mutableCopy开头的方法返回值取得的对象是自己生成并且持有的，其他情况是非自己持有的对象，会自动加入到autoreleasepoo【 NSString *str = [NSString stringWithFormat:@"%d",i]】此时对象的持有者就是AutoreleasePool。
 自动释放池释放的时机？
 没有手动加AutoreleasePool的情况下，Autorelease对象是在当前的Runloop迭代结束的时候释放的。手动添加的Autorelease对象也是自动计数的，当引用计数为0的时候，被释放掉。
-runloop中有关autorelease的两个回调是1)即将进入loop，_wrapRunLoopWithAutoreleasePoolHandler回调会_objc_autoreleasePoolPush() 创建自动释放池。BeforeWaiting(准备进入休眠) 时调用_objc_autoreleasePoolPop() 和 _objc_autoreleasePoolPush() 释放旧的池并创建新池；Exit(即将退出Loop) 时调用 _objc_autoreleasePoolPop() 来释放自动释放池。
+        runloop中有关autorelease的两个回调是1:即将进入loop，_wrapRunLoopWithAutoreleasePoolHandler回调会_objc_autoreleasePoolPush() 创建自动释放池。2:BeforeWaiting(准备进入休眠) 时调用_objc_autoreleasePoolPop() 和 _objc_autoreleasePoolPush() 释放旧的池并创建新池；Exit(即将退出Loop) 时调用 _objc_autoreleasePoolPop() 来释放自动释放池。
 自动释放池的定义？
 自动释放池是由autoreleasePoolPage类型的对象以双向链表的方式实现
 当对象调用autorelease方法时，会将对象加入autoreleasePoolPage的栈中。当当前page满后，会创建新的page
 调用autoreleasePoolPage::pop方法会向栈中的对象发送release消息释放。
 //=======内存管理=======
+ARC中通过SideTable这个数据结构来存储引用计数。这个数据结构就是存储了一个自旋锁，一个引用计数map。这个引用计数的map以对象的地址作为key，引用计数作为value
+release:查找map，对引用计数减1，如果引用计数小于阈值，则调用SEL_dealloc
+
+//=======Block======
+        __weak typeSelf(self) weakSelf = self;//block会捕获外部变量，用weakSelf保证self不会被block捕获，防止引起循环引用或者不必要的额外生命周期
+        [object doSomething:^{
+            __strong typeSelf(weakSelf) strongSelf = weakSelf;
+            //用strongSelf则保证在block的执行过程中，对象不会被释放掉。
+        }];
+
+//=======图像相关=====
+        sRGB：这个是目前比较通用的全色彩图像色域，每个像素占 4 个字节
+        Wide：每个像素占 8 个字节，相比 sRGB 能表示的颜色更多
+        还有占内存更小的格式：
+        亮度和 alpha 8 格式：每像素 2 个字节，单色图像和 alpha，metal 着色器。
+        Alpha 8 格式：每个像素 1 个字节，用于单色图像，比 SRGB 小 75％
+
 //=========埋点========
 //======内省方法====
+内省是对象揭示自己作为一个运行时对象的详细信息的一种能力。这些详细信息包括对象在继承树上的位置，对象是否遵循特定的协议，以及是否可以响应特定的消息。
 -(BOOL) isKindOfClass: 判断是否是这个类或者这个类的子类的实例
 -(BOOL) isMemberOfClass: 判断是否是这个类的实例
 
@@ -217,5 +239,44 @@ runloop中有关autorelease的两个回调是1)即将进入loop，_wrapRunLoopWi
 conformsToProtocol:protocol检测是否遵循某个协议
 class 实例对象调用的话，返回类对象，类调用的话，返回自身
 objc_getClass 相当于isa指针指向
+//===========反射==========
+运行时选择创建哪个实例，并动态选择调用哪个方法。
+通过class方法获得Class对象
+反射方法:
+        // SEL和字符串转换
+        FOUNDATION_EXPORT NSString *NSStringFromSelector(SEL aSelector);
+        FOUNDATION_EXPORT SEL NSSelectorFromString(NSString *aSelectorName);
+        // Class和字符串转换
+        FOUNDATION_EXPORT NSString *NSStringFromClass(Class aClass);
+        FOUNDATION_EXPORT Class __nullable NSClassFromString(NSString *aClassName);
+        // Protocol和字符串转换
+        FOUNDATION_EXPORT NSString *NSStringFromProtocol(Protocol *proto) NS_AVAILABLE(10_5, 2_0);
+        FOUNDATION_EXPORT Protocol * __nullable NSProtocolFromString(NSString *namestr) NS_AVAILABLE(10_5, 2_0);
+通过这些方法，我们可以在运行时选择创建那个实例，并动态选择调用哪个方法。这些操作甚至可以由服务器传回来的参数来控制，我们可以将服务器传回来的类名和方法名，实例为我们的对象。
 //======class_rw_t 和 class_ro_t=============
 class_rw_t作为objc_class结构体的成员 里边存储类的方法，协议 属性列表 class_rw_t也是结构体，方法成员中含有结构体class_ro_t 里边含有实例变量，class_ro_t 中存储了当前类在编译期就已经确定的属性、方法以及遵循的协议。
+//==========AppDelegate解耦=========
+1：可以通过分类来扩展进行，将不同的功能或业务代码分开到不同的分类中。
+2：可以单独建一个manager类，将不同的业务功能的初始化或配置代码都放在manager类里，之后在appdelegate里直接调用这个manager类的不同方法。进行不同业务的初始化或配置。【可以选择用命令模式】
+3：生成不同的appdelegate的子类，不同的功能作为单独的一个类，实现自己需要实现的方法，最后将不同的子类组合起来一个组合类，在appdelegate里通过组合类来实现各个不同功能的类的调用。比上个方法更灵活。
+//===========ViewController控制器解耦==============
+//===========优化app启动===================
+启动过程:Dyld-->Load Dylibs -->Rebase-->Bind-->Objc-->Initializers
+加载dyld(dyld的全称是dynamic loader，它的作用是加载一个进程所需要的image)到app进程。
+加载动态库(包括所依赖的所有动态库)
+Rebase
+Bind
+初始化Objective-C Runtime
+其他的初始化
+
+冷启动&热启动
+冷启动:App被kill掉以后一切从头开始启动的过程
+热启动:按下home键的时候，iOS APP还存存在一段时间，这时点击APP马上就能恢复到原状态，这种启动我们称为热启动。
+以main函数作为分水岭，启动时间其实包括了两部分: main函数之前和main函数到第一个界面的viewDidAppear:
+优化的核心思路：能延迟初始化的尽量延迟初始化，不能延迟初始化的尽量放到后台初始化。【第三个SDK的初始化：分享，支付，统计等的初始化可以放在第一次用的时候】
+main函数之前的优化：1：减少动态库的数量(可以把类似功能的动态库合并)2：合并类似功能的Category，删除无用的方法和类。
+        
+//======crash监控以及统计上报=====
+        
+        
+
