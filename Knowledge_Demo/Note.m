@@ -91,10 +91,13 @@ weak 的实现原理可以概括一下三步：
 1、初始化时：runtime会调用objc_initWeak函数，初始化一个新的weak指针指向对象的地址。
 2、添加引用时：objc_initWeak函数会调用 objc_storeWeak() 函数， objc_storeWeak() 的作用是更新指针指向，创建对应的弱引用表。
 3、释放时，调用clearDeallocating函数。clearDeallocating函数首先根据对象地址获取所有weak指针地址的数组，然后遍历这个数组把其中的数据设为nil，最后把这个entry从weak表中删除，最后清理对象的记录。
-
+weak会在当前runloop结束的时候被释放
+如果没有strong的话
 __weak修饰
 获取存储weak对象的map，这个map的key是对象的地址，value是weak引用的地址。
 当对象被释放的时候，根据对象的地址可以找到对应的weak引用的地址，将其置为nil即可。
+
+
 //=================================关联对象================================
 概念
 关联策略 关联属性为block时是copy
@@ -211,9 +214,37 @@ struct objc_class : objc_object {
 当对象调用autorelease方法时，会将对象加入autoreleasePoolPage的栈中。当当前page满后，会创建新的page
 调用autoreleasePoolPage::pop方法会向栈中的对象发送release消息释放。
 //=======内存管理=======
+自己生成的对象，自己持有 alloc/new/copy/mutableCopy等方法
+非自己生成的对象，自己也可以持有
+不再需要自己持有的对象时释放
+非自己持有的对象无法释放
+
 ARC中通过SideTable这个数据结构来存储引用计数。这个数据结构就是存储了一个自旋锁，一个引用计数map。这个引用计数的map以对象的地址作为key，引用计数作为value
 release:查找map，对引用计数减1，如果引用计数小于阈值，则调用SEL_dealloc
 
+深浅拷贝:1：源对象是否是可变的。2:调用的是mutablecopy还是copy方法
+        属性声明的属性             所有权修饰符
+        assign                  __unsafe_unretained修饰符
+        copy                    __strong （赋值时是副本）
+        retain                  __strong
+        strong                  __strong
+        unsafe_unretained       __unsafe_unretained
+        weak                    __weak
+
+内存泄漏的几种情况:
+1：循环引用
+2：使用单例
+使用单例时候可能会造成内存泄漏。特别是单例含有block回调方法时候。有些单例会强持有这些block
+self.obser = [[NSNotificationCenter defaultCenter] addObserverForName:@"boyce" object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+    self.name = @"boyce";
+}];
+- (void)dealloc{
+            [[NSNotificationCenter defaultCenter] removeObserver:self.obser];
+}
+这里就造成了内存泄漏，这是因为NSNotificationCenter强引用了usingBlock，而usingBlock强引用了self，而NSNotificationCenter是个单例不会被释放，而self在被释放的时候才会去把self.obser从NSNotificationCenter中移除。类似的情况还有很多，比如一个数组中对象等等。这些内存泄漏不容易发现
+3：NSTimer
+NSTimer会强引用传入的target，这时候如果加入NSRunLoop这个timer又会被NSRunLoop强引用.
+解决这个方法主动stoptimer，至少是不能在dealloc中stoptimer的。另外可以设置一个中间类，把target变成中间类
 //=======Block======
         __weak typeSelf(self) weakSelf = self;//block会捕获外部变量，用weakSelf保证self不会被block捕获，防止引起循环引用或者不必要的额外生命周期
         [object doSomething:^{
@@ -229,6 +260,9 @@ release:查找map，对引用计数减1，如果引用计数小于阈值，则�
         Alpha 8 格式：每个像素 1 个字节，用于单色图像，比 SRGB 小 75％
 
 //=========埋点========
+1：页面统计，页面停留时间，页面进入次数
+2:交互事件统计，包括单击，双击，手势交互
+运用runtime hook要埋点的方法，交换方法后，在其中注入自己的统计逻辑。同时用plist文件来配置不同统计事件的id，进一步可以同时单元测试id和事件是否匹配或遗漏。
 //======内省方法====
 内省是对象揭示自己作为一个运行时对象的详细信息的一种能力。这些详细信息包括对象在继承树上的位置，对象是否遵循特定的协议，以及是否可以响应特定的消息。
 -(BOOL) isKindOfClass: 判断是否是这个类或者这个类的子类的实例

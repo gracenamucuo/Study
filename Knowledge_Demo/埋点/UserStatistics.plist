@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ViewController</key>
+	<dict>
+		<key>PageEventIds</key>
+		<dict>
+			<key>Leave</key>
+			<string>Page_Event_Home_Leave</string>
+			<key>Enter</key>
+			<string>Page_Event_Home_Enter</string>
+		</dict>
+		<key>ControlEventIds</key>
+		<dict>
+			<key>favBtnPressed:</key>
+			<string>Ctrl_Event_Home_Fav</string>
+			<key>shareBtnPressed:</key>
+			<string>Ctrl_Event_Home_Share</string>
+		</dict>
+	</dict>
+	<key>DetailViewController</key>
+	<dict>
+		<key>PageEventIds</key>
+		<dict>
+			<key>Leave</key>
+			<string>Page_Event_Detail_Leave</string>
+			<key>Enter</key>
+			<string>Page_Event_Detail_Enter</string>
+		</dict>
+		<key>ControlEventIds</key>
+		<dict>
+			<key>favBtnPressed:</key>
+			<string>Ctrl_Event_Detail_Fav</string>
+			<key>shareBtnPressed:</key>
+			<string>Ctrl_Event_Detail_Share</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

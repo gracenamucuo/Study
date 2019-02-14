@@ -23,6 +23,19 @@
 		5A0F9DA42213B8A6008B2DAD /* Composite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F9DA32213B8A6008B2DAD /* Composite.swift */; };
 		5A0F9DA72213E36A008B2DAD /* AppDelegate+Cate1.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F9DA62213E36A008B2DAD /* AppDelegate+Cate1.m */; };
 		5A0F9DAA2213E376008B2DAD /* AppDelegate+Cate2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F9DA92213E376008B2DAD /* AppDelegate+Cate2.m */; };
+		5A0FB4F52215154C00C05F14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FB4F42215154C00C05F14 /* AppDelegate.m */; };
+		5A0FB4F82215154C00C05F14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FB4F72215154C00C05F14 /* ViewController.m */; };
+		5A0FB4FB2215154C00C05F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0FB4F92215154C00C05F14 /* Main.storyboard */; };
+		5A0FB4FD2215154E00C05F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A0FB4FC2215154E00C05F14 /* Assets.xcassets */; };
+		5A0FB5002215154E00C05F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0FB4FE2215154E00C05F14 /* LaunchScreen.storyboard */; };
+		5A0FB5032215154E00C05F14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FB5022215154E00C05F14 /* main.m */; };
+		5A0FB5092215165800C05F14 /* HookUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FB5082215165800C05F14 /* HookUtility.m */; };
+		5A0FB50D221530CC00C05F14 /* UIViewController+UserStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FB50C221530CC00C05F14 /* UIViewController+UserStatistics.m */; };
+		5A0FB510221532EC00C05F14 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FB50F221532EC00C05F14 /* DetailViewController.m */; };
+		5A0FB5122215347100C05F14 /* UserStatistics.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A0FB5112215347100C05F14 /* UserStatistics.plist */; };
+		5A0FB51822153D0A00C05F14 /* UIControl+UserStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FB51722153D0A00C05F14 /* UIControl+UserStatistics.m */; };
+		5A0FB5222215444E00C05F14 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FB5212215444E00C05F14 /* __Tests.m */; };
+		5A0FB52A2215447100C05F14 /* EventIDMappingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FB5292215447100C05F14 /* EventIDMappingTest.m */; };
 		5A41079C2212651D0014261B /* KVOPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41079B2212651D0014261B /* KVOPerson.m */; };
 		5A41079F221266440014261B /* KVOObeserve.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41079E221266440014261B /* KVOObeserve.m */; };
 		5A4107A8221274890014261B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4107A7221274890014261B /* AppDelegate.m */; };
@@ -47,6 +60,16 @@
 		5AFB5C0F21F9845A0052674F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0E21F9845A0052674F /* main.m */; };
 		5AFB5C1F21F9A9D60052674F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C1E21F9A9D60052674F /* main.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A0FB5242215444E00C05F14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AFB5BF421F984590052674F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0FB4F02215154B00C05F14;
+			remoteInfo = "埋点";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		5A010EA021FAA38900579480 /* CopyFiles */ = {
@@ -98,6 +121,29 @@
 		5A0F9DA62213E36A008B2DAD /* AppDelegate+Cate1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Cate1.m"; sourceTree = "<group>"; };
 		5A0F9DA82213E376008B2DAD /* AppDelegate+Cate2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Cate2.h"; sourceTree = "<group>"; };
 		5A0F9DA92213E376008B2DAD /* AppDelegate+Cate2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Cate2.m"; sourceTree = "<group>"; };
+		5A0FB4F12215154B00C05F14 /* 埋点.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "埋点.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0FB4F32215154C00C05F14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5A0FB4F42215154C00C05F14 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5A0FB4F62215154C00C05F14 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5A0FB4F72215154C00C05F14 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5A0FB4FA2215154C00C05F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A0FB4FC2215154E00C05F14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A0FB4FF2215154E00C05F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A0FB5012215154E00C05F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A0FB5022215154E00C05F14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A0FB5072215165800C05F14 /* HookUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HookUtility.h; sourceTree = "<group>"; };
+		5A0FB5082215165800C05F14 /* HookUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HookUtility.m; sourceTree = "<group>"; };
+		5A0FB50B221530CC00C05F14 /* UIViewController+UserStatistics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+UserStatistics.h"; sourceTree = "<group>"; };
+		5A0FB50C221530CC00C05F14 /* UIViewController+UserStatistics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+UserStatistics.m"; sourceTree = "<group>"; };
+		5A0FB50E221532EC00C05F14 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		5A0FB50F221532EC00C05F14 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		5A0FB5112215347100C05F14 /* UserStatistics.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserStatistics.plist; sourceTree = "<group>"; };
+		5A0FB51622153D0A00C05F14 /* UIControl+UserStatistics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+UserStatistics.h"; sourceTree = "<group>"; };
+		5A0FB51722153D0A00C05F14 /* UIControl+UserStatistics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+UserStatistics.m"; sourceTree = "<group>"; };
+		5A0FB51F2215444D00C05F14 /* 埋点Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "埋点Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0FB5212215444E00C05F14 /* __Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __Tests.m; sourceTree = "<group>"; };
+		5A0FB5232215444E00C05F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A0FB5292215447100C05F14 /* EventIDMappingTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventIDMappingTest.m; sourceTree = "<group>"; };
 		5A41079A2212651D0014261B /* KVOPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOPerson.h; sourceTree = "<group>"; };
 		5A41079B2212651D0014261B /* KVOPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOPerson.m; sourceTree = "<group>"; };
 		5A41079D221266440014261B /* KVOObeserve.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOObeserve.h; sourceTree = "<group>"; };
@@ -138,7 +184,7 @@
 		5AFB5C0B21F9845A0052674F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AFB5C0D21F9845A0052674F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AFB5C0E21F9845A0052674F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5AFB5C1521F9846E0052674F /* Note.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
+		5AFB5C1521F9846E0052674F /* Note.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; wrapsLines = 0; };
 		5AFB5C1C21F9A9D60052674F /* C语言 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C语言"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFB5C1E21F9A9D60052674F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +198,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5A0F9D8A2213B435008B2DAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0FB4EE2215154B00C05F14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0FB51C2215444D00C05F14 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -205,6 +265,41 @@
 				5A0F9D9B2213B438008B2DAD /* Info.plist */,
 			);
 			path = "Appdelegate解耦";
+			sourceTree = "<group>";
+		};
+		5A0FB4F22215154C00C05F14 /* 埋点 */ = {
+			isa = PBXGroup;
+			children = (
+				5A0FB4F32215154C00C05F14 /* AppDelegate.h */,
+				5A0FB4F42215154C00C05F14 /* AppDelegate.m */,
+				5A0FB4F62215154C00C05F14 /* ViewController.h */,
+				5A0FB4F72215154C00C05F14 /* ViewController.m */,
+				5A0FB50E221532EC00C05F14 /* DetailViewController.h */,
+				5A0FB50F221532EC00C05F14 /* DetailViewController.m */,
+				5A0FB4F92215154C00C05F14 /* Main.storyboard */,
+				5A0FB4FC2215154E00C05F14 /* Assets.xcassets */,
+				5A0FB4FE2215154E00C05F14 /* LaunchScreen.storyboard */,
+				5A0FB5012215154E00C05F14 /* Info.plist */,
+				5A0FB5022215154E00C05F14 /* main.m */,
+				5A0FB5072215165800C05F14 /* HookUtility.h */,
+				5A0FB5082215165800C05F14 /* HookUtility.m */,
+				5A0FB50B221530CC00C05F14 /* UIViewController+UserStatistics.h */,
+				5A0FB50C221530CC00C05F14 /* UIViewController+UserStatistics.m */,
+				5A0FB5112215347100C05F14 /* UserStatistics.plist */,
+				5A0FB51622153D0A00C05F14 /* UIControl+UserStatistics.h */,
+				5A0FB51722153D0A00C05F14 /* UIControl+UserStatistics.m */,
+			);
+			path = "埋点";
+			sourceTree = "<group>";
+		};
+		5A0FB5202215444E00C05F14 /* 埋点Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5A0FB5212215444E00C05F14 /* __Tests.m */,
+				5A0FB5232215444E00C05F14 /* Info.plist */,
+				5A0FB5292215447100C05F14 /* EventIDMappingTest.m */,
+			);
+			path = "埋点Tests";
 			sourceTree = "<group>";
 		};
 		5A4107A5221274890014261B /* 内存 */ = {
@@ -305,6 +400,8 @@
 				5A010EA321FAA38900579480 /* 类别与扩展 */,
 				5A4107A5221274890014261B /* 内存 */,
 				5A0F9D8E2213B435008B2DAD /* Appdelegate解耦 */,
+				5A0FB4F22215154C00C05F14 /* 埋点 */,
+				5A0FB5202215444E00C05F14 /* 埋点Tests */,
 				5AFB5BFD21F984590052674F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -317,6 +414,8 @@
 				5A010EA221FAA38900579480 /* 类别与扩展 */,
 				5A4107A4221274890014261B /* 内存.app */,
 				5A0F9D8D2213B435008B2DAD /* Appdelegate解耦.app */,
+				5A0FB4F12215154B00C05F14 /* 埋点.app */,
+				5A0FB51F2215444D00C05F14 /* 埋点Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -383,6 +482,41 @@
 			productName = "Appdelegate解耦";
 			productReference = 5A0F9D8D2213B435008B2DAD /* Appdelegate解耦.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5A0FB4F02215154B00C05F14 /* 埋点 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0FB5062215154E00C05F14 /* Build configuration list for PBXNativeTarget "埋点" */;
+			buildPhases = (
+				5A0FB4ED2215154B00C05F14 /* Sources */,
+				5A0FB4EE2215154B00C05F14 /* Frameworks */,
+				5A0FB4EF2215154B00C05F14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "埋点";
+			productName = "埋点";
+			productReference = 5A0FB4F12215154B00C05F14 /* 埋点.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A0FB51E2215444D00C05F14 /* 埋点Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0FB5262215444E00C05F14 /* Build configuration list for PBXNativeTarget "埋点Tests" */;
+			buildPhases = (
+				5A0FB51B2215444D00C05F14 /* Sources */,
+				5A0FB51C2215444D00C05F14 /* Frameworks */,
+				5A0FB51D2215444D00C05F14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A0FB5252215444E00C05F14 /* PBXTargetDependency */,
+			);
+			name = "埋点Tests";
+			productName = "埋点Tests";
+			productReference = 5A0FB51F2215444D00C05F14 /* 埋点Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		5A4107A3221274890014261B /* 内存 */ = {
 			isa = PBXNativeTarget;
@@ -451,6 +585,13 @@
 					5A0F9D8C2213B435008B2DAD = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					5A0FB4F02215154B00C05F14 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					5A0FB51E2215444D00C05F14 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5A0FB4F02215154B00C05F14;
+					};
 					5A4107A3221274890014261B = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -480,6 +621,8 @@
 				5A010EA121FAA38900579480 /* 类别与扩展 */,
 				5A4107A3221274890014261B /* 内存 */,
 				5A0F9D8C2213B435008B2DAD /* Appdelegate解耦 */,
+				5A0FB4F02215154B00C05F14 /* 埋点 */,
+				5A0FB51E2215444D00C05F14 /* 埋点Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -492,6 +635,24 @@
 				5A0F9D9A2213B438008B2DAD /* LaunchScreen.storyboard in Resources */,
 				5A0F9D972213B438008B2DAD /* Assets.xcassets in Resources */,
 				5A0F9D952213B435008B2DAD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0FB4EF2215154B00C05F14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0FB5122215347100C05F14 /* UserStatistics.plist in Resources */,
+				5A0FB5002215154E00C05F14 /* LaunchScreen.storyboard in Resources */,
+				5A0FB4FD2215154E00C05F14 /* Assets.xcassets in Resources */,
+				5A0FB4FB2215154C00C05F14 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0FB51D2215444D00C05F14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +708,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5A0FB4ED2215154B00C05F14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0FB51822153D0A00C05F14 /* UIControl+UserStatistics.m in Sources */,
+				5A0FB4F82215154C00C05F14 /* ViewController.m in Sources */,
+				5A0FB5092215165800C05F14 /* HookUtility.m in Sources */,
+				5A0FB5032215154E00C05F14 /* main.m in Sources */,
+				5A0FB50D221530CC00C05F14 /* UIViewController+UserStatistics.m in Sources */,
+				5A0FB4F52215154C00C05F14 /* AppDelegate.m in Sources */,
+				5A0FB510221532EC00C05F14 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0FB51B2215444D00C05F14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0FB52A2215447100C05F14 /* EventIDMappingTest.m in Sources */,
+				5A0FB5222215444E00C05F14 /* __Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A4107A0221274890014261B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -585,6 +769,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5A0FB5252215444E00C05F14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0FB4F02215154B00C05F14 /* 埋点 */;
+			targetProxy = 5A0FB5242215444E00C05F14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		5A0F9D932213B435008B2DAD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -598,6 +790,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				5A0F9D992213B438008B2DAD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5A0FB4F92215154C00C05F14 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A0FB4FA2215154C00C05F14 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A0FB4FE2215154E00C05F14 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A0FB4FF2215154E00C05F14 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -697,6 +905,78 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5A0FB5042215154E00C05F14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
+				INFOPLIST_FILE = "埋点/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dyp.--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A0FB5052215154E00C05F14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
+				INFOPLIST_FILE = "埋点/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dyp.--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5A0FB5272215444E00C05F14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
+				INFOPLIST_FILE = "埋点Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dyp.--Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/埋点.app/埋点";
+			};
+			name = Debug;
+		};
+		5A0FB5282215444E00C05F14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
+				INFOPLIST_FILE = "埋点Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dyp.--Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/埋点.app/埋点";
 			};
 			name = Release;
 		};
@@ -919,6 +1199,24 @@
 			buildConfigurations = (
 				5A0F9D9C2213B438008B2DAD /* Debug */,
 				5A0F9D9D2213B438008B2DAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A0FB5062215154E00C05F14 /* Build configuration list for PBXNativeTarget "埋点" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0FB5042215154E00C05F14 /* Debug */,
+				5A0FB5052215154E00C05F14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A0FB5262215444E00C05F14 /* Build configuration list for PBXNativeTarget "埋点Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0FB5272215444E00C05F14 /* Debug */,
+				5A0FB5282215444E00C05F14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
