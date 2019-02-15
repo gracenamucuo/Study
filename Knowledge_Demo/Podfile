@@ -1,0 +1,55 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Appdelegate解耦' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Appdelegate解耦
+
+end
+
+target 'C语言' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for C语言
+
+end
+
+target 'Knowledge_Demo' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for Knowledge_Demo
+
+end
+
+target '内存' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for 内存
+
+end
+
+target '埋点' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for 埋点
+	pod "Aspects"
+  target '埋点Tests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target '类别与扩展' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for 类别与扩展
+
+end

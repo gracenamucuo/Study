@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>TableController</key>
+	<dict>
+		<key>ControlEventIds</key>
+		<dict>
+			<key>tableView:didSelectRowAtIndexPath:</key>
+			<string>Ctrl_Cell_Select</string>
+			<key>cellDidClick:</key>
+			<string>Ctrl_Cell_Click</string>
+		</dict>
+	</dict>
 	<key>ViewController</key>
 	<dict>
 		<key>PageEventIds</key>
