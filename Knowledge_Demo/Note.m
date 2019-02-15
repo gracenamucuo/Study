@@ -311,6 +311,14 @@ Bind
 main函数之前的优化：1：减少动态库的数量(可以把类似功能的动态库合并)2：合并类似功能的Category，删除无用的方法和类。
         
 //======crash监控以及统计上报=====
-        
-        
-
+系统杀死
+EXC_CRASH (SIGKILL)，SIGKILL 一般代表的是系统终止了进程的运行，这种信号无法被应用捕获
+常见的内存错误包含：过度释放、野指针（访问已释放对象）、内存访问越界（比如 C 数组）
+EXC_BAD_ACCESS(SIGSEGV) 对只读的内存地址进行写操作; 访问不存在的内存地址 objc_msgSend 或者 retain/release 崩溃
+数组相关
+EXC_CRASH (SIGABRT)数组插入nil
+方法没有实现
+unrecognized selector 通过runtime重载NSObject的- (id)forwardingTargetForSelector:(SEL)aSelector方法，给类进入消息转发的方法增加后备接受者。
+KVO
+移除没有注册的观察者，重复移除
+Cannot remove an observer <ViewController 0x100e09c90> for the key path "name" from <TestKVOCrash 0x280e035e0> because it is not registered as an observer
