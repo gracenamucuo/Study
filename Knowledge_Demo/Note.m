@@ -322,3 +322,6 @@ unrecognized selector 通过runtime重载NSObject的- (id)forwardingTargetForSel
 KVO
 移除没有注册的观察者，重复移除
 Cannot remove an observer <ViewController 0x100e09c90> for the key path "name" from <TestKVOCrash 0x280e035e0> because it is not registered as an observer
+//=======iOS编译======
+//=======iOS签名======
+
