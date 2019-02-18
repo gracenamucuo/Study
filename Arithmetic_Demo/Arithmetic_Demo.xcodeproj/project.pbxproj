@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		5A0F1DDD2169A6F60037C4EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F1DDC2169A6F60037C4EA /* main.m */; };
 		5A0F1DE32169A7170037C4EA /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F1DE22169A7170037C4EA /* Test.m */; };
+		5A131502221A4B940023A521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A131501221A4B940023A521 /* AppDelegate.swift */; };
+		5A131504221A4B940023A521 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A131503221A4B940023A521 /* ViewController.swift */; };
+		5A131507221A4B940023A521 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A131505221A4B940023A521 /* Main.storyboard */; };
+		5A131509221A4B970023A521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A131508221A4B970023A521 /* Assets.xcassets */; };
+		5A13150C221A4B970023A521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A13150A221A4B970023A521 /* LaunchScreen.storyboard */; };
+		5A131512221A4BD00023A521 /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A131511221A4BD00023A521 /* Sort.swift */; };
 		5A226E9A2119DAE600E8B651 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A226E992119DAE600E8B651 /* main.m */; };
 		5A226EA52119E11500E8B651 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A226EA42119E11500E8B651 /* main.m */; };
 		5A229277214BAC6D00673264 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A229276214BAC6D00673264 /* main.m */; };
@@ -366,6 +372,15 @@
 		5A0F1DDC2169A6F60037C4EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A0F1DE12169A7170037C4EA /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		5A0F1DE22169A7170037C4EA /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		5A1314FF221A4B940023A521 /* 算法与数据结构.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "算法与数据结构.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A131501221A4B940023A521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5A131503221A4B940023A521 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5A131506221A4B940023A521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A131508221A4B970023A521 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A13150B221A4B970023A521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A13150D221A4B970023A521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A131511221A4BD00023A521 /* Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
+		5A131513221A4F8A0023A521 /* Note.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		5A226E972119DAE600E8B651 /* 链表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "链表"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A226E992119DAE600E8B651 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A226EA22119E11500E8B651 /* 模拟链表 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "模拟链表"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -459,6 +474,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		5A0F1DD72169A6F60037C4EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A1314FC221A4B940023A521 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -709,6 +731,20 @@
 			path = " 算法图解";
 			sourceTree = "<group>";
 		};
+		5A131500221A4B940023A521 /* 算法与数据结构 */ = {
+			isa = PBXGroup;
+			children = (
+				5A131501221A4B940023A521 /* AppDelegate.swift */,
+				5A131503221A4B940023A521 /* ViewController.swift */,
+				5A131511221A4BD00023A521 /* Sort.swift */,
+				5A131505221A4B940023A521 /* Main.storyboard */,
+				5A131508221A4B970023A521 /* Assets.xcassets */,
+				5A13150A221A4B970023A521 /* LaunchScreen.storyboard */,
+				5A13150D221A4B970023A521 /* Info.plist */,
+			);
+			path = "算法与数据结构";
+			sourceTree = "<group>";
+		};
 		5A226E982119DAE600E8B651 /* 链表 */ = {
 			isa = PBXGroup;
 			children = (
@@ -919,6 +955,7 @@
 		5AA2BD4020D8A0C100083DA9 = {
 			isa = PBXGroup;
 			children = (
+				5A131513221A4F8A0023A521 /* Note.m */,
 				5AA2BD4B20D8A0C100083DA9 /* Arithmetic_Demo */,
 				5AEA5D9A2117E98800CC9E05 /* 桶排序 */,
 				5AEA5DA52117EDCB00CC9E05 /* 冒泡排序 */,
@@ -953,6 +990,7 @@
 				5A229275214BAC6D00673264 /* Test */,
 				5A229281214BBB8A00673264 /* 递归 */,
 				5A0F1DDB2169A6F60037C4EA /*  算法图解 */,
+				5A131500221A4B940023A521 /* 算法与数据结构 */,
 				5AA2BD4A20D8A0C100083DA9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -994,6 +1032,7 @@
 				5A229274214BAC6D00673264 /* Test */,
 				5A229280214BBB8A00673264 /* 递归 */,
 				5A0F1DDA2169A6F60037C4EA /* 分治 */,
+				5A1314FF221A4B940023A521 /* 算法与数据结构.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1105,6 +1144,23 @@
 			productName = "分治";
 			productReference = 5A0F1DDA2169A6F60037C4EA /* 分治 */;
 			productType = "com.apple.product-type.tool";
+		};
+		5A1314FE221A4B940023A521 /* 算法与数据结构 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A131510221A4B970023A521 /* Build configuration list for PBXNativeTarget "算法与数据结构" */;
+			buildPhases = (
+				5A1314FB221A4B940023A521 /* Sources */,
+				5A1314FC221A4B940023A521 /* Frameworks */,
+				5A1314FD221A4B940023A521 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "算法与数据结构";
+			productName = "算法与数据结构";
+			productReference = 5A1314FF221A4B940023A521 /* 算法与数据结构.app */;
+			productType = "com.apple.product-type.application";
 		};
 		5A226E962119DAE600E8B651 /* 链表 */ = {
 			isa = PBXNativeTarget;
@@ -1673,12 +1729,15 @@
 		5AA2BD4120D8A0C100083DA9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "戴运鹏";
 				TargetAttributes = {
 					5A0F1DD92169A6F60037C4EA = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					5A1314FE221A4B940023A521 = {
+						CreatedOnToolsVersion = 10.1;
 					};
 					5A226E962119DAE600E8B651 = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -1828,11 +1887,22 @@
 				5A229273214BAC6D00673264 /* Test */,
 				5A22927F214BBB8A00673264 /* 递归 */,
 				5A0F1DD92169A6F60037C4EA /* 分治 */,
+				5A1314FE221A4B940023A521 /* 算法与数据结构 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5A1314FD221A4B940023A521 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A13150C221A4B970023A521 /* LaunchScreen.storyboard in Resources */,
+				5A131509221A4B970023A521 /* Assets.xcassets in Resources */,
+				5A131507221A4B940023A521 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5AA2BD4720D8A0C100083DA9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1861,6 +1931,16 @@
 			files = (
 				5A0F1DDD2169A6F60037C4EA /* main.m in Sources */,
 				5A0F1DE32169A7170037C4EA /* Test.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A1314FB221A4B940023A521 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A131504221A4B940023A521 /* ViewController.swift in Sources */,
+				5A131502221A4B940023A521 /* AppDelegate.swift in Sources */,
+				5A131512221A4BD00023A521 /* Sort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2136,6 +2216,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		5A131505221A4B940023A521 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A131506221A4B940023A521 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A13150A221A4B970023A521 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A13150B221A4B970023A521 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		5AA2BD5220D8A0C200083DA9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2177,6 +2273,49 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5A13150E221A4B970023A521 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "算法与数据结构/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "dyp.-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A13150F221A4B970023A521 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "算法与数据结构/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "dyp.-------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -3044,6 +3183,15 @@
 			buildConfigurations = (
 				5A0F1DDF2169A6F60037C4EA /* Debug */,
 				5A0F1DE02169A6F60037C4EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A131510221A4B970023A521 /* Build configuration list for PBXNativeTarget "算法与数据结构" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A13150E221A4B970023A521 /* Debug */,
+				5A13150F221A4B970023A521 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
