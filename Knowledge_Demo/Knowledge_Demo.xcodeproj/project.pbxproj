@@ -65,6 +65,12 @@
 		5A15396C221BF16F00B88E75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A15396B221BF16F00B88E75 /* Assets.xcassets */; };
 		5A15396F221BF16F00B88E75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A15396D221BF16F00B88E75 /* LaunchScreen.storyboard */; };
 		5A153972221BF16F00B88E75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A153971221BF16F00B88E75 /* main.m */; };
+		5A2BD9F0221D527300048EE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2BD9EF221D527300048EE3 /* AppDelegate.swift */; };
+		5A2BD9F2221D527300048EE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2BD9F1221D527300048EE3 /* ViewController.swift */; };
+		5A2BD9F5221D527300048EE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2BD9F3221D527300048EE3 /* Main.storyboard */; };
+		5A2BD9F7221D527500048EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2BD9F6221D527500048EE3 /* Assets.xcassets */; };
+		5A2BD9FA221D527500048EE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2BD9F8221D527500048EE3 /* LaunchScreen.storyboard */; };
+		5A2BDA00221D529200048EE3 /* MVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2BD9FF221D529200048EE3 /* MVVM.swift */; };
 		5A41079C2212651D0014261B /* KVOPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41079B2212651D0014261B /* KVOPerson.m */; };
 		5A41079F221266440014261B /* KVOObeserve.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41079E221266440014261B /* KVOObeserve.m */; };
 		5A4107A8221274890014261B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4107A7221274890014261B /* AppDelegate.m */; };
@@ -235,6 +241,14 @@
 		5A15396E221BF16F00B88E75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A153970221BF16F00B88E75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A153971221BF16F00B88E75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A2BD9ED221D527300048EE3 /* MVX_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVX_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A2BD9EF221D527300048EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5A2BD9F1221D527300048EE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5A2BD9F4221D527300048EE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A2BD9F6221D527500048EE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A2BD9F9221D527500048EE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A2BD9FB221D527500048EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A2BD9FF221D529200048EE3 /* MVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM.swift; sourceTree = "<group>"; };
 		5A41079A2212651D0014261B /* KVOPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOPerson.h; sourceTree = "<group>"; };
 		5A41079B2212651D0014261B /* KVOPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOPerson.m; sourceTree = "<group>"; };
 		5A41079D221266440014261B /* KVOObeserve.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOObeserve.h; sourceTree = "<group>"; };
@@ -354,6 +368,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5A15395D221BF16400B88E75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A2BD9EA221D527300048EE3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -519,6 +540,20 @@
 			path = WKWebView_Demo;
 			sourceTree = "<group>";
 		};
+		5A2BD9EE221D527300048EE3 /* MVX_Demo */ = {
+			isa = PBXGroup;
+			children = (
+				5A2BD9EF221D527300048EE3 /* AppDelegate.swift */,
+				5A2BD9F1221D527300048EE3 /* ViewController.swift */,
+				5A2BD9F3221D527300048EE3 /* Main.storyboard */,
+				5A2BD9F6221D527500048EE3 /* Assets.xcassets */,
+				5A2BD9F8221D527500048EE3 /* LaunchScreen.storyboard */,
+				5A2BD9FB221D527500048EE3 /* Info.plist */,
+				5A2BD9FF221D529200048EE3 /* MVVM.swift */,
+			);
+			path = MVX_Demo;
+			sourceTree = "<group>";
+		};
 		5A4107A5221274890014261B /* 内存 */ = {
 			isa = PBXGroup;
 			children = (
@@ -639,6 +674,7 @@
 				5A13151F221A9BBC0023A521 /* Runloop_Demo */,
 				5A153961221BF16500B88E75 /* WKWebView_Demo */,
 				5A6C1452221CF5DC00586589 /* Thread_demo */,
+				5A2BD9EE221D527300048EE3 /* MVX_Demo */,
 				5AFB5BFD21F984590052674F /* Products */,
 				A89A3A0078FC062024DAD12A /* Pods */,
 				B37BC983F7C43455A38C63C0 /* Frameworks */,
@@ -659,6 +695,7 @@
 				5A13151E221A9BBC0023A521 /* Runloop_Demo.app */,
 				5A153960221BF16400B88E75 /* WKWebView_Demo.app */,
 				5A6C1451221CF5DC00586589 /* Thread_demo.app */,
+				5A2BD9ED221D527300048EE3 /* MVX_Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -851,6 +888,23 @@
 			productReference = 5A153960221BF16400B88E75 /* WKWebView_Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5A2BD9EC221D527300048EE3 /* MVX_Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A2BD9FE221D527500048EE3 /* Build configuration list for PBXNativeTarget "MVX_Demo" */;
+			buildPhases = (
+				5A2BD9E9221D527300048EE3 /* Sources */,
+				5A2BD9EA221D527300048EE3 /* Frameworks */,
+				5A2BD9EB221D527300048EE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MVX_Demo;
+			productName = MVX_Demo;
+			productReference = 5A2BD9ED221D527300048EE3 /* MVX_Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		5A4107A3221274890014261B /* 内存 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A4107B72212748C0014261B /* Build configuration list for PBXNativeTarget "内存" */;
@@ -954,6 +1008,9 @@
 					5A15395F221BF16400B88E75 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					5A2BD9EC221D527300048EE3 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					5A4107A3221274890014261B = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -992,6 +1049,7 @@
 				5A13151D221A9BBC0023A521 /* Runloop_Demo */,
 				5A15395F221BF16400B88E75 /* WKWebView_Demo */,
 				5A6C1450221CF5DC00586589 /* Thread_demo */,
+				5A2BD9EC221D527300048EE3 /* MVX_Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -1051,6 +1109,16 @@
 				5A15396F221BF16F00B88E75 /* LaunchScreen.storyboard in Resources */,
 				5A15396C221BF16F00B88E75 /* Assets.xcassets in Resources */,
 				5A15396A221BF16500B88E75 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A2BD9EB221D527300048EE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A2BD9FA221D527500048EE3 /* LaunchScreen.storyboard in Resources */,
+				5A2BD9F7221D527500048EE3 /* Assets.xcassets in Resources */,
+				5A2BD9F5221D527300048EE3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1335,6 +1403,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5A2BD9E9221D527300048EE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A2BD9F2221D527300048EE3 /* ViewController.swift in Sources */,
+				5A2BDA00221D529200048EE3 /* MVVM.swift in Sources */,
+				5A2BD9F0221D527300048EE3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A4107A0221274890014261B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1468,6 +1546,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				5A15396E221BF16F00B88E75 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5A2BD9F3221D527300048EE3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A2BD9F4221D527300048EE3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A2BD9F8221D527500048EE3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A2BD9F9221D527500048EE3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1766,6 +1860,46 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "dyp.WKWebView-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5A2BD9FC221D527500048EE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
+				INFOPLIST_FILE = MVX_Demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dyp.MVX-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A2BD9FD221D527500048EE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
+				INFOPLIST_FILE = MVX_Demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dyp.MVX-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2076,6 +2210,15 @@
 			buildConfigurations = (
 				5A153973221BF16F00B88E75 /* Debug */,
 				5A153974221BF16F00B88E75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A2BD9FE221D527500048EE3 /* Build configuration list for PBXNativeTarget "MVX_Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A2BD9FC221D527500048EE3 /* Debug */,
+				5A2BD9FD221D527500048EE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
