@@ -36,6 +36,7 @@ extension可以添加实例变量，category不可以，因为在运行期对象
 属性中不声明atomic默认就是atomic
 atomic系统自动生成的getter/setter方法会进行加锁操作【这个锁仅仅保证了getter和setter存取方法的线程安全.】eg：
 如果线程 A 调了 getter，与此同时线程 B 、线程 C 都调了 setter——那最后线程 A get 到的值，3种都有可能：可能是 B、C set 之前原始的值，也可能是 B set 的值，也可能是 C set 的值。同时，最终这个属性的值，可能是 B set 的值，也有可能是 C set 的值。
+1:生成原子操作的getter和setter。，atomic只能保证代码进入getter或者setter函数内部时是安全的，一旦出了getter和setter，多线程安全只能靠程序员自己保障了。
 - (void)setCurrentImage:(UIImage *)currentImage
 {
     @synchronized(self) {
@@ -362,7 +363,38 @@ C        浏览器用预置的CA列表验证证书，如果有问题，则提示
 C         浏览器生成随机的对称密钥，用服务器的public key加密----->          S
             服务器用自己的private key进行解密，得到对称密钥                S
 C          <----双方都知道了对称密钥，用来加密通信-->                      S
-//=======多线程和锁=====
+//========wkwebView=====
+//======runloop==========
+1:定时器不带[NSTimer timerWithTimeInterval:]方法需要加入到common的modes 避免滑动的时候定时器失效
+2：imageView设置图片的时候需要将其加在[self.imageView performSelector:@selector(setImage:) withObject:[UIImage imageNamed:@"1"] afterDelay:2.0 inModes:@[NSRunLoopCommonModes]];当对象执行performSelector时需要清楚当前的runloop的mode
+//======性能优化=================
+//=========多线程和锁==========
+https://www.jianshu.com/p/938d68ed832c
+一段代码段在同一个时间只能允许被一个线程访问，比如一个线程A进入加锁代码之后由于已经加锁，另一个线程B就无法访问，只有等待前一个线程A执行完加锁代码后解锁，B线程才能访问加锁代码。
+原子性能保证代码串行的执行，能保证代码执行到一半的时候，不会有另一个线程介入。
+@synchronized(token)
+NSLock
+dispatch_semaphore_t
+OSSpinLock
+这几种锁都可以带来原子性，性能的损耗从上至下依次更小。
+除了用锁来保证操作原子性外，还可以Atomic Operations 但是只能应用于32位或者64位的数据类型
+递归锁NSRecursiveLock
+有时候“加锁代码”中存在递归调用，递归开始前加锁，递归调用开始后会重复执行此方法以至于反复执行加锁代码最终造成死锁，这个时候可以使用递归锁来解决
 
-
-
+线程间通信
+// 返回主线程
+- (void)performSelectorOnMainThread:(SEL)aSelector withObject:(id)arg waitUntilDone:(BOOL)wait;
+// 返回指定线程
+- (void)performSelector:(SEL)aSelector onThread:(NSThread *)thr withObject:(id)arg waitUntilDone:(BOOL)wait;
+/*
+ OSSpinLock:                           46.15 ms
+ dispatch_semaphore:           56.50 ms
+ pthread_mutex:                     178.28 ms
+ NSCondition:                          193.38 ms
+ NSLock:                                   175.02 ms
+ pthread_mutex(recursive):   172.56 ms
+ NSRecursiveLock:                   157.44 ms
+ NSConditionLock:                   490.04 ms
+ @synchronized:                       371.17 ms
+ 
+ */

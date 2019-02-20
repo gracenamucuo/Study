@@ -79,7 +79,7 @@ static NSString *cellID = @"cellID";
             case 32:
             {
                 NSLog(@"即将进入休眠");
-                [self doTasks];
+//                [self doTasks];
             }
                 break;
             case 64:
