@@ -7,22 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
-
-struct Person{
-    char name[3];
-    int age;
-};
+#import "Person.h"
+#import "Son.h"
+//struct Person{
+//    char name[3];
+//    int age;
+//};
 
 void multiThread();
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        struct Person p = {"124",10};
-        struct Person *p1 =&p;
+//        struct Person p = {"124",10};
+//        struct Person *p1 =&p;
         
         NSString *str = @"123";
         NSLog(@"%p",str);
-        
-        
+        [Son staticMethod];
     }
     return 0;
 }

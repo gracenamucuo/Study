@@ -93,6 +93,8 @@
 		5A6C145D221CF5DD00586589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A6C145C221CF5DD00586589 /* Assets.xcassets */; };
 		5A6C1460221CF5DD00586589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6C145E221CF5DD00586589 /* LaunchScreen.storyboard */; };
 		5A6C1463221CF5DD00586589 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C1462221CF5DD00586589 /* main.m */; };
+		5A986EE1221E9FDF007FDCF0 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A986EE0221E9FDF007FDCF0 /* Person.m */; };
+		5A986EE4221E9FEE007FDCF0 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A986EE3221E9FEE007FDCF0 /* Son.m */; };
 		5AFB5C0121F984590052674F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0021F984590052674F /* AppDelegate.m */; };
 		5AFB5C0421F9845A0052674F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0321F9845A0052674F /* ViewController.m */; };
 		5AFB5C0721F9845A0052674F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0521F9845A0052674F /* Main.storyboard */; };
@@ -289,6 +291,10 @@
 		5A6C145F221CF5DD00586589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A6C1461221CF5DD00586589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6C1462221CF5DD00586589 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A986EDF221E9FDF007FDCF0 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		5A986EE0221E9FDF007FDCF0 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		5A986EE2221E9FEE007FDCF0 /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
+		5A986EE3221E9FEE007FDCF0 /* Son.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
 		5AFB5BFC21F984590052674F /* Knowledge_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Knowledge_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFB5BFF21F984590052674F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5AFB5C0021F984590052674F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -722,6 +728,10 @@
 			isa = PBXGroup;
 			children = (
 				5AFB5C1E21F9A9D60052674F /* main.m */,
+				5A986EDF221E9FDF007FDCF0 /* Person.h */,
+				5A986EE0221E9FDF007FDCF0 /* Person.m */,
+				5A986EE2221E9FEE007FDCF0 /* Son.h */,
+				5A986EE3221E9FEE007FDCF0 /* Son.m */,
 			);
 			path = "C语言";
 			sourceTree = "<group>";
@@ -1455,6 +1465,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A986EE4221E9FEE007FDCF0 /* Son.m in Sources */,
+				5A986EE1221E9FDF007FDCF0 /* Person.m in Sources */,
 				5AFB5C1F21F9A9D60052674F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

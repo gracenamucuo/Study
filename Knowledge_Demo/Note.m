@@ -398,3 +398,31 @@ OSSpinLock
  @synchronized:                       371.17 ms
  
  */
+        
+//==================源码解析==================
+//********************************MJRefresh
+继承的设计
+基类：  MJRefreshComponent 制定控件的所有状态，回调，接口，以及声明需要子类实现的方法
+控制层：MJRefreshHeader/MJRefreshFooter 控制header和footer的大小以及位置，
+显示层：加label MJRefreshStateHeader/ 根据不同状态设置label里显示的文字。【重写prepare；placeSubviews;setState:】
+显示层: 加菊花(gif) MJRefreshNormalHeader 【重写prepare；placeSubviews;setState:】
+
+//********************************    VVeboTableView 优化tableView
+//减少CPU/GPU计算量                            按需加载Cell                                      异步处理Cell
+cell的重用机制                               cellForRow里只加载可见的cell                           异步加载网络图片
+将cell高度甚至里边控件的frame缓存在model         监听tableView的快速滚动，保存目标滚动范围的前后三行          异步绘制本地图片
+减少cell内部控件的层级                                                                               异步绘制UIView
+优化圆角的效率                                                                                     异步绘制NSString UILabel
+
+//******************************** YYCache
+线程安全的高性能缓存组件
+技术点：双向链表，线程锁，数据库操作相关的知识
+缓存淘汰算法：（LRU）淘汰使用频率较低的缓存。
+缓存清理策略：分别通过count cost age 来清理某一维度的缓存。
+YYCache：提供对外调用的接口，包括YYMemoryCache和YYDiskCache
+YYMemoryCache：负责处理容量小，相对高速的内存缓存，线程安全的。
+_YYLinkedMap：YYMemoryCache使用的双向链表类
+_YYLinkedMapNode：是_YYLinkedMap使用的节点类。
+YYDiskCache：负责容量大，相对低速的磁盘缓存，线程安全，支持异步操作
+YYKVStorage：YYDiskCache的底层实现类，用于管理磁盘缓存。
+YYKVStorageItem：内置在YYKVStorage中，是YYKVStorage用于封装某个缓存的类。
