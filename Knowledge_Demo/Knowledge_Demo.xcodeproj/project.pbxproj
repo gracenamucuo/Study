@@ -95,6 +95,7 @@
 		5A6C1463221CF5DD00586589 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C1462221CF5DD00586589 /* main.m */; };
 		5A986EE1221E9FDF007FDCF0 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A986EE0221E9FDF007FDCF0 /* Person.m */; };
 		5A986EE4221E9FEE007FDCF0 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A986EE3221E9FEE007FDCF0 /* Son.m */; };
+		5AB43D98221F8E8300EC1173 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB43D97221F8E8300EC1173 /* TestView.m */; };
 		5AFB5C0121F984590052674F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0021F984590052674F /* AppDelegate.m */; };
 		5AFB5C0421F9845A0052674F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0321F9845A0052674F /* ViewController.m */; };
 		5AFB5C0721F9845A0052674F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0521F9845A0052674F /* Main.storyboard */; };
@@ -295,6 +296,8 @@
 		5A986EE0221E9FDF007FDCF0 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		5A986EE2221E9FEE007FDCF0 /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
 		5A986EE3221E9FEE007FDCF0 /* Son.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
+		5AB43D96221F8E8300EC1173 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		5AB43D97221F8E8300EC1173 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		5AFB5BFC21F984590052674F /* Knowledge_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Knowledge_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFB5BFF21F984590052674F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5AFB5C0021F984590052674F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -661,6 +664,8 @@
 				5A6C145E221CF5DD00586589 /* LaunchScreen.storyboard */,
 				5A6C1461221CF5DD00586589 /* Info.plist */,
 				5A6C1462221CF5DD00586589 /* main.m */,
+				5AB43D96221F8E8300EC1173 /* TestView.h */,
+				5AB43D97221F8E8300EC1173 /* TestView.m */,
 			);
 			path = Thread_demo;
 			sourceTree = "<group>";
@@ -1441,6 +1446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AB43D98221F8E8300EC1173 /* TestView.m in Sources */,
 				5A6C1458221CF5DC00586589 /* ViewController.m in Sources */,
 				5A6C1463221CF5DD00586589 /* main.m in Sources */,
 				5A6C1455221CF5DC00586589 /* AppDelegate.m in Sources */,

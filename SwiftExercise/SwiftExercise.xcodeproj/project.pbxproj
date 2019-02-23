@@ -151,6 +151,8 @@
 		5A82EAA221C09D6700B3547E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A82EAA121C09D6700B3547E /* Photo.swift */; };
 		5A82EAA521C0A1BC00B3547E /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A82EAA421C0A1BC00B3547E /* UIImage+Decompression.swift */; };
 		5A82EAA821C0AA6F00B3547E /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A82EAA721C0AA6F00B3547E /* PinterestLayout.swift */; };
+		5AB43DA6222150B600EC1173 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB43DA5222150B600EC1173 /* main.swift */; };
+		5AB43DAC222151CA00EC1173 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB43DAB222151CA00EC1173 /* LinkedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -191,6 +193,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		5A7F272721E1D61800FBF96C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		5AB43DA1222150B600EC1173 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -391,6 +402,9 @@
 		5A82EAA121C09D6700B3547E /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		5A82EAA421C0A1BC00B3547E /* UIImage+Decompression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
 		5A82EAA721C0AA6F00B3547E /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		5AB43DA3222150B600EC1173 /* LRU */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LRU; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AB43DA5222150B600EC1173 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		5AB43DAB222151CA00EC1173 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -558,6 +572,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5A82EA8521C09C9700B3547E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AB43DA0222150B600EC1173 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -916,6 +937,7 @@
 				5A081B2621E46B7A000E4CFD /* AlgorithmExercise */,
 				5A47840C21F4150A004DF667 /* 设计原则 */,
 				5A0E191821F7139300CE2F29 /* SwiftForwardDemo */,
+				5AB43DA4222150B600EC1173 /* LRU */,
 				5A70B8AB21A0035800422A4B /* Products */,
 				5A26325721BCFC1B00946A01 /* Frameworks */,
 			);
@@ -948,6 +970,7 @@
 				5A081B2521E46B7A000E4CFD /* AlgorithmExercise */,
 				5A47840B21F4150A004DF667 /* 设计原则.app */,
 				5A0E191721F7139200CE2F29 /* SwiftForwardDemo.app */,
+				5AB43DA3222150B600EC1173 /* LRU */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1040,6 +1063,15 @@
 				5A82EAA721C0AA6F00B3547E /* PinterestLayout.swift */,
 			);
 			path = Layouts;
+			sourceTree = "<group>";
+		};
+		5AB43DA4222150B600EC1173 /* LRU */ = {
+			isa = PBXGroup;
+			children = (
+				5AB43DA5222150B600EC1173 /* main.swift */,
+				5AB43DAB222151CA00EC1173 /* LinkedList.swift */,
+			);
+			path = LRU;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1453,6 +1485,23 @@
 			productReference = 5A82EA8821C09C9700B3547E /* Pinterest_10.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5AB43DA2222150B600EC1173 /* LRU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AB43DA9222150B600EC1173 /* Build configuration list for PBXNativeTarget "LRU" */;
+			buildPhases = (
+				5AB43D9F222150B600EC1173 /* Sources */,
+				5AB43DA0222150B600EC1173 /* Frameworks */,
+				5AB43DA1222150B600EC1173 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LRU;
+			productName = LRU;
+			productReference = 5AB43DA3222150B600EC1173 /* LRU */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1536,6 +1585,9 @@
 					5A82EA8721C09C9700B3547E = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					5AB43DA2222150B600EC1173 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 5A70B8A521A0035800422A4B /* Build configuration list for PBXProject "SwiftExercise" */;
@@ -1575,6 +1627,7 @@
 				5A081B2421E46B7A000E4CFD /* AlgorithmExercise */,
 				5A47840A21F4150A004DF667 /* 设计原则 */,
 				5A0E191621F7139200CE2F29 /* SwiftForwardDemo */,
+				5AB43DA2222150B600EC1173 /* LRU */,
 			);
 		};
 /* End PBXProject section */
@@ -2023,6 +2076,15 @@
 				5A104D7C21C20B10001F6E1E /* RoundedCornersView.swift in Sources */,
 				5A82EA8D21C09C9700B3547E /* ViewController.swift in Sources */,
 				5A82EA8B21C09C9700B3547E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AB43D9F222150B600EC1173 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AB43DAC222151CA00EC1173 /* LinkedList.swift in Sources */,
+				5AB43DA6222150B600EC1173 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3263,6 +3325,30 @@
 			};
 			name = Release;
 		};
+		5AB43DA7222150B600EC1173 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		5AB43DA8222150B600EC1173 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -3487,6 +3573,15 @@
 			buildConfigurations = (
 				5A82EA9721C09C9C00B3547E /* Debug */,
 				5A82EA9821C09C9C00B3547E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AB43DA9222150B600EC1173 /* Build configuration list for PBXNativeTarget "LRU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AB43DA7222150B600EC1173 /* Debug */,
+				5AB43DA8222150B600EC1173 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -20,9 +20,14 @@ int main(int argc, const char * argv[]) {
 //        struct Person p = {"124",10};
 //        struct Person *p1 =&p;
         
-        NSString *str = @"123";
-        NSLog(@"%p",str);
-        [Son staticMethod];
+//        NSString *str = @"123";
+//        NSLog(@"%p",str);
+//        [Son staticMethod];
+        
+        NSObject *obj = [NSObject new];
+        obj = nil;
+        Class cls = [Person class];
+        cls = Nil;
     }
     return 0;
 }

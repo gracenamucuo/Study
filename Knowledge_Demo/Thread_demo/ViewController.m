@@ -23,6 +23,7 @@
     [self sema];
 //    [self lockTest];
 //    [self conditionLock];
+    
 }
 
 - (void)thread1
@@ -197,4 +198,8 @@
         
     });
 }
+
+
+
+
 @end

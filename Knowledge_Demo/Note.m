@@ -367,6 +367,11 @@ C          <----双方都知道了对称密钥，用来加密通信-->          
 //======runloop==========
 1:定时器不带[NSTimer timerWithTimeInterval:]方法需要加入到common的modes 避免滑动的时候定时器失效
 2：imageView设置图片的时候需要将其加在[self.imageView performSelector:@selector(setImage:) withObject:[UIImage imageNamed:@"1"] afterDelay:2.0 inModes:@[NSRunLoopCommonModes]];当对象执行performSelector时需要清楚当前的runloop的mode
+runloop与线程的关系
+每条线程都有唯一的一个与之对应的RunLoop对象
+RunLoop保存在一个全局的Dictionary里，线程作为key,RunLoop作为value
+主线程的RunLoop已经自动创建好了，子线程的RunLoop需要主动创建
+RunLoop在第一次获取时创建，在线程结束时销毁
 //======性能优化=================
 //=========多线程和锁==========
 https://www.jianshu.com/p/938d68ed832c
@@ -398,7 +403,30 @@ OSSpinLock
  @synchronized:                       371.17 ms
  
  */
+//=============通知中心 NSNotificationCenter=====
+通知中心对响应者observer是使用unsafe_unretained修饰，当响应者释放会出现野指针，向野指针发送消息造成崩溃；
+在 iOS9 系统之后，[NSNotificationCenter defaultCenter]会在响应者observer调用-dealloc方法的时候执行-removeObserver:方法。
+添加通知时，若指定了object参数，那么该响应者只会接收发送通知时object参数指定为同一实例的通知。
+通知发送线程和通知接收线程是一致的。
+//============响应链============
+    
+        手势识别器与UIResponder对于事件响应的联系：
+        Window先将绑定了触摸对象的事件传递给触摸对象上绑定的手势识别器，再发送给触摸对象对应的hit-tested view。
+        手势识别器识别手势期间，若触摸对象的触摸状态发生变化，事件都是先发送给手势识别器再发送给hit-test view。
+        手势识别器若成功识别了手势，则通知Application取消hit-tested view对于事件的响应，并停止向hit-tested view发送事件；
+        若手势识别器未能识别手势，而此时触摸并未结束，则停止向手势识别器发送事件，仅向hit-test view发送事件。
+        若手势识别器未能识别手势，且此时触摸已经结束，则向hit-tested view发送end状态的touch事件以停止对事件的响应。
+手势识别器比响应链具有更高的事件响应优先级。
+UIControl会阻止父视图上的手势识别器行为，也就是UIControl处理事件的优先级比UIGestureRecognizer高，但前提是相比于父视图上的手势识别器。
+        【事件的传递:从收指点击屏幕，系统将点击包装成一个事件，有系统判断事件给哪个进程，如果当前app正处于前台，会将事件给到当前app,触发当前app主线程Runloop的Source1回调，source1回调触发source0的回调，source0的回调将事件包装成UIEvent,source0的回调将UIEvent传给UIWindow，通过UIEvent中的UITouch的hitTest View 来找到hitTestedView,(hitTesting过程)找到最适合响应的View,从下往上找(UIApplication ——> UIWindow ——> 子视图 ——> ... ——> 子视图)，核心方法是hitTest:withEvent:方法】
+    hitTest:withEvent: 方法返回一个UIView对象，作为当前视图层次中的响应者。默认实现是：
         
+        若当前视图无法响应事件，则返回nil
+        若当前视图可以响应事件，但无子视图可以响应事件，则返回自身作为当前视图层次中的事件响应者
+        若当前视图可以响应事件，同时有子视图可以响应，则返回子视图层次中的事件响应者
+
+事件的响应:响应链是自上而下
+UITextField ——> UIView ——> UIView ——> UIViewController ——> UIWindow ——> UIApplication ——> UIApplicationDelegation
 //==================源码解析==================
 //********************************MJRefresh
 继承的设计
@@ -426,3 +454,7 @@ _YYLinkedMapNode：是_YYLinkedMap使用的节点类。
 YYDiskCache：负责容量大，相对低速的磁盘缓存，线程安全，支持异步操作
 YYKVStorage：YYDiskCache的底层实现类，用于管理磁盘缓存。
 YYKVStorageItem：内置在YYKVStorage中，是YYKVStorage用于封装某个缓存的类。
+
+//================id和instancetype===
+1:id在编译的时候不能判断对象的真实类型 instancetype在编译的时候可以判断对象的真实类型
+2:id可以用来定义变量, 可以作为返回值, 可以作为形参

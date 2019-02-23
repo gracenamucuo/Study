@@ -10,15 +10,91 @@
 #import "Model.h"
 #import <objc/runtime.h>
 @interface ViewController ()
-
+@property (nonatomic,assign)CFRunLoopObserverRef obsever;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self testMethod];
+}
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"1");
+//        NSTimer *timer = [NSTimer timerWithTimeInterval:1 repeats:NO block:^(NSTimer * _Nonnull timer) {
+//            NSLog(@"timer源");
+//        }];
+//        [self addObserver];
+        NSRunLoop *runloop = [NSRunLoop currentRunLoop];
+//        [runloop addTimer:timer forMode:NSDefaultRunLoopMode];
+//        [self performSelector:@selector(testPerform) withObject:nil afterDelay:0];//
+        
+        [runloop run];
+        NSLog(@"3");
+    });
+}
+
+- (void)testPerform{
+    NSLog(@"2");
+}
+
+
+
+- (void)addObserver
+{
+    /*
+     kCFRunLoopEntry = (1UL << 0),1
+     kCFRunLoopBeforeTimers = (1UL << 1),2
+     kCFRunLoopBeforeSources = (1UL << 2), 4
+     kCFRunLoopBeforeWaiting = (1UL << 5), 32
+     kCFRunLoopAfterWaiting = (1UL << 6), 64
+     kCFRunLoopExit = (1UL << 7),128
+     kCFRunLoopAllActivities = 0x0FFFFFFFU
+     */
+    
+    CFRunLoopObserverRef observer = CFRunLoopObserverCreateWithHandler(CFAllocatorGetDefault(), kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        switch (activity) {
+            case 1:
+            {
+                NSLog(@"进入runloop");
+            }
+                break;
+            case 2:
+            {
+                NSLog(@"timers");
+            }
+                break;
+            case 4:
+            {
+                NSLog(@"sources");
+            }
+                break;
+            case 32:
+            {
+                NSLog(@"即将进入休眠");
+            }
+                break;
+            case 64:
+            {
+                NSLog(@"唤醒");
+            }
+                break;
+            case 128:
+            {
+                NSLog(@"退出");
+            }
+                break;
+                
+            default:
+                break;
+        }
+    });
+    CFRunLoopAddObserver(CFRunLoopGetCurrent(), observer, kCFRunLoopCommonModes);//将观察者添加到common模式下，这样当default模式和UITrackingRunLoopMode两种模式下都有回调。
+    self.obsever  = observer;
+    CFRelease(observer);
 }
 
 - (void)testMethod
@@ -65,4 +141,6 @@
     }
     NSLog(@"结束2");
 }
+
+
 @end
