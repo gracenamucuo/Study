@@ -66,8 +66,6 @@ CALayer的doubleSided属性来控制是否是双面绘图。
 
 “改变属性时CALayer自动应用的动画称作行为”
 
-摘录来自: 钟声. “ios核心动画高级技巧。” iBooks. 
-
 Core Animation通常对CALayer的所有属性(可以做动画的属性)做动画，但是UIView把关联的图层的这个特性关闭了。(就是说，创建一个layer改变其颜色属性，有默认的动画，但是如果直接用view.layer来改变其颜色属性，是没有隐式动画效果的)
 
 ```
@@ -122,7 +120,7 @@ kCAMediaTimingFunctionEaseInEaseOut
 //和上边的效果类似
 kCAMediaTimingFunctionDefault”
 
-
+>>> 以上为《ios核心动画高级技巧》读书笔记
 
 
 
