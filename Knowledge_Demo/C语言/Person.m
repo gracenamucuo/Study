@@ -10,6 +10,19 @@
 
 @implementation Person
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _name = @"1";
+//        _age = @"2";
+//        _sex = @"3";
+//        _height = 50;
+//        _width = 50;
+    }
+    return self;
+}
+
 + (void)staticMethod
 {
     NSLog(@"person");

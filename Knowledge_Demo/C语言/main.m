@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Person.h"
 #import "Son.h"
+#import <objc/runtime.h>
 //struct Person{
 //    char name[3];
 //    int age;
@@ -24,10 +25,12 @@ int main(int argc, const char * argv[]) {
 //        NSLog(@"%p",str);
 //        [Son staticMethod];
         
-        NSObject *obj = [NSObject new];
-        obj = nil;
-        Class cls = [Person class];
-        cls = Nil;
+//        NSObject *obj = [NSObject new];
+//        obj = nil;
+//        Class cls = [Person class];
+//        cls = Nil;
+        Person *p = [[Person alloc]init];
+        NSLog(@"%d",class_getInstanceSize([p class]));
     }
     return 0;
 }
