@@ -15,7 +15,6 @@
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-//        objc_getClass(<#const char * _Nonnull name#>)
     [Helper swizzlingInClass:objc_getClass(@selector(__NSArrayI)) originalSelector:@selector(objectAtIndex:) swizzledSelector:@selector(swizz_objectAtIndex:)];
         
     [Helper swizzlingInClass:objc_getClass(@selector(__NSArrayI)) originalSelector:@selector(objectAtIndexedSubscript:) swizzledSelector:@selector(swizz_objectAtIndexedSubscript:)];
@@ -29,7 +28,7 @@
         @try {
             return [self swizz_objectAtIndex:index];
         } @catch (NSException *exception) {
-            NSLog(@"---崩溃异常-----");
+
             return nil;
         } @finally {
             

@@ -372,6 +372,60 @@ runloop与线程的关系
 RunLoop保存在一个全局的Dictionary里，线程作为key,RunLoop作为value
 主线程的RunLoop已经自动创建好了，子线程的RunLoop需要主动创建
 RunLoop在第一次获取时创建，在线程结束时销毁
+        
+        static void __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__();
+        static void __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__();
+        static void __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__();
+        static void __CFRUNLOOP_IS_CALLING_OUT_TO_A_TIMER_CALLBACK_FUNCTION__();
+        static void __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__();
+        static void __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE1_PERFORM_FUNCTION__();
+        
+        1:Observer事件，runloop中状态变化时进行通知。（微信卡顿监控就是利用这个事件通知来记录下最近一次main runloop活动时间，在另一个check线程中用定时器检测当前时间距离最后一次活动时间过久来判断在主线程中的处理逻辑耗时和卡主线程）。这里还需要特别注意，CAAnimation是由RunloopObserver触发回调来重绘，接下来会讲到。
+        
+        2:Block事件，非延迟的NSObject PerformSelector立即调用，dispatch_after立即调用，block回调。
+        
+        3:Main_Dispatch_Queue事件：GCD中dispatch到main queue的block会被dispatch到main loop执行。
+        
+        4:Timer事件：延迟的NSObject PerformSelector，延迟的dispatch_after，timer事件。
+        
+        5:Source0事件：处理如UIEvent，CFSocket这类事件。需要手动触发。触摸事件其实是Source1接收系统事件后在回调 __IOHIDEventSystemClientQueueCallback() 内触发的 Source0，Source0 再触发的 _UIApplicationHandleEventQueue()。source0一定是要唤醒runloop及时响应并执行的，如果runloop此时在休眠等待系统的 mach_msg事件，那么就会通过source1来唤醒runloop执行。
+        
+        6:Source1事件：处理系统内核的mach_msg事件。（推测CADisplayLink也是这里触发）。
+        
+        伪代码
+        SetupThisRunLoopRunTimeoutTimer(); // by GCD timer
+        //通知即将进入runloop__CFRUNLLOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__(KCFRunLoopEntry);
+        do {
+            __CFRunLoopDoObservers(kCFRunLoopBeforeTimers);
+            __CFRunLoopDoObservers(kCFRunLoopBeforeSources);
+            
+            __CFRunLoopDoBlocks();  //一个循环中会调用两次，确保非延迟的NSObject PerformSelector调用和非延迟的dispatch_after调用在当前runloop执行。还有回调block
+            __CFRunLoopDoSource0(); //例如UIKit处理的UIEvent事件
+            
+            CheckIfExistMessagesInMainDispatchQueue(); //GCD dispatch main queue
+            
+            __CFRunLoopDoObservers(kCFRunLoopBeforeWaiting); //即将进入休眠，会重绘一次界面
+            var wakeUpPort = SleepAndWaitForWakingUpPorts();
+            // mach_msg_trap，陷入内核等待匹配的内核mach_msg事件
+            // Zzz...
+            // Received mach_msg, wake up
+            __CFRunLoopDoObservers(kCFRunLoopAfterWaiting);
+            // Handle msgs
+            if (wakeUpPort == timerPort) {
+                __CFRunLoopDoTimers();
+            } else if (wakeUpPort == mainDispatchQueuePort) {
+                //GCD当调用dispatch_async(dispatch_get_main_queue(),block)时，libDispatch会向主线程的runloop发送mach_msg消息唤醒runloop，并在这里执行。这里仅限于执行dispatch到主线程的任务，dispatch到其他线程的仍然是libDispatch来处理。
+                __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__()
+            } else {
+                __CFRunLoopDoSource1();  //CADisplayLink是source1的mach_msg触发？
+            }
+            __CFRunLoopDoBlocks();
+        } while (!stop && !timeout);
+        
+        //通知observers，即将退出runloop
+        __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBERVER_CALLBACK_FUNCTION__(CFRunLoopExit);
+        
+        https://mp.weixin.qq.com/s?__biz=MzAwNDY1ODY2OQ==&mid=400417748&idx=1&sn=0c5f6747dd192c5a0eea32bb4650c160&3rd=MzA3MDU4NTYzMw==&scene=6#rd
 //======性能优化=================
 //=========多线程和锁==========
 https://www.jianshu.com/p/938d68ed832c

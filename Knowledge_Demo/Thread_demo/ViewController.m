@@ -11,6 +11,7 @@
 @interface ViewController ()
 @property (nonatomic,copy)NSString *str;
 @property (nonatomic,strong)NSLock *lock;
+@property (nonatomic,strong)NSThread *thread;
 @end
 
 @implementation ViewController
@@ -20,9 +21,29 @@
 //    [NSThread detachNewThreadSelector:@selector(thread1) toTarget:self withObject:nil];
 //    [NSThread detachNewThreadSelector:@selector(thread2) toTarget:self withObject:nil];
 //    self.lock = [[NSLock alloc]init];
-    [self sema];
+//    [self sema];
 //    [self lockTest];
 //    [self conditionLock];
+    NSLog(@"-------------");
+            self.thread = [[NSThread alloc]init];
+//            [self.thread start];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    [self performSelector:@selector(testThread) onThread:self.thread withObject:nil waitUntilDone:NO];
+//    [self performSelectorInBackground:@selector(testThread) withObject:nil];
+}
+
+- (void)testThread
+{
+    
+    NSRunLoop *runloop = [NSRunLoop currentRunLoop];
+    [runloop addPort:[NSPort port] forMode:NSDefaultRunLoopMode];
+     NSLog(@"%@",[NSThread currentThread]);
+    [runloop run];
+
     
 }
 
