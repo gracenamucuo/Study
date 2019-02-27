@@ -13,6 +13,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Person : NSObject
 
+@property (nonatomic,copy)NSString *name;
+@property (nonatomic,copy)NSString *age;
+//@property (nonatomic,copy)NSString *sex;
+//@property (nonatomic,assign)double height;
+//@property (nonatomic,assign)double width;
+//@property (nonatomic,copy)NSString *name;
+//@property (nonatomic,copy)NSString *name;
+
 + (void)staticMethod;
 
 @end

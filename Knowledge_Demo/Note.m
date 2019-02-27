@@ -496,7 +496,7 @@ cell的重用机制                               cellForRow里只加载可见�
 减少cell内部控件的层级                                                                               异步绘制UIView
 优化圆角的效率                                                                                     异步绘制NSString UILabel
 
-//******************************** YYCache
+//******************************** YYCache=============
 线程安全的高性能缓存组件
 技术点：双向链表，线程锁，数据库操作相关的知识
 缓存淘汰算法：（LRU）淘汰使用频率较低的缓存。
@@ -508,7 +508,9 @@ _YYLinkedMapNode：是_YYLinkedMap使用的节点类。
 YYDiskCache：负责容量大，相对低速的磁盘缓存，线程安全，支持异步操作
 YYKVStorage：YYDiskCache的底层实现类，用于管理磁盘缓存。
 YYKVStorageItem：内置在YYKVStorage中，是YYKVStorage用于封装某个缓存的类。
+//==================SDWebImage================
 
 //================id和instancetype===
 1:id在编译的时候不能判断对象的真实类型 instancetype在编译的时候可以判断对象的真实类型
 2:id可以用来定义变量, 可以作为返回值, 可以作为形参
+
