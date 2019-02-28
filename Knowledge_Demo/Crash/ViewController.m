@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TestKVOCrash.h"
+#import "Model.h"
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,copy)NSString *test;
@@ -58,8 +59,11 @@
             break;
         case 2:
         {
-            UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-            [btn performSelector:@selector(doUnimplementationMethod)];
+            Model *obj = [NSObject new];
+            NSString *t1 = [obj testName];
+            NSArray *t2 = [obj testArr];
+            
+            NSLog(@"%@     %@",t1,t2);
         }
             break;
         case 3:

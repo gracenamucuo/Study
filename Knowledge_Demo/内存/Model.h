@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Model : NSObject
+@interface Model : NSObject<NSCopying>
 @property (nonatomic,assign)NSInteger age;
 @property (nonatomic,assign)NSInteger sex;
 @property (nonatomic,copy)NSString *name;
