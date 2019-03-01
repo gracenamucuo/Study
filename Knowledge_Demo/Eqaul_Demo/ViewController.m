@@ -16,8 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self testSet];
-//    [self testDictionary];
+//    [self testSet];
+    [self testDictionary];
     
 }
 
@@ -29,14 +29,14 @@
     model0.name = @"model0";
     model0.identifier = 0;
     NSLog(@"-------0--前");
-//    [set addObject:model0];
+    [set addObject:model0];
     NSLog(@"-------0--后");
     
     EqualModel *model1 = [[EqualModel alloc]init];
     model1.name = @"model1";
     model1.identifier = 1;
     NSLog(@"-------1--前");
-    [set addObject:model1];
+//    [set addObject:model1];
     NSLog(@"-------1--后");
     
     EqualModel *model2 = [[EqualModel alloc]init];
@@ -44,17 +44,17 @@
     model2.identifier = 2;
 //    [set addObject:model2];
     
-//    for (NSInteger i = 0; i < 1000; i++) {
+//    for (NSInteger i = 0; i <41; i++) {
 //        EqualModel *model = [[EqualModel alloc]init];
 //        model.name = [NSString stringWithFormat:@"model%ld",(long)i];
 //        model.identifier = i + 3;
 //        [set addObject:model];
-//    }
+//    
     
-//    NSLog(@"判断有的元素----------");
-//    NSLog(@"%d",[set containsObject:model1]);
-//    NSLog(@"判断没有的元素----------");
+    NSLog(@"判断有的元素----------");
     NSLog(@"%d",[set containsObject:model1]);
+    NSLog(@"判断没有的元素----------");
+    NSLog(@"%d",[set containsObject:model2]);
 }
 
 - (void)testDictionary
@@ -69,11 +69,19 @@
     model1.name = @"model1";
     model1.identifier = 1;
     
-    [dic setObject:model1 forKey:model0];
-    [dic setObject:model0 forKey:model1];
+    for (NSInteger i = 0; i < 5; i++) {
+        EqualModel *m = [[EqualModel alloc]init];
+        m.name = [NSString stringWithFormat:@"name11%ld",(long)i];
+        m.identifier = i + 100;
+        [dic setObject:@"1" forKey:m];
+    }
     
-    NSLog(@"%@",dic[model0]);
+    [dic setObject:@"1" forKey:model0];
+    [dic setObject:@"2" forKey:model1];
     
+    NSLog(@"读之前");
+    NSLog(@"---%@",dic[@"1"]);
+    NSLog(@"读之后");
     
 }
 
