@@ -62,6 +62,9 @@
 		5A0FB52A2215447100C05F14 /* EventIDMappingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FB5292215447100C05F14 /* EventIDMappingTest.m */; };
 		5A0FB52D221549A600C05F14 /* TableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FB52C221549A600C05F14 /* TableController.m */; };
 		5A0FB538221570F400C05F14 /* UITableView+UserStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FB537221570F400C05F14 /* UITableView+UserStatistics.m */; };
+		5A0FEDD3222A1D5D0091B10D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FEDD2222A1D5D0091B10D /* MBProgressHUD.m */; };
+		5A0FEDD7222A53530091B10D /* Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FEDD6222A53530091B10D /* Custom.m */; };
+		5A0FEDE1222A907A0091B10D /* HudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FEDE0222A907A0091B10D /* HudTests.m */; };
 		5A131522221A9BBC0023A521 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A131521221A9BBC0023A521 /* AppDelegate.m */; };
 		5A131525221A9BBC0023A521 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A131524221A9BBC0023A521 /* ViewController.m */; };
 		5A131528221A9BBC0023A521 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A131526221A9BBC0023A521 /* Main.storyboard */; };
@@ -124,6 +127,8 @@
 		5A9FDDD22226660800858DD3 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9FDDD12226660800858DD3 /* DrawView.m */; };
 		5A9FDDDA222669A700858DD3 /* NSObject+RunloopObesever.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9FDDD9222669A700858DD3 /* NSObject+RunloopObesever.m */; };
 		5A9FDDDB222669BF00858DD3 /* NSObject+RunloopObesever.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9FDDD9222669A700858DD3 /* NSObject+RunloopObesever.m */; };
+		5AAE6229222ACEBF0052696E /* SecController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE6228222ACEBF0052696E /* SecController.m */; };
+		5AAE622C222AD00F0052696E /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE622B222AD00F0052696E /* CustomCell.m */; };
 		5AB43D98221F8E8300EC1173 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB43D97221F8E8300EC1173 /* TestView.m */; };
 		5AFB5C0121F984590052674F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0021F984590052674F /* AppDelegate.m */; };
 		5AFB5C0421F9845A0052674F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0321F9845A0052674F /* ViewController.m */; };
@@ -145,6 +150,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5A0FB4F02215154B00C05F14;
 			remoteInfo = "埋点";
+		};
+		5A0FEDE3222A907A0091B10D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AFB5BF421F984590052674F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0EFB6F22290083006B3DCB;
+			remoteInfo = Progress_Demo;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -265,6 +277,13 @@
 		5A0FB52C221549A600C05F14 /* TableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableController.m; sourceTree = "<group>"; };
 		5A0FB536221570F400C05F14 /* UITableView+UserStatistics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+UserStatistics.h"; sourceTree = "<group>"; };
 		5A0FB537221570F400C05F14 /* UITableView+UserStatistics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+UserStatistics.m"; sourceTree = "<group>"; };
+		5A0FEDD1222A1D5D0091B10D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		5A0FEDD2222A1D5D0091B10D /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		5A0FEDD5222A53530091B10D /* Custom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Custom.h; sourceTree = "<group>"; };
+		5A0FEDD6222A53530091B10D /* Custom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Custom.m; sourceTree = "<group>"; };
+		5A0FEDDE222A907A0091B10D /* HudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0FEDE0222A907A0091B10D /* HudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HudTests.m; sourceTree = "<group>"; };
+		5A0FEDE2222A907A0091B10D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A13151E221A9BBC0023A521 /* Runloop_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runloop_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A131520221A9BBC0023A521 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A131521221A9BBC0023A521 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -373,6 +392,10 @@
 		5A9FDDD12226660800858DD3 /* DrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		5A9FDDD8222669A700858DD3 /* NSObject+RunloopObesever.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+RunloopObesever.h"; sourceTree = "<group>"; };
 		5A9FDDD9222669A700858DD3 /* NSObject+RunloopObesever.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RunloopObesever.m"; sourceTree = "<group>"; };
+		5AAE6227222ACEBF0052696E /* SecController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecController.h; sourceTree = "<group>"; };
+		5AAE6228222ACEBF0052696E /* SecController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecController.m; sourceTree = "<group>"; };
+		5AAE622A222AD00F0052696E /* CustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		5AAE622B222AD00F0052696E /* CustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		5AB43D96221F8E8300EC1173 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		5AB43D97221F8E8300EC1173 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		5AFB5BFC21F984590052674F /* Knowledge_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Knowledge_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -456,6 +479,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				97AC49DE26ABD81A01C177EB /* libPods-埋点Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0FEDDB222A907A0091B10D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +597,8 @@
 		5A0EFB7122290083006B3DCB /* Progress_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5A0FEDD1222A1D5D0091B10D /* MBProgressHUD.h */,
+				5A0FEDD2222A1D5D0091B10D /* MBProgressHUD.m */,
 				5A0EFB7222290083006B3DCB /* AppDelegate.h */,
 				5A0EFB7322290083006B3DCB /* AppDelegate.m */,
 				5A0EFB7522290083006B3DCB /* ViewController.h */,
@@ -576,6 +608,12 @@
 				5A0EFB7D22290086006B3DCB /* LaunchScreen.storyboard */,
 				5A0EFB8022290086006B3DCB /* Info.plist */,
 				5A0EFB8122290086006B3DCB /* main.m */,
+				5A0FEDD5222A53530091B10D /* Custom.h */,
+				5A0FEDD6222A53530091B10D /* Custom.m */,
+				5AAE6227222ACEBF0052696E /* SecController.h */,
+				5AAE6228222ACEBF0052696E /* SecController.m */,
+				5AAE622A222AD00F0052696E /* CustomCell.h */,
+				5AAE622B222AD00F0052696E /* CustomCell.m */,
 			);
 			path = Progress_Demo;
 			sourceTree = "<group>";
@@ -647,6 +685,15 @@
 				5A0FB5292215447100C05F14 /* EventIDMappingTest.m */,
 			);
 			path = "埋点Tests";
+			sourceTree = "<group>";
+		};
+		5A0FEDDF222A907A0091B10D /* HudTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A0FEDE0222A907A0091B10D /* HudTests.m */,
+				5A0FEDE2222A907A0091B10D /* Info.plist */,
+			);
+			path = HudTests;
 			sourceTree = "<group>";
 		};
 		5A13151F221A9BBC0023A521 /* Runloop_Demo */ = {
@@ -866,6 +913,7 @@
 				5A89AE7D2227A877008A0745 /* Eqaul_Demo */,
 				5A0EFB7122290083006B3DCB /* Progress_Demo */,
 				5A0EFBD922293344006B3DCB /* Draw_Demo */,
+				5A0FEDDF222A907A0091B10D /* HudTests */,
 				5AFB5BFD21F984590052674F /* Products */,
 				A89A3A0078FC062024DAD12A /* Pods */,
 				B37BC983F7C43455A38C63C0 /* Frameworks */,
@@ -891,6 +939,7 @@
 				5A89AE7C2227A877008A0745 /* Eqaul_Demo.app */,
 				5A0EFB7022290083006B3DCB /* Progress_Demo.app */,
 				5A0EFBD822293344006B3DCB /* Draw_Demo.app */,
+				5A0FEDDE222A907A0091B10D /* HudTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1087,6 +1136,24 @@
 			productReference = 5A0FB51F2215444D00C05F14 /* 埋点Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		5A0FEDDD222A907A0091B10D /* HudTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A0FEDE5222A907A0091B10D /* Build configuration list for PBXNativeTarget "HudTests" */;
+			buildPhases = (
+				5A0FEDDA222A907A0091B10D /* Sources */,
+				5A0FEDDB222A907A0091B10D /* Frameworks */,
+				5A0FEDDC222A907A0091B10D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A0FEDE4222A907A0091B10D /* PBXTargetDependency */,
+			);
+			name = HudTests;
+			productName = HudTests;
+			productReference = 5A0FEDDE222A907A0091B10D /* HudTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5A13151D221A9BBC0023A521 /* Runloop_Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A131533221A9BC70023A521 /* Build configuration list for PBXNativeTarget "Runloop_Demo" */;
@@ -1275,6 +1342,10 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 5A0FB4F02215154B00C05F14;
 					};
+					5A0FEDDD222A907A0091B10D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5A0EFB6F22290083006B3DCB;
+					};
 					5A13151D221A9BBC0023A521 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -1333,6 +1404,7 @@
 				5A89AE7B2227A877008A0745 /* Eqaul_Demo */,
 				5A0EFB6F22290083006B3DCB /* Progress_Demo */,
 				5A0EFBD722293344006B3DCB /* Draw_Demo */,
+				5A0FEDDD222A907A0091B10D /* HudTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1389,6 +1461,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5A0FB51D2215444D00C05F14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0FEDDC222A907A0091B10D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1673,8 +1752,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A0EFB7722290083006B3DCB /* ViewController.m in Sources */,
+				5AAE6229222ACEBF0052696E /* SecController.m in Sources */,
 				5A0EFB8222290086006B3DCB /* main.m in Sources */,
 				5A0EFB7422290083006B3DCB /* AppDelegate.m in Sources */,
+				5AAE622C222AD00F0052696E /* CustomCell.m in Sources */,
+				5A0FEDD3222A1D5D0091B10D /* MBProgressHUD.m in Sources */,
+				5A0FEDD7222A53530091B10D /* Custom.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1722,6 +1805,14 @@
 			files = (
 				5A0FB52A2215447100C05F14 /* EventIDMappingTest.m in Sources */,
 				5A0FB5222215444E00C05F14 /* __Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A0FEDDA222A907A0091B10D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A0FEDE1222A907A0091B10D /* HudTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1838,6 +1929,11 @@
 			isa = PBXTargetDependency;
 			target = 5A0FB4F02215154B00C05F14 /* 埋点 */;
 			targetProxy = 5A0FB5242215444E00C05F14 /* PBXContainerItemProxy */;
+		};
+		5A0FEDE4222A907A0091B10D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0EFB6F22290083006B3DCB /* Progress_Demo */;
+			targetProxy = 5A0FEDE3222A907A0091B10D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2303,6 +2399,44 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/埋点.app/埋点";
+			};
+			name = Release;
+		};
+		5A0FEDE6222A907A0091B10D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
+				INFOPLIST_FILE = HudTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = daiyunpeng.HudTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Progress_Demo.app/Progress_Demo";
+			};
+			name = Debug;
+		};
+		5A0FEDE7222A907A0091B10D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HU7CX6V97R;
+				INFOPLIST_FILE = HudTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = daiyunpeng.HudTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Progress_Demo.app/Progress_Demo";
 			};
 			name = Release;
 		};
@@ -2788,6 +2922,15 @@
 			buildConfigurations = (
 				5A0FB5272215444E00C05F14 /* Debug */,
 				5A0FB5282215444E00C05F14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A0FEDE5222A907A0091B10D /* Build configuration list for PBXNativeTarget "HudTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A0FEDE6222A907A0091B10D /* Debug */,
+				5A0FEDE7222A907A0091B10D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
