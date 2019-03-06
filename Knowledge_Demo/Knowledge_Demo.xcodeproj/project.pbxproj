@@ -27,6 +27,9 @@
 		5A03416B22164FB2002DCAF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A03416A22164FB2002DCAF9 /* Assets.xcassets */; };
 		5A03416E22164FB2002DCAF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A03416C22164FB2002DCAF9 /* LaunchScreen.storyboard */; };
 		5A03417122164FB2002DCAF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A03417022164FB2002DCAF9 /* main.m */; };
+		5A0BAC63222FB6250036FB9E /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BAC62222FB6250036FB9E /* CustomView.m */; };
+		5A0BAC66222FB73B0036FB9E /* SecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BAC65222FB73B0036FB9E /* SecViewController.m */; };
+		5A0BAC69222FB9660036FB9E /* UIViewController+loadFromStoryBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BAC68222FB9660036FB9E /* UIViewController+loadFromStoryBoard.m */; };
 		5A0EFB7422290083006B3DCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EFB7322290083006B3DCB /* AppDelegate.m */; };
 		5A0EFB7722290083006B3DCB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0EFB7622290083006B3DCB /* ViewController.m */; };
 		5A0EFB7A22290083006B3DCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0EFB7822290083006B3DCB /* Main.storyboard */; };
@@ -220,6 +223,12 @@
 		5A03416D22164FB2002DCAF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A03416F22164FB2002DCAF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A03417022164FB2002DCAF9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A0BAC61222FB6250036FB9E /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		5A0BAC62222FB6250036FB9E /* CustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		5A0BAC64222FB73B0036FB9E /* SecViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecViewController.h; sourceTree = "<group>"; };
+		5A0BAC65222FB73B0036FB9E /* SecViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecViewController.m; sourceTree = "<group>"; };
+		5A0BAC67222FB9660036FB9E /* UIViewController+loadFromStoryBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+loadFromStoryBoard.h"; sourceTree = "<group>"; };
+		5A0BAC68222FB9660036FB9E /* UIViewController+loadFromStoryBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+loadFromStoryBoard.m"; sourceTree = "<group>"; };
 		5A0EFB7022290083006B3DCB /* Progress_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Progress_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0EFB7222290083006B3DCB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A0EFB7322290083006B3DCB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -714,6 +723,12 @@
 				5A131538221AA6BC0023A521 /* RunloopCustomCell.m */,
 				5A9FDDD8222669A700858DD3 /* NSObject+RunloopObesever.h */,
 				5A9FDDD9222669A700858DD3 /* NSObject+RunloopObesever.m */,
+				5A0BAC61222FB6250036FB9E /* CustomView.h */,
+				5A0BAC62222FB6250036FB9E /* CustomView.m */,
+				5A0BAC64222FB73B0036FB9E /* SecViewController.h */,
+				5A0BAC65222FB73B0036FB9E /* SecViewController.m */,
+				5A0BAC67222FB9660036FB9E /* UIViewController+loadFromStoryBoard.h */,
+				5A0BAC68222FB9660036FB9E /* UIViewController+loadFromStoryBoard.m */,
 			);
 			path = Runloop_Demo;
 			sourceTree = "<group>";
@@ -1820,10 +1835,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A0BAC66222FB73B0036FB9E /* SecViewController.m in Sources */,
 				5A9FDDDA222669A700858DD3 /* NSObject+RunloopObesever.m in Sources */,
 				5A131525221A9BBC0023A521 /* ViewController.m in Sources */,
+				5A0BAC69222FB9660036FB9E /* UIViewController+loadFromStoryBoard.m in Sources */,
 				5A131530221A9BC70023A521 /* main.m in Sources */,
 				5A131522221A9BBC0023A521 /* AppDelegate.m in Sources */,
+				5A0BAC63222FB6250036FB9E /* CustomView.m in Sources */,
 				5A131536221AA54A0023A521 /* RRFPSBar.m in Sources */,
 				5A131539221AA6BC0023A521 /* RunloopCustomCell.m in Sources */,
 			);

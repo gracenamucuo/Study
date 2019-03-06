@@ -117,7 +117,13 @@ AssociationsManager持有一个AssociationsHashMap,hashmap以被关联对象(被
 关联对象并不是存储在被关联对象本身内存中，而是存储在全局的统一的一个AssociationsManager中，如果设置关联对象为nil，就相当于是移除关联对象。
 当被关联对象销毁的时候，其上的所有关联对象都会被销毁。不需要手动将所有关联对象置为nil
 //========================属性@property=====================================================
-动态生成属性的getter和setter方法的话，使用@dynamic,而且需要手动声明实例变量成员。
+动态生成属性的getter和setter方法的话，使用@dynamic,而且需要手动声明实例变量成员。例如:
+//@interface Student : NSObject
+//{
+//    NSString *_sex;
+//}
+
+
 如果setter和getter方法都重写了，则需要手动写出合成@synthesize nameStr = _nameStr;否则，编译器没有声明对应的实例变量。
 不可变对象属性修饰符使用copy，可变对象属性修饰符使用strong
 //========KVC=====================

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "RRFPSBar.h"
+#import "NSObject+RunloopObesever.h"
 @interface AppDelegate ()
 
 @end
@@ -17,10 +17,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-//    [[RRFPSBar sharedInstance]setHidden:NO];
+    [self addObserver];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(takeScreenshot:)
+                                                 name:UIApplicationUserDidTakeScreenshotNotification
+                                               object:nil];
     return YES;
 }
 
+- (void)takeScreenshot:(NSNotification *)noti
+{
+    NSLog(@"%@",noti);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

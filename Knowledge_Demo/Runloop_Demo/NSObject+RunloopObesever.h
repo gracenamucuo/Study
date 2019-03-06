@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (RunloopObesever)
-
+- (void)addObserver;
 @end
 
 NS_ASSUME_NONNULL_END
