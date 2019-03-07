@@ -105,6 +105,7 @@
 		5A4712E9221172AE009E3383 /* KVOClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4712E8221172AE009E3383 /* KVOClassA.m */; };
 		5A4712EC221172BA009E3383 /* KVOClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4712EB221172BA009E3383 /* KVOClassB.m */; };
 		5A4712EF221172C4009E3383 /* KVOClassC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4712EE221172C4009E3383 /* KVOClassC.m */; };
+		5A698EEC22311739005229B2 /* NSArray+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A698EEB22311739005229B2 /* NSArray+safe.m */; };
 		5A6C1458221CF5DC00586589 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C1457221CF5DC00586589 /* ViewController.m */; };
 		5A6C145B221CF5DC00586589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6C1459221CF5DC00586589 /* Main.storyboard */; };
 		5A6C145D221CF5DD00586589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A6C145C221CF5DD00586589 /* Assets.xcassets */; };
@@ -133,6 +134,10 @@
 		5AAE6229222ACEBF0052696E /* SecController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE6228222ACEBF0052696E /* SecController.m */; };
 		5AAE622C222AD00F0052696E /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE622B222AD00F0052696E /* CustomCell.m */; };
 		5AB43D98221F8E8300EC1173 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB43D97221F8E8300EC1173 /* TestView.m */; };
+		5AB8969A2230FB0900A8AD91 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB896972230FB0900A8AD91 /* NSObject+YYModel.m */; };
+		5AB8969B2230FB0900A8AD91 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB896982230FB0900A8AD91 /* YYClassInfo.m */; };
+		5AB8969D2230FBBF00A8AD91 /* tag_green_json.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AB8969C2230FBBE00A8AD91 /* tag_green_json.json */; };
+		5AB896A22230FD2E00A8AD91 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB896A12230FD2E00A8AD91 /* Model.m */; };
 		5AFB5C0121F984590052674F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0021F984590052674F /* AppDelegate.m */; };
 		5AFB5C0421F9845A0052674F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0321F9845A0052674F /* ViewController.m */; };
 		5AFB5C0721F9845A0052674F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0521F9845A0052674F /* Main.storyboard */; };
@@ -357,6 +362,8 @@
 		5A4712EB221172BA009E3383 /* KVOClassB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOClassB.m; sourceTree = "<group>"; };
 		5A4712ED221172C4009E3383 /* KVOClassC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOClassC.h; sourceTree = "<group>"; };
 		5A4712EE221172C4009E3383 /* KVOClassC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOClassC.m; sourceTree = "<group>"; };
+		5A698EEA22311739005229B2 /* NSArray+safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+safe.h"; sourceTree = "<group>"; };
+		5A698EEB22311739005229B2 /* NSArray+safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+safe.m"; sourceTree = "<group>"; };
 		5A6C1451221CF5DC00586589 /* Thread_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Thread_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6C1453221CF5DC00586589 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A6C1454221CF5DC00586589 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -407,6 +414,14 @@
 		5AAE622B222AD00F0052696E /* CustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		5AB43D96221F8E8300EC1173 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		5AB43D97221F8E8300EC1173 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		5AB896952230FB0900A8AD91 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		5AB896962230FB0900A8AD91 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
+		5AB896972230FB0900A8AD91 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
+		5AB896982230FB0900A8AD91 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		5AB896992230FB0900A8AD91 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
+		5AB8969C2230FBBE00A8AD91 /* tag_green_json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tag_green_json.json; sourceTree = "<group>"; };
+		5AB896A02230FD2E00A8AD91 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		5AB896A12230FD2E00A8AD91 /* Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		5AFB5BFC21F984590052674F /* Knowledge_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Knowledge_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFB5BFF21F984590052674F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5AFB5C0021F984590052674F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -659,6 +674,7 @@
 		5A0FB4F22215154C00C05F14 /* 埋点 */ = {
 			isa = PBXGroup;
 			children = (
+				5AB896942230FB0900A8AD91 /* YYModel */,
 				5A0FB4F32215154C00C05F14 /* AppDelegate.h */,
 				5A0FB4F42215154C00C05F14 /* AppDelegate.m */,
 				5A0FB4F62215154C00C05F14 /* ViewController.h */,
@@ -667,10 +683,13 @@
 				5A0FB50F221532EC00C05F14 /* DetailViewController.m */,
 				5A0FB52B221549A600C05F14 /* TableController.h */,
 				5A0FB52C221549A600C05F14 /* TableController.m */,
+				5AB896A02230FD2E00A8AD91 /* Model.h */,
+				5AB896A12230FD2E00A8AD91 /* Model.m */,
 				5A0FB4F92215154C00C05F14 /* Main.storyboard */,
 				5A0FB4FE2215154E00C05F14 /* LaunchScreen.storyboard */,
 				5A0FB5012215154E00C05F14 /* Info.plist */,
 				5A0FB5022215154E00C05F14 /* main.m */,
+				5AB8969C2230FBBE00A8AD91 /* tag_green_json.json */,
 				5A0FB5072215165800C05F14 /* HookUtility.h */,
 				5A0FB5082215165800C05F14 /* HookUtility.m */,
 				5A0FB50B221530CC00C05F14 /* UIViewController+UserStatistics.h */,
@@ -682,6 +701,8 @@
 				5A13153B221AAA010023A521 /* CustomCell.m */,
 				5A0FB536221570F400C05F14 /* UITableView+UserStatistics.h */,
 				5A0FB537221570F400C05F14 /* UITableView+UserStatistics.m */,
+				5A698EEA22311739005229B2 /* NSArray+safe.h */,
+				5A698EEB22311739005229B2 /* NSArray+safe.m */,
 			);
 			path = "埋点";
 			sourceTree = "<group>";
@@ -906,6 +927,18 @@
 				5A9FDDD12226660800858DD3 /* DrawView.m */,
 			);
 			path = "渲染";
+			sourceTree = "<group>";
+		};
+		5AB896942230FB0900A8AD91 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				5AB896952230FB0900A8AD91 /* YYClassInfo.h */,
+				5AB896962230FB0900A8AD91 /* YYModel.h */,
+				5AB896972230FB0900A8AD91 /* NSObject+YYModel.m */,
+				5AB896982230FB0900A8AD91 /* YYClassInfo.m */,
+				5AB896992230FB0900A8AD91 /* NSObject+YYModel.h */,
+			);
+			path = YYModel;
 			sourceTree = "<group>";
 		};
 		5AFB5BF321F984590052674F = {
@@ -1469,6 +1502,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AB8969D2230FBBF00A8AD91 /* tag_green_json.json in Resources */,
 				5A0FB5122215347100C05F14 /* UserStatistics.plist in Resources */,
 				5A0FB5002215154E00C05F14 /* LaunchScreen.storyboard in Resources */,
 				5A0FB4FB2215154C00C05F14 /* Main.storyboard in Resources */,
@@ -1805,11 +1839,15 @@
 				5A0FB51822153D0A00C05F14 /* UIControl+UserStatistics.m in Sources */,
 				5A13153C221AAA010023A521 /* CustomCell.m in Sources */,
 				5A0FB4F82215154C00C05F14 /* ViewController.m in Sources */,
+				5AB8969B2230FB0900A8AD91 /* YYClassInfo.m in Sources */,
+				5A698EEC22311739005229B2 /* NSArray+safe.m in Sources */,
 				5A0FB5092215165800C05F14 /* HookUtility.m in Sources */,
 				5A0FB5032215154E00C05F14 /* main.m in Sources */,
 				5A0FB50D221530CC00C05F14 /* UIViewController+UserStatistics.m in Sources */,
 				5A0FB4F52215154C00C05F14 /* AppDelegate.m in Sources */,
+				5AB8969A2230FB0900A8AD91 /* NSObject+YYModel.m in Sources */,
 				5A0FB538221570F400C05F14 /* UITableView+UserStatistics.m in Sources */,
+				5AB896A22230FD2E00A8AD91 /* Model.m in Sources */,
 				5A0FB510221532EC00C05F14 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

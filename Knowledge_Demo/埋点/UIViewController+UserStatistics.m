@@ -8,7 +8,20 @@
 
 #import "UIViewController+UserStatistics.h"
 #import "HookUtility.h"
+#import <objc/runtime.h>
+
 @implementation UIViewController (UserStatistics)
+
+- (void)setNameWithRuntime:(NSString *)nameWithRuntime
+{
+    objc_setAssociatedObject(self, @selector(nameWithRuntime), nameWithRuntime, OBJC_ASSOCIATION_COPY);
+}
+
+- (NSString *)nameWithRuntime
+{
+    return objc_getAssociatedObject(self, @selector(nameWithRuntime));
+}
+
 
 + (void)load
 {
@@ -29,6 +42,10 @@
 - (void)swiz_viewWillAppear:(BOOL)animated
 {
     NSLog(@"在viewWillAppear前插入代码");
+    if (![self.nameWithRuntime isEqualToString:@"test"]) {
+        self.nameWithRuntime = @"test";
+        NSLog(@"赋值成功");
+    }
     [self inject_viewWillAppear];
     [self swiz_viewWillAppear:animated];
 }

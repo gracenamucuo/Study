@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
-
+#import "YYModel/YYModel.h"
+#import "Model.h"
+#import "NSArray+safe.h"
 @interface ViewController ()
 
 @end
@@ -16,7 +18,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+//    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"jj" ofType:@"json"];
+    
+//    NSString *json = [NSString stringWithContentsOfFile:jsonPath encoding:NSUTF8StringEncoding error:nil];
+//    Model *model = [Model yy_modelWithJSON:json];
+//    NSLog(@"%@",model.c);
+    
+//    NSLog(@"%lld",[model.b[@"test"] longLongValue]);
+    
+    NSMutableArray *arr = [NSMutableArray arrayWithArray:@[]];
+    arr[0] = nil;
+    [arr insertObject:@"8" atIndex:4];
+    [arr insertObject:nil atIndex:0];
+    
+    
+    
 }
 
 - (IBAction)shareBtnPressed:(UIButton *)sender {

@@ -19,9 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.tableView aspect_hookSelector:@selector(setDelegate:) withOptions:2 usingBlock:^(id obj){
-        NSLog(@"%@",obj);
-    } error:nil];
+//    [self.tableView aspect_hookSelector:@selector(setDelegate:) withOptions:2 usingBlock:^(id obj){
+//        NSLog(@"%@",obj);
+//    } error:nil];
     self.tableView.delegate = self;
 }
 
