@@ -133,6 +133,7 @@
 		5A9FDDDB222669BF00858DD3 /* NSObject+RunloopObesever.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9FDDD9222669A700858DD3 /* NSObject+RunloopObesever.m */; };
 		5AAE6229222ACEBF0052696E /* SecController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE6228222ACEBF0052696E /* SecController.m */; };
 		5AAE622C222AD00F0052696E /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAE622B222AD00F0052696E /* CustomCell.m */; };
+		5AAFF61322320442001FD318 /* AsyncDrawLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAFF61222320442001FD318 /* AsyncDrawLabel.m */; };
 		5AB43D98221F8E8300EC1173 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB43D97221F8E8300EC1173 /* TestView.m */; };
 		5AB8969A2230FB0900A8AD91 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB896972230FB0900A8AD91 /* NSObject+YYModel.m */; };
 		5AB8969B2230FB0900A8AD91 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB896982230FB0900A8AD91 /* YYClassInfo.m */; };
@@ -412,6 +413,8 @@
 		5AAE6228222ACEBF0052696E /* SecController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecController.m; sourceTree = "<group>"; };
 		5AAE622A222AD00F0052696E /* CustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		5AAE622B222AD00F0052696E /* CustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		5AAFF61122320442001FD318 /* AsyncDrawLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyncDrawLabel.h; sourceTree = "<group>"; };
+		5AAFF61222320442001FD318 /* AsyncDrawLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsyncDrawLabel.m; sourceTree = "<group>"; };
 		5AB43D96221F8E8300EC1173 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		5AB43D97221F8E8300EC1173 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		5AB896952230FB0900A8AD91 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
@@ -925,6 +928,8 @@
 				5A9FDDCE222665CA00858DD3 /* DrawVCViewController.m */,
 				5A9FDDD02226660800858DD3 /* DrawView.h */,
 				5A9FDDD12226660800858DD3 /* DrawView.m */,
+				5AAFF61122320442001FD318 /* AsyncDrawLabel.h */,
+				5AAFF61222320442001FD318 /* AsyncDrawLabel.m */,
 			);
 			path = "渲染";
 			sourceTree = "<group>";
@@ -1946,6 +1951,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A9FDDDB222669BF00858DD3 /* NSObject+RunloopObesever.m in Sources */,
+				5AAFF61322320442001FD318 /* AsyncDrawLabel.m in Sources */,
 				5A9FDDBE2226653700858DD3 /* ViewController.m in Sources */,
 				5A9FDDC92226653A00858DD3 /* main.m in Sources */,
 				5A9FDDBB2226653700858DD3 /* AppDelegate.m in Sources */,

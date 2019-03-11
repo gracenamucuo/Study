@@ -9,9 +9,30 @@
 #import "DrawView.h"
 
 @implementation DrawView
-//- (void)drawRect:(CGRect)rect
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = [UIColor redColor];
+    }
+    return self;
+}
+
+- (void)drawRect:(CGRect)rect
+{
+    [super drawRect:rect];
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+}
+
+- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx
+{
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+}
+
+//- (void)displayLayer:(CALayer *)layer
 //{
-//    [super drawRect:rect];
-//    NSLog(@"----");
+//    NSLog(@"%@",NSStringFromSelector(_cmd));
 //}
+
 @end
