@@ -1,0 +1,57 @@
+PODS:
+  - Alamofire (4.8.0)
+  - EmptyDataSet-Swift (4.2.0)
+  - ETNeworkBase (0.1.2):
+    - Moya
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
+  - NVActivityIndicatorView (4.5.0):
+    - NVActivityIndicatorView/Presenter (= 4.5.0)
+  - NVActivityIndicatorView/Presenter (4.5.0)
+  - PKHUD (5.2.0)
+  - PullToRefreshKit (0.8.8)
+  - Result (4.0.0)
+  - SnapKit (4.2.0)
+  - TestResources (0.1.0)
+
+DEPENDENCIES:
+  - EmptyDataSet-Swift
+  - ETNeworkBase
+  - NVActivityIndicatorView
+  - PKHUD
+  - PullToRefreshKit
+  - SnapKit
+  - TestResources
+
+SPEC REPOS:
+  "git@gitlab.com:iosweyee/etspecremoterepo.git":
+    - ETNeworkBase
+    - TestResources
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - EmptyDataSet-Swift
+    - Moya
+    - NVActivityIndicatorView
+    - PKHUD
+    - PullToRefreshKit
+    - Result
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  EmptyDataSet-Swift: 1fa0b35f530a35f852ecb2b53564728b0c300aaf
+  ETNeworkBase: 2f58c5c1ea79de11e5c3892f206f7c920e802155
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  NVActivityIndicatorView: 1e4e3ed79248cf1666af182593c3a2acf0fcf193
+  PKHUD: dd5357ac65f26115c35c4a68e9b328053326c5fe
+  PullToRefreshKit: 7cc53e720e69f135cffa1a57784dfb534f0222ab
+  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  TestResources: 711c73a783713979d4ac5f3c469dd296b4ae39dc
+
+PODFILE CHECKSUM: 1aa19efd9db2d1e9d4c07f9a7e0ecda1ddf0c0ad
+
+COCOAPODS: 1.5.3

@@ -10,21 +10,21 @@
 #import "HookUtility.h"
 #import <objc/runtime.h>
 @implementation NSArray (safe)
-+ (void)load
-{
-    NSLog(@"控制器的load方法");
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        SEL originalSelector = @selector(setObject:atIndexedSubscript:);
-        SEL swizzledSelector = @selector(arrayM_setObject:atIndexedSubscript:);
-        
-        SEL originalDisSel = @selector(insertObject:atIndex:);
-        SEL swizzledDisSel = @selector(arrayM_insertObject:atIndex:);
-        
-        [HookUtility swizzlingInClass:objc_getClass("__NSArrayM") originalSelector:originalSelector swizzledSelector:swizzledSelector];
-        [HookUtility swizzlingInClass:objc_getClass("__NSArrayM") originalSelector:originalDisSel swizzledSelector:swizzledDisSel];
-    });
-}
+//+ (void)load
+//{
+//    NSLog(@"控制器的load方法");
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        SEL originalSelector = @selector(setObject:atIndexedSubscript:);
+//        SEL swizzledSelector = @selector(arrayM_setObject:atIndexedSubscript:);
+//        
+//        SEL originalDisSel = @selector(insertObject:atIndex:);
+//        SEL swizzledDisSel = @selector(arrayM_insertObject:atIndex:);
+//        
+//        [HookUtility swizzlingInClass:objc_getClass("__NSArrayM") originalSelector:originalSelector swizzledSelector:swizzledSelector];
+//        [HookUtility swizzlingInClass:objc_getClass("__NSArrayM") originalSelector:originalDisSel swizzledSelector:swizzledDisSel];
+//    });
+//}
 
 
 #pragma mark -- 数组写入

@@ -23,21 +23,21 @@
 }
 
 
-+ (void)load
-{
-    NSLog(@"控制器的load方法");
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        SEL originalSelector = @selector(viewWillAppear:);
-        SEL swizzledSelector = @selector(swiz_viewWillAppear:);
-        
-        SEL originalDisSel = @selector(viewWillDisappear:);
-        SEL swizzledDisSel = @selector(swiz_viewWillDisappear:);
-        
-        [HookUtility swizzlingInClass:self originalSelector:originalSelector swizzledSelector:swizzledSelector];
-        [HookUtility swizzlingInClass:self originalSelector:originalDisSel swizzledSelector:swizzledDisSel];
-    });
-}
+//+ (void)load
+//{
+//    NSLog(@"控制器的load方法");
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        SEL originalSelector = @selector(viewWillAppear:);
+//        SEL swizzledSelector = @selector(swiz_viewWillAppear:);
+//        
+//        SEL originalDisSel = @selector(viewWillDisappear:);
+//        SEL swizzledDisSel = @selector(swiz_viewWillDisappear:);
+//        
+//        [HookUtility swizzlingInClass:self originalSelector:originalSelector swizzledSelector:swizzledSelector];
+//        [HookUtility swizzlingInClass:self originalSelector:originalDisSel swizzledSelector:swizzledDisSel];
+//    });
+//}
 
 - (void)swiz_viewWillAppear:(BOOL)animated
 {

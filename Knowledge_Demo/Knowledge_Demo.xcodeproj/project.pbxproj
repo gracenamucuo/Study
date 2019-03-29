@@ -111,6 +111,7 @@
 		5A6C145D221CF5DD00586589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A6C145C221CF5DD00586589 /* Assets.xcassets */; };
 		5A6C1460221CF5DD00586589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6C145E221CF5DD00586589 /* LaunchScreen.storyboard */; };
 		5A6C1463221CF5DD00586589 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6C1462221CF5DD00586589 /* main.m */; };
+		5A7A39B62235F856003DEEFB /* UILabel+Font.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A39B52235F856003DEEFB /* UILabel+Font.m */; };
 		5A89AE76222775F2008A0745 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A89AE75222775F2008A0745 /* Model.m */; };
 		5A89AE802227A878008A0745 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A89AE7F2227A878008A0745 /* AppDelegate.m */; };
 		5A89AE832227A878008A0745 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A89AE822227A878008A0745 /* ViewController.m */; };
@@ -139,6 +140,9 @@
 		5AB8969B2230FB0900A8AD91 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB896982230FB0900A8AD91 /* YYClassInfo.m */; };
 		5AB8969D2230FBBF00A8AD91 /* tag_green_json.json in Resources */ = {isa = PBXBuildFile; fileRef = 5AB8969C2230FBBE00A8AD91 /* tag_green_json.json */; };
 		5AB896A22230FD2E00A8AD91 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB896A12230FD2E00A8AD91 /* Model.m */; };
+		5AC8361F224485690032BA2A /* SecController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC8361E224485690032BA2A /* SecController.m */; };
+		5AF743C022375B16002BE4D0 /* qq.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AF743BF22375B15002BE4D0 /* qq.png */; };
+		5AFB2B92223F48120022BE30 /* NSObject+Perform.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB2B91223F48120022BE30 /* NSObject+Perform.m */; };
 		5AFB5C0121F984590052674F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0021F984590052674F /* AppDelegate.m */; };
 		5AFB5C0421F9845A0052674F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0321F9845A0052674F /* ViewController.m */; };
 		5AFB5C0721F9845A0052674F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFB5C0521F9845A0052674F /* Main.storyboard */; };
@@ -375,6 +379,8 @@
 		5A6C145F221CF5DD00586589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A6C1461221CF5DD00586589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6C1462221CF5DD00586589 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A7A39B42235F856003DEEFB /* UILabel+Font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Font.h"; sourceTree = "<group>"; };
+		5A7A39B52235F856003DEEFB /* UILabel+Font.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Font.m"; sourceTree = "<group>"; };
 		5A89AE74222775F2008A0745 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		5A89AE75222775F2008A0745 /* Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		5A89AE7C2227A877008A0745 /* Eqaul_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eqaul_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -425,6 +431,11 @@
 		5AB8969C2230FBBE00A8AD91 /* tag_green_json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tag_green_json.json; sourceTree = "<group>"; };
 		5AB896A02230FD2E00A8AD91 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		5AB896A12230FD2E00A8AD91 /* Model.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		5AC8361D224485690032BA2A /* SecController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecController.h; sourceTree = "<group>"; };
+		5AC8361E224485690032BA2A /* SecController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecController.m; sourceTree = "<group>"; };
+		5AF743BF22375B15002BE4D0 /* qq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qq.png; sourceTree = "<group>"; };
+		5AFB2B90223F48120022BE30 /* NSObject+Perform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Perform.h"; sourceTree = "<group>"; };
+		5AFB2B91223F48120022BE30 /* NSObject+Perform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Perform.m"; sourceTree = "<group>"; };
 		5AFB5BFC21F984590052674F /* Knowledge_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Knowledge_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AFB5BFF21F984590052674F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5AFB5C0021F984590052674F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -682,6 +693,7 @@
 				5A0FB4F42215154C00C05F14 /* AppDelegate.m */,
 				5A0FB4F62215154C00C05F14 /* ViewController.h */,
 				5A0FB4F72215154C00C05F14 /* ViewController.m */,
+				5AF743BF22375B15002BE4D0 /* qq.png */,
 				5A0FB50E221532EC00C05F14 /* DetailViewController.h */,
 				5A0FB50F221532EC00C05F14 /* DetailViewController.m */,
 				5A0FB52B221549A600C05F14 /* TableController.h */,
@@ -706,6 +718,12 @@
 				5A0FB537221570F400C05F14 /* UITableView+UserStatistics.m */,
 				5A698EEA22311739005229B2 /* NSArray+safe.h */,
 				5A698EEB22311739005229B2 /* NSArray+safe.m */,
+				5A7A39B42235F856003DEEFB /* UILabel+Font.h */,
+				5A7A39B52235F856003DEEFB /* UILabel+Font.m */,
+				5AFB2B90223F48120022BE30 /* NSObject+Perform.h */,
+				5AFB2B91223F48120022BE30 /* NSObject+Perform.m */,
+				5AC8361D224485690032BA2A /* SecController.h */,
+				5AC8361E224485690032BA2A /* SecController.m */,
 			);
 			path = "埋点";
 			sourceTree = "<group>";
@@ -1507,6 +1525,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF743C022375B16002BE4D0 /* qq.png in Resources */,
 				5AB8969D2230FBBF00A8AD91 /* tag_green_json.json in Resources */,
 				5A0FB5122215347100C05F14 /* UserStatistics.plist in Resources */,
 				5A0FB5002215154E00C05F14 /* LaunchScreen.storyboard in Resources */,
@@ -1843,13 +1862,16 @@
 				5A0FB52D221549A600C05F14 /* TableController.m in Sources */,
 				5A0FB51822153D0A00C05F14 /* UIControl+UserStatistics.m in Sources */,
 				5A13153C221AAA010023A521 /* CustomCell.m in Sources */,
+				5AC8361F224485690032BA2A /* SecController.m in Sources */,
 				5A0FB4F82215154C00C05F14 /* ViewController.m in Sources */,
 				5AB8969B2230FB0900A8AD91 /* YYClassInfo.m in Sources */,
 				5A698EEC22311739005229B2 /* NSArray+safe.m in Sources */,
 				5A0FB5092215165800C05F14 /* HookUtility.m in Sources */,
+				5A7A39B62235F856003DEEFB /* UILabel+Font.m in Sources */,
 				5A0FB5032215154E00C05F14 /* main.m in Sources */,
 				5A0FB50D221530CC00C05F14 /* UIViewController+UserStatistics.m in Sources */,
 				5A0FB4F52215154C00C05F14 /* AppDelegate.m in Sources */,
+				5AFB2B92223F48120022BE30 /* NSObject+Perform.m in Sources */,
 				5AB8969A2230FB0900A8AD91 /* NSObject+YYModel.m in Sources */,
 				5A0FB538221570F400C05F14 /* UITableView+UserStatistics.m in Sources */,
 				5AB896A22230FD2E00A8AD91 /* Model.m in Sources */,
@@ -2402,7 +2424,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "dyp.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2420,7 +2442,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "dyp.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

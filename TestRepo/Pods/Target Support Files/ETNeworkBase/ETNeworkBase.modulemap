@@ -1,0 +1,6 @@
+framework module ETNeworkBase {
+  umbrella header "ETNeworkBase-umbrella.h"
+
+  export *
+  module * { export * }
+}
