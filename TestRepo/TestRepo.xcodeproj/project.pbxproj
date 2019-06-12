@@ -198,6 +198,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 5A12705D21D1D35A00D82307;
 			productRefGroup = 5A12706721D1D35A00D82307 /* Products */;
@@ -461,7 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HU7CX6V97R;
+				DEVELOPMENT_TEAM = 2969E9YH45;
 				INFOPLIST_FILE = TestRepo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -481,7 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HU7CX6V97R;
+				DEVELOPMENT_TEAM = 2969E9YH45;
 				INFOPLIST_FILE = TestRepo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
