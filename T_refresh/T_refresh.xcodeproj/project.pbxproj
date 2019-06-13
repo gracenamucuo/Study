@@ -42,6 +42,8 @@
 		3C1F784822AFA6810098257E /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F783022AFA6810098257E /* MJRefreshBackFooter.m */; };
 		3C1F784922AFA6810098257E /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F783122AFA6810098257E /* MJRefreshAutoFooter.m */; };
 		3C1F784A22AFA6810098257E /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F783322AFA6810098257E /* MJRefreshComponent.m */; };
+		3CA4D63222B1DEF600B658F3 /* BaseFooterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA4D63122B1DEF600B658F3 /* BaseFooterController.m */; };
+		3CA4D63922B1E3E300B658F3 /* BackFooterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA4D63822B1E3E300B658F3 /* BackFooterController.m */; };
 		6909A3C86FF8BED18F254DC1 /* libPods-T_refresh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF4CA1044D1B640967B83F81 /* libPods-T_refresh.a */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +116,10 @@
 		3C1F783322AFA6810098257E /* MJRefreshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshComponent.m; sourceTree = "<group>"; };
 		3C1F783422AFA6810098257E /* MJRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooter.h; sourceTree = "<group>"; };
 		3C1F783522AFA6810098257E /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
+		3CA4D63022B1DEF600B658F3 /* BaseFooterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseFooterController.h; sourceTree = "<group>"; };
+		3CA4D63122B1DEF600B658F3 /* BaseFooterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseFooterController.m; sourceTree = "<group>"; };
+		3CA4D63722B1E3E300B658F3 /* BackFooterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackFooterController.h; sourceTree = "<group>"; };
+		3CA4D63822B1E3E300B658F3 /* BackFooterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackFooterController.m; sourceTree = "<group>"; };
 		B4126AA9D9C31DEDD1A1CBA5 /* Pods-T_refresh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T_refresh.release.xcconfig"; path = "Target Support Files/Pods-T_refresh/Pods-T_refresh.release.xcconfig"; sourceTree = "<group>"; };
 		CF4CA1044D1B640967B83F81 /* libPods-T_refresh.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-T_refresh.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F7BA0DD4DC5EC641856152 /* Pods-T_refresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T_refresh.debug.xcconfig"; path = "Target Support Files/Pods-T_refresh/Pods-T_refresh.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,8 +171,6 @@
 				3C05835322B0A68500C59C39 /* CustomHeaderController.m */,
 				3C05834F22B0A3E800C59C39 /* CustomHeader.h */,
 				3C05835022B0A3E800C59C39 /* CustomHeader.m */,
-				3C05837722B0EF0500C59C39 /* UITableView+Refresh.h */,
-				3C05837822B0EF0500C59C39 /* UITableView+Refresh.m */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -202,7 +206,10 @@
 				3C1F77FA22AFA6670098257E /* LaunchScreen.storyboard */,
 				3C1F77FD22AFA6670098257E /* Info.plist */,
 				3C1F77FE22AFA6670098257E /* main.m */,
+				3C05837722B0EF0500C59C39 /* UITableView+Refresh.h */,
+				3C05837822B0EF0500C59C39 /* UITableView+Refresh.m */,
 				3C05834B22B0998600C59C39 /* Headers */,
+				3CA4D63322B1DEF900B658F3 /* Footers */,
 			);
 			path = T_refresh;
 			sourceTree = "<group>";
@@ -302,6 +309,17 @@
 				3C1F783022AFA6810098257E /* MJRefreshBackFooter.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		3CA4D63322B1DEF900B658F3 /* Footers */ = {
+			isa = PBXGroup;
+			children = (
+				3CA4D63022B1DEF600B658F3 /* BaseFooterController.h */,
+				3CA4D63122B1DEF600B658F3 /* BaseFooterController.m */,
+				3CA4D63722B1E3E300B658F3 /* BackFooterController.h */,
+				3CA4D63822B1E3E300B658F3 /* BackFooterController.m */,
+			);
+			path = Footers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +427,7 @@
 				3C05835122B0A3E800C59C39 /* CustomHeader.m in Sources */,
 				3C1F783A22AFA6810098257E /* UIScrollView+MJExtension.m in Sources */,
 				3C1F783D22AFA6810098257E /* MJRefreshBackGifFooter.m in Sources */,
+				3CA4D63922B1E3E300B658F3 /* BackFooterController.m in Sources */,
 				3C05837922B0EF0500C59C39 /* UITableView+Refresh.m in Sources */,
 				3C1F784522AFA6810098257E /* MJRefreshGifHeader.m in Sources */,
 				3C1F784A22AFA6810098257E /* MJRefreshComponent.m in Sources */,
@@ -432,6 +451,7 @@
 				3C1F784422AFA6810098257E /* MJRefreshStateHeader.m in Sources */,
 				3C1F783722AFA6810098257E /* MJRefreshConst.m in Sources */,
 				3C05834E22B099FD00C59C39 /* BaseCustomRefreshHeader.m in Sources */,
+				3CA4D63222B1DEF600B658F3 /* BaseFooterController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

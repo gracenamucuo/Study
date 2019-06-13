@@ -12,6 +12,8 @@
 #import "NormalHeaderController.h"
 #import "GifHeaderController.h"
 #import "CustomHeaderController.h"
+#import "BaseFooterController.h"
+#import "BackFooterController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong)NSArray *dataSource;
@@ -21,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataSource = @[@"header",@"stateHeader",@"normalHeader",@"gifheader",@"customHeader"];
+    self.dataSource = @[@"header",@"stateHeader",@"normalHeader",@"gifheader",@"customHeader",@"这一个",@"backFooter"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
     [self.tableView reloadData];
 }
@@ -54,6 +56,10 @@
         vc = [[GifHeaderController alloc]init];
     }else if ([name isEqualToString:@"customHeader"]){
         vc = [[CustomHeaderController alloc]init];
+    }else if ([name isEqualToString:@"这一个"]){
+        vc = [[BaseFooterController alloc]init];
+    }else if ([name isEqualToString:@"backFooter"]){
+        vc = [[BackFooterController alloc]init];
     }
     [self.navigationController pushViewController:vc animated:YES];
 }

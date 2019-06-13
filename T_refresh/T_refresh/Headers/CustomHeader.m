@@ -14,6 +14,7 @@
 @property (nonatomic,weak)UIImageView *middleDot;
 @property (nonatomic,weak)UIImageView *rightDot;
 @property (nonatomic,assign)MJRefreshState state;
+@property (nonatomic,assign)CGFloat pullingPercent;
 @end
 
 @implementation CustomHeader
@@ -56,6 +57,7 @@
     self.state = MJRefreshStateIdle;
     [self placeImageViews];
     
+    [self.leftDot addObserver:self forKeyPath:@"center" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
 }
 
 - (void)layoutSubviews
@@ -77,16 +79,19 @@
 {
     self.state = state;
     if (state == MJRefreshStateIdle) {
-        [UIView animateWithDuration:0.25 animations:^{
-            [self placeImageViews];
-            self.leftDot.transform = CGAffineTransformIdentity;
-            self.middleDot.transform = CGAffineTransformIdentity;
-            self.rightDot.transform = CGAffineTransformIdentity;
-        } completion:^(BOOL finished) {
-            [self.middleDot.layer removeAllAnimations];
-            [self.leftDot.layer removeAllAnimations];
-            [self.rightDot.layer removeAllAnimations];
-        }];
+        if (self.pullingPercent <= 0) {
+            [UIView animateWithDuration:0.25 animations:^{
+                [self placeImageViews];
+                self.leftDot.transform = CGAffineTransformIdentity;
+                self.middleDot.transform = CGAffineTransformIdentity;
+                self.rightDot.transform = CGAffineTransformIdentity;
+            } completion:^(BOOL finished) {
+                [self.middleDot.layer removeAllAnimations];
+                [self.leftDot.layer removeAllAnimations];
+                [self.rightDot.layer removeAllAnimations];
+            }];
+        }
+
     }else if (state == MJRefreshStatePulling){
         
     }else if (state == MJRefreshStateRefreshing){
@@ -109,6 +114,9 @@
 
 - (void)animationPullPercent:(CGFloat)pullcent
 {
+    self.pullingPercent = pullcent;
+    NSLog(@"%@     %@",@(self.state),@(pullcent));
+    
     //刷新动画
     if (self.state == MJRefreshStateRefreshing) {
         
@@ -139,9 +147,22 @@
     
     //下拉动画
     CGFloat offset = (pullcent >= 1 ? 1 : pullcent) * 27.0;
+//    NSLog(@"偏移量%@",@(offset));
     CGAffineTransform left = CGAffineTransformMakeTranslation(-offset, 0);
     CGAffineTransform right = CGAffineTransformMakeTranslation(offset, 0);
+    
     self.leftDot.transform = left;
     self.rightDot.transform = right;
+//    NSLog(@"%@",@(self.leftDot.frame));
 }
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+    if ([object isEqual:self.leftDot] && [keyPath isEqualToString:@"center"]) {
+//        NSLog(@"%@",[change[@"new"] CGPointValue].x < 187.5 - 27);
+//        NSLog(@"%@",@(self.leftDot.frame));
+    }
+}
+
+
 @end

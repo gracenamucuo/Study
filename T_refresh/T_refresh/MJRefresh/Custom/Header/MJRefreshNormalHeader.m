@@ -124,6 +124,5 @@
         self.arrowView.hidden = YES;
     }
     
-    NSLog(@"======%@",@(state));
 }
 @end
