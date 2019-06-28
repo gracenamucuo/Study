@@ -10,6 +10,7 @@
 #import "GreetingController.h"
 #import "LoginController.h"
 #import "ProductListController.h"
+#import "InputController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong)NSArray *dataSource;
@@ -25,7 +26,7 @@
 - (void)configTableView
 {
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
-    self.dataSource = @[@"GreetingController",@"LoginController",@"ProductListController"];
+    self.dataSource = @[@"GreetingController",@"LoginController",@"ProductListController",@"InputController"];
     [self.tableView reloadData];
 }
 

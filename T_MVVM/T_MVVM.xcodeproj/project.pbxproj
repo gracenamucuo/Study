@@ -17,6 +17,9 @@
 		3C06651022C207DD0089722F /* ProductListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C06650E22C207DD0089722F /* ProductListController.xib */; };
 		3C06651322C215CA0089722F /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C06651222C215CA0089722F /* ProductModel.m */; };
 		3C06651622C2162E0089722F /* ProductItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C06651522C2162E0089722F /* ProductItemViewModel.m */; };
+		3C0EE21522C5BE870097EBC3 /* InputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EE21322C5BE870097EBC3 /* InputController.m */; };
+		3C0EE21622C5BE870097EBC3 /* InputController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C0EE21422C5BE870097EBC3 /* InputController.xib */; };
+		3C0EE21A22C5E6F20097EBC3 /* InputViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0EE21922C5E6F20097EBC3 /* InputViewModel.m */; };
 		3C22B8E922C4690900B09E2C /* ProductListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C22B8E822C4690900B09E2C /* ProductListViewModel.m */; };
 		3C22B8EC22C4A18400B09E2C /* UITableView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C22B8EB22C4A18400B09E2C /* UITableView+Refresh.m */; };
 		3C22B8EF22C4A1BD00B09E2C /* BaseCustomRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C22B8EE22C4A1BD00B09E2C /* BaseCustomRefreshHeader.m */; };
@@ -49,6 +52,11 @@
 		3C06651222C215CA0089722F /* ProductModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductModel.m; sourceTree = "<group>"; };
 		3C06651422C2162E0089722F /* ProductItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductItemViewModel.h; sourceTree = "<group>"; };
 		3C06651522C2162E0089722F /* ProductItemViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductItemViewModel.m; sourceTree = "<group>"; };
+		3C0EE21222C5BE870097EBC3 /* InputController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputController.h; sourceTree = "<group>"; };
+		3C0EE21322C5BE870097EBC3 /* InputController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputController.m; sourceTree = "<group>"; };
+		3C0EE21422C5BE870097EBC3 /* InputController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputController.xib; sourceTree = "<group>"; };
+		3C0EE21822C5E6F20097EBC3 /* InputViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputViewModel.h; sourceTree = "<group>"; };
+		3C0EE21922C5E6F20097EBC3 /* InputViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputViewModel.m; sourceTree = "<group>"; };
 		3C22B8E722C4690900B09E2C /* ProductListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductListViewModel.h; sourceTree = "<group>"; };
 		3C22B8E822C4690900B09E2C /* ProductListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductListViewModel.m; sourceTree = "<group>"; };
 		3C22B8EA22C4A18400B09E2C /* UITableView+Refresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Refresh.h"; sourceTree = "<group>"; };
@@ -113,22 +121,74 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		3C16AD7F22B8B9460009AF93 /* List */ = {
+		3C0EE20D22C5B0690097EBC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3C06651122C215CA0089722F /* ProductModel.h */,
+				3C06651222C215CA0089722F /* ProductModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3C0EE20E22C5B0750097EBC3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3C06651422C2162E0089722F /* ProductItemViewModel.h */,
+				3C06651522C2162E0089722F /* ProductItemViewModel.m */,
+				3C22B8E722C4690900B09E2C /* ProductListViewModel.h */,
+				3C22B8E822C4690900B09E2C /* ProductListViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3C0EE20F22C5B0850097EBC3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3C22B90322C4BB0300B09E2C /* ProductCell.h */,
+				3C22B90422C4BB0300B09E2C /* ProductCell.m */,
+				3C22B90522C4BB0300B09E2C /* ProductCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3C0EE21022C5B08B0097EBC3 /* Binder */ = {
+			isa = PBXGroup;
+			children = (
+				3C22B90822C4BD4A00B09E2C /* BindProtocol.h */,
+			);
+			path = Binder;
+			sourceTree = "<group>";
+		};
+		3C0EE21122C5B0980097EBC3 /* controller */ = {
 			isa = PBXGroup;
 			children = (
 				3C06650C22C207DD0089722F /* ProductListController.h */,
 				3C06650D22C207DD0089722F /* ProductListController.m */,
 				3C06650E22C207DD0089722F /* ProductListController.xib */,
-				3C06651122C215CA0089722F /* ProductModel.h */,
-				3C06651222C215CA0089722F /* ProductModel.m */,
-				3C06651422C2162E0089722F /* ProductItemViewModel.h */,
-				3C06651522C2162E0089722F /* ProductItemViewModel.m */,
-				3C22B8E722C4690900B09E2C /* ProductListViewModel.h */,
-				3C22B8E822C4690900B09E2C /* ProductListViewModel.m */,
-				3C22B90322C4BB0300B09E2C /* ProductCell.h */,
-				3C22B90422C4BB0300B09E2C /* ProductCell.m */,
-				3C22B90522C4BB0300B09E2C /* ProductCell.xib */,
-				3C22B90822C4BD4A00B09E2C /* BindProtocol.h */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		3C0EE21722C5BE8C0097EBC3 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				3C0EE21222C5BE870097EBC3 /* InputController.h */,
+				3C0EE21322C5BE870097EBC3 /* InputController.m */,
+				3C0EE21422C5BE870097EBC3 /* InputController.xib */,
+				3C0EE21822C5E6F20097EBC3 /* InputViewModel.h */,
+				3C0EE21922C5E6F20097EBC3 /* InputViewModel.m */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		3C16AD7F22B8B9460009AF93 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				3C0EE21122C5B0980097EBC3 /* controller */,
+				3C0EE20D22C5B0690097EBC3 /* Model */,
+				3C0EE20E22C5B0750097EBC3 /* ViewModel */,
+				3C0EE20F22C5B0850097EBC3 /* Cell */,
+				3C0EE21022C5B08B0097EBC3 /* Binder */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -174,6 +234,7 @@
 				3C16AD7F22B8B9460009AF93 /* List */,
 				3CA8DCF622B737CD0084487A /* Greeting */,
 				3C0664FF22C1CF1B0089722F /* Login */,
+				3C0EE21722C5BE8C0097EBC3 /* Input */,
 			);
 			path = T_MVVM;
 			sourceTree = "<group>";
@@ -261,6 +322,7 @@
 				3C22B90722C4BB0300B09E2C /* ProductCell.xib in Resources */,
 				3C0664FE22C1CF150089722F /* LoginController.xib in Resources */,
 				3CA8DCD022B72B9E0084487A /* Assets.xcassets in Resources */,
+				3C0EE21622C5BE870097EBC3 /* InputController.xib in Resources */,
 				3CA8DCCE22B72B9D0084487A /* Main.storyboard in Resources */,
 				3C0664F922C1C8D50089722F /* MVVM架构层次图 (存疑).png in Resources */,
 				3C06651022C207DD0089722F /* ProductListController.xib in Resources */,
@@ -322,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C0EE21522C5BE870097EBC3 /* InputController.m in Sources */,
 				3CA8DCCB22B72B9D0084487A /* ViewController.m in Sources */,
 				3C0664FD22C1CF150089722F /* LoginController.m in Sources */,
 				3C22B8E922C4690900B09E2C /* ProductListViewModel.m in Sources */,
@@ -329,6 +392,7 @@
 				3C06650F22C207DD0089722F /* ProductListController.m in Sources */,
 				3C22B90622C4BB0300B09E2C /* ProductCell.m in Sources */,
 				3C22B8EC22C4A18400B09E2C /* UITableView+Refresh.m in Sources */,
+				3C0EE21A22C5E6F20097EBC3 /* InputViewModel.m in Sources */,
 				3CA8DCD622B72B9E0084487A /* main.m in Sources */,
 				3CA8DCDE22B72E2C0084487A /* Person.m in Sources */,
 				3C22B8EF22C4A1BD00B09E2C /* BaseCustomRefreshHeader.m in Sources */,
