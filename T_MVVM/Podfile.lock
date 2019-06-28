@@ -1,0 +1,24 @@
+PODS:
+  - KVOController (1.2.0)
+  - Masonry (1.1.0)
+  - MJRefresh (3.2.0)
+
+DEPENDENCIES:
+  - KVOController
+  - Masonry
+  - MJRefresh
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - KVOController
+    - Masonry
+    - MJRefresh
+
+SPEC CHECKSUMS:
+  KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+
+PODFILE CHECKSUM: 0c6a568a4f34cd216cea1eb2770fc1d09c6048a3
+
+COCOAPODS: 1.6.1
