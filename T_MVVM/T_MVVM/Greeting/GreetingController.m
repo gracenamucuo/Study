@@ -109,4 +109,21 @@
     NSLog(@"%@ ------销毁",[self class]);
 }
 
+
+/**
+ 
+ MVVM involves three layers:
+    -- Model  layer---
+ • The model layer contains data access objects and validation logic. It knows how to
+ read and write data, and it notifies the view model when data changes.
+    -- ViewModel  layer---
+ • The view model layer contains the state of the view and has methods to handle user
+ interaction. It calls methods on the model layer to read and write data, and it notifies
+ the view when the model‘s data changes.
+    -- view  layer---
+ • The view layer styles and displays on-screen elements. It doesn‘t contain business
+ or validation logic. Instead, it binds its visual elements to properties on the view
+ model. It also receives user inputs and interaction, and it calls methods on the view
+ model in response.
+ */
 @end

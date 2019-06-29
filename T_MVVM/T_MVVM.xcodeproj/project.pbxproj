@@ -25,6 +25,8 @@
 		3C22B8EF22C4A1BD00B09E2C /* BaseCustomRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C22B8EE22C4A1BD00B09E2C /* BaseCustomRefreshHeader.m */; };
 		3C22B90622C4BB0300B09E2C /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C22B90422C4BB0300B09E2C /* ProductCell.m */; };
 		3C22B90722C4BB0300B09E2C /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C22B90522C4BB0300B09E2C /* ProductCell.xib */; };
+		3C7CF6A622C75CD600DDE9A9 /* pic_mvvm.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7CF6A422C75CD600DDE9A9 /* pic_mvvm.png */; };
+		3C7CF6A722C75CD600DDE9A9 /* pic_model.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C7CF6A522C75CD600DDE9A9 /* pic_model.png */; };
 		3CA8DCC822B72B9D0084487A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA8DCC722B72B9D0084487A /* AppDelegate.m */; };
 		3CA8DCCB22B72B9D0084487A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA8DCCA22B72B9D0084487A /* ViewController.m */; };
 		3CA8DCCE22B72B9D0084487A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CA8DCCC22B72B9D0084487A /* Main.storyboard */; };
@@ -67,6 +69,8 @@
 		3C22B90422C4BB0300B09E2C /* ProductCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProductCell.m; sourceTree = "<group>"; };
 		3C22B90522C4BB0300B09E2C /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		3C22B90822C4BD4A00B09E2C /* BindProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindProtocol.h; sourceTree = "<group>"; };
+		3C7CF6A422C75CD600DDE9A9 /* pic_mvvm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic_mvvm.png; sourceTree = "<group>"; };
+		3C7CF6A522C75CD600DDE9A9 /* pic_model.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic_model.png; sourceTree = "<group>"; };
 		3CA8DCC322B72B9D0084487A /* T_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA8DCC622B72B9D0084487A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3CA8DCC722B72B9D0084487A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -214,6 +218,8 @@
 		3CA8DCC522B72B9D0084487A /* T_MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				3C7CF6A522C75CD600DDE9A9 /* pic_model.png */,
+				3C7CF6A422C75CD600DDE9A9 /* pic_mvvm.png */,
 				3C0664F822C1C8D50089722F /* MVVM架构层次图 (存疑).png */,
 				3C06650A22C206BB0089722F /* mvvm.png */,
 				3CA8DCC622B72B9D0084487A /* AppDelegate.h */,
@@ -320,6 +326,7 @@
 			files = (
 				3CA8DCD322B72B9E0084487A /* LaunchScreen.storyboard in Resources */,
 				3C22B90722C4BB0300B09E2C /* ProductCell.xib in Resources */,
+				3C7CF6A622C75CD600DDE9A9 /* pic_mvvm.png in Resources */,
 				3C0664FE22C1CF150089722F /* LoginController.xib in Resources */,
 				3CA8DCD022B72B9E0084487A /* Assets.xcassets in Resources */,
 				3C0EE21622C5BE870097EBC3 /* InputController.xib in Resources */,
@@ -327,6 +334,7 @@
 				3C0664F922C1C8D50089722F /* MVVM架构层次图 (存疑).png in Resources */,
 				3C06651022C207DD0089722F /* ProductListController.xib in Resources */,
 				3C06650B22C206BB0089722F /* mvvm.png in Resources */,
+				3C7CF6A722C75CD600DDE9A9 /* pic_model.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
