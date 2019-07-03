@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AutoLayoutAnimationsController" customModule="T_Animations" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonMenu" destination="Oyu-Oe-dUI" id="oye-SA-R8e"/>
+                <outlet property="menuHeightConstraint" destination="V4b-F2-v6n" id="GGb-MT-0Fw"/>
+                <outlet property="tableView" destination="y3P-th-XDF" id="6bo-4y-fUp"/>
+                <outlet property="titleLabel" destination="s2l-sf-dt0" id="Sb5-mp-0bU"/>
+                <outlet property="view" destination="u22-pd-NQH" id="h9U-SZ-HRe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="u22-pd-NQH">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooZ-Qk-aqd">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2l-sf-dt0">
+                            <rect key="frame" x="186" y="11.5" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyu-Oe-dUI">
+                            <rect key="frame" x="376" y="-0.5" width="30" height="45"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                            <state key="normal" title="+"/>
+                            <connections>
+                                <action selector="addAction:" destination="-1" eventType="touchUpInside" id="XD6-R9-Muf"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="s2l-sf-dt0" firstAttribute="centerY" secondItem="ooZ-Qk-aqd" secondAttribute="centerY" identifier="TitleCenterY" id="3IE-tY-UIy"/>
+                        <constraint firstItem="s2l-sf-dt0" firstAttribute="centerX" secondItem="ooZ-Qk-aqd" secondAttribute="centerX" id="JZR-ps-Nax"/>
+                        <constraint firstItem="Oyu-Oe-dUI" firstAttribute="centerY" secondItem="s2l-sf-dt0" secondAttribute="centerY" id="RZu-ix-W19"/>
+                        <constraint firstAttribute="height" constant="44" id="V4b-F2-v6n"/>
+                        <constraint firstAttribute="trailing" secondItem="Oyu-Oe-dUI" secondAttribute="trailing" constant="8" id="kqy-jH-Eja"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y3P-th-XDF">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="jPj-JX-99E"/>
+                        <outlet property="delegate" destination="-1" id="BEp-MB-EP6"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bGQ-hA-xqN" firstAttribute="trailing" secondItem="y3P-th-XDF" secondAttribute="trailing" id="GdV-tg-vGE"/>
+                <constraint firstItem="bGQ-hA-xqN" firstAttribute="bottom" secondItem="y3P-th-XDF" secondAttribute="bottom" id="IIt-HT-QER"/>
+                <constraint firstItem="y3P-th-XDF" firstAttribute="top" secondItem="ooZ-Qk-aqd" secondAttribute="bottom" id="ImF-5t-BJg"/>
+                <constraint firstItem="ooZ-Qk-aqd" firstAttribute="top" secondItem="bGQ-hA-xqN" secondAttribute="top" id="ZY7-uJ-ush"/>
+                <constraint firstItem="y3P-th-XDF" firstAttribute="leading" secondItem="bGQ-hA-xqN" secondAttribute="leading" id="aCL-ms-vbJ"/>
+                <constraint firstItem="ooZ-Qk-aqd" firstAttribute="leading" secondItem="bGQ-hA-xqN" secondAttribute="leading" id="idf-Zq-LOS"/>
+                <constraint firstItem="bGQ-hA-xqN" firstAttribute="trailing" secondItem="ooZ-Qk-aqd" secondAttribute="trailing" id="kKV-EF-9D5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="bGQ-hA-xqN"/>
+        </view>
+    </objects>
+</document>
