@@ -25,6 +25,10 @@
 		3C21BC5822CC3CF700BD07CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C21BC5722CC3CF700BD07CF /* ViewController.swift */; };
 		3C21BC5B22CC498300BD07CF /* LayerAnimationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C21BC5922CC498300BD07CF /* LayerAnimationsController.swift */; };
 		3C21BC5C22CC498300BD07CF /* LayerAnimationsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C21BC5A22CC498300BD07CF /* LayerAnimationsController.xib */; };
+		3C3E62ED22CEF40800351A67 /* PresentationAnimationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3E62EB22CEF40800351A67 /* PresentationAnimationsController.swift */; };
+		3C3E62EE22CEF40800351A67 /* PresentationAnimationsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C3E62EC22CEF40800351A67 /* PresentationAnimationsController.xib */; };
+		3C3E62F222CEF53300351A67 /* PresentationDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3E62F022CEF53300351A67 /* PresentationDetailController.swift */; };
+		3C3E62F322CEF53300351A67 /* PresentationDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C3E62F122CEF53300351A67 /* PresentationDetailController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		3C21BC5722CC3CF700BD07CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3C21BC5922CC498300BD07CF /* LayerAnimationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerAnimationsController.swift; sourceTree = "<group>"; };
 		3C21BC5A22CC498300BD07CF /* LayerAnimationsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayerAnimationsController.xib; sourceTree = "<group>"; };
+		3C3E62EB22CEF40800351A67 /* PresentationAnimationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAnimationsController.swift; sourceTree = "<group>"; };
+		3C3E62EC22CEF40800351A67 /* PresentationAnimationsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresentationAnimationsController.xib; sourceTree = "<group>"; };
+		3C3E62F022CEF53300351A67 /* PresentationDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationDetailController.swift; sourceTree = "<group>"; };
+		3C3E62F122CEF53300351A67 /* PresentationDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PresentationDetailController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 				3C18ECDF22CAEEB1006A2BAE /* Assets.xcassets */,
 				3C18ECE122CAEEB1006A2BAE /* LaunchScreen.storyboard */,
 				3C18ECE422CAEEB1006A2BAE /* Info.plist */,
+				3C3E62EF22CEF50E00351A67 /* PresentationAnimations */,
 			);
 			path = T_Animations;
 			sourceTree = "<group>";
@@ -148,6 +157,17 @@
 				3C21BC5A22CC498300BD07CF /* LayerAnimationsController.xib */,
 			);
 			path = LayerAnimations;
+			sourceTree = "<group>";
+		};
+		3C3E62EF22CEF50E00351A67 /* PresentationAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				3C3E62EB22CEF40800351A67 /* PresentationAnimationsController.swift */,
+				3C3E62EC22CEF40800351A67 /* PresentationAnimationsController.xib */,
+				3C3E62F022CEF53300351A67 /* PresentationDetailController.swift */,
+				3C3E62F122CEF53300351A67 /* PresentationDetailController.xib */,
+			);
+			path = PresentationAnimations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +249,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C3E62F322CEF53300351A67 /* PresentationDetailController.xib in Resources */,
 				3C21BC5622CC3C3000BD07CF /* AutoLayoutAnimationsController.xib in Resources */,
 				3C18ECE322CAEEB1006A2BAE /* LaunchScreen.storyboard in Resources */,
 				3C21BC5C22CC498300BD07CF /* LayerAnimationsController.xib in Resources */,
+				3C3E62EE22CEF40800351A67 /* PresentationAnimationsController.xib in Resources */,
 				3C18ED0B22CB385D006A2BAE /* KeyboardAnimationController.xib in Resources */,
 				3C18ECE022CAEEB1006A2BAE /* Assets.xcassets in Resources */,
 				3C18ECDE22CAEEB0006A2BAE /* Main.storyboard in Resources */,
@@ -255,7 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C3E62F222CEF53300351A67 /* PresentationDetailController.swift in Sources */,
 				3C21BC5B22CC498300BD07CF /* LayerAnimationsController.swift in Sources */,
+				3C3E62ED22CEF40800351A67 /* PresentationAnimationsController.swift in Sources */,
 				3C21BC5822CC3CF700BD07CF /* ViewController.swift in Sources */,
 				3C18ECDB22CAEEB0006A2BAE /* AutoLayoutAnimationsController.swift in Sources */,
 				3C18ECEB22CAF6D2006A2BAE /* HorizontalItemList.swift in Sources */,
